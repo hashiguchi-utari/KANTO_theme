@@ -1,45 +1,43 @@
 /*
-Theme Name: KANTO Staff
+Theme Name: KANTO
 Theme URI: https://kanto.local/
 Author: KANTO
-Description: KANTO公式サイト用のオリジナルテーマ。Figmaのスタッフ紹介ページを基に制作。
+Description: KANTO公式サイト用のオリジナルテーマ。
 Version: 1.0.0
-Text Domain: kanto-staff
+Text Domain: kanto
 */
 
 /* 全ページ共通のWebフォント。 */
+/* ここで使うGoogleフォントを読みだしてください。今は色んなサイトで主に使われてるNotoSansJPを呼び出しています。 */
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+JP:wght@400;500;600&family=Nothing+You+Could+Do&family=Yomogi&family=Zen+Old+Mincho&display=swap");
 
 /* 全ページで使用する色・コンテンツ幅の共通変数。 */
 :root {
+  /* 背景カラーなど共通で使うカラーパレットをここで登録します。 */
   --kanto-orange: #ff8d28;
   --kanto-ink: #3f3b3a;
   --kanto-blue: #150657;
   --kanto-bg: #fff9f4;
   --kanto-pale: #fff2e8;
-  --content-width: 115rem;
 }
 
 /* サイト全体の基本的な文字色・背景・フォント。 */
 body {
-  /* htmlを62.5%にした後も、未指定の本文は従来の16px相当を維持します。 */
-  font-size: 1.6rem;
-  color: var(--kanto-ink);
-  background: var(--kanto-bg);
   font-family: "Noto Sans JP", sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
-
-/* PC・SP共通：p要素の本文サイズを16px相当（1.6rem）へ統一します。 */
+/* 議事録を元にフォントサイズを指定しました。スマホ版の文字サイズも欲しいです。 */
+h1 {
+  font-size: 6.4rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+h4 {
+  font-size: 2.8rem;
+}
 p {
-  font-size: 1.6rem !important;
-}
-/* 画像・リンクの長押しドラッグによる操作不能を防ぎ、通常クリックは維持します。 */
-img,
-a {
-  -webkit-user-drag: none;
-}
-
-img {
-  user-select: none;
+  font-size: 1.6rem;
 }
