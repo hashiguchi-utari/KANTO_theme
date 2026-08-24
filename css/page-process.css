@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* ==========================================
+   共通フォント・ベーススタイル（全体指示用クラス）
+   ========================================== */
+.process_page_layout {
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+  line-height: 1.75;
+  background-color: #fffaf2; /* KANTO/Setaのベース暖色系背景 */
+  overflow-x: hidden;
+}
+
+/* 1440px固定幅のコンテナ（デザインルール適用） */
+.process_container {
+  max-width: 90rem; /* 1440px */
+  margin: 0 auto;
+  padding: 6.25rem 2.5rem; /* ヘッダー・フッター分の上下余白あけ */
+  box-sizing: border-box;
+}
+
+/* タイトル定義 */
+.process_main_title {
+  font-size: 4rem; /* 64px */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.process_content_title {
+  font-size: 1.75rem; /* 28px (h4) */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.process_content_text {
+  font-size: 1rem; /* 16px (p) */
+  color: #555555;
+}
+
+/* ==========================================
+   ステップフロー・レイアウト（ジグザグ配置）
+   ========================================== */
+.process_flow_section {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  position: relative;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto 8rem auto;
+}
+
+/* つなぎ線（背景として自然に配置し、z-indexを使わない） */
+/* JSで高さを0%から100%へ伸ばすことで、次の円へ伸びる仕様に対応 */
+.process_flow_section::before {
+  content: "";
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.125rem; /* 2px */
+  height: 0%; /* JSでスクロールに合わせて伸縮 */
+  background-color: #333333;
+  transition: height 1.2s ease-out;
+}
+
+.process_step_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 偶数番目のステップ（左右反転処理） */
+.process_step_item.item_reverse {
+  flex-direction: row-reverse;
+}
+
+/* サークル文章・ノード */
+.process_circle_wrapper {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.process_circle_node {
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  border: 0.125rem solid #333333;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.process_node_text {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.process_node_icon {
+  margin-top: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* コンテンツ文章側 */
+.process_content_box {
+  width: 45%;
+}
+
+/* ==========================================
+   下部インフォメーションカード
+   ========================================== */
+.process_info_section {
+  max-width: 56.25rem; /* 900px */
+  margin: 0 auto 8rem auto;
+}
+
+.process_info_card {
+  background-color: #ffffff;
+  border-radius: 1.25rem; /* 20px */
+  padding: 3.125rem; /* 50px */
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.03);
+}
+
+.process_info_title {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.process_info_lead {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.process_info_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem auto;
+  max-width: 37.5rem;
+}
+
+.process_info_item {
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.process_info_item::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #333333;
+}
+
+.process_info_note {
+  font-size: 0.875rem; /* 14px */
+  text-align: center;
+  color: #666666;
+}
+
+/* ==========================================
+   画像・イラストセクション (4:3 比率コントロール)
+   ========================================== */
+.process_visual_section {
+  width: 100%;
+  max-width: 90rem; /* 1440px */
+  margin: 0 auto;
+}
+
+.process_hero_image_holder {
+  width: 100%;
+  height: 67.5rem; /* 1080px (1440pxに対して4:3の高さ) */
+  background-color: #e2ded8; /* 画像未挿入時のプレースホルダー色 */
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.process_visual_placeholder_text {
+  font-size: 1.25rem;
+  color: #777777;
+}
+
+/* ==========================================
+   スクロールアニメーション用ベース（フェードアップ）
+   ========================================== */
+.fade_up_trigger {
+  opacity: 0;
+  transform: translateY(2.5rem); /* 40px下から */
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fade_up_trigger.is_active {
+  opacity: 1;
+  transform: translateY(0);
+}
