@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (headerMenu && hamburger && navItems) {
         headerMenu.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             hamburger.classList.toggle('is-open');
             navItems.classList.toggle('is-open');
         });
@@ -17,6 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('is-open');
                 navItems.classList.remove('is-open');
             });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (navItems.classList.contains('is-open')) {
+                if (!navItems.contains(e.target) && !headerMenu.contains(e.target)) {
+                    hamburger.classList.remove('is-open');
+                    navItems.classList.remove('is-open');
+                }
+            }
         });
     }
 });
