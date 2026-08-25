@@ -51,6 +51,10 @@
   font-size: clamp(1.6rem, 1.67vw, 2.4rem);
 }
 
+.site-footer__nav-label--sp {
+  display: none;
+}
+
 .site-footer__nav-link:hover,
 .site-footer__nav-link:focus-visible {
   opacity: 0.75;
@@ -281,6 +285,14 @@
   .site-footer__nav-link:first-child {
     font-family: serif;
     font-size: 1.6rem;
+  }
+
+  .site-footer__nav-label--pc {
+    display: none;
+  }
+
+  .site-footer__nav-label--sp {
+    display: inline;
   }
 
   .site-footer__character--pc {

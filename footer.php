@@ -3,7 +3,10 @@
 		<!-- TOPページとお問い合わせページへ移動するフッターナビゲーション -->
 		<nav class="site-footer__nav" aria-label="フッターナビゲーション">
 			<a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
-			<a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/inquiry/')); ?>">お問い合わせはこちら</a>
+			<a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/inquiry/')); ?>">
+				<span class="site-footer__nav-label--pc">お問い合わせはこちら</span>
+				<span class="site-footer__nav-label--sp">お問い合わせ</span>
+			</a>
 		</nav>
 
 		<!-- PC版でTOPボタンの役割を案内する吹き出し画像 -->
