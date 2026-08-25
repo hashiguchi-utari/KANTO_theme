@@ -1,1 +1,93 @@
-/* 投稿詳細ページに関するスタイルを記述します。 */
+/*====================================
+お知らせ部分
+=====================================*/
+.archive-top {
+  text-align: center;
+}
+
+.archive_h2 {
+  margin-top: 20.7rem;
+  font-size: 4.0rem;
+  margin-bottom: 3rem;
+}
+
+.archive-border {
+  width: 120rem;
+  border-bottom: 0.1rem solid #000;
+  margin: 0 auto;
+  margin-bottom: 12.0rem;
+  box-sizing: border-box;
+}
+
+.archive-underborder{
+  width: 120rem;
+  border-bottom: 0.1rem solid #000;
+  margin: 0 auto;
+  margin: 12rem auto ;
+ 
+}
+
+/*====================================
+投稿ページ部分
+=====================================*/
+
+.single {
+  width: 100%;
+}
+
+.single-article {
+  width: 100rem;
+  margin: 0 auto;
+}
+
+.single-meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin-bottom: 2rem;
+
+  font-size: 1.6rem;
+}
+
+.single-title {
+  margin: 0 0 4rem;
+
+  font-size: 3.6rem;
+ }
+
+.single-thumbnail {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.single-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.single-content {
+  font-size: 1.6rem;
+}
+
+.single-content p {
+  margin: 0 0 3rem;
+}
+
+/*====================================
+写真が浮かび上がる
+=====================================*/
+.fade-up-image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
+}
+
+.fade-up-image.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
