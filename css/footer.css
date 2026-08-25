@@ -51,6 +51,10 @@
   font-size: clamp(1.6rem, 1.67vw, 2.4rem);
 }
 
+.site-footer__nav-label--sp {
+  display: none;
+}
+
 .site-footer__nav-link:hover,
 .site-footer__nav-link:focus-visible {
   opacity: 0.75;
@@ -72,16 +76,17 @@
   top: -0.7rem;
   left: 15.2rem;
   z-index: 2;
-  width: 17rem;
+  width: 20rem;
 }
 
 .site-footer__speech img {
+  margin-top: 5rem;
   width: 100%;
 }
 
 .site-footer__character--pc {
-  top: 8.4rem;
-  left: 5.6rem;
+  top: 16.4rem;
+  left: 6.6rem;
   width: 22.9rem;
 }
 
@@ -106,6 +111,12 @@
   min-width: 0;
   flex-direction: column;
   align-items: center;
+}
+
+/* 3事業所のロゴを重なり回避のため少し下へ移動 */
+.site-footer__group > a {
+  margin-bottom: 1.5rem;
+  transform: translateY(1.5rem);
 }
 
 .site-footer__logo--kanto {
@@ -274,6 +285,14 @@
   .site-footer__nav-link:first-child {
     font-family: serif;
     font-size: 1.6rem;
+  }
+
+  .site-footer__nav-label--pc {
+    display: none;
+  }
+
+  .site-footer__nav-label--sp {
+    display: inline;
   }
 
   .site-footer__character--pc {
