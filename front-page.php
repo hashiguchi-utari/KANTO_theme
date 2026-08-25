@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<<<<<<< HEAD
-=======
 <!-- ここに本文を記載 -->
 <main class="front_container">
   <section class="front_mv">
@@ -29,7 +27,7 @@
 
   <section>
     <div>
-      <h1 class="h1">「自分らしい」を<br>
+      <h1 class="h1 float-text">「自分らしい」を<br>
         一緒に育てる訪問看護</h1>
       <div class="front_navi">
         <div>
@@ -83,17 +81,26 @@
 
         </ul>
 
+        <!--ページネーション-->
         <?php
-        the_posts_pagination([
-          'mid_size'  => 2,
-          'prev_text' => '←',
-          'next_text' => '→',
+        $pagination = paginate_links([
+          'type'      => 'array',
+          'mid_size'  => 1,
+          'end_size'  => 1,
+          'prev_text' => '…',
+          'next_text' => '…',
         ]);
+
+        if ($pagination) :
         ?>
 
-      <?php else : ?>
-
-        <p>現在、お知らせはありません。</p>
+          <nav class="pagination" aria-label="ページネーション">
+            <?php foreach ($pagination as $page) : ?>
+              <?php echo $page; ?>
+            <?php endforeach; ?>
+          </nav>
+        <?php endif; ?>
+        <!--ページネーションここまで-->
 
       <?php endif; ?>
 
@@ -102,17 +109,39 @@
   </section>
 
   <section class="insta">
-  <p class="front-insta">instagram</p>
-    
-    訪問看護ステーションKANTO
-
-    障がい者グループホームぐ🍀セタ
-
-    就労継続支援A型B型事業所UTARI-ウタリ-
-  </section>
+    <div>
+      <p class="front-insta">instagram</p>
+      <p class="front-kanto_to">訪問看護ステーションKANTO<br>
+    <img src="<?php echo get_theme_file_uri('/img/front_page/kanto_logo1.png'); ?>" alt="setaのロゴ" class="logo_ka"></p>
+      <p class="front-seta">障がい者グループホーム🍀セタ<br>
+    <img src="<?php echo get_theme_file_uri('/img/front_page/seta_logo1.png'); ?>" alt="setaのロゴ" class="logo_se"></p>
+      <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ- <br>
+    <img src="<?php echo get_theme_file_uri('/img/front_page/utari_logo1.png'); ?>" alt="utariのロゴ" class="logo_u">
+  </p>
+    </div>
+  </section> 
 
 </main>
 <!-- ここまで本文を記載 -->
 
->>>>>>> remotes/origin/suzuki
+
+<script>
+  /*浮かぶようなアニメーション*/
+  const floatTexts = document.querySelectorAll('.float-text');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  floatTexts.forEach((text) => {
+    observer.observe(text);
+  });
+</script>
+
 <?php get_footer(); ?>
