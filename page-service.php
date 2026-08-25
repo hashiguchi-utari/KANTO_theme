@@ -1,43 +1,44 @@
 <?php get_header(); ?>
 
 <main>
+  <div class="main_container">
+    <section class="service_main">
+      <div class="service_left">
+        <div class="service_message">
+          <h1 class="catchcopy">あなたの空に<br><span>そっと寄り添う。</span></h1>
+          <p class="service_guide">
+            ひとりひとりの想いに耳を傾け、<br>
+            安心して自分らしく過ごせる明日へ、<br>
+            看護師がご自宅に訪問し、<br>
+            心と体のバランスを整えるお手伝いをします。</p>
+        </div>
 
-  <section class="service_main">
-    <div class="service_left">
-      <div class="service_message">
-        <h1 class="catchcopy">あなたの空に<br><span>そっと寄り添う。</span></h1>
-        <p class="service_guide">
-          ひとりひとりの想いに耳を傾け、<br>
-          安心して自分らしく過ごせる明日へ、<br>
-          看護師がご自宅に訪問し、<br>
-          心と体のバランスを整えるお手伝いをします。</p>
+        <div class="icon_set">
+          <div class="heart">
+            <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/ハート 1.png" alt="ハート">
+            <p class="pr_point">こころと体に<br>やさしく寄り添う</p>
+          </div>
+          <div class="speak">
+            <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/対話 2.png" alt="対話">
+            <p class="pr_point">対話を大切にした<br>サポート</p>
+          </div>
+          <div class="grouphome">
+            <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/ホーム 1.png" alt="ホーム">
+            <p class="pr_point">グループホーム<br>SETAと連携</p>
+          </div>
+        </div>
       </div>
 
-      <div class="icon_set">
-        <div class="heart">
-          <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/ハート 1.png" alt="ハート">
-          <p class="pr_point">こころと体に<br>やさしく寄り添う</p>
-        </div>
-        <div class="speak">
-          <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/対話 2.png" alt="対話">
-          <p class="pr_point">対話を大切にした<br>サポート</p>
-        </div>
-        <div class="grouphome">
-          <img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/ホーム 1.png" alt="ホーム">
-          <p class="pr_point">グループホーム<br>SETAと連携</p>
+      <div class="service_img">
+        <img class="speak_human" src="<?php echo get_template_directory_uri(); ?>/img/看護師と利用者が対話してる様子 1.png" alt="対話の写真">
+        <div class="img_photo">
+          <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/MVイメージ画像1 1.png" alt="散歩の写真">
+          <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/イメージ画像.png" alt="散歩の写真">
+          <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/イメージ画像.png" alt="散歩の写真">
         </div>
       </div>
-    </div>
-
-    <div class="service_img">
-      <img class="speak_human" src="<?php echo get_template_directory_uri(); ?>/img/看護師と利用者が対話してる様子 1.png" alt="対話の写真">
-      <div class="img_photo">
-        <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/MVイメージ画像1 1.png" alt="散歩の写真">
-        <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/イメージ画像.png" alt="散歩の写真">
-        <img class="photo" src="<?php echo get_template_directory_uri(); ?>/img/イメージ画像.png" alt="散歩の写真">
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="service_content">
     <div class="service_info">
@@ -64,7 +65,6 @@
         <h3></h3>
         <p></p>
       </div>
-
     </div>
 
 
