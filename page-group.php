@@ -89,9 +89,10 @@ get_header();
 				<img src="<?php echo esc_url(get_theme_file_uri('/img/group_utari_img2.png')); ?>" alt="明るい共同作業スペース">
 				<img src="<?php echo esc_url(get_theme_file_uri('/img/group_utari_img3.png')); ?>" alt="デザイン制作作業">
 			</div>
+			<!-- キャッチコピーは緑色のセクション全体の中央に配置 -->
+			<h3 class="group-service__catch">『ひとりじゃない』</h3>
 			<div class="group-service__content">
 				<div class="group-service__copy">
-					<h3>『ひとりじゃない』</h3>
 					<p>仲間と共に学び、働き、時には支え合いながら自分のペースで成長できる場を提供します。 WEB制作や動画編集といった仕事を通じて、自分のペースで「できること」を少しずつ広げ、社会とのつながりを実感できる場を目指しています。</p>
 				</div>
 				<a class="group-service__link" href="https://utari.jp/" target="_blank" rel="noopener noreferrer">HPへGO！</a>

@@ -21,7 +21,7 @@
   left: 50%;
   color: #ff791d;
   font-family: Arial, sans-serif;
-  font-size: 4.6rem;
+  font-size: 6.4rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   transform: translateX(-50%);
@@ -133,15 +133,15 @@
 
 /* Seta・UTARI紹介カード */
 .group-services {
-  padding: 8rem 3.2rem 6rem;
+  padding: 8rem 3.2rem 5rem;
 }
 .group-service {
   width: min(100%, 131.5rem);
   margin-inline: auto;
-  padding: 6rem 5.5rem 6.5rem;
+  /* padding: 6rem 5.5rem 6.5rem; */
   border-radius: 3.2rem;
   box-shadow: 0.9rem 0.9rem 0.3rem rgb(0 0 0 / 25%);
-  height: 93.5rem;
+  height: 88.9rem;
 }
 .group-service + .group-service {
   margin-top: 8rem;
@@ -155,9 +155,11 @@
 .group-service__title {
   font-family: serif;
   font-size: 4.8rem;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.35;
   text-align: center;
+  font-family: "Kaisei Decol", serif;
+  margin-top: 6rem;
 }
 .group-service__gallery {
   display: grid;
@@ -168,6 +170,7 @@
   grid-template-columns: 26.7rem 27.6rem 24.9rem 23.5rem;
   justify-content: space-between;
   gap: 2rem;
+  margin: 5rem 6rem;
 }
 .group-service__gallery--seta figure {
   margin: 0;
@@ -199,21 +202,55 @@
   display: none;
 }
 .group-service__gallery--utari {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6.5rem;
+  grid-template-columns: 36.8rem 34.8rem 36.7rem;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 6rem 5rem;
 }
 .group-service__gallery--utari img {
-  width: 100%;
-  height: 25rem;
   object-fit: cover;
   border-radius: 5rem;
 }
+/* UTARIの各画像をデザイン指定のサイズにする（1rem＝10px） */
+.group-service__gallery--utari img:nth-child(1) {
+  width: 36.8rem;
+  height: 24.5rem;
+}
+.group-service__gallery--utari img:nth-child(2) {
+  width: 34.8rem;
+  height: 23.2rem;
+}
+.group-service__gallery--utari img:nth-child(3) {
+  width: 36.7rem;
+  height: 24.5rem;
+}
+@media (min-width: 700px) {
+  .group-service--utari {
+    height: 93.9rem;
+  }
+  .group-service--utari .group-service__title {
+    padding-top: 5rem;
+  }
+  .group-service__gallery--utari img:nth-child(1) {
+    margin-top: 5rem;
+  }
+  .group-service__gallery--utari img:nth-child(2),
+  .group-service__gallery--utari img:nth-child(3) {
+    margin-top: 5rem;
+  }
+}
 .group-service__catch {
   margin-top: 4rem;
-  font-family: "M PLUS 1";
+  font-family: "M PLUS 1", sans-serif;
   font-size: 4.8rem;
   line-height: 1.4;
   text-align: center;
+}
+.group-service--seta .group-service__catch {
+  margin-top: 4rem;
+}
+.group-service--utari .group-service__catch {
+  margin-top: 7rem;
 }
 .group-service__content {
   display: grid;
@@ -225,16 +262,37 @@
 .group-service--seta .group-service__content {
   margin-top: 3.6rem;
 }
+.group-service--utari .group-service__content {
+  margin-top: 3.6rem;
+}
 .group-service--seta .group-service__copy p {
   margin-top: 0;
   width: 72rem;
   height: 23rem;
-  margin-left: 6rem;
+  margin-left: 11rem;
+}
+@media screen and (max-width: 699.98px) {
+  .group-service--seta .group-service__copy p {
+    width: 31.8rem;
+  }
+}
+
+.group-service--utari .group-service__copy p {
+  margin-top: 0;
+  margin-left: 12rem;
+  width: 75.4rem;
 }
 .group-service--seta .group-service__link {
   position: relative;
   top: -5rem;
-  right: 3rem;
+  right: 8rem;
+}
+@media (min-width: 700px) {
+  .group-service--utari .group-service__link {
+    position: relative;
+    top: -6rem;
+    right: 6rem;
+  }
 }
 .group-service__copy h3 {
   font-family: serif;
@@ -296,6 +354,7 @@
   }
   .group-hero__item {
     left: 50%;
+    right: auto;
     width: auto;
     transform: translateX(-50%);
   }
@@ -305,6 +364,7 @@
   .group-hero__item img {
     width: auto;
     height: 22rem;
+    max-width: none;
     margin-inline: auto;
   }
   .group-hero__item figcaption {
@@ -361,26 +421,37 @@
   }
   .group-service__gallery--seta img {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-inline: auto;
+    object-fit: cover;
     border-radius: 5rem;
   }
   /* SP版は横幅を揃え、PC版と同じ縦横比を維持 */
   .group-service__gallery--seta figure:nth-child(1),
   .group-service__gallery--seta figure:nth-child(2) {
     width: 22rem;
-    height: 22rem;
+    height: auto;
     margin-inline: auto;
   }
   .group-service__gallery--seta figure:nth-child(3) {
     width: 22rem;
-    height: 29.33rem;
+    height: auto;
     margin-inline: auto;
   }
   .group-service__gallery--seta figure:nth-child(4) {
     width: 22rem;
-    height: 29.49rem;
+    height: auto;
     margin-inline: auto;
+  }
+  .group-service__gallery--seta figure:nth-child(1) img,
+  .group-service__gallery--seta figure:nth-child(2) img {
+    aspect-ratio: 1 / 1;
+  }
+  .group-service__gallery--seta figure:nth-child(3) img {
+    aspect-ratio: 249 / 332;
+  }
+  .group-service__gallery--seta figure:nth-child(4) img {
+    aspect-ratio: 235 / 315;
   }
   .group-service__gallery figcaption {
     display: block;
@@ -395,6 +466,12 @@
     max-height: 24rem;
     object-fit: cover;
     border-radius: 5rem;
+  }
+  .group-service__gallery--utari img:nth-child(1),
+  .group-service__gallery--utari img:nth-child(2),
+  .group-service__gallery--utari img:nth-child(3) {
+    width: 100%;
+    height: auto;
   }
   .group-service__gallery--utari img + img {
     margin-top: 6rem;
@@ -412,6 +489,16 @@
   }
   .group-service--seta .group-service__content {
     margin-top: 3.5rem;
+  }
+  .group-service--utari .group-service__content {
+    margin-top: 3.5rem;
+  }
+  /* PC用の固定寸法を解除し、SPでは文章量に合わせて自然に伸ばす */
+  .group-service--seta .group-service__copy p,
+  .group-service--utari .group-service__copy p {
+    width: auto;
+    height: auto;
+    margin-left: 0;
   }
   .group-service__copy h3 {
     font-size: 2rem;
