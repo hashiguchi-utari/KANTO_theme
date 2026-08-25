@@ -50,3 +50,182 @@ KANTOとは
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*====================================
+KANTOとはの１～４画像
+=====================================*/
+.front_img1 {
+  width: 23.8rem;
+  height: 23.8rem;
+  object-fit: cover;
+  border-radius: 20%;
+
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.front_img2 {
+  width: 25.7rem;
+  height: 25.7rem;
+  object-fit: cover;
+  border-radius: 20%;
+
+  position: absolute;
+  top: 45%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+}
+
+.front_img3 {
+  width: 29.7rem;
+  height: 29.7rem;
+  object-fit: cover;
+  border-radius: 20%;
+
+  position: absolute;
+  top: 53%;
+  right: -4%;
+  transform: translate(-50%, -50%);
+}
+
+.front_img4 {
+  width: 26.0rem;
+  height: 26.0rem;
+  object-fit: cover;
+  border-radius: 20%;
+
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+/*====================================
+自分らしいを一緒に育てる訪問看護
+=====================================*/
+.h1 {
+  font-size: 6.4rem;
+  text-align: center;
+}
+
+.front_navi {
+  margin-top: 11.6rem;
+  display: flex;
+  gap: 11.8rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.front_navi span {
+  font-size: 2.4rem;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+.front_circle {
+  width: 26.4rem;
+  height: 26.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2.41rem;
+}
+
+/*====================================
+お知らせフィード
+=====================================*/
+.front-news{
+  margin-top: 9.2rem;
+  position: relative;
+  margin-bottom: 6.6rem;
+}
+
+.front-news-inner{
+width: 108.6rem;
+
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front-news-title{
+  font-size: 3.6rem;
+  margin-top:5.31rem;
+}
+
+.front-news img {
+  margin: 0 auto;
+  /*ベクター画像2*/
+}
+
+.front-news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.1rem solid #000;
+}
+
+.front-news-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.front-news-item a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.front-news-item time {
+  flex-shrink: 0;
+}
+
+.front-news-text {
+  flex: 1;
+}
+
+/*====================================
+お知らせフィードのページネーション
+=====================================*/
+.front-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.front-nav-links a,
+.front-nav-links span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.front-nav-links .current {
+  font-weight: 600;
+}
+
+/*====================================
+インスタ紹介の部分
+=====================================*/
+.insta{
+  background-color: #fff;
+}
+.front-insta{
+  font-size:3.396rem ;
+  color: #598876;
+}
+
+
+
+
+
