@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<<<<<<< HEAD
+=======
 <!-- ここに本文を記載 -->
 <main class="front_container">
   <section class="front_mv">
@@ -112,4 +114,5 @@
 </main>
 <!-- ここまで本文を記載 -->
 
+>>>>>>> remotes/origin/suzuki
 <?php get_footer(); ?>
