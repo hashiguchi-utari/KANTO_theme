@@ -18,7 +18,7 @@
                         <span class="process_node_text">相談<br>お問い合せ</span>
                         <!-- 160px×160pxの大型アイコンイラスト枠 -->
                         <div class="process_node_icon">
-                            <img src="img/img23.png" alt="サークル内アイコン１">
+                             <img src="<?php echo get_theme_file_uri('img/image23.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div> 
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">主治医に<br>相談</span>
                         <div class="process_node_icon">
-                            <img src="img/image22.png" alt="主治医アイコン">
+                             <img src="<?php echo get_theme_file_uri('img/image22.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,9 @@
                 <div class="process_circle_wrapper">
                     <div class="process_circle_node">
                         <span class="process_node_text">契約</span>
-                        <div class="process_node_icon"></div>
+                        <div class="process_node_icon">
+                             <img src="<?php echo get_theme_file_uri('img/image24.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                        </div>
                     </div>
                 </div>
                 <div class="process_content_box">
@@ -73,7 +75,9 @@
                 <div class="process_circle_wrapper">
                     <div class="process_circle_node">
                         <span class="process_node_text">開始</span>
-                        <div class="process_node_icon"></div>
+                        <div class="process_node_icon">
+                            <img src="<?php echo get_theme_file_uri('img/image25.png'); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
+                        </div>
                     </div>
                 </div>
                 <div class="process_content_box">
@@ -88,12 +92,8 @@
 
         <div class="process_container">
         
-        <!-- 大見出しセクション -->
-        <section class="process_hero_section fade_up_trigger">
-            <h1 class="process_main_title">ご利用までの流れ</h1>
-        </section>
 
-        <!-- ステップフローセクション（前述のSTEP 1〜4がここに入ります） -->
+        <!-- ステップフローセクション（前述のSTEP 1〜4がここ） -->
         <section class="process_flow_section">
             <!-- （中略：STEP 1 〜 STEP 4） -->
         </section>
@@ -110,6 +110,13 @@
                     <li class="process_info_item">主治医の病院名・診療科・お名前</li>
                 </ul>
                 <p class="process_info_note">わからないことがあっても、お気軽にご相談ください。<br>スタッフがひとつひとつ丁寧にお答えいたします。</p>
+            </div>
+        </section>
+
+        <!-- 一番下の鳥のイラストアイコン -->
+        <section class="process_visual_section fade_up_trigger">
+            <div class="process_hero_image_holder">
+                <img src="<?php echo get_theme_file_uri('img/Frame206.png'); ?>" alt="最下部鳥イラスト" class="process_visual_image">
             </div>
         </section>
 
