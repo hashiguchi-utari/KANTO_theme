@@ -1,216 +1,268 @@
 @charset "UTF-8";
 
 /* ==========================================
-   共通フォント・ベーススタイル（全体指示用クラス）
+   共通フォント・ベーススタイル
    ========================================== */
 .process_page_layout {
   font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
   color: #333333;
-  line-height: 1.75;
-  background-color: #fffaf2; /* KANTO/Setaのベース暖色系背景 */
+  line-height: 1.9; /* 文字が大きくなったので少し行間を広げて視認性確保 */
+  background-color: #FFEDD4;
   overflow-x: hidden;
 }
 
-/* 1440px固定幅のコンテナ（デザインルール適用） */
+/* 1440px固定幅コンテナ */
 .process_container {
   max-width: 90rem; /* 1440px */
   margin: 0 auto;
-  padding: 6.25rem 2.5rem; /* ヘッダー・フッター分の上下余白あけ */
+  padding: 8rem 0; /* 上下余白 */
   box-sizing: border-box;
 }
 
-/* タイトル定義 */
+/* 大見出し：左上に配置 */
 .process_main_title {
-  font-size: 4rem; /* 64px */
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 5rem;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 8rem;
 }
 
+/* 隣のテキスト：タイトル 48px (3rem) */
 .process_content_title {
-  font-size: 1.75rem; /* 28px (h4) */
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
   color: #2c2c2c;
+  line-height: 1.4;
 }
 
+/* 隣のテキスト：本文 24px (1.5rem) */
 .process_content_text {
-  font-size: 1rem; /* 16px (p) */
+  font-size: 1.5rem; /* 24px */
   color: #555555;
 }
 
 /* ==========================================
-   ステップフロー・レイアウト（ジグザグ配置）
+   ステップフロー・レイアウト（サークルと斜め線）
    ========================================== */
 .process_flow_section {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 14rem; /* サークルが大きくなったため、縦の余白を拡大 */
   position: relative;
-  max-width: 75rem; /* 1200px */
-  margin: 0 auto 8rem auto;
-}
-
-/* つなぎ線（背景として自然に配置し、z-indexを使わない） */
-/* JSで高さを0%から100%へ伸ばすことで、次の円へ伸びる仕様に対応 */
-.process_flow_section::before {
-  content: "";
-  position: absolute;
-  top: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0.125rem; /* 2px */
-  height: 0%; /* JSでスクロールに合わせて伸縮 */
-  background-color: #333333;
-  transition: height 1.2s ease-out;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .process_step_item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;/* 左右の要素を画面の端と端へ完全に押し広げる */
   width: 100%;
+  position: relative; /* 斜め線の基準点 */
 }
 
-/* 偶数番目のステップ（左右反転処理） */
+/* 左右反転レイアウト */
 .process_step_item.item_reverse {
   flex-direction: row-reverse;
 }
 
-/* サークル文章・ノード */
+/* ------------------------------------------
+   超大型サークルデザイン（560px × 560px / 白統一）
+   ------------------------------------------ */
 .process_circle_wrapper {
-  width: 45%;
+  width: 41%;
   display: flex;
   justify-content: center;
+  position: relative; /* z-index不使用で手前に出すためのスタッキングコンテキスト */
 }
 
 .process_circle_node {
-  width: 12.5rem; /* 200px */
-  height: 12.5rem; /* 200px */
-  border: 0.125rem solid #333333;
+  width: 35rem; /* 560px */
+  height: 35rem; /* 560px */
+  border: 0.2rem solid #333333; /* 線も少し太くして調整 */
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #ffffff; /* 白統一 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 3rem;
 }
 
+/* サークル内文字：54px (3.375rem) */
 .process_node_text {
-  font-size: 1.125rem; /* 18px */
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #333333;
 }
 
+/* アイコン枠：160px × 160px (10rem) 文字のやや下に配置 */
 .process_node_icon {
-  margin-top: 0.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  margin-top: 2rem; /* 余白も広めに確保 */
+  width: 10rem; /* 160px */
+  height: 10rem; /* 160px */
+  border: 0.125rem dashed #cccccc; /* 仮枠の線 */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* コンテンツ文章側 */
+/* ------------------------------------------
+   サークル隣のテキスト領域
+   ------------------------------------------ */
 .process_content_box {
-  width: 45%;
+  width: 48%;
 }
 
-/* ==========================================
-   下部インフォメーションカード
-   ========================================== */
-.process_info_section {
-  max-width: 56.25rem; /* 900px */
-  margin: 0 auto 8rem auto;
-}
-
-.process_info_card {
-  background-color: #ffffff;
-  border-radius: 1.25rem; /* 20px */
-  padding: 3.125rem; /* 50px */
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.03);
-}
-
-.process_info_title {
-  font-size: 1.75rem; /* 28px */
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.process_info_lead {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.process_info_list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto 2rem auto;
-  max-width: 37.5rem;
-}
-
-.process_info_item {
-  font-size: 1rem;
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.process_info_item::before {
-  content: "●";
+/* ------------------------------------------
+   斜めのつなぎ線（z-index不使用・変形とクリップで表現）
+   ------------------------------------------ */
+/* 次のステップ（右下）へ伸びる斜め線 */
+.process_step_item.line_down_right::before {
+  content: "";
   position: absolute;
-  left: 0;
-  color: #333333;
+  top: 75%;
+  left: 24%; /* 巨大サークルの中心に合わせる */
+  width: 52%; 
+  height: 0.1875rem; /* 線も3pxに太くして見えづらさを解消 */
+  background-color: #333333;
+  transform: rotate(38deg); /* 高さに合わせて角度を35度に調整 */
+  transform-origin: left center;
+  
+  clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+  transition: clip-path 1.2s ease-out;
 }
 
-.process_info_note {
-  font-size: 0.875rem; /* 14px */
-  text-align: center;
-  color: #666666;
-}
-
-/* ==========================================
-   画像・イラストセクション (4:3 比率コントロール)
-   ========================================== */
-.process_visual_section {
-  width: 100%;
-  max-width: 90rem; /* 1440px */
-  margin: 0 auto;
-}
-
-.process_hero_image_holder {
-  width: 100%;
-  height: 67.5rem; /* 1080px (1440pxに対して4:3の高さ) */
-  background-color: #e2ded8; /* 画像未挿入時のプレースホルダー色 */
-  border-radius: 0.625rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.process_visual_placeholder_text {
-  font-size: 1.25rem;
-  color: #777777;
+/* 次のステップ（左下）へ伸びる斜め線 */
+.process_step_item.line_down_left::before {
+  content: "";
+  position: absolute;
+  top: 85%;
+  right: 24%;
+  width: 52%;
+  height: 0.1875rem; /* 3px */
+  background-color: #333333;
+  transform: rotate(-38deg);
+  transform-origin: right center;
+  
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 1.2s ease-out;
 }
 
 /* ==========================================
-   スクロールアニメーション用ベース（フェードアップ）
+   スクロールアニメーション
    ========================================== */
 .fade_up_trigger {
   opacity: 0;
-  transform: translateY(2.5rem); /* 40px下から */
-  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(4.5rem); /* 72px下からフェードアップ */
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .fade_up_trigger.is_active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 画面内に入ったら斜め線が100%まで伸びる */
+.process_step_item.line_down_right.is_active::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.process_step_item.line_down_left.is_active::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* ==========================================
+   下部インフォメーションカード（スケールアップ版）
+   ========================================== */
+.process_info_section {
+  width: 100%;
+  max-width: 86rem; /* ステップフローの広がりに合わせて横幅を拡張 */
+  margin: 12.5rem auto; /* 上下の余白を200pxに広げてゆったりと配置 */
+}
+
+.process_info_card {
+  background-color: #ffffff;
+  border-radius: 2.5rem; /* 40px */
+  padding: 6.25rem 5rem; /* 100px 80px のリッチな余白に変更 */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
+}
+
+/* カード内タイトル：h2等と合わせて 2.5rem (40px) */
+.process_info_title {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c2c2c;
+}
+
+/* リード文：24px (1.5rem) */
+.process_info_lead {
+  font-size: 1.5rem; /* 24px */
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #333333;
+}
+
+/* 箇条書きリスト */
+.process_info_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 4rem auto;
+  max-width: 56.25rem; /* リスト全体の幅を900pxに広げて読みやすく */
+}
+
+/* リストアイテム：24px (1.5rem) */
+.process_info_item {
+  font-size: 1.5rem; /* 24px */
+  position: relative;
+  padding-left: 2.5rem; /* ドット用の余白 */
+  margin-bottom: 1.5rem;
+  color: #555555;
+}
+
+/* z-indexを使わず擬似要素でカスタムドットを大きく配置 */
+.process_info_item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.625rem; /* 文字の中心に合わせる */
+  width: 0.75rem; /* 12pxの大きめのドット */
+  height: 0.75rem;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+/* 注意書き・ノート：18px (1.125rem) */
+.process_info_note {
+  font-size: 1.125rem; /* 18px */
+  text-align: center;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   最下部メインビジュアル・イラストセクション (1440px × 1080px)
+   ========================================== */
+.process_visual_section {
+  width: 100%;
+  max-width: 90rem; /* 1440px幅いっぱいに配置 */
+  margin: 0 auto;
+}
+
+.process_hero_image_holder {
+  width: 100%;
+  height: 67.5rem; /* 1080px (1440pxに対して完全な4:3比率) */
+  background-color: transparent; /* 背景プレースホルダー色を透明に */
+  border-radius: 1.25rem; /* 20px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 画像の角丸はみ出しをカット */
 }
