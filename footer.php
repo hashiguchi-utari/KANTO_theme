@@ -1,10 +1,12 @@
 <footer class="site-footer">
 	<div class="site-footer__inner">
+		<!-- TOPページとお問い合わせページへ移動するフッターナビゲーション -->
 		<nav class="site-footer__nav" aria-label="フッターナビゲーション">
 			<a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
 			<a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/inquiry/')); ?>">お問い合わせはこちら</a>
 		</nav>
 
+		<!-- PC版でTOPボタンの役割を案内する吹き出し画像 -->
 		<div class="site-footer__speech">
 			<img
 				src="<?php echo esc_url(get_theme_file_uri('/img/footer吹き出し.png')); ?>"
@@ -13,6 +15,7 @@
 			>
 		</div>
 
+		<!-- PC版とSP版で表示を切り替える人物画像 -->
 		<img
 			class="site-footer__character site-footer__character--pc"
 			src="<?php echo esc_url(get_theme_file_uri('/img/cowgirl.png')); ?>"
@@ -26,7 +29,9 @@
 			aria-hidden="true"
 		>
 
+		<!-- KANTO・Seta・UTARIのロゴと事業所情報 -->
 		<div class="site-footer__groups">
+			<!-- KANTOのロゴはこのサイトのTOPページへ移動 -->
 			<section class="site-footer__group site-footer__group--kanto" aria-label="訪問看護ステーションKANTO">
 				<a href="<?php echo esc_url(home_url('/')); ?>" aria-label="訪問看護ステーションKANTO トップページへ">
 					<img
@@ -42,6 +47,7 @@
 				</address>
 			</section>
 
+			<!-- Setaのロゴは外部公式サイトを別タブで表示 -->
 			<section class="site-footer__group site-footer__group--seta" aria-label="Seta Group Home">
 				<a href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer" aria-label="Seta Group Home公式サイトへ（新しいタブで開きます）">
 					<img
@@ -55,6 +61,7 @@
 				</address>
 			</section>
 
+			<!-- UTARIのロゴは外部公式サイトを別タブで表示 -->
 			<section class="site-footer__group site-footer__group--utari" aria-label="就労継続支援UTARI">
 				<a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ（新しいタブで開きます）">
 					<img
@@ -69,6 +76,7 @@
 			</section>
 		</div>
 
+		<!-- 年号はWordPressの設定に合わせて自動表示 -->
 		<p class="site-footer__copyright">
 			<small><?php echo esc_html(wp_date('Y')); ?>　株式会社リタベル　 All Right Reserved</small>
 		</p>
