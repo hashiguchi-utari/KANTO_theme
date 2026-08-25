@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo bloginfo('name'); ?></title>
 	<link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/favicon.ico')); ?>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Kaisei+Tokumin&family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 

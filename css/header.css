@@ -71,13 +71,16 @@
     width: 80%;
     max-width: 720px;
     height: 100vh;
-    transition: right 0.3s ease-in-out;
-    padding: 80px 20px 20px;
+    transition: right 0.5s ease-in-out;
+    padding: 20px;
     margin: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffeac4, #ff988e);
 }
 .nav-items.is-open {
     right: 0;
@@ -88,4 +91,8 @@
     color: #333;
     text-decoration: none;
     font-size: 16px;
+}
+.header-inq {
+    background-image: url(../img/header1.png);
+    margin: 50px 0;
 }
