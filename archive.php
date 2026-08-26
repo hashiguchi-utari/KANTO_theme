@@ -23,8 +23,8 @@
           <div class="archive-card__body">
 
             <div class="archive-card__meta">
-              <span><?php echo get_the_date('Y.m.d'); ?></span>
-              <span>||| カテゴリー・<?php the_category(', '); ?></span>
+              <p><?php echo get_the_date('Y.m.d'); ?><br class="front_sp_only">
+              ||| カテゴリー・<?php the_category(', '); ?></p>
             </div>
 
             <h2 class="archive-card__title">
