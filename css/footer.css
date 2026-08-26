@@ -74,20 +74,20 @@
 .site-footer__speech {
   position: absolute;
   top: -0.7rem;
-  left: 15.2rem;
+  left: min(10.555556vw, 15.2rem);
   z-index: 2;
-  width: 20rem;
+  width: min(13.888889vw, 20rem);
 }
 
 .site-footer__speech img {
-  margin-top: 5rem;
+  margin-top: min(3.472222vw, 5rem);
   width: 100%;
 }
 
 .site-footer__character--pc {
   top: 16.4rem;
-  left: 6.6rem;
-  width: 22.9rem;
+  left: min(4.583333vw, 6.6rem);
+  width: min(15.902778vw, 22.9rem);
 }
 
 .site-footer__character--sp {
@@ -103,7 +103,7 @@
   display: grid;
   grid-template-columns: 1.1fr 0.8fr 1fr;
   align-items: start;
-  gap: 7.5rem;
+  gap: min(5.208333vw, 7.5rem);
 }
 
 .site-footer__group {
@@ -119,16 +119,17 @@
   transform: translateY(1.5rem);
 }
 
+/* 1440px時のPCデザインサイズを上限に、画像を画面幅に合わせて縮める */
 .site-footer__logo--kanto {
-  width: 41.5rem;
+  width: min(28.819444vw, 41.5rem);
 }
 
 .site-footer__logo--seta {
-  width: 26rem;
+  width: min(18.055556vw, 26rem);
 }
 
 .site-footer__logo--utari {
-  width: 35.7rem;
+  width: min(24.791667vw, 35.7rem);
 }
 
 .site-footer__address {
@@ -174,7 +175,7 @@
   .site-footer__group > a {
     display: flex;
     width: 100%;
-    height: 13.7rem;
+    height: min(9.513889vw, 13.7rem);
     align-items: center;
     justify-content: center;
   }
@@ -307,7 +308,7 @@
     top: 15.7rem;
     left: 50%;
     display: block;
-    width: 18.5rem;
+    width: min(47.435897vw, 18.5rem);
     transform: translateX(-50%);
   }
 
@@ -335,16 +336,17 @@
     top: 75.8rem;
   }
 
+  /* SP画像は390px時の指定サイズを上限にする */
   .site-footer__logo--kanto {
-    width: 31.4rem;
+    width: min(80.512821vw, 31.4rem);
   }
 
   .site-footer__logo--seta {
-    width: 24.5rem;
+    width: min(62.820513vw, 24.5rem);
   }
 
   .site-footer__logo--utari {
-    width: 28.8rem;
+    width: min(73.846154vw, 28.8rem);
     margin-top: 0;
   }
 
