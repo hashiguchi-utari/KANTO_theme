@@ -122,6 +122,7 @@
   margin: 0 auto;
   position: relative;
   top: 5rem;
+  margin-top: -5rem;
   background-color: white;
 }
 
@@ -263,7 +264,7 @@
 .third_content {
   width: 144rem;
   height: 75.7rem;
-  margin: 1rem auto;
+  margin: 0 auto;
   background-color: #FFF8E7;
 }
 
@@ -302,13 +303,15 @@
   height: 33.4rem;
   display: flex;
   gap: 1rem;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .point1 {
   width: 30.1rem;
   height: 33.4rem;
-  padding: 1.9rem auto;
+  margin: 0 auto;
+  padding: 10rem auto;
+  box-sizing: border-box;
   border-radius: 2.5rem;
   background-color: #FEEEE2;
 }
@@ -317,19 +320,27 @@
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
+  margin: 1.9rem auto 0;
 }
 
-.img
+.illustration0 {
+  width: 27.7rem;
+  height: 15.7rem;
+  margin: 0.5rem auto 0;
+}
 
 .point1 p {
+  width: 26.2rem;
+  height: 3.8rem;
   font-size: 1.6rem;
   text-align: center;
+  margin: 0 auto;
 }
 
 .point2 {
-  display: flex;
   width: 48.9rem;
   height: 33.4rem;
+  margin: 0 auto;
   padding: 1.8rem auto;
   border-radius: 2.5rem;
   background-color: #FDF2E8;
@@ -339,43 +350,73 @@
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
+  margin: 4.8rem auto;
 }
 
-.img
-.img
-.img
+.point2_img {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 33.5rem;
+  height: 10rem;
+}
+
+.illustration1 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.illustration2 {
+  width: 10rem;
+  height: 10rem;
+}
+
+/*width.height:8.6remから変更（横並びの画像と揃えるため）  */
+.illustration3 {
+  width: 10rem;
+  height: 10rem;
+}
 
 .point2 p {
+  width: 37.5rem;
+  height: 4rem;
   font-size: 1.6rem;
   text-align: center;
+  margin: 0 auto;
+
 }
 
 .point3 {
   width: 33rem;
   height: 33.4rem;
+  margin: 0 auto;
   padding: 2.1rem auto;
   border-radius: 2.5rem;
   background-color: #FEEEE2;
 }
 
 .point3 h3 {
+  width: 31rem;
+  height: 7.8rem;
   font-size: 3.2rem;
   font-weight: bold;
-  text-align: center;
+  margin: 2.1rem auto 0;
 }
 
-.img
+.illustration5 {
+  width: 23.7rem;
+  height: 11.5rem;
+  margin: 2rem auto;
+}
 
 .point3 p {
   font-size: 1.6rem;
-  text-align: center;
+  width: 23.8rem;
+  height: 5.7rem;
+  margin: 0 auto;
 }
-
-
-
-
-
-
 
 .last_space {
   display: flex;
@@ -402,4 +443,186 @@
   margin: 1.1rem 0;
   display: flex;
   align-items: center;
+}
+
+.forth_content {
+  width: 144rem;
+  height: 53.8rem;
+  margin: 0 auto;
+  background-color: #FFF8E7;
+}
+
+.step {
+  width: 120rem;
+  height: 43.8rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  border-radius: 5rem;
+  background-color: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.step_guide {
+  width: 36.4rem;
+  height: 33.8rem;
+  margin-top: 5rem;
+  margin-left: 17.2rem;
+}
+
+.step_guide h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.forth_line {
+  display: block;
+  width: 36rem;
+  height: 0.1rem;
+  margin: 2rem auto;
+  background-color: #FFCA33;
+}
+
+.step_guide p {
+  font-size: 1.6rem;
+}
+
+.step_button {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 36.4rem;
+  height: 6.6rem;
+  margin-top: 2rem;
+  border: black 0.1rem solid;
+  border-radius: 5rem;
+  transition: transform 0.3s ease;
+}
+
+.step_button:hover {
+  transform: scale(1.05);
+}
+
+.step_button:hover .arrow {
+  transform: scale(2.0) translateX(0.5rem);
+}
+
+.step_button p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nurse {
+  width: 48.2rem;
+  height: 33.8rem;
+  margin-top: 5rem;
+}
+
+.fifth_content {
+  width: 144rem;
+  height: 39.6rem;
+  margin: 0 auto;
+  background-color: #FFF8E7;
+}
+
+.service_contact {
+  width: 120rem;
+  height: 29.6rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  border-radius: 5rem;
+  background-color: #FD8A3A;
+}
+
+.nav_message1,
+.nav_message2 {
+  color: white;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.nav_message1 {
+  padding-top: 5rem;
+}
+
+.nav_message2 {
+  margin-top: 1rem;
+}
+
+.contact_button {
+  width: 82.9rem;
+  height: 10rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 5rem;
+  border: black 0.1rem solid;
+  border-radius: 5rem;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.contact_button:hover {
+  transform: scale(1.05);
+}
+
+.contact_button:hover .contact_arrow {
+  transform: scale(2.5) translateX(0.5rem);
+}
+
+.contact_button P {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.contact_arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media screen and (max-width: 699.98px) {
+
+  .main_container {
+    width: 100%;
+  }
+
+  .service_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .service_img {
+    order: 1;
+    width: 37rem;
+    height: 31.1rem;
+    margin: 1rem auto;
+  }
+
+  .speak_human {
+    width: 37.3rem;
+    height: 26.4rem;
+    object-fit: cover;
+    margin: 3.6rem 0.3rem 1.1rem 0;
+  }
+
+  .service_left {
+    order: 2;
+  }
+
+  .photo {
+    display: none;
+  }
+
+
 }

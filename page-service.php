@@ -100,24 +100,24 @@
       <div class="power_point">
         <div class="point1">
           <h3>対話を大切にする<br>訪問看護</h3>
-          <img class="" src="<?php echo get_template_directory_uri(); ?>/img/対話を大切にする訪問看護 1.png" alt="対話の写真">
-          <p>一人ひとりの想いに寄り添い、あなたらしい毎日を支えます。</p>
+          <img class="illustration0" src="<?php echo get_template_directory_uri(); ?>/img/対話を大切にする訪問看護 1.png" alt="対話の写真">
+          <p>一人ひとりの想いに寄り添い、<br>あなたらしい毎日を支えます。</p>
         </div>
         <div class="point2">
           <h3>必要に応じてSETAと連携</h3>
-          <img class="" src="<?php echo get_template_directory_uri(); ?>/img/KANTOイメージ 1.png" alt="寄り添う写真">
-          <img class="" src="<?php echo get_template_directory_uri(); ?>/img/Frame 185.png" alt="情報交換">
-          <img class="" src="<?php echo get_template_directory_uri(); ?>/img/Mask group.png" alt="写真">
-          <p>グループホーム「SETA」と日常的に情報を共有し、
-            医療だけでなく、生活面も含めてサポートします。</p>
+          <div class="point2_img">
+            <img class="illustration1" src="<?php echo get_template_directory_uri(); ?>/img/KANTOイメージ 1.png" alt="寄り添う写真">
+            <img class="illustration2" src="<?php echo get_template_directory_uri(); ?>/img/Frame 185.png" alt="情報交換">
+            <img class="illustration3" src="<?php echo get_template_directory_uri(); ?>/img/Mask group.png" alt="写真">
+          </div>
+          <p>グループホーム「SETA」と日常的に情報を共有し、<br>医療だけでなく、生活面も含めてサポートします。</p>
         </div>
         <div class="point3">
-          <h3>生活全体を支えるサポート</h3>
-          <img class="" src="<?php echo get_template_directory_uri(); ?>/img/Frame 186.png" alt="の写真">
-          <p>体調・服薬のサポートはもちろん暮らしの不安も一緒に考えます。</p>
+          <h3>生活全体を支える<br>サポート</h3>
+          <img class="illustration5" src="<?php echo get_template_directory_uri(); ?>/img/Frame 186.png" alt="の写真">
+          <p>体調・服薬のサポートはもちろ<br>ん暮らしの不安も一緒に考えま<br>す。</p>
         </div>
       </div>
-
       <div class="last_space">
         <img class="home" src="<?php echo get_template_directory_uri(); ?>/img/ホーム 2.png" alt="対話の写真">
         <p>「家での暮らしが不安」　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
@@ -126,7 +126,32 @@
   </section>
 
   <section class="forth_content">
+    <div class="step">
+      <div class="step_guide">
+        <h2>ご利用までの流れ</h2>
+        <span class="forth_line"></span>
+        <p>初めての方でも安心して<br>
+          ご相談いただけるよう、<br>
+          お問い合わせからご利用開始まで<br>
+          一つひとつ丁寧にご案内します。</p>
+        <a class="step_button" href="<?php echo home_url('/process/'); ?>">
+          <p>ご利用までの流れを見る</p>
+          <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/img/Arrow 4.png" alt="矢印">
+        </a>
+      </div>
+      <img class="nurse" src="<?php echo get_template_directory_uri(); ?>/img/ご利用までの流れイメージ写真 1.png" alt="看護師">
+    </div>
+  </section>
 
+  <section class="fifth_content">
+    <div class="service_contact">
+      <p class="nav_message1">ひとりで抱え込まず、まずはお話してみませんか？</p>
+      <p class="nav_message2">あなたの「はじめの一歩」を、私たちがそっとサポートします。</p>
+      <a class="contact_button" href="<?php echo home_url('/contact/'); ?>">
+        <p>お問い合わせはこちら</p>
+        <img class="contact_arrow" src="<?php echo get_template_directory_uri(); ?>/img/Arrow 4.png" alt="矢印">
+      </a>
+    </div>
   </section>
 
 
