@@ -171,6 +171,22 @@
 
 /* PC版ボタンのホバー時に光が左から右へ流れる演出 */
 @media (min-width: 700px) {
+  /* 通常時は背景を透かした緑の枠、ホバー・フォーカス時は緑で塗る */
+  .site-footer__nav-link {
+    color: #16652c;
+    background: transparent;
+    /* 内側の枠にして、ボタン寸法や文字の表示領域を変えない */
+    box-shadow: inset 0 0 0 0.2rem #3edb61;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .site-footer__nav-link:hover,
+  .site-footer__nav-link:focus-visible {
+    color: #fff;
+    background-color: #3edb61;
+    opacity: 1;
+  }
+
   /* 高さの異なるロゴを共通エリアの中央に置き、住所の開始位置も揃える */
   .site-footer__group > a {
     display: flex;
