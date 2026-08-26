@@ -28,22 +28,22 @@
 
   <section>
     <div>
-      <h1 class="front_h1 float-text">「自分らしい」を<br>
+      <h1 class="front_h1 float-text chiron-goround-tc-">「自分らしい」を<br>
         一緒に育てる訪問看護</h1>
       <div class="front_navi">
         <div>
           <a href="<?php echo esc_url(home_url('/process/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi1.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <p class="front_navi_p">利用まで<br class="front_sp_only">の流れ</p>
+            <p class="front_navi_p chiron-goround-tc-">利用まで<br class="front_sp_only">の流れ</p>
           </a>
         </div>
         <div>
           <a href="<?php echo esc_url(home_url('/service/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi2.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <p class="front_navi_p">サービス<br class="front_sp_only">内容</p>
+            <p class="front_navi_p chiron-goround-tc-">サービス<br class="front_sp_only">内容</p>
           </a>
         </div>
         <div>
           <a href="<?php echo esc_url(home_url('/group/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi3.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <p class="front_navi_p">グループ<br class="front_sp_only">紹介</p>
+            <p class="front_navi_p chiron-goround-tc-">グループ<br class="front_sp_only">紹介</p>
           </a>
         </div>
       </div>
