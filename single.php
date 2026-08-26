@@ -54,8 +54,12 @@
 
       <?php endwhile; ?>
 
-      <div class="archive-underborder"></div>
-    <?php endif; ?>
+      <div class="archive-underborder"> </div>
+        
+          <div class="single_button">
+            <a href="<?php echo esc_url(home_url('/news/')); ?>"><button class="button">一覧に戻る</button></a>
+          </div>
+        <?php endif; ?>
   </section>
 
 </main>
@@ -67,28 +71,26 @@
 
 <script>
   /*フェードアップ*/
-const fadeUpImages = document.querySelectorAll('.fade-up-image');
+  const fadeUpImages = document.querySelectorAll('.fade-up-image');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
 
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-show');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-show');
 
-      // 1回だけアニメーション
-      observer.unobserve(entry.target);
-    }
+        // 1回だけアニメーション
+        observer.unobserve(entry.target);
+      }
 
+    });
+  }, {
+    threshold: 0.2
   });
-}, {
-  threshold: 0.2
-});
 
-fadeUpImages.forEach((image) => {
-  observer.observe(image);
-});
-
-
+  fadeUpImages.forEach((image) => {
+    observer.observe(image);
+  });
 </script>
 
 

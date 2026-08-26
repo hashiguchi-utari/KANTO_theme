@@ -29,10 +29,13 @@ KANTOとは
 
 .front-kanto img {
   margin: 0 auto;
+
+  flex-shrink: 0;
+  /*画像を縮ませない指定*/
   /*ベクター画像*/
 }
 
-.h3 {
+.front_h3 {
   font-size: 3.6rem;
   margin-bottom: 6.6rem;
 }
@@ -55,10 +58,13 @@ KANTOとは
 KANTOとはの１～４画像
 =====================================*/
 .front_img1 {
-  width: 23.8rem;
-  height: 23.8rem;
+  width: min(16.53vw, 23.8rem);
+  height: min(16.53vw, 23.8rem);
   object-fit: cover;
   border-radius: 20%;
+
+  flex-shrink: 0;
+  /*画像を縮ませない指定*/
 
   position: absolute;
   top: 15%;
@@ -67,10 +73,13 @@ KANTOとはの１～４画像
 }
 
 .front_img2 {
-  width: 25.7rem;
-  height: 25.7rem;
+  width: min(16.53vw, 25.7rem);
+  height: min(16.53vw, 25.7rem);
   object-fit: cover;
   border-radius: 20%;
+
+  flex-shrink: 0;
+  /*画像を縮ませない指定*/
 
   position: absolute;
   top: 45%;
@@ -79,10 +88,13 @@ KANTOとはの１～４画像
 }
 
 .front_img3 {
-  width: 29.7rem;
-  height: 29.7rem;
+  width: min(16.53vw, 29.7rem);
+  height: min(16.53vw, 29.7rem);
   object-fit: cover;
   border-radius: 20%;
+
+  flex-shrink: 0;
+  /*画像を縮ませない指定*/
 
   position: absolute;
   top: 53%;
@@ -91,10 +103,13 @@ KANTOとはの１～４画像
 }
 
 .front_img4 {
-  width: 26.0rem;
-  height: 26.0rem;
+  width: min(16.53vw, 26.0rem);
+  height: min(16.53vw, 26.0rem);
   object-fit: cover;
   border-radius: 20%;
+
+  flex-shrink: 0;
+  /*画像を縮ませない指定*/
 
   position: absolute;
   top: 80%;
@@ -103,9 +118,20 @@ KANTOとはの１～４画像
 }
 
 /*====================================
+SPとPCの切り替え
+=====================================*/
+.front_sp_only {
+  display: none;
+}
+
+.front_pc_only {
+  display: block;
+}
+
+/*====================================
 自分らしいを一緒に育てる訪問看護
 =====================================*/
-.h1 {
+.front_h1 {
   font-size: 6.4rem;
   text-align: center;
 }
@@ -119,15 +145,16 @@ KANTOとはの１～４画像
   text-align: center;
 }
 
-.front_navi span {
+.front_navi_p {
   font-size: 2.4rem;
   letter-spacing: 0.07em;
   font-weight: 600;
+
 }
 
 .front_circle {
-  width: 26.4rem;
-  height: 26.4rem;
+  width: min(16.53vw, 26.4rem);
+  height: min(16.53vw, 26.4rem);
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 2.41rem;
@@ -261,21 +288,19 @@ KANTOとはの１～４画像
   font-size: 2.4rem;
 }
 
-
-
 /*====================================
 インスタ紹介の部分
 =====================================*/
 .insta {
   background-color: #fff;
-  padding: 16.8rem 8.6rem 0 ;
+  padding: 16.8rem 8.6rem 0;
   box-sizing: border-box;
 }
 
 .front-insta {
   font-size: 3.396rem;
   color: #598876;
-  margin-bottom:3.2rem ;
+  margin-bottom: 3.2rem;
 }
 
 .front-kanto_to {
@@ -284,27 +309,341 @@ KANTOとはの１～４画像
   text-align: center;
 }
 
-.logo_ka{
-  width: 29.2rem;
-}
-
 .front-seta {
   font-size: 2.207rem;
   color: #538175;
   text-align: center;
 }
 
-.logo_se{
-  width: 29.2rem;
-}
-
 .front-utari {
   font-size: 2.207rem;
   color: #4C7A61;
   text-align: center;
+  margin-bottom: 15.4rem;
 }
 
-.logo_u{
-  width: 29.2rem;
-  margin-bottom: 8.4rem;
+
+
+
+
+/*====================================
+SP版
+=====================================*/
+@media screen and (max-width: 699.98px) {
+
+  /*====================================
+コンテナ部
+=====================================*/
+  .front_container {
+    width: 100%;
+    padding: 3rem 0 0;
+    box-sizing: border-box;
+    background-color: #FFEDD4;
+    /*背景ｍｖ以外の部分のカラー？*/
+  }
+
+  /*====================================
+TOP動画（現在画像で置く）
+=====================================*/
+  .front_mv {
+    width: 35.0rem;
+    height: 108.0rem;
+    margin: 0 auto;
+    border: 0.1rem solid #000;
+    /*動画枠*/
+  }
+
+  /*====================================
+KANTOとは
+=====================================*/
+  .front-kanto {
+    padding-top: 7.3rem;
+    margin: 0 auto;
+    background-color: #FFEDD4;
+    padding-bottom: 10.6rem;
+    position: relative;
+  }
+
+  .front-kanto img {
+    margin: 0 auto;
+
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+    /*ベクター画像*/
+  }
+
+  .front_h3 {
+    font-size: 2.4rem;
+    margin-bottom: 9.8rem;
+    margin-left: -5rem;
+  }
+
+  .front-kanto p {
+    width: 20.8rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.708;
+  }
+
+  .front-howto {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*====================================
+KANTOとはの１～４画像
+=====================================*/
+  .front_img1 {
+    width: 10.2rem;
+    height: 10.2rem;
+    object-fit: cover;
+    border-radius: 20%;
+
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+
+    position: absolute;
+    top: 20%;
+    right: -20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .front_img2 {
+    width: 6.0rem;
+    height: 6.0rem;
+    object-fit: cover;
+    border-radius: 20%;
+
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+
+  .front_img3 {
+    width: 11.5rem;
+    height: 11.5rem;
+    object-fit: cover;
+    border-radius: 20%;
+
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+
+    position: absolute;
+    top: 82%;
+    left: -40%;
+    transform: translate(-50%, -50%);
+  }
+
+  .front_img4 {
+    width: 8.8rem;
+    height: 8.8rem;
+    object-fit: cover;
+    border-radius: 20%;
+
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+
+    position: absolute;
+    top: 88%;
+    right: -47%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*====================================
+SPオンリー
+=====================================*/
+  .front_sp_only {
+    display: block;
+  }
+
+  .front_pc_only {
+    display: none;
+  }
+
+  /*====================================
+自分らしいを一緒に育てる訪問看護
+=====================================*/
+  .front_h1 {
+    font-size: 3.6rem;
+    text-align: center;
+  }
+
+  .front_navi {
+    margin-top: 4.7rem;
+    display: flex;
+    gap: 2.4rem;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+  }
+
+  .front_navi_p {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    line-height: 1.2em;
+  }
+
+  .front_circle {
+    width: 8.968rem;
+    height: 8.968rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  /*====================================
+お知らせフィード
+=====================================*/
+  .front-news {
+    margin-top: 6.8rem;
+    position: relative;
+    margin-bottom: 6.6rem;
+    font-size: 1.6rem;
+  }
+
+  .front-news-inner {
+    width: 39rem;
+
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .front-news-title {
+    font-size: 2.4rem;
+    margin: 4.7rem 0;
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+
+  .front-news img {
+    margin: 0 auto;
+    /*ベクター画像2*/
+  }
+
+  .front-news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.6rem;
+  }
+
+  .front-news-item {
+    border-bottom: 0.1rem solid #000;
+    width: 34rem;
+    margin: 0 auto;
+  }
+
+  .front-news-item a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1rem 1.8rem;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .front-news-item time {
+    flex-shrink: 0;
+  }
+
+  .front-news-text {
+    flex: 1;
+  }
+
+  /*====================================
+お知らせフィードのページネーション
+=====================================*/
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2.6rem 0 8.8rem;
+  }
+
+  .pagination a,
+  .pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    color: #000;
+    text-decoration: none;
+
+    font-size: 1.6rem;
+        margin-bottom:8.8rem;
+  }
+
+  /* 現在のページ */
+  .pagination .current {
+    border: 0.1rem solid #000;
+    border-radius: 50%;
+  }
+
+  /* 前へ・次へ */
+  .pagination .prev,
+  .pagination .next {
+    width: auto;
+    height: auto;
+
+    font-size: 2.4rem;
+  }
+
+
+  /*====================================
+インスタ紹介の部分
+=====================================*/
+  .insta {
+    background-color: #fff;
+    padding: 2.5rem 2.7rem 15.4rem;
+    box-sizing: border-box;
+  }
+
+  .front-insta {
+    font-size: 2.4rem;
+    color: #598876;
+    margin-bottom: 3.2rem;
+  }
+
+  .front-kanto_to {
+    font-size: 1.6rem;
+    color: #ff8d28;
+    text-align: center;
+  }
+
+  .front-seta {
+    font-size: 1.6rem;
+    color: #538175;
+    text-align: center;
+  }
+
+  .front-utari {
+    font-size: 1.6rem;
+    color: #4C7A61;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
 }

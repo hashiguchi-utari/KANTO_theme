@@ -10,9 +10,10 @@
   <section>
     <div class="front-kanto">
 
-      <img src="<?php echo get_theme_file_uri('/img/front_page/vector1.png'); ?>" alt="背景ベクター">
+      <img src="<?php echo get_theme_file_uri('/img/front_page/vector1.png'); ?>" alt="背景ベクター1" class="front_pc_only">
+      <img src="<?php echo get_theme_file_uri('/img/front_page/vector3.svg'); ?>" alt="背景ベクター3" class="front_sp_only">
       <div class="front-howto">
-        <h3 class="h3">KANTOとは</h3>
+        <h3 class="front_h3">KANTOとは</h3>
         <p>訪問看護ステーションKANTOは、ご利用者様やご家族が住み慣れた地域で安心して生活を続けられるよう、一人ひとりに寄り添った看護を提供する訪問看護ステーションです。
         </p>
       </div>
@@ -27,22 +28,22 @@
 
   <section>
     <div>
-      <h1 class="h1 float-text">「自分らしい」を<br>
+      <h1 class="front_h1 float-text">「自分らしい」を<br>
         一緒に育てる訪問看護</h1>
       <div class="front_navi">
         <div>
           <a href="<?php echo esc_url(home_url('/process/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi1.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <span>利用までの流れ</span>
+            <p class="front_navi_p">利用まで<br class="front_sp_only">の流れ</p>
           </a>
         </div>
         <div>
           <a href="<?php echo esc_url(home_url('/service/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi2.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <span>サービス内容</span>
+            <p class="front_navi_p">サービス<br class="front_sp_only">内容</p>
           </a>
         </div>
         <div>
           <a href="<?php echo esc_url(home_url('/group/')); ?>"><img src="<?php echo get_theme_file_uri('/img/front_page/navi3.png'); ?>" alt="利用までの流れ" class="front_circle">
-            <span>グループ紹介</span>
+            <p class="front_navi_p">グループ<br class="front_sp_only">紹介</p>
           </a>
         </div>
       </div>
@@ -50,59 +51,66 @@
 
   <section class="front-news">
 
-    <img src="<?php echo get_theme_file_uri('/img/front_page/vector2.png'); ?>" alt="背景ベクター2">
+    <img src="<?php echo get_theme_file_uri('/img/front_page/vector2.png'); ?>" alt="背景ベクター2" class="front_pc_only">
+    <img src="<?php echo get_theme_file_uri('/img/front_page/vector4.png'); ?>" alt="背景ベクター4" class="front_sp_only">
 
     <div class="front-news-inner">
+
       <h2 class="front-news-title">お知らせ</h2>
 
-      <?php if (have_posts()) : ?>
+      <div id="front-news-content">
 
-        <ul class="front-news-list">
+        <?php if (have_posts()) : ?>
 
-          <?php while (have_posts()) : the_post(); ?>
+          <ul class="front-news-list">
 
-            <li class="front-news-item">
+            <?php while (have_posts()) : the_post(); ?>
 
-              <a href="<?php the_permalink(); ?>">
+              <li class="front-news-item">
 
-                <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-                  <?php echo get_the_date('Y.m.d'); ?>
-                </time>
+                <a href="<?php the_permalink(); ?>">
 
-                <span class="front-news-text">
-                  <?php the_title(); ?>
-                </span>
+                  <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
+                    <?php echo get_the_date('Y.m.d'); ?>
+                  </time>
 
-              </a>
+                  <span class="front-news-text">
+                    <?php the_title(); ?>
+                  </span>
 
-            </li>
+                </a>
 
-          <?php endwhile; ?>
+              </li>
 
-        </ul>
+            <?php endwhile; ?>
 
-        <!--ページネーション-->
-        <?php
-        $pagination = paginate_links([
-          'type'      => 'array',
-          'mid_size'  => 1,
-          'end_size'  => 1,
-          'prev_text' => '…',
-          'next_text' => '…',
-        ]);
+          </ul>
 
-        if ($pagination) :
-        ?>
+          <?php
+          $pagination = paginate_links([
+            'type'      => 'array',
+            'mid_size'  => 1,
+            'end_size'  => 1,
+            'prev_text' => '…',
+            'next_text' => '…',
+          ]);
 
-          <nav class="pagination" aria-label="ページネーション">
-            <?php foreach ($pagination as $page) : ?>
-              <?php echo $page; ?>
-            <?php endforeach; ?>
-          </nav>
+          if ($pagination) :
+          ?>
+
+            <nav class="pagination" aria-label="ページネーション">
+
+              <?php foreach ($pagination as $page) : ?>
+                <?php echo $page; ?>
+              <?php endforeach; ?>
+
+            </nav>
+
+          <?php endif; ?>
+
         <?php endif; ?>
-        <!--ページネーションここまで-->
 
-      <?php endif; ?>
+      </div>
 
     </div>
 
@@ -111,15 +119,11 @@
   <section class="insta">
     <div>
       <p class="front-insta">instagram</p>
-      <p class="front-kanto_to">訪問看護ステーションKANTO<br>
-    <img src="<?php echo get_theme_file_uri('/img/front_page/kanto_logo1.png'); ?>" alt="setaのロゴ" class="logo_ka"></p>
-      <p class="front-seta">障がい者グループホーム🍀セタ<br>
-    <img src="<?php echo get_theme_file_uri('/img/front_page/seta_logo1.png'); ?>" alt="setaのロゴ" class="logo_se"></p>
-      <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ- <br>
-    <img src="<?php echo get_theme_file_uri('/img/front_page/utari_logo1.png'); ?>" alt="utariのロゴ" class="logo_u">
-  </p>
+      <p class="front-kanto_to">訪問看護ステーションKANTO</p>
+      <p class="front-seta">障がい者グループホーム🍀セタ</p>
+      <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ-</p>
     </div>
-  </section> 
+  </section>
 
 </main>
 <!-- ここまで本文を記載 -->
@@ -141,6 +145,63 @@
 
   floatTexts.forEach((text) => {
     observer.observe(text);
+  });
+
+
+  /*お知らせページのページネーションをページ更新せずに更新*/
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const newsContent = document.querySelector('#front-news-content');
+
+    if (!newsContent) return;
+
+    newsContent.addEventListener('click', async (event) => {
+
+      const link = event.target.closest('.pagination a');
+
+      if (!link) return;
+
+      event.preventDefault();
+
+      const url = link.href;
+
+      newsContent.classList.add('is-loading');
+
+      try {
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error('通信に失敗しました');
+        }
+
+        const html = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        const newContent = doc.querySelector('#front-news-content');
+
+        if (!newContent) {
+          throw new Error('お知らせ部分が見つかりません');
+        }
+
+        newsContent.innerHTML = newContent.innerHTML;
+
+        window.history.pushState({}, '', url);
+
+      } catch (error) {
+
+        console.error(error);
+
+      } finally {
+
+        newsContent.classList.remove('is-loading');
+
+      }
+
+    });
+
   });
 </script>
 
