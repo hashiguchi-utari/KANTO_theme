@@ -335,7 +335,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start; /* アイコンを【左寄せ】 */
-    margin-bottom: 5rem;/*アイコンとテキストとの余白*/
+    margin-bottom: 3rem;/*アイコンとテキストとの余白*/
   }
 
   /* PC用の丸枠やボーダー、背景白を消去 */
@@ -371,7 +371,7 @@
   /* タイトル：スマホサイズで左寄せに */
   .process_content_title {
     font-size: 2.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: left;
     opacity: 0;
   }
@@ -435,10 +435,11 @@
     text-align: left;
   }
 
+  /*黒ポチのサイズ調整*/
   .process_info_item::before {
-    top: 0.5rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    top: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .process_info_note {
@@ -458,7 +459,7 @@
   }
 
   .process_hero_image_holder {
-    width: 15.625rem; /* スマホ画面幅で動いたりないよう固定 */
+    width: 30rem; /* 画像のサイズ変更はここで */
     height: auto;
     aspect-ratio: 380 / 400; /* 比率を保って歪まないように固定 */
     flex-shrink: 0;
