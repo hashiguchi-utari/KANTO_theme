@@ -4,7 +4,7 @@
    共通フォント・ベーススタイル
    ========================================== */
 .process_page_layout {
-  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   color: #000000;
   line-height: 1.9; /* 文字を大きくしたので行間を広げ視認性確保 */
   background-color: #FFEDD4;
@@ -28,7 +28,7 @@
   margin-bottom: 8rem;
 }
 
-/* 隣のテキスト：タイトル 48px (3rem) */
+/* 隣のテキスト */
 .process_content_title {
   font-size: 3.2rem;
   font-weight: 400;
@@ -37,7 +37,7 @@
   line-height: 1.4;
 }
 
-/* 隣のテキスト：本文 24px (1.5rem) */
+/* 隣のテキスト */
 .process_content_text {
   font-size: 1.6rem;
   color: #000000;
@@ -225,7 +225,7 @@
   max-width: 56.25rem; /* リスト全体の幅広げて読みやすく */
 }
 
-/* リストアイテ */
+/* リストアイテム */
 .process_info_item {
   font-size: 1.6rem;
   position: relative;
@@ -247,7 +247,7 @@
 }
 
 /* 注意書き・ノート */
-.process_info_note {
+.process_info_note { 
   font-size: 1.4rem;
   text-align: center;
   color: #000000;
@@ -299,17 +299,17 @@
     box-sizing: border-box;
   }
 
-  /* 大見出し：「ご利用までの流れ」はセンター維持 */
+  /* 大見出し：「ご利用までの流れ」センター維持 */
   .process_main_title {
     font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
     padding-left: 0;
   }
 
-  /* ステップフロー：全体をカチッとホールドし、要素を左寄せに変更 */
+  /* ステップフロー：要素を左寄せに変更 */
   .process_flow_section {
-    gap: 5rem;
+    gap: 10rem;/*全体テキストの上下余白*/
     width: 100%;
   }
 
@@ -415,7 +415,7 @@
   .process_info_title {
     font-size: 2.8rem;
     text-align: left; /* 左寄せ */
-    margin-top: 10rem;
+    margin-top: 15rem;
     margin-bottom: 4rem;
   }
 
@@ -446,7 +446,7 @@
     font-size: 1.6rem;
     text-align: left; /* 左寄せ */
     margin-top: 4rem;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 
   /* ------------------------------------------
