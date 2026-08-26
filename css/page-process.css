@@ -13,24 +13,25 @@
 
 /* 1440px固定幅コンテナ */
 .process_container {
-  max-width: 90rem; /* 1440px */
+  max-width: 144rem; /* 1440px */
   margin: 0 auto;
-  padding: 15rem 0; /* 上下余白 */
+  padding: 15rem 10rem 3rem 10rem; /* 上下左右の余白 */
   box-sizing: border-box;
 }
 
 /* 大見出し：左上に配置 */
 .process_main_title {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 4rem;
+  font-weight: 400;
   text-align: left;
+  margin-left: 5rem;
   margin-bottom: 8rem;
 }
 
 /* 隣のテキスト：タイトル 48px (3rem) */
 .process_content_title {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 3.2rem;
+  font-weight: 400;
   margin-bottom: 2rem;
   color: #000000;
   line-height: 1.4;
@@ -38,7 +39,7 @@
 
 /* 隣のテキスト：本文 24px (1.5rem) */
 .process_content_text {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.6rem;
   color: #000000;
 }
 
@@ -48,7 +49,7 @@
 .process_flow_section {
   display: flex;
   flex-direction: column;
-  gap: 14rem; /* サークルが大きくなったため、縦の余白を拡大 */
+  gap: 30rem; /* サークル同士の上下の余白 */
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -80,7 +81,7 @@
 .process_circle_node {
   width: 35rem; /* 560px */
   height: 35rem; /* 560px */
-  border: 0.4rem solid #000000; /* 線少し太くして調整 */
+  border: 0.7rem solid #000000; /* 線少し太くして調整 */
   border-radius: 50%;
   background-color: #ffffff; /* 白統一 */
   display: flex;
@@ -92,7 +93,7 @@
   padding: 3rem;
 }
 
-/* サークル内文字：54px (3.375rem) */
+/* サークル内文字 */
 .process_node_text {
   font-size: 3rem;
   font-weight: 500;
@@ -120,7 +121,7 @@
    サークル隣のテキスト領域
    ------------------------------------------ */
 .process_content_box {
-  width: 48%;
+  width: 50%;
 }
 
 /* ------------------------------------------
@@ -130,12 +131,12 @@
 .process_step_item.line_down_right::before {
   content: "";
   position: absolute;
-  top: 75%;
-  left: 24%; /* 巨大サークルの中心に合わせる */
-  width: 52%; 
-  height: 0.4rem; /* 線の太さはここで調整します*/
+  top: 96%;/*線の始まりの位置調整はここ*/
+  left: 21%; /* 巨大サークルの中心に合わせる */
+  width: 65%;/*線の長さはここで調整*/
+  height: 0.7rem; /* 線の太さはここで調整します*/
   background-color: #000000;
-  transform: rotate(38deg); /* 高さに合わせて角度を35度に調整 */
+  transform: rotate(23deg); /* ななめ線の傾斜はここで調整します */
   transform-origin: left center;
   
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
@@ -146,12 +147,12 @@
 .process_step_item.line_down_left::before {
   content: "";
   position: absolute;
-  top: 85%;
-  right: 24%;
-  width: 52%;
-  height: 0.4rem; /*ななめ線の太さ*/
-  background-color: #333333;
-  transform: rotate(-38deg);
+  top: 98%;/*線の始まり位置の上下位置調整*/
+  right: 21%;/*線の始まりの位置左右調整*/
+  width: 64%;/*線の長さはここで調整*/
+  height: 0.7rem; /*ななめ線の太さ*/
+  background-color: #000000;
+  transform: rotate(-23deg);/*ななめ線の角度はここで調整します*/
   transform-origin: right center;
   
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -163,7 +164,7 @@
    ========================================== */
 .fade_up_trigger {
   opacity: 0;
-  transform: translateY(4.5rem); /* 72px下からフェードアップ */
+  transform: translateY(4.5rem); /* 下からフェードアップ */
   transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -183,33 +184,34 @@
 
 
 /* ==========================================
-   下部インフォメーションカード（スケールアップ版）
+   下部インフォメーションカード
    ========================================== */
 .process_info_section {
   width: 100%;
-  max-width: 86rem; /* ステップフローの広がりに合わせて横幅を拡張 */
-  margin: 12.5rem auto; /* 上下の余白を200pxに広げてゆったりと配置 */
+  max-width: 75rem; /* 白枠の横サイズ */
+  margin: 12.5rem auto; /* 上下の余白 */
 }
 
 .process_info_card {
+  margin-top: -10rem;/*カードの位置を上げるための数値*/
   background-color: #ffffff;
-  border-radius: 12.5rem; /* 40px */
-  padding: 6.25rem 5rem; /* 100px 80px のリッチな余白に変更 */
+  border-radius: 12.5rem;
+  padding: 6.25rem 5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
 }
 
 /* カード内タイトル：h2*/
 .process_info_title {
-  font-size: 2.5rem; /* 40px */
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #2c2c2c;
+  color: #000000;
 }
 
-/* リード文：24px (1.5rem) */
+/* リード文 */
 .process_info_lead {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.6rem;
   text-align: center;
   margin-bottom: 4rem;
   color: #000000;
@@ -220,33 +222,33 @@
   list-style: none;
   padding: 0;
   margin: 0 auto 4rem auto;
-  max-width: 56.25rem; /* リスト全体の幅を900pxに広げて読みやすく */
+  max-width: 56.25rem; /* リスト全体の幅広げて読みやすく */
 }
 
-/* リストアイテム：24px (1.5rem) */
+/* リストアイテ */
 .process_info_item {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.6rem;
   position: relative;
-  padding-left: 2.5rem; /* ドット用の余白 */
+  padding-left: 2rem; /* ドット用の余白 */
   margin-bottom: 1.5rem;
   color: #000000;
 }
 
-/* ドットをサイズ大きめに配置 */
+/* ドットをサイズや位置の調整 */
 .process_info_item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.625rem; /* 文字の中心に合わせる */
-  width: 0.75rem; /* 12pxの大きめのドット */
-  height: 0.75rem;
+  top: 0.8rem; /* 文字の中心に合わせる */
+  width: 1.2rem; /* 12pxの大きめのドット */
+  height: 1.2rem;
   background-color: #333333;
   border-radius: 50%;
 }
 
-/* 注意書き・ノート：18px (1.125rem) */
+/* 注意書き・ノート */
 .process_info_note {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   text-align: center;
   color: #000000;
   line-height: 1.6;
@@ -258,11 +260,11 @@
    ========================================== */
 .process_visual_section {
   width: 100%;
-  max-width: 90rem;
+  max-width: 104rem;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start; /* 左側に寄せる */
-  padding-left: 3rem;
+  padding-left: 1rem;
   box-sizing: border-box;
 }
 
@@ -277,7 +279,7 @@
 /*鳥イラスト画像への指示 */
 .process_visual_image {
   width: 100%;
-  height: 100%;
+  height: 101%;
   object-fit: contain;
   display: block;
 }
@@ -287,19 +289,19 @@
    SP版（スマホ対応：699.98px以下 固定幅・左寄せ仕様）
    ========================================== */
 @media screen and (max-width: 699.98px) {
-  /* コンテナ：画面幅が縮小しても動かないよう固定幅（320px相当〜最大100%未満）でホールド */
-  /* 左右にはみ出さないよう padding を適切にとり、中央に安全に固定します */
+  /* コンテナ：画面幅が縮小しても動かないよう固定幅 */
+  /* 左右にはみ出さないようにpadding をとり中央に安全に固定 */
   .process_container {
     width: 100%;
     max-width: 41.25rem; /* スマホ画面内で固定感を持たせるための最大幅制限（約660px） */
     margin: 0 auto;
-    padding: 4rem 1.5rem; 
+    padding: 7rem 2rem; /*もともと設定数値4rem 1.5rem*/
     box-sizing: border-box;
   }
 
-  /* 大見出し：「ご利用までの流れ」は【センター維持】 */
+  /* 大見出し：「ご利用までの流れ」はセンター維持 */
   .process_main_title {
-    font-size: 2rem; /* 32px */
+    font-size: 2.8rem;
     text-align: center;
     margin-bottom: 4rem;
     padding-left: 0;
@@ -333,7 +335,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start; /* アイコンを【左寄せ】 */
-    margin-bottom: 1.5rem;
+    margin-bottom: 5rem;/*アイコンとテキストとの余白*/
   }
 
   /* PC用の丸枠やボーダー、背景白を消去 */
@@ -353,9 +355,9 @@
   /* アイコン：サイズをしっかり固定（100px）し、ふわふわアニメーションを適用 */
   .process_node_icon {
     margin-top: 0;
-    width: 6.25rem; /* 100px固定 */
-    height: 6.25rem; /* 100px固定 */
-    flex-shrink: 0; /* 縮小されてもサイズが絶対変わらないように固定 */
+    width: 10rem; /* 100px固定 */
+    height: 10rem; /* 100px固定 */
+    flex-shrink: 0; /* 縮小されてもサイズが変わらないよう固定 */
     animation: process_float_animation 3.5s ease-in-out infinite;
   }
 
@@ -368,15 +370,15 @@
 
   /* タイトル：スマホサイズで左寄せに */
   .process_content_title {
-    font-size: 1.5rem; /* 24px */
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
     text-align: left;
     opacity: 0;
   }
 
   /* 本文：スマホサイズ【左寄せ】 */
   .process_content_text {
-    font-size: 1rem; /* 15px */
+    font-size: 1.6rem;
     color: #000000;
     text-align: left;
     opacity: 0;
@@ -411,15 +413,16 @@
 
   /* 【中央左寄せ（ブロック全体を中央に保ちつつ中身は左寄せ）】 */
   .process_info_title {
-    font-size: 1.5rem; /* 24px */
+    font-size: 2.8rem;
     text-align: left; /* 左寄せ */
-    margin-bottom: 1.5rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
   }
 
   .process_info_lead {
-    font-size: 1.2rem; /* 16px */
+    font-size: 1.6rem; /* 16px */
     text-align: left; /* 左寄せ */
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   .process_info_list {
@@ -428,7 +431,7 @@
   }
 
   .process_info_item {
-    font-size: 1.1rem; /* 16px */
+    font-size: 1.6rem;
     text-align: left;
   }
 
@@ -439,8 +442,10 @@
   }
 
   .process_info_note {
-    font-size: 1rem; /* 可読性のため少し大きく16pxに調整 */
+    font-size: 1.6rem;
     text-align: left; /* 左寄せ */
+    margin-top: 4rem;
+    margin-bottom: 10rem;
   }
 
   /* ------------------------------------------
