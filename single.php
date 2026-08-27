@@ -2,10 +2,10 @@
 
 <main class="single">
   <section>
-    <div class="archive-top">
-      <h2 class="archive_h2">お知らせ</h2>
+    <div class="single-top">
+      <h2 class="single_h2">お知らせ</h2>
     </div>
-    <div class="archive-border"></div>
+    <div class="single-border"></div>
   </section>
 
   <section>
@@ -18,13 +18,12 @@
           <!-- カテゴリー・日付 -->
           <div class="single-meta">
 
-            <span class="single-date">
+            <p class="single-date">
               <?php echo get_the_date('Y.m.d'); ?>
-            </span>
-
-            <span class="single-category">||| カテゴリー・
+              <span class="date_space"></span><br class="front_sp_only">
+              ||| カテゴリー・
               <?php the_category(', '); ?>
-            </span>
+            </p>
 
           </div>
 
@@ -53,13 +52,14 @@
         </article>
 
       <?php endwhile; ?>
+      
 
-      <div class="archive-underborder"> </div>
-        
-          <div class="single_button">
-            <a href="<?php echo esc_url(home_url('/news/')); ?>"><button class="button">一覧に戻る</button></a>
-          </div>
-        <?php endif; ?>
+      <div class="single-underborder"> </div>
+
+      <div class="single_button">
+        <a href="<?php echo esc_url(home_url('/news/')); ?>"><button class="button">一覧に戻る</button></a>
+      </div>
+    <?php endif; ?>
   </section>
 
 </main>

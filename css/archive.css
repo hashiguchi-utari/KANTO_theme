@@ -19,12 +19,13 @@
   box-sizing: border-box;
 }
 
-.archive-underborder{
+.archive-underborder {
   width: 120rem;
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
   padding-bottom: 5.0rem;
   box-sizing: border-box;
+  margin-bottom: 5rem;
 }
 
 /*====================================
@@ -130,23 +131,8 @@ SPとPCの切り替え
   display: block;
 }
 
-
-/* --------------------
-   装飾画像
--------------------- */
-
-.archive-card__deco {
-  position: absolute;
-
-  width: 100px;
-  height: 100px;
-
-  object-fit: contain;
-
-  right: 14.5rem;
-  bottom: -4.8rem;
-
-  z-index: 2;
+.date_space {
+  padding: 0 2rem 0 0;
 }
 
 
@@ -194,7 +180,7 @@ SPとPCの切り替え
   justify-content: center;
   align-items: center;
   gap: 2.8rem;
-  margin: 6rem 0;
+    margin: 5rem 0 6.3rem;
 }
 
 .pagination a,
@@ -231,137 +217,194 @@ SPとPCの切り替え
 
 
 
-
-
 /*====================================
 SP版
 =====================================*/
 @media screen and (max-width: 699.98px) {
 
+
   /*====================================
 お知らせ部分
 =====================================*/
-.archive-top {
-  text-align: center;
-}
+  .archive-top {
+    text-align: center;
+  }
 
-.archive_h2 {
-  margin-top: 5.8rem;
-  font-size: 2.4rem;
-  margin-bottom: 3rem;
-}
+  .archive_h2 {
+    margin-top: 5.8rem;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
 
-.archive-border {
-  width: 35rem;
-  border-bottom: 0.1rem solid #000;
-  margin: 0 auto;
-  margin-bottom: 5.0rem;
-}
+  .archive-border {
+    width: 35rem;
+    border-bottom: 0.1rem solid #000;
+    margin: 0 auto;
+    margin-bottom: 5.0rem;
+  }
 
-.archive-underborder{
-  width: 35rem;
-  border-bottom: 0.1rem solid #000;
-  margin: 0 auto;
-  padding-bottom: 5.4rem;
-  box-sizing: border-box;
-}
+  .archive-underborder {
+    width: 35rem;
+    border-bottom: 0.1rem solid #000;
+    margin: 0 auto;
+    padding-bottom: 5.4rem;
+    box-sizing: border-box;
+  }
 
 
-/*====================================
+  /*====================================
 archive部分
 =====================================*/
 
-.archive-card {
-  display: block;
+  .archive-card {
+    display: block;
 
-  width:30rem;
-  margin: 0 auto;
-}
+    width: 30rem;
+    margin: 0 auto;
+  }
 
-/* --------------------
+  /* --------------------
    左：画像
 -------------------- */
 
-.archive-card__image {
-  display: block;
-  width: 30rem;
-  height: 20rem;
-  flex-shrink: 0;
-  /*画像を縮ませない指定*/
-  border: 0.1rem solid #000;
-  background-color: #ECECEC;
-  overflow: hidden;
-}
+  .archive-card__image {
+    display: block;
+    width: 30rem;
+    height: 20rem;
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+    border: 0.1rem solid #000;
+    background-color: #ECECEC;
+    overflow: hidden;
+  }
 
-.archive-card__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .archive-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-/*フェードアップ*/
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
-}
 
-.fade-up.is-show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --------------------
+  /* --------------------
    右：記事情報
 -------------------- */
 
-.archive-card__body {
-  width: 29rem;
-  padding: 0 0 5rem;
-  box-sizing: border-box;
-}
+  .archive-card__body {
+    width: 29rem;
+    padding: 0 0 5rem;
+    box-sizing: border-box;
+  }
 
 
-/* 日付・カテゴリー */
-.archive-card__meta {
-  display: block;
-  font-size: 2.0rem;
-  margin-bottom: 3.5rem;
-  /*日付カテゴリーとタイトルの間*/
-}
+  /* 日付・カテゴリー */
+  .archive-card__meta {
+    margin-top: 5rem;
+    display: block;
+    font-size: 2.0rem;
+    margin-bottom: 3.5rem;
+    /*日付カテゴリーとタイトルの間*/
+  }
 
-/* タイトル */
-.archive-card__title {
-  margin: 0 0 3.5rem;
-  font-size: 3.2rem;
-}
+  /* タイトル */
+  .archive-card__title {
+    margin: 0 0 3.5rem;
+    font-size: 3.2rem;
+  }
 
-/* 本文 */
+  /* 本文 */
 
-.archive-card__excerpt {
-  margin: 0;
-  font-size: 1.6rem;
-}
+  .archive-card__excerpt {
+    margin: 0;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+    padding-bottom: 10.1rem;
+    box-sizing: border-box;
+  }
 
-/*====================================
+  /*====================================
 SPとPCの切り替え
 =====================================*/
-.front_sp_only {
-  display: none;
+  .front_sp_only {
+    display: block;
+
+  }
+
+  .front_pc_only {
+    display: none;
+  }
+
+
+  /* --------------------
+   続きを読む
+-------------------- */
+  .archive-card__more {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: #000;
+    text-decoration: none;
+
+    font-size: 2.4rem;
+    padding-bottom: 10.1rem;
+  }
+
+  .archive-card__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background: #ff8a00;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  /*====================================
+ページネーション
+=====================================*/
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;
+    margin: 5.4rem 0 9rem;
+  }
+
+  .pagination a,
+  .pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    color: #000;
+    text-decoration: none;
+
+    font-size: 1.6rem;
+  }
+
+  /* 現在のページ */
+  .pagination .current {
+    color: #fff;
+    background: #ff8a00;
+    border-radius: 50%;
+  }
+
+  /* 前へ・次へ */
+  .pagination .prev,
+  .pagination .next {
+    width: auto;
+    height: auto;
+
+    font-size: 2.4rem;
+  }
+
 }
-
-.front_pc_only {
-  display: block;
-}
-
-
-
-
-
-}
-
-
-SPとPCの切り替え部の調整から始める。
