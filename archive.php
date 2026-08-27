@@ -6,6 +6,9 @@
       <h2 class="archive_h2">お知らせ</h2>
     </div>
     <div class="archive-border"></div>
+
+<!-- ！！！！！！！！！！！ここに絞り込みのカテゴリーを置く -->
+
   </section>
 
   <section>
@@ -23,12 +26,12 @@
           <div class="archive-card__body">
 
             <div class="archive-card__meta">
-              <p><?php echo get_the_date('Y.m.d'); ?><br class="front_sp_only">
-              ||| カテゴリー・<?php the_category(', '); ?></p>
+              <p><?php echo get_the_date('Y.m.d'); ?><span class="date_space"></span><br class="front_sp_only">
+                ||| カテゴリー・<?php the_category(', '); ?></p>
             </div>
 
             <h2 class="archive-card__title">
-              <?php the_title(); ?>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
 
             <p class="archive-card__excerpt">
@@ -53,7 +56,6 @@
 
 
       <!--ページネーション-->
-
       <?php
       $pagination = paginate_links([
         'type'      => 'array',
@@ -72,7 +74,6 @@
           <?php endforeach; ?>
         </nav>
       <?php endif; ?>
-
 
     <?php endif; ?>
 
@@ -100,7 +101,6 @@
     observer.observe(item);
   });
 </script>
-
 
 
 <?php get_footer(); ?>

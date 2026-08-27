@@ -106,13 +106,19 @@
 
             </nav>
 
-          <?php endif; ?>
 
+            <a href="<?php echo esc_url(home_url('/news/')); ?>" class="front-news-link">
+              → お知らせ一覧へ
+            </a>
+
+          <?php endif; ?>
         <?php endif; ?>
 
       </div>
 
     </div>
+
+
 
   </section>
 

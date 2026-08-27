@@ -1,17 +1,17 @@
 /*====================================
 お知らせ部分
 =====================================*/
-.archive-top {
+.single-top {
   text-align: center;
 }
 
-.archive_h2 {
+.single_h2 {
   margin-top: 20.7rem;
   font-size: 4.0rem;
   margin-bottom: 3rem;
 }
 
-.archive-border {
+.single-border {
   width: 120rem;
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-.archive-underborder {
+.single-underborder {
   width: 120rem;
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
@@ -38,11 +38,16 @@
 }
 
 .single-article {
-  width: 100rem;
+  width: 120rem;
+  padding: 0 5rem;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
 .single-meta {
+  width: 58rem;
+  padding: 0 0 5rem;
+
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -53,13 +58,16 @@
 }
 
 .single-title {
-  margin: 0 0 4rem;
-
-  font-size: 3.6rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+  font-size: 3.4rem;
+  width: 85rem;
+  margin: 0 auto;
 }
 
 .single-thumbnail {
-  width: 100%;
+  width: 100rem;
+  margin: 0 auto;
   margin-bottom: 3rem;
 }
 
@@ -67,10 +75,13 @@
   display: block;
   width: 100%;
   height: auto;
+  align-items: center;
 }
 
 .single-content {
   font-size: 1.6rem;
+  width: 80rem;
+  margin: 0 auto;
 }
 
 .single-content p {
@@ -93,24 +104,161 @@
   transform: translateY(0);
 }
 
+
+/*====================================
+SPとPCの切り替え
+=====================================*/
+.front_sp_only {
+  display: none;
+}
+
+.front_pc_only {
+  display: block;
+}
+
+.date_space {
+  padding: 0 2rem 0 0;
+}
+
+
+
 /*====================================
 一覧へ戻る
 =====================================*/
 
 .button {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: 1rem;
-    background-color: #FFEDD4;
-    border: 0.1rem solid #000;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #FFEDD4;
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .single_button {
+  margin-top: 5rem;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 
 .button:hover {
   background-color: #3f3b3a;
   color: #fff;
+}
+
+
+
+
+
+
+/*====================================
+SP版
+=====================================*/
+@media screen and (max-width: 699.98px) {
+
+
+  /*====================================
+お知らせ部分
+=====================================*/
+  .single-top {
+    text-align: center;
+  }
+
+  .single_h2 {
+    margin-top: 5.8rem;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .single-border {
+    width: 35rem;
+    border-bottom: 0.1rem solid #000;
+    margin: 0 auto;
+    margin-bottom: 5.0rem;
+  }
+
+  .single-underborder {
+    width: 35rem;
+    border-bottom: 0.1rem solid #000;
+    margin: 0 auto;
+    padding-bottom: 5.4rem;
+    box-sizing: border-box;
+  }
+
+  /*====================================
+投稿ページ部分
+=====================================*/
+
+  .single {
+    width: 100%;
+    padding: 0 0 5rem;
+    box-sizing: border-box;
+  }
+
+  .single-article {
+    width: 39rem;
+    margin: 0 auto;
+  }
+
+  .single-meta {
+    max-width: 29rem;
+
+    display: block;
+    align-items: center;
+
+    margin-bottom: 2rem;
+    padding: 0rem;
+    font-size: 1.6rem;
+  }
+
+  .single-title {
+    margin: 0 0 4rem;
+    width: 30rem;
+    font-size: 3.2rem;
+    margin: 0 auto;
+  }
+
+  .single-thumbnail {
+    width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  .single-thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  .single-content {
+    font-size: 1.6rem;
+    width: 30rem;
+    margin: 0 auto;
+  }
+
+  .single-content p {
+    margin: 0 0 3rem;
+  }
+
+
+  /*====================================
+SPとPCの切り替え
+=====================================*/
+  .front_sp_only {
+    display: block;
+  }
+
+  .front_pc_only {
+    display: none;
+  }
+
+  .date_space {
+    padding: 0 2rem 0 0;
+  }
+
+
+
+
+
+
 }
