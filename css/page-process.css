@@ -69,7 +69,7 @@
 }
 
 /* ------------------------------------------
-   超大型サークルデザイン（560px × 560px / 白統一）
+   超大型サークルデザイン
    ------------------------------------------ */
 .process_circle_wrapper {
   width: 41%;
@@ -79,8 +79,8 @@
 }
 
 .process_circle_node {
-  width: 35rem; /* 560px */
-  height: 35rem; /* 560px */
+  width: 35rem;
+  height: 35rem;
   border: 0.7rem solid #000000; /* 線少し太くして調整 */
   border-radius: 50%;
   background-color: #ffffff; /* 白統一 */
@@ -104,8 +104,8 @@
 /* アイコン枠文字のやや下に配置 */
 .process_node_icon {
   margin-top: 3.5rem;
-  width: 10rem; /* 160px */
-  height: 10rem; /* 160px */
+  width: 10rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,9 +134,9 @@
   top: 96%;/*線の始まりの位置調整はここ*/
   left: 21%; /* 巨大サークルの中心に合わせる */
   width: 65%;/*線の長さはここで調整*/
-  height: 0.7rem; /* 線の太さはここで調整します*/
+  height: 0.7rem; /* 線の太さはここで調整*/
   background-color: #000000;
-  transform: rotate(23deg); /* ななめ線の傾斜はここで調整します */
+  transform: rotate(23deg); /* ななめ線の傾斜はここで調整*/
   transform-origin: left center;
   
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
@@ -188,7 +188,7 @@
    ========================================== */
 .process_info_section {
   width: 100%;
-  max-width: 75rem; /* 白枠の横サイズ */
+  max-width: 70rem; /* 白枠の横サイズ */
   margin: 12.5rem auto; /* 上下の余白 */
 }
 
@@ -279,7 +279,7 @@
 /*鳥イラスト画像への指示 */
 .process_visual_image {
   width: 100%;
-  height: 101%;
+  height: 101%;/*鳥のサイズを大きくするためにこの数値にしています*/
   object-fit: contain;
   display: block;
 }
