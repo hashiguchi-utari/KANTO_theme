@@ -15,8 +15,8 @@
 .service_left {
   width: 53.3rem;
   height: 74rem;
-  margin: 1rem;
-  padding: 5rem;
+  margin: 1rem 0 1rem 1rem;
+  padding-top: 5rem;
 }
 
 .service_message {
@@ -119,16 +119,17 @@
   width: 120rem;
   height: 62.4rem;
   border-radius: 5rem;
+  display: flow-root;
   margin: 0 auto;
   position: relative;
   top: 5rem;
-  margin-top: -5rem;
   background-color: white;
 }
 
 .top_word {
   width: 60.9rem;
-  margin: 5rem auto;
+  margin: 0 auto;
+  padding: 5rem auto;
 }
 
 .top_word h2 {
@@ -239,6 +240,8 @@
 }
 
 .second_text p {
+  width: 34.1rem;
+  height: 18.8rem;
   font-size: 1.6rem;
 }
 
@@ -249,6 +252,7 @@
   height: 19.4rem;
   padding: 5rem 0;
   box-sizing: border-box;
+  margin-top: 1rem;
 }
 
 .three_message p {
@@ -259,6 +263,7 @@
   border-radius: 2rem;
   padding: 2.1rem 0;
   text-align: center;
+  margin: 0 auto;
 }
 
 .third_content {
@@ -593,13 +598,17 @@
 
   .main_container {
     width: 100%;
+    height: 125.4rem;
+    margin: 0 auto;
   }
 
   .service_main {
     width: 100%;
+    height: 125.4rem;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 5rem auto;
+    padding: 0;
   }
 
   .service_img {
@@ -618,11 +627,348 @@
 
   .service_left {
     order: 2;
+    width: 37rem;
+    height: 87.3rem;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .photo {
     display: none;
   }
+
+  .service_message {
+    width: 36rem;
+    height: 25.1rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
+
+  .catchcopy {
+    width: 33.4rem;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .service_guide {
+    width: 33.4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .icon_set {
+    display: block;
+    padding: 0;
+    margin: 3.2rem auto 9.6rem;
+    width: 36rem;
+    height: 49.4rem;
+  }
+
+  .heart,
+  .speak {
+    width: 30rem;
+    height: 15rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .speak {
+    width: 35rem;
+    height: 15rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .grouphome {
+    width: 36rem;
+    height: 19.4rem;
+    box-sizing: border-box;
+    margin: 6rem auto 0;
+  }
+
+  .heart::after,
+  .speak::after {
+    display: none;
+  }
+
+  .pr_point {
+    font-weight: bold;
+  }
+
+  .heart .pr_point {
+    margin-top: -16rem;
+  }
+
+  .speak .pr_point {
+    margin-top: -9rem;
+  }
+
+  .grouphome .pr_point {
+    margin-top: -10rem;
+  }
+
+  .service_content {
+    width: 100%;
+    height: 154.7rem;
+  }
+
+  .service_info {
+    width: 36rem;
+    height: 144.7rem;
+  }
+
+  .top_word {
+    width: 100%;
+  }
+
+  .top_word h2 {
+    font-size: 2.8rem;
+  }
+
+  .line {
+    width: 20rem;
+  }
+
+  .three_point {
+    display: block;
+    width: 34rem;
+    height: 120rem;
+    margin: 1rem auto 5rem;
+  }
+
+  .service_photo {
+    width: 31.2rem;
+    border-radius: 2.4rem;
+    margin: 0 auto;
+  }
+
+  .body_maintenance,
+  .medicine,
+  .main_service {
+    width: 34rem;
+    height: 38rem;
+  }
+
+  .medicine,
+  .main_service {
+    margin-top: 3.3rem;
+  }
+
+  .body_maintenance h3,
+  .medicine h3,
+  .main_service h3 {
+    font-size: 2.2rem;
+  }
+
+  .second_content {
+    width: 100%;
+    height: 131.6rem;
+  }
+
+  .service_text_space {
+    width: 36rem;
+    height: 121.6rem;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+  }
+
+  .second_photo {
+    display: block;
+  }
+
+  .smile_tolk {
+    width: 34rem;
+    height: 38.7rem;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 5rem;
+  }
+
+  .second_text {
+    margin: 2rem auto;
+  }
+
+  .second_text P {
+    width: 34.1rem;
+    height: 18.8rem;
+  }
+
+  .second_text h2 {
+    font-size: 2.8rem;
+  }
+
+  .second_line {
+    width: 33.5rem;
+  }
+
+  .three_message {
+    display: block;
+    width: 35.2rem;
+    height: 37.8rem;
+  }
+
+  .three_message p {
+    width: 33rem;
+    height: 8.3rem;
+    margin: 0 auto;
+  }
+
+  .three_message .space {
+    margin-bottom: 3.3rem;
+  }
+
+  /* KANTOの強み */
+  .third_content {
+    width: 100%;
+    height: 159.5rem;
+  }
+
+  .kanto_power {
+    width: 36rem;
+    height: 149.5rem;
+  }
+
+  .kanto_power h2 {
+    font-size: 2.8rem;
+  }
+
+  .third_line {
+    width: 21rem;
+  }
+
+  .power_point {
+    width: 33rem;
+    height: 105.8rem;
+    display: block;
+    margin: 2rem auto;
+  }
+
+  .point1 {
+    width: 33rem;
+    height: 37rem;
+    padding: 1.9rem auto;
+  }
+
+  .point1 h3 {
+    font-size: 2.2rem;
+  }
+
+  .illustration0 {
+    width: 30.6rem;
+    height: 15.7rem;
+    margin: 3.3rem auto 0;
+  }
+/* ここから！ */
+  .point2 {
+    width: 48.9rem;
+    height: 33.4rem;
+    margin: 0 auto;
+    padding: 1.8rem auto;
+    border-radius: 2.5rem;
+    background-color: #FDF2E8;
+  }
+
+  .point2 h3 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 4.8rem auto;
+  }
+
+  .point2_img {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 33.5rem;
+    height: 10rem;
+  }
+
+  .illustration1 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .illustration2 {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /*width.height:8.6remから変更（横並びの画像と揃えるため）  */
+  .illustration3 {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .point2 p {
+    width: 37.5rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+
+  .point3 {
+    width: 33rem;
+    height: 33.4rem;
+    margin: 0 auto;
+    padding: 2.1rem auto;
+    border-radius: 2.5rem;
+    background-color: #FEEEE2;
+  }
+
+  .point3 h3 {
+    width: 31rem;
+    height: 7.8rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 2.1rem auto 0;
+  }
+
+  .illustration5 {
+    width: 23.7rem;
+    height: 11.5rem;
+    margin: 2rem auto;
+  }
+
+  .point3 p {
+    font-size: 1.6rem;
+    width: 23.8rem;
+    height: 5.7rem;
+    margin: 0 auto;
+  }
+
+  .last_space {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 110rem;
+    height: 10.9rem;
+    margin: 1rem auto;
+    border-radius: 5rem;
+    background-color: #FDF1DF;
+  }
+
+  .home {
+    width: 12.7rem;
+    height: 8.9rem;
+    margin-left: 18.7rem;
+    padding-top: 1rem;
+  }
+
+  .last_space p {
+    width: 58.8rem;
+    height: 8.7rem;
+    font-size: 1.6rem;
+    margin: 1.1rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+
 
 
 }
