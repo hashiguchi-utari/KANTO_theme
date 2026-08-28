@@ -299,6 +299,20 @@ SPとPCの切り替え
   font-size: 2.4rem;
 }
 
+
+ /*お知らせ一覧*/
+.front-news-link {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+
+  color: #000;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+
 /*====================================
 インスタ紹介の部分
 =====================================*/
@@ -525,7 +539,7 @@ SPオンリー
     width: 39rem;
 
     position: absolute;
-    top: 30rem;
+    top: 25rem;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -595,7 +609,7 @@ SPオンリー
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 2.6rem 0 8.8rem;
+    margin: 2.6rem 0 0;
   }
 
   .pagination a,
@@ -611,8 +625,7 @@ SPオンリー
     text-decoration: none;
 
     font-size: 1.6rem;
-    margin-bottom: 8.8rem;
-  }
+    }
 
   /* 現在のページ */
   .pagination .current {
@@ -629,11 +642,24 @@ SPオンリー
     font-size: 2.4rem;
   }
 
+  /*お知らせ一覧*/
+.front-news-link {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+
+}
 
   /*====================================
 インスタ紹介の部分
 =====================================*/
   .insta {
+    margin-top:15rem;
     background-color: #fff;
     padding: 2.5rem 2.7rem 15.4rem;
     box-sizing: border-box;
@@ -662,7 +688,6 @@ SPオンリー
     color: #4C7A61;
     text-align: center;
   }
-
 
 
 
