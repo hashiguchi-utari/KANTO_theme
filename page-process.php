@@ -102,12 +102,12 @@
         <section class="process_info_section fade_up_trigger">
             <div class="process_info_card">
                 <!-- 40px相当のh4見出し -->
-                <h4 class="process_info_title">準備しておくと良いもの</h4>
-                <p class="process_info_lead">お問合せからリハビリ・各種手続きを円滑に進めるため、以下をご準備ください。</p>
+                <h4 class="process_info_title">準備しておくと便利なもの</h4>
+                <p class="process_info_lead">初回の訪問前に、以下を手元に用意しておくとスムーズです。</p>
                 <ul class="process_info_list">
-                    <li class="process_info_item">各種保険証（介護保険証・医療保険証など）</li>
-                    <li class="process_info_item">現在処方されているお薬の内容がわかるもの（お薬手帳など）</li>
-                    <li class="process_info_item">主治医の病院名・診療科・お名前</li>
+                    <li class="process_info_item">マイナンバーカード、保険証（健康保険証・介護保険被保険者証）</li>
+                    <li class="process_info_item">お薬手帳（または現在飲んでいる薬の一覧がわかるもの）</li>
+                    <li class="process_info_item">かかりつけ医の診察券・連絡先</li>
                 </ul>
                 <p class="process_info_note">わからないことがあっても、お気軽にご相談ください。<br>スタッフがひとつひとつ丁寧にお答えいたします。</p>
             </div>
