@@ -26,7 +26,7 @@
 						<span></span>
 					</button>
 					<div class="menu">
-						<h2>menu</h1>
+						<h2>menu</h2>
 					</div>
 				</div>
 

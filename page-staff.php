@@ -10,24 +10,28 @@
             <p>スタッフ紹介</p>
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff1.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff2.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
             <span></span>
         </div>
         <div class="comment"> 
             <p>\ 私たちがサポートします /</p>
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff3.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
         </div>
 
-        <div class="staff-card1 card">
+        <div class="card" id="staff1">
             <div id="mainimg">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" alt="メイン画像" />
             </div>
             <div class="status">
-                <p>看護師/サービス管理責任者</p>
+                <p class="job">看護師/サービス管理責任者</p>
                 <div class="staff-name">
                     <h2>酒井沙穂里</h2>
-                    <h2>SAHORI SAKAI</h2>
+                    <h2 class="kana">SAHORI SAKAI</h2>
                 </div>
-                <span></span>
+                <span class="border"></span>
 
                 <p>利用者さまとご家族の想いに寄り添い、その人らしい生活を支えていけるよう精進してまいります。<br>よろしくお願いいたします！</p>
                 <div class="staff-concept">
@@ -46,26 +50,29 @@
             </div>
         </div>
 
-        <div class="img-up">
-            <p>よく見たい写真はクリックしてください♪</p>
+        <div class="staff-footer-top">
+            <div class="img-up">
+                <p>よく見たい写真はクリック<br>してください♪</p>
+            </div>
+            <a href="#staff2" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff-next.png")) ?>')">
+                <p>Next<br>Scroll</p>
+                <span></span>
+            </a>
         </div>
-        <div class="next-staff">
-            <p>Next<br>Scroll</p>
-            <span></span>
+
+        <div class="staff-footer-bottom">
+            <span class="border"></span>
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff4.png')); ?>" alt="">
         </div>
 
-        <span class="border"></span>
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff4.png')); ?>" alt="">
-
-
-        <div class="staff-card2 card">
+        <div class="card" id="staff2">
             <div class="status">
-                <p>看護師</p>
+                <p class="job">看護師</p>
                 <div class="staff-name">
                     <h2>浦新沙紀</h2>
-                    <h2>SAKI URASHIN</h2>
+                    <h2 class="kana">SAKI URASHIN</h2>
                 </div>
-                <span></span>
+                <span class="border"></span>
 
                 <p>看護師として、みんなの心にそっと寄り添える存在でいたいです。<br>笑顔を大切にしています❤<br>毎日楽しく奮闘中です！</p>
                 <div class="staff-concept">
@@ -87,28 +94,31 @@
             </div>
         </div>
 
-        <div class="next-staff">
-            <p>Next<br>Scroll</p>
-            <span></span>
+        <div class="staff-footer-top">
+            <a href="#staff3" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff-next.png")) ?>')">
+                <p>Next<br>Scroll</p>
+                <span></span>
+            </a>
+            <div class="img-up right">
+                <p>よく見たい写真はクリック<br>してください♪</p>
+            </div>
         </div>
-        <div class="img-up">
-            <p>よく見たい写真はクリックしてください♪</p>
+        <div class="staff-footer-bottom">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff5.png')); ?>" alt="">
+            <span class="border"></span>
         </div>
 
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff5.png')); ?>" alt="">
-        <span class="border"></span>
-
-        <div class="staff-card3 card">
+        <div class="card" id="staff3">
             <div id="mainimg">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" alt="メイン画像" />
             </div>
             <div class="status">
-                <p>看護師</p>
+                <p class="job">看護師</p>
                 <div class="staff-name">
                     <h2>齋藤由布奈</h2>
-                    <h2>YUNA SAITO</h2>
+                    <h2 class="kana">YUNA SAITO</h2>
                 </div>
-                <span></span>
+                <span class="border"></span>
 
                 <p>あなたらしさを私らしく、お支えします！<br>がんばれ私</p>
                 <div class="staff-concept">
@@ -127,12 +137,16 @@
             </div>
         </div>
 
-        <div class="img-up">
-            <p>よく見たい写真はクリックしてください♪</p>
+        <div class="staff-footer-top">
+            <div class="img-up">
+                <p>よく見たい写真はクリック<br>してください♪</p>
+            </div>
         </div>
 
-        <span class="border"></span>
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff6.png')); ?>" alt="">
+        <div class="staff-footer-bottom">
+            <span class="border"></span>
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff6.png')); ?>" alt="">
+        </div>
 
         <a class="page-start" href="#">このページの上に戻る</a>
 
