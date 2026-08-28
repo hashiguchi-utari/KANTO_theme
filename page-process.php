@@ -18,7 +18,7 @@
                         <span class="process_node_text">相談<br>お問い合せ</span>
                         <!-- 160px×160pxの大型アイコンイラスト枠 -->
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image23.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image23.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div> 
                     </div>
                 </div>
@@ -38,11 +38,11 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">主治医に<br>相談</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image22.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image22.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
-                <div class="process_content_box">
+                <div class="process_content_box" id="process_content_box_left">
                     <h2 class="process_content_title">主治医による<br>「指示書」の発行</h2>
                     <p class="process_content_text">
                         訪問看護を行うにあたり、主治医からの「訪問看護指示書」が必要となります。<br>
@@ -57,7 +57,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">契約</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image24.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image24.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">開始</span>
                         <div class="process_node_icon">
-                            <img src="<?php echo get_theme_file_uri('img/image25.png'); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
+                            <img src="<?php echo esc_url(get_theme_file_uri('img/image25.png')); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
                         </div>
                     </div>
                 </div>
-                <div class="process_content_box">
+                <div class="process_content_box" id="process_content_box_left">
                     <h2 class="process_content_title">サービス利用開始</h2>
                     <p class="process_content_text">
                         訪問看護計画に基づき、定期的な訪問看護サービスがスタートします。<br>
@@ -102,12 +102,12 @@
         <section class="process_info_section fade_up_trigger">
             <div class="process_info_card">
                 <!-- 40px相当のh4見出し -->
-                <h4 class="process_info_title">準備しておくと良いもの</h4>
-                <p class="process_info_lead">お問合せからリハビリ・各種手続きを円滑に進めるため、以下をご準備ください。</p>
+                <h4 class="process_info_title">準備しておくと便利なもの</h4>
+                <p class="process_info_lead">初回の訪問前に、以下を手元に用意しておくとスムーズです。</p>
                 <ul class="process_info_list">
-                    <li class="process_info_item">各種保険証（介護保険証・医療保険証など）</li>
-                    <li class="process_info_item">現在処方されているお薬の内容がわかるもの（お薬手帳など）</li>
-                    <li class="process_info_item">主治医の病院名・診療科・お名前</li>
+                    <li class="process_info_item">マイナンバーカード、保険証（健康保険証・介護保険被保険者証）</li>
+                    <li class="process_info_item">お薬手帳（または現在飲んでいる薬の一覧がわかるもの）</li>
+                    <li class="process_info_item">かかりつけ医の診察券・連絡先</li>
                 </ul>
                 <p class="process_info_note">わからないことがあっても、お気軽にご相談ください。<br>スタッフがひとつひとつ丁寧にお答えいたします。</p>
             </div>
@@ -116,7 +116,7 @@
         <!-- 一番下の鳥のイラストアイコン -->
         <section class="process_visual_section fade_up_trigger">
             <div class="process_hero_image_holder">
-                <img src="<?php echo get_theme_file_uri('img/Frame206.png'); ?>" alt="最下部鳥イラスト" class="process_visual_image">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/Frame206.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
             </div>
         </section>
 

@@ -121,7 +121,10 @@
    サークル隣のテキスト領域
    ------------------------------------------ */
 .process_content_box {
-  width: 50%;
+  width: 56%;/*現在のデザインに寄せ、やや左に寄せています*/
+}
+#process_content_box_left {
+  margin-left: 5rem;/*サークル左隣のテキスト2つには個別で少し位置をずらす指示を出しています*/
 }
 
 /* ------------------------------------------
@@ -133,10 +136,10 @@
   position: absolute;
   top: 96%;/*線の始まりの位置調整はここ*/
   left: 21%; /* 巨大サークルの中心に合わせる */
-  width: 65%;/*線の長さはここで調整*/
+  width: 66%;/*線の長さはここで調整*/
   height: 0.7rem; /* 線の太さはここで調整*/
   background-color: #000000;
-  transform: rotate(23deg); /* ななめ線の傾斜はここで調整*/
+  transform: rotate(23deg); /* ななめ線の傾斜具合はここで調整します*/
   transform-origin: left center;
   
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
@@ -222,7 +225,7 @@
   list-style: none;
   padding: 0;
   margin: 0 auto 4rem auto;
-  max-width: 56.25rem; /* リスト全体の幅広げて読みやすく */
+  max-width: 56.25rem; /* リスト全体の幅 */
 }
 
 /* リストアイテム */
@@ -242,7 +245,7 @@
   top: 0.8rem; /* 文字の中心に合わせる */
   width: 1.2rem; /* 12pxの大きめのドット */
   height: 1.2rem;
-  background-color: #333333;
+  background-color: #000000;
   border-radius: 50%;
 }
 
@@ -264,7 +267,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: flex-start; /* 左側に寄せる */
-  padding-left: 1rem;
+  padding-left: 0.1rem;
   box-sizing: border-box;
 }
 
@@ -289,11 +292,11 @@
    SP版（スマホ対応：699.98px以下 固定幅・左寄せ仕様）
    ========================================== */
 @media screen and (max-width: 699.98px) {
-  /* コンテナ：画面幅が縮小しても動かないよう固定幅 */
-  /* 左右にはみ出さないようにpadding をとり中央に安全に固定 */
+  /* コンテナ：画面幅が縮小しても動かない固定幅 */
+  /* 左右にはみ出さないようにpadding をとり中央に固定 */
   .process_container {
     width: 100%;
-    max-width: 41.25rem; /* スマホ画面内で固定感を持たせるための最大幅制限（約660px） */
+    max-width: 42.25rem; /* スマホ画面内で固定させるための最大幅 */
     margin: 0 auto;
     padding: 7rem 2rem; /*もともと設定数値4rem 1.5rem*/
     box-sizing: border-box;
@@ -303,6 +306,7 @@
   .process_main_title {
     font-size: 2.8rem;
     text-align: center;
+    margin-left: 0;/*少し右へ寄っていたので修正のため追加*/
     margin-bottom: 10rem;
     padding-left: 0;
   }
@@ -319,7 +323,7 @@
     display: none;
   }
 
-  /* アイテムの並び方向：反転レイアウトを解除し、すべて【左寄せ】に統一 */
+  /* アイテムの並び方向：反転レイアウトを解除し、すべて左寄せに統一 */
   .process_step_item,
   .process_step_item.item_reverse {
     flex-direction: column;
@@ -352,7 +356,7 @@
     display: none;
   }
 
-  /* アイコン：サイズをしっかり固定（100px）し、ふわふわアニメーションを適用 */
+  /* アイコン：サイズを固定し、ふわふわアニメーションを適用 */
   .process_node_icon {
     margin-top: 0;
     width: 10rem; /* 100px固定 */
@@ -403,7 +407,7 @@
     width: 100%;
   }
 
-  /* 白枠カードをリセット：背景色を透明に、シャドウも消去して背景と一体にしています */
+  /* 白枠カードをリセット：背景色を透明にしてシャドウも消去・背景と一体化させてます */
   .process_info_card {
     padding: 0; /* 枠が消えたので余計な内側余白をリセット */
     background-color: transparent; 
@@ -411,7 +415,7 @@
     border-radius: 0;
   }
 
-  /* 【中央左寄せ（ブロック全体を中央に保ちつつ中身は左寄せ）】 */
+  /* 中央左寄せ（ブロック全体を中央に保ちつつ中身は左寄せ） */
   .process_info_title {
     font-size: 2.8rem;
     text-align: left; /* 左寄せ */
@@ -444,7 +448,7 @@
 
   .process_info_note {
     font-size: 1.6rem;
-    text-align: left; /* 左寄せ */
+    text-align: left;/* 左寄せ */
     margin-top: 4rem;
     margin-bottom: 15rem;
   }
