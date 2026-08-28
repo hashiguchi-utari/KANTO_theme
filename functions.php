@@ -148,7 +148,18 @@ function kanto_enqueue_scripts()
 		kanto_enqueue_theme_script('kanto-home', '/js/home.js', array('kanto-main'));
 	} elseif (is_archive()) {
 		kanto_enqueue_theme_script('kanto-archive', '/js/archive.js', array('kanto-main'));
-	} elseif (is_single()) {
+
+    // Ajax URLをarchive.jsに渡す
+    wp_localize_script(
+        'kanto-archive',
+        'archiveAjax',
+        array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+        )
+    );
+
+
+		} elseif (is_single()) {
 		kanto_enqueue_theme_script('kanto-single', '/js/single.js', array('kanto-main'));
 	} elseif (is_search()) {
 		kanto_enqueue_theme_script('kanto-search', '/js/search.js', array('kanto-main'));
@@ -177,3 +188,176 @@ add_filter('register_post_type_args', 'set_post_archive', 10, 2);
 
 // サムネイルを有効にする
 add_theme_support('post-thumbnails');
+
+
+
+
+
+/*===============================================
+ archive カテゴリー絞り込み Ajax
+================================================== */
+
+function archive_filter_ajax() {
+
+  // 選択されたカテゴリー
+  $category = isset($_POST['category'])
+    ? sanitize_text_field($_POST['category'])
+    : 'all';
+
+
+  // WP_Query
+  $args = [
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
+    'posts_per_page' => -1,
+  ];
+
+
+  // ALL以外の場合
+  if ($category !== 'all') {
+
+    $args['category_name'] = $category;
+
+  }
+
+
+  $query = new WP_Query($args);
+
+
+  if ($query->have_posts()) :
+
+    while ($query->have_posts()) :
+      $query->the_post();
+      ?>
+
+      <div class="archive-card">
+
+        <a
+          href="<?php the_permalink(); ?>"
+          class="archive-card__image fade-up"
+        >
+
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('medium'); ?>
+          <?php endif; ?>
+
+        </a>
+
+
+        <div class="archive-card__body">
+
+          <div class="archive-card__meta">
+
+            <p>
+              <?php echo get_the_date('Y.m.d'); ?>
+
+              <span class="date_space"></span>
+
+              <br class="front_sp_only">
+
+              ||| カテゴリー・<?php the_category(', '); ?>
+            </p>
+
+          </div>
+
+
+          <h2 class="archive-card__title">
+
+            <a href="<?php the_permalink(); ?>">
+              <?php the_title(); ?>
+            </a>
+
+          </h2>
+
+
+          <p class="archive-card__excerpt">
+
+            <?php
+            echo wp_trim_words(
+              get_the_excerpt(),
+              50,
+              '…'
+            );
+            ?>
+
+          </p>
+
+
+          <a
+            href="<?php the_permalink(); ?>"
+            class="archive-card__more"
+          >
+
+            <span>続きを読む</span>
+
+            <span class="archive-card__arrow">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <?php
+
+    endwhile;
+
+  else :
+
+    ?>
+
+    <p class="archive-no-post">
+      該当する記事がありません。
+    </p>
+
+    <?php
+
+  endif;
+
+
+  wp_reset_postdata();
+
+  wp_die();
+}
+
+
+// ログインユーザー
+add_action(
+  'wp_ajax_archive_filter',
+  'archive_filter_ajax'
+);
+
+
+// 未ログインユーザー
+add_action(
+  'wp_ajax_nopriv_archive_filter',
+  'archive_filter_ajax'
+);
+
+
+
+/*===============================================
+ JavaScriptにWordPressのAjax URLを渡す
+==================================================*/
+
+function my_archive_scripts() {
+
+  wp_enqueue_script(
+    'archive-js',
+    get_stylesheet_directory_uri() . '/js/archive.js',
+    [],
+    null,
+    true
+  );
+
+}
+
+add_action(
+  'wp_enqueue_scripts',
+  'my_archive_scripts'
+);
+
+
+

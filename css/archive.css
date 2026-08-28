@@ -15,7 +15,7 @@
   width: 120rem;
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
-  margin-bottom: 12.0rem;
+  margin-bottom: 2.0rem;
   box-sizing: border-box;
 }
 
@@ -28,6 +28,40 @@
   margin-bottom: 5rem;
 }
 
+/*====================================
+カテゴリー絞り込み用
+=====================================*/
+.archive-filter {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+.archive-filter__link {
+  color: #000;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.archive-filter__link:hover {
+  text-decoration: underline;
+}
+
+.archive-filter__link.is-active {
+  text-decoration: underline;
+}
+
+
+/* Ajax読み込み中 */
+.archive-list {
+  transition: opacity 0.3s ease;
+}
+
+.archive-list.is-loading {
+  opacity: 0.4;
+  pointer-events: none;
+}
 /*====================================
 archive部分
 =====================================*/
@@ -63,6 +97,17 @@ archive部分
   height: 100%;
   object-fit: cover;
 }
+
+/*アイキャッチがない時の画像*/
+.archive-card__image .no-image {
+  width: 40rem;
+  height: 25rem;
+  object-fit: contain;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /*フェードアップ*/
 .fade-up {
@@ -284,6 +329,19 @@ archive部分
     height: 100%;
     object-fit: cover;
   }
+
+
+/*アイキャッチがない時の画像*/
+.archive-card__image .no-image {
+  width: 25rem;
+  height: 15rem;
+  object-fit: contain;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
   /* --------------------
