@@ -18,7 +18,7 @@
                         <span class="process_node_text">相談<br>お問い合せ</span>
                         <!-- 160px×160pxの大型アイコンイラスト枠 -->
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image23.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image23.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div> 
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">主治医に<br>相談</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image22.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image22.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">契約</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo get_theme_file_uri('img/image24.png'); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/image24.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">開始</span>
                         <div class="process_node_icon">
-                            <img src="<?php echo get_theme_file_uri('img/image25.png'); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
+                            <img src="<?php echo esc_url(get_theme_file_uri('img/image25.png')); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
         <!-- 一番下の鳥のイラストアイコン -->
         <section class="process_visual_section fade_up_trigger">
             <div class="process_hero_image_holder">
-                <img src="<?php echo get_theme_file_uri('img/Frame206.png'); ?>" alt="最下部鳥イラスト" class="process_visual_image">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/Frame206.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
             </div>
         </section>
 

@@ -133,7 +133,7 @@
   position: absolute;
   top: 96%;/*線の始まりの位置調整はここ*/
   left: 21%; /* 巨大サークルの中心に合わせる */
-  width: 65%;/*線の長さはここで調整*/
+  width: 66%;/*線の長さはここで調整*/
   height: 0.7rem; /* 線の太さはここで調整*/
   background-color: #000000;
   transform: rotate(23deg); /* ななめ線の傾斜はここで調整*/
