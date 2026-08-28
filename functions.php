@@ -16,6 +16,8 @@ if (! defined('ABSPATH')) {
 function kanto_theme_setup()
 {
 	add_theme_support('title-tag');
+	// 20260828_橋口修正_アイキャッチ画像の機能はテーマ設定時のこの1か所で有効になります。
+	// お知らせ一覧付近にあった同じ設定は効果が重複するだけだったため削除しました。
 	add_theme_support('post-thumbnails');
 	add_theme_support('responsive-embeds');
 	add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script'));
@@ -149,7 +151,9 @@ function kanto_enqueue_scripts()
 	} elseif (is_archive()) {
 		kanto_enqueue_theme_script('kanto-archive', '/js/archive.js', array('kanto-main'));
 
-    // Ajax URLをarchive.jsに渡す
+		// 20260828_橋口修正_archive.jsが複数回読み込まれると、カテゴリを1回選択しただけでも
+		// 同じ通信が複数回実行されるため、読み込み場所をここだけに統一しました。
+		// あわせて、カテゴリ絞り込みの通信先となるWordPressのURLをarchive.jsへ渡します。
     wp_localize_script(
         'kanto-archive',
         'archiveAjax',
@@ -170,11 +174,10 @@ function kanto_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'kanto_enqueue_scripts');
 
 
-/*====================================
- * 投稿のアーカイブページを作成
- * 設定後に（パーマリンク更新すること）
- * 
-====================================*/
+/**
+ * 20260828_橋口修正_WordPressの通常投稿を「お知らせ」として扱い、一覧URLを/news/に設定します。
+ * この設定を変更した場合は、管理画面の「パーマリンク設定」を保存し直す必要があります。
+ */
 function set_post_archive($args, $post_type)
 {
 	if ('post' == $post_type) {
@@ -186,178 +189,57 @@ function set_post_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'set_post_archive', 10, 2);
 
-// サムネイルを有効にする
-add_theme_support('post-thumbnails');
+/**
+ * 20260828_橋口修正_選択されたカテゴリに該当するお知らせを取得し、
+ * ページ全体を再読み込みせずに記事カード部分だけを返すAjax処理です。
+ */
+function archive_filter_ajax()
+{
+	// 20260828_橋口修正_画面で選択されたカテゴリを受け取ります。
+	// カテゴリが送信されなかった場合は「ALL」と同じ扱いになるようallを使用します。
+	$category = isset($_POST['category'])
+		? sanitize_text_field($_POST['category'])
+		: 'all';
 
+	// 20260828_橋口修正_公開中のお知らせをすべて取得するための基本条件です。
+	// カテゴリが選択されている場合は、この配列へカテゴリ条件を後から追加します。
+	$args = array(
+		'post_type'      => 'post',
+		'post_status'    => 'publish',
+		// 20260828_橋口修正_現在は該当記事を全件表示します。記事数が増えた場合は件数制限やページ分割が必要です。
+		'posts_per_page' => -1,
+	);
 
+	// 20260828_橋口修正_ALL以外が選択された場合だけ、そのカテゴリの記事に絞り込みます。
+	if ('all' !== $category) {
+		$args['category_name'] = $category;
+	}
 
+	$query = new WP_Query($args);
 
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
 
-/*===============================================
- archive カテゴリー絞り込み Ajax
-================================================== */
+			// 20260828_橋口修正_カテゴリ選択後だけ代替画像が消えていた原因は、Ajax側に
+			// 「画像がない場合」のHTMLがなかったためです。通常表示と同じ共通ファイルを読み込み、
+			// 初期表示とカテゴリ選択後で必ず同じ記事カードが出力されるようにしました。
+			get_template_part('template-parts/archive-card');
+		}
+	} else {
+		// 20260828_橋口修正_選択したカテゴリに記事がない場合は、空白ではなく案内文を表示します。
+		echo '<p class="archive-no-post">該当する記事がありません。</p>';
+	}
 
-function archive_filter_ajax() {
+	// 20260828_橋口修正_独自の記事取得後に、WordPressの元の記事情報へ戻します。
+	wp_reset_postdata();
 
-  // 選択されたカテゴリー
-  $category = isset($_POST['category'])
-    ? sanitize_text_field($_POST['category'])
-    : 'all';
-
-
-  // WP_Query
-  $args = [
-    'post_type'      => 'post',
-    'post_status'    => 'publish',
-    'posts_per_page' => -1,
-  ];
-
-
-  // ALL以外の場合
-  if ($category !== 'all') {
-
-    $args['category_name'] = $category;
-
-  }
-
-
-  $query = new WP_Query($args);
-
-
-  if ($query->have_posts()) :
-
-    while ($query->have_posts()) :
-      $query->the_post();
-      ?>
-
-      <div class="archive-card">
-
-        <a
-          href="<?php the_permalink(); ?>"
-          class="archive-card__image fade-up"
-        >
-
-          <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('medium'); ?>
-          <?php endif; ?>
-
-        </a>
-
-
-        <div class="archive-card__body">
-
-          <div class="archive-card__meta">
-
-            <p>
-              <?php echo get_the_date('Y.m.d'); ?>
-
-              <span class="date_space"></span>
-
-              <br class="front_sp_only">
-
-              ||| カテゴリー・<?php the_category(', '); ?>
-            </p>
-
-          </div>
-
-
-          <h2 class="archive-card__title">
-
-            <a href="<?php the_permalink(); ?>">
-              <?php the_title(); ?>
-            </a>
-
-          </h2>
-
-
-          <p class="archive-card__excerpt">
-
-            <?php
-            echo wp_trim_words(
-              get_the_excerpt(),
-              50,
-              '…'
-            );
-            ?>
-
-          </p>
-
-
-          <a
-            href="<?php the_permalink(); ?>"
-            class="archive-card__more"
-          >
-
-            <span>続きを読む</span>
-
-            <span class="archive-card__arrow">
-              →
-            </span>
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <?php
-
-    endwhile;
-
-  else :
-
-    ?>
-
-    <p class="archive-no-post">
-      該当する記事がありません。
-    </p>
-
-    <?php
-
-  endif;
-
-
-  wp_reset_postdata();
-
-  wp_die();
+	// 20260828_橋口修正_Ajaxで返す記事カードの出力が完了したため、ここで処理を終了します。
+	wp_die();
 }
 
+// 20260828_橋口修正_管理画面へログインしている利用者からのカテゴリ選択を受け付けます。
+add_action('wp_ajax_archive_filter', 'archive_filter_ajax');
 
-// ログインユーザー
-add_action(
-  'wp_ajax_archive_filter',
-  'archive_filter_ajax'
-);
-
-
-// 未ログインユーザー
-add_action(
-  'wp_ajax_nopriv_archive_filter',
-  'archive_filter_ajax'
-);
-
-
-
-/*===============================================
- JavaScriptにWordPressのAjax URLを渡す
-==================================================*/
-
-function my_archive_scripts() {
-
-  wp_enqueue_script(
-    'archive-js',
-    get_stylesheet_directory_uri() . '/js/archive.js',
-    [],
-    null,
-    true
-  );
-
-}
-
-add_action(
-  'wp_enqueue_scripts',
-  'my_archive_scripts'
-);
-
-
-
+// 20260828_橋口修正_ログインしていない一般の閲覧者からのカテゴリ選択も受け付けます。
+add_action('wp_ajax_nopriv_archive_filter', 'archive_filter_ajax');

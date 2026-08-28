@@ -3,23 +3,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const links = document.querySelectorAll('.archive-filter__link');
   const archiveList = document.querySelector('#archive-list');
-  const pagination = document.querySelector('#archive-pagination');
+
+  if (!archiveList) {
+    return;
+  }
 
 
   /*
-   * 初回表示時のfade-up
+   * 20260828_橋口修正_ページを開いた直後に全画像を表示するのではなく、スクロールして
+   * 画像の20％以上が画面内へ入った時だけis-showを追加します。CSS側の動きと組み合わせて、
+   * 画像が下から上がりながら徐々に表示されるフェードアップになります。
    * ==========================================
    */
-  const initialFadeItems =
-    archiveList.querySelectorAll('.fade-up');
+  function observeFadeUpItems(items) {
 
-  requestAnimationFrame(function() {
+    // 20260828_橋口修正_端末で「動きを減らす」が設定されている場合や、スクロール検知に
+    // 対応していない古いブラウザでは画像が非表示のままにならないよう、すぐに表示します。
+    const shouldSkipAnimation =
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      !('IntersectionObserver' in window);
 
-    initialFadeItems.forEach(function(item) {
-      item.classList.add('is-show');
+    if (shouldSkipAnimation) {
+      items.forEach(function(item) {
+        item.classList.add('is-show');
+      });
+      return;
+    }
+
+    const fadeObserver = new IntersectionObserver(function(entries, observer) {
+
+      entries.forEach(function(entry) {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-show');
+          observer.unobserve(entry.target);
+        }
+
+      });
+
+    }, {
+      threshold: 0.2
     });
 
-  });
+    items.forEach(function(item) {
+      fadeObserver.observe(item);
+    });
+
+  }
+
+  // 20260828_橋口修正_ページを開いた時に表示されている記事画像を、スクロール検知の対象へ登録します。
+  observeFadeUpItems(
+    archiveList.querySelectorAll('.fade-up')
+  );
 
 
   /*
@@ -76,27 +111,16 @@ document.addEventListener('DOMContentLoaded', function() {
         archiveList.innerHTML = html;
 
 
-        // 絞り込み中はページネーションを消す
-        if (pagination) {
-          pagination.style.display = 'none';
-        }
-
-
         // ローディング終了
         archiveList.classList.remove('is-loading');
 
 
-        // Ajax後のfade-up
+        // 20260828_橋口修正_カテゴリを選択すると記事HTMLが新しく入れ替わるため、入れ替え後の
+        // 画像も改めてスクロール検知へ登録し、初期表示と同じフェードアップを適用します。
         const fadeItems =
           archiveList.querySelectorAll('.fade-up');
 
-        requestAnimationFrame(function() {
-
-          fadeItems.forEach(function(item) {
-            item.classList.add('is-show');
-          });
-
-        });
+        observeFadeUpItems(fadeItems);
 
       })
 
