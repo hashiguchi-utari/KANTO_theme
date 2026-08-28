@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="process_content_box">
+                <div class="process_content_box" id="process_content_box_left">
                     <h2 class="process_content_title">主治医による<br>「指示書」の発行</h2>
                     <p class="process_content_text">
                         訪問看護を行うにあたり、主治医からの「訪問看護指示書」が必要となります。<br>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="process_content_box">
+                <div class="process_content_box" id="process_content_box_left">
                     <h2 class="process_content_title">サービス利用開始</h2>
                     <p class="process_content_text">
                         訪問看護計画に基づき、定期的な訪問看護サービスがスタートします。<br>
