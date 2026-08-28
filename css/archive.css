@@ -81,7 +81,14 @@ archive部分
 -------------------- */
 
 .archive-card__image {
-  display: block;
+  /*
+   * 20260828_橋口修正_代替画像が左上に寄っていた原因は、画像そのものへ中央配置の指定を
+   * 書いていたためです。画像を囲う枠へ中央配置を指定することで、代替画像の上下左右に
+   * 同じ余白ができ、画像枠の中央へ表示されます。
+   */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 45.0rem;
   height: 30.0rem;
   flex-shrink: 0;
@@ -100,16 +107,22 @@ archive部分
 
 /*アイキャッチがない時の画像*/
 .archive-card__image .no-image {
+  /*
+   * 20260828_橋口修正_代替画像を通常のアイキャッチより一回り小さく表示します。
+   * object-fit: containにより、画像を切り取らず全体が見える状態で画像枠内へ収めます。
+   */
   width: 40rem;
   height: 25rem;
   object-fit: contain;
   display: block;
-  justify-content: center;
-  align-items: center;
 }
 
 
-/*フェードアップ*/
+/*
+ * 20260828_橋口修正_表示前は画像を透明にして40px下へ移動させておきます。
+ * スクロールして画像が画面内へ入るとJavaScriptがis-showを追加し、
+ * 1秒かけて元の位置へ上がりながら表示されるフェードアップになります。
+ */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -313,7 +326,13 @@ archive部分
 -------------------- */
 
   .archive-card__image {
-    display: block;
+    /*
+     * 20260828_橋口修正_スマートフォン用CSSでdisplay:blockが再指定され、PC側の中央配置が
+     * 上書きされていたため、スマートフォン側もdisplay:flexへ統一して中央配置を維持します。
+     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30rem;
     height: 20rem;
     flex-shrink: 0;
@@ -333,12 +352,14 @@ archive部分
 
 /*アイキャッチがない時の画像*/
 .archive-card__image .no-image {
+  /*
+   * 20260828_橋口修正_幅30rem・高さ20remのスマートフォン用画像枠に対し、代替画像を
+   * 幅25rem・高さ15remにすることで、上下左右へ均等な余白を確保します。
+   */
   width: 25rem;
   height: 15rem;
   object-fit: contain;
   display: block;
-  justify-content: center;
-  align-items: center;
 }
 
 
