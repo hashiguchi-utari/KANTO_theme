@@ -28,6 +28,25 @@
   font-size: 6.4rem;
 }
 
+/* フェードアップさせる */
+.fade-up {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeUp 5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .catchcopy span {
   color: #FE8344;
 }
@@ -410,7 +429,7 @@
   margin: 2.1rem auto 0;
 }
 
-.illustration5 {
+.illustration4 {
   width: 23.7rem;
   height: 11.5rem;
   margin: 2rem auto;
@@ -595,6 +614,10 @@
 }
 
 @media screen and (max-width: 699.98px) {
+
+  .pc_only {
+    display: none;
+  }
 
   .main_container {
     width: 100%;
@@ -847,128 +870,158 @@
   .point1 {
     width: 33rem;
     height: 37rem;
-    padding: 1.9rem auto;
   }
 
   .point1 h3 {
     font-size: 2.2rem;
+    margin-top: 0;
+    padding-top: 1.9rem;
   }
 
   .illustration0 {
-    width: 30.6rem;
-    height: 15.7rem;
-    margin: 3.3rem auto 0;
+    margin-top: 3.3rem;
   }
-/* ここから！ */
+
+  .point1 p {
+    width: 26.2rem;
+    height: 3.8rem;
+    margin-top: 3.3rem;
+  }
+
   .point2 {
-    width: 48.9rem;
+    width: 33rem;
     height: 33.4rem;
-    margin: 0 auto;
-    padding: 1.8rem auto;
-    border-radius: 2.5rem;
-    background-color: #FDF2E8;
+    margin-top: 1rem;
   }
 
   .point2 h3 {
-    font-size: 3.2rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 4.8rem auto;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4.2rem;
   }
 
+  /* 画像の関係でmargin調整してます */
   .point2_img {
-    display: flex;
-    gap: 1rem;
-    margin: 2rem auto;
-    width: 33.5rem;
+    width: 27.6rem;
     height: 10rem;
-  }
-
-  .illustration1 {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .illustration2 {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  /*width.height:8.6remから変更（横並びの画像と揃えるため）  */
-  .illustration3 {
-    width: 10rem;
-    height: 10rem;
+    margin: 2rem 0.5rem;
   }
 
   .point2 p {
-    width: 37.5rem;
-    height: 4rem;
-    font-size: 1.6rem;
-    text-align: center;
-    margin: 0 auto;
-
+    width: 27.6rem;
+    height: 8.2rem;
+    margin-top: 2rem;
+    text-align: left;
   }
 
   .point3 {
-    width: 33rem;
-    height: 33.4rem;
-    margin: 0 auto;
-    padding: 2.1rem auto;
-    border-radius: 2.5rem;
-    background-color: #FEEEE2;
+    margin-top: 1rem;
   }
 
   .point3 h3 {
-    width: 31rem;
-    height: 7.8rem;
-    font-size: 3.2rem;
-    font-weight: bold;
-    margin: 2.1rem auto 0;
+    width: 27.4rem;
+    height: 3.8rem;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 0 auto 0;
+    padding-top: 2rem;
   }
 
-  .illustration5 {
-    width: 23.7rem;
-    height: 11.5rem;
+  /* 4remの方がバランスがいいかも。 */
+  .illustration4 {
     margin: 2rem auto;
   }
 
-  .point3 p {
-    font-size: 1.6rem;
-    width: 23.8rem;
-    height: 5.7rem;
-    margin: 0 auto;
-  }
-
   .last_space {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 110rem;
-    height: 10.9rem;
-    margin: 1rem auto;
-    border-radius: 5rem;
-    background-color: #FDF1DF;
+    width: 33rem;
+    height: 18.3rem;
+    margin: 2rem auto 5rem;
   }
 
+  /* 5.7rem × 8.7remという縦長の枠自体が、254×178の画像と比率が合っていない */
   .home {
-    width: 12.7rem;
-    height: 8.9rem;
-    margin-left: 18.7rem;
-    padding-top: 1rem;
+    width: 5.7rem;
+    height: 8.7rem;
+    margin-left: 2.25rem;
+    padding: 0;
   }
 
   .last_space p {
-    width: 58.8rem;
-    height: 8.7rem;
-    font-size: 1.6rem;
-    margin: 1.1rem 0;
-    display: flex;
-    align-items: center;
+    width: 21.8rem;
+    height: 16.3rem;
+    margin: 1rem 0;
   }
 
+  .forth_content {
+    width: 100%;
+    height: 83.3rem;
+    position: relative;
+    top: -5rem;
+  }
 
+  .step {
+    width: 36rem;
+    height: 73.3rem;
+    display: block;
+  }
 
+  .step_guide {
+    margin: 0 auto;
+  }
+
+  .step_guide h2 {
+    font-size: 2.8rem;
+    padding-top: 5rem;
+    text-align: center;
+  }
+
+  .forth_line {
+    width: 23.9rem;
+  }
+
+  .step_guide p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .step_button {
+    width: 35rem;
+  }
+
+  .step_button p {
+    font-size: 1.6rem;
+  }
+
+  .nurse {
+    width: 33rem;
+    height: 29.6rem;
+    margin-top: 1rem;
+  }
+
+  .fifth_content {
+    width: 100%;
+    height: 49.5rem;
+    margin-top: -5rem;
+  }
+
+  .service_contact {
+    width: 38rem;
+    height: 31.1rem;
+  }
+
+  .nav_message1,
+  .nav_message2 {
+    color: white;
+    font-size: 2.2rem;
+  }
+
+  .contact_button {
+    width: 36rem;
+    height: 7.2rem;
+    display: flex;
+    gap: 0;
+    margin: 1rem auto 6.5rem;
+  }
 
 }

@@ -5,7 +5,7 @@
     <section class="service_main">
       <div class="service_left">
         <div class="service_message">
-          <h1 class="catchcopy">あなたの空に<br><span>そっと寄り添う。</span></h1>
+          <h1 class="catchcopy fade-up">あなたの空に<br><span>そっと寄り添う。</span></h1>
           <p class="service_guide">
             ひとりひとりの想いに耳を傾け、<br>
             安心して自分らしく過ごせる明日へ、<br>
@@ -112,8 +112,8 @@
           <p>グループホーム「SETA」と日常的に情報を共有し、<br>医療だけでなく、生活面も含めてサポートします。</p>
         </div>
         <div class="point3">
-          <h3>生活全体を支える<br>サポート</h3>
-          <img class="illustration5" src="<?php echo esc_url(get_theme_file_uri('img/Frame 186.png')); ?>" alt="の写真">
+          <h3>生活全体を支える<br class="pc_only">サポート</h3>
+          <img class="illustration4" src="<?php echo esc_url(get_theme_file_uri('img/Frame 186.png')); ?>" alt="の写真">
           <p>体調・服薬のサポートはもちろ<br>ん暮らしの不安も一緒に考えま<br>す。</p>
         </div>
       </div>
@@ -133,7 +133,7 @@
           ご相談いただけるよう、<br>
           お問い合わせからご利用開始まで<br>
           一つひとつ丁寧にご案内します。</p>
-        <a class="step_button" href="<?php echo home_url('/process/'); ?>">
+        <a class="step_button" href="<?php echo esc_url(home_url('/process/')); ?>">
           <p>ご利用までの流れを見る</p>
           <img class="arrow" src="<?php echo esc_url(get_theme_file_uri('img/Arrow 4.png')); ?>" alt="矢印">
         </a>
@@ -146,7 +146,7 @@
     <div class="service_contact">
       <p class="nav_message1">ひとりで抱え込まず、まずはお話してみませんか？</p>
       <p class="nav_message2">あなたの「はじめの一歩」を、私たちがそっとサポートします。</p>
-      <a class="contact_button" href="<?php echo home_url('/contact/'); ?>">
+      <a class="contact_button" href="<?php echo esc_url(home_url('/inquiry/')); ?>">
         <p>お問い合わせはこちら</p>
         <img class="contact_arrow" src="<?php echo esc_url(get_theme_file_uri('img/Arrow 4.png')); ?>" alt="矢印">
       </a>
