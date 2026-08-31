@@ -27,6 +27,12 @@ TOP動画（現在画像で置く）
   margin: 0 auto;
 }
 
+ /* .front_mv video {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
 /*====================================
 KANTOとは
 =====================================*/
@@ -242,7 +248,7 @@ SPとPCの切り替え
 
 .front-news-item a {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 5rem;
   padding: 2rem 5rem;
   box-sizing: border-box;
@@ -300,7 +306,7 @@ SPとPCの切り替え
 }
 
 
- /*お知らせ一覧*/
+/*お知らせ一覧*/
 .front-news-link {
   display: block;
   width: 100%;
@@ -318,7 +324,7 @@ SPとPCの切り替え
 =====================================*/
 .insta {
   background-color: #fff;
-  padding: 16.8rem 8.6rem 0;
+  padding: 16.8rem 8.6rem 15.4rem;
   box-sizing: border-box;
 }
 
@@ -335,16 +341,17 @@ SPとPCの切り替え
 }
 
 .front-seta {
+  margin-top: 5rem;
   font-size: 2.207rem;
   color: #538175;
   text-align: center;
 }
 
 .front-utari {
+  margin-top: 5rem;
   font-size: 2.207rem;
   color: #4C7A61;
   text-align: center;
-  margin-bottom: 15.4rem;
 }
 
 
@@ -377,6 +384,20 @@ TOP動画（現在画像で置く）
     border: 0.1rem solid #000;
     /*動画枠*/
   }
+
+  /* .front_mv {
+  width: 100%;
+  height: auto;
+} */
+
+/* 
+  .front_mv video {
+    display: block;
+    width: 100%;
+    height: auto;
+  } */
+
+
 
   /*====================================
 KANTOとは
@@ -576,7 +597,7 @@ SPオンリー
   .front-news-item a {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2.5rem;
     padding: 0rem 1.8rem;
     box-sizing: border-box;
@@ -625,7 +646,7 @@ SPオンリー
     text-decoration: none;
 
     font-size: 1.6rem;
-    }
+  }
 
   /* 現在のページ */
   .pagination .current {
@@ -643,23 +664,23 @@ SPオンリー
   }
 
   /*お知らせ一覧*/
-.front-news-link {
-  display: block;
-  width: 100%;
-  margin-top: 2rem;
+  .front-news-link {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
 
-  color: #000;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
 
-}
+  }
 
   /*====================================
 インスタ紹介の部分
 =====================================*/
   .insta {
-    margin-top:15rem;
+    margin-top: 15rem;
     background-color: #fff;
     padding: 2.5rem 2.7rem 15.4rem;
     box-sizing: border-box;
@@ -688,11 +709,5 @@ SPオンリー
     color: #4C7A61;
     text-align: center;
   }
-
-
-
-
-
-
 
 }
