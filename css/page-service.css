@@ -28,24 +28,29 @@
   font-size: 6.4rem;
 }
 
-/* フェードアップさせる */
-.fade-up {
+/* 順にフェードアップさせる */
+.service_message,
+.speak_human,
+.photo,
+.heart,
+.speak,
+.grouphome {
   opacity: 0;
   transform: translateY(3rem);
-  animation: fadeUp 5s ease-out forwards;
+  transition: opacity 1.6s ease, transform 1.6s ease;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.service_message.is-visible,
+.speak_human.is-visible,
+.photo.is-visible,
+.heart.is-visible,
+.speak.is-visible,
+.grouphome.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+
 
 .catchcopy span {
   color: #FE8344;
@@ -179,8 +184,54 @@
   margin: 3.1rem auto 5rem;
 }
 
+/* 波のようにフェードアップ */
+.three_point>div {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/* 表示開始 */
+.three_point>div.is-show {
+  animation: waveFadeUp 2.2s ease-out forwards;
+}
+
+/* 左 → 中 → 右の順番 */
+.three_point>div:nth-child(1).is-show {
+  animation-delay: 0s;
+}
+
+.three_point>div:nth-child(2).is-show {
+  animation-delay: 0.6s;
+}
+
+.three_point>div:nth-child(3).is-show {
+  animation-delay: 1.2s;
+}
+
+@keyframes waveFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+
+  65% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .service_photo {
   width: 31.2rem;
+  height: 18rem;
   border-radius: 2.4rem;
   margin: 0 auto;
 }
@@ -206,7 +257,10 @@
 .body_maintenance p,
 .medicine p,
 .main_service p {
+  width: 32.2rem;
+  height: 9.9rem;
   font-size: 1.6rem;
+  margin: 0 auto 1.3rem;
 }
 
 .second_content {
@@ -233,11 +287,39 @@
   box-sizing: border-box;
 }
 
+/* 画像、メッセージと順々にフェードアップで表示 */
+.smile_tolk.is-show {
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+.three_message p {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.three_message p.is-show {
+  animation: fadeUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .smile_tolk {
   width: 60rem;
   height: 40rem;
   border-radius: 5rem;
   margin: 5rem 0 0 1rem;
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .second_text {
@@ -328,6 +410,43 @@
   display: flex;
   gap: 1rem;
   margin: 1rem auto;
+}
+
+/* 三つを順にフェードアップさせる */
+.power_point>div {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.power_point>div.is-show {
+  animation: powerPointFadeUp 1.8s ease-out forwards;
+}
+
+/* ① point1 */
+.power_point>div:nth-child(1).is-show {
+  animation-delay: 0s;
+}
+
+/* ② point2 */
+.power_point>div:nth-child(2).is-show {
+  animation-delay: 0.5s;
+}
+
+/* ③ point3 */
+.power_point>div:nth-child(3).is-show {
+  animation-delay: 1s;
+}
+
+@keyframes powerPointFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .point1 {
@@ -426,6 +545,7 @@
   height: 7.8rem;
   font-size: 3.2rem;
   font-weight: bold;
+  text-align: center;
   margin: 2.1rem auto 0;
 }
 
@@ -456,7 +576,8 @@
 .home {
   width: 12.7rem;
   height: 8.9rem;
-  margin-left: 18.7rem;
+  object-fit: contain;
+  margin-left: 18.8rem;
   padding-top: 1rem;
 }
 
@@ -613,10 +734,22 @@
   height: 1rem;
 }
 
+.sp_only {
+  display: none;
+}
+
+.pc_only {
+  display: inline;
+}
+
 @media screen and (max-width: 699.98px) {
 
   .pc_only {
     display: none;
+  }
+
+  .sp_only {
+    display: inline;
   }
 
   .main_container {
@@ -627,7 +760,7 @@
 
   .service_main {
     width: 100%;
-    height: 125.4rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 5rem auto;
@@ -683,9 +816,14 @@
   .icon_set {
     display: block;
     padding: 0;
-    margin: 3.2rem auto 9.6rem;
+    margin: 3.2rem auto 10.6rem;
     width: 36rem;
     height: 49.4rem;
+  }
+
+  .icon {
+    width: 60%;
+    margin: 0 auto;
   }
 
   .heart,
@@ -700,14 +838,14 @@
     width: 35rem;
     height: 15rem;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: -5rem auto 0;
   }
 
   .grouphome {
     width: 36rem;
     height: 19.4rem;
     box-sizing: border-box;
-    margin: 6rem auto 0;
+    margin: 0 auto;
   }
 
   .heart::after,
@@ -720,15 +858,15 @@
   }
 
   .heart .pr_point {
-    margin-top: -16rem;
+    margin-top: -10rem;
   }
 
   .speak .pr_point {
-    margin-top: -9rem;
+    margin-top: -5rem;
   }
 
   .grouphome .pr_point {
-    margin-top: -10rem;
+    margin-top: -6rem;
   }
 
   .service_content {
@@ -794,27 +932,34 @@
     height: 121.6rem;
     margin: 0 auto;
     padding: 5rem 1rem;
+    box-sizing: border-box;
   }
 
   .second_photo {
     display: block;
+    width: 100%;
   }
 
   .smile_tolk {
+    display: block;
     width: 34rem;
     height: 38.7rem;
     object-fit: cover;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 5rem;
   }
 
   .second_text {
-    margin: 2rem auto;
+    width: 35.1rem;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    box-sizing: border-box;
   }
 
   .second_text P {
-    width: 34.1rem;
-    height: 18.8rem;
+    width: 100%;
+    height: auto;
   }
 
   .second_text h2 {
@@ -829,10 +974,12 @@
     display: block;
     width: 35.2rem;
     height: 37.8rem;
+    margin-top: 5rem;
+    padding: 0 1rem;
   }
 
   .three_message p {
-    width: 33rem;
+    width: 100%;
     height: 8.3rem;
     margin: 0 auto;
   }
@@ -939,7 +1086,6 @@
     margin: 2rem auto 5rem;
   }
 
-  /* 5.7rem × 8.7remという縦長の枠自体が、254×178の画像と比率が合っていない */
   .home {
     width: 5.7rem;
     height: 8.7rem;
@@ -950,7 +1096,7 @@
   .last_space p {
     width: 21.8rem;
     height: 16.3rem;
-    margin: 1rem 0;
+    margin: 1rem 2.25rem 1rem 1rem;
   }
 
   .forth_content {
@@ -1022,6 +1168,14 @@
     display: flex;
     gap: 0;
     margin: 1rem auto 6.5rem;
+  }
+
+  .contact_arrow {
+    margin-left: 1rem;
+  }
+
+  .contact_button:hover .contact_arrow {
+    transform: scale(1.5) translateX(0.5rem);
   }
 
 }

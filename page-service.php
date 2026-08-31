@@ -5,7 +5,7 @@
     <section class="service_main">
       <div class="service_left">
         <div class="service_message">
-          <h1 class="catchcopy fade-up">あなたの空に<br><span>そっと寄り添う。</span></h1>
+          <h1 class="catchcopy">あなたの空に<br><span>そっと寄り添う。</span></h1>
           <p class="service_guide">
             ひとりひとりの想いに耳を傾け、<br>
             安心して自分らしく過ごせる明日へ、<br>
@@ -52,19 +52,19 @@
         <div class="body_maintenance">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/体調管理 1.png')); ?>" alt="血圧計">
           <h3>体調管理</h3>
-          <p>毎日の体調や気分の変化を一緒に確認し、<br>安心して過ごせるようサポートします。</p>
+          <p>毎日の体調や気分の変化を一緒に確認<br class="sp_only">し、<br>安心して過ごせるようサポートします。</p>
         </div>
 
         <div class="medicine">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/服薬管理 1.png')); ?>" alt="薬の写真">
           <h3>服薬管理</h3>
-          <p>お薬の飲み忘れや副作用の不安などを確認し、無理なく続けられる方法を一緒に考えます。</p>
+          <p>お薬の飲み忘れや副作用の不安などを確<br class="sp_only">認し、無理なく続けられる方法を一緒に<br class="sp_only">考えます。</p>
         </div>
 
         <div class="main_service">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/対話.png')); ?>" alt="対話してる写真">
           <h3>対話（メインの支援）</h3>
-          <p>安心して気持ちを話せる時間を大切にします。あなたの想いを耳を傾け、必要なときに必要なサポートを一緒に考えます。</p>
+          <p>安心して気持ちを話せる時間を大切にし<br class="sp_only">ます。<br>あなたの想いを耳を傾け、必要なときに<br class="sp_only">必要なサポートを一緒に考えます。</p>
         </div>
       </div>
   </section>
@@ -94,7 +94,7 @@
     <div class="kanto_power">
       <h2>KANTOの強み</h2>
       <span class="third_line"></span>
-      <p class="power_word">医療と生活の両面から、新しい暮らしを支えます。</p>
+      <p class="power_word">医療と生活の両面から、<br class="sp_only">新しい暮らしを支えます。</p>
 
       <div class="power_point">
         <div class="point1">
@@ -118,13 +118,13 @@
         </div>
       </div>
       <div class="last_space">
-        <img class="home" src="<?php echo esc_url(get_theme_file_uri('img/ホーム 2.png')); ?>" alt="対話の写真">
-        <p>「家での暮らしが不安」　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
+        <img class="home" src="<?php echo esc_url(get_theme_file_uri('img/Frame 187.png')); ?>" alt="家のアイコン">
+        <p>「家での暮らしが不安」<br class="sp_only">　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
       </div>
     </div>
   </section>
 
-  <section class="forth_content"> 
+  <section class="forth_content">
     <div class="step">
       <div class="step_guide">
         <h2>ご利用までの流れ</h2>
@@ -144,17 +144,14 @@
 
   <section class="fifth_content">
     <div class="service_contact">
-      <p class="nav_message1">ひとりで抱え込まず、まずはお話してみませんか？</p>
-      <p class="nav_message2">あなたの「はじめの一歩」を、私たちがそっとサポートします。</p>
+      <p class="nav_message1">ひとりで抱え込まず、<br class="sp_only">まずはお話してみませんか？</p>
+      <p class="nav_message2">あなたの「はじめの一歩」を、<br class="sp_only">私たちがそっとサポートします。</p>
       <a class="contact_button" href="<?php echo esc_url(home_url('/inquiry/')); ?>">
         <p>お問い合わせはこちら</p>
         <img class="contact_arrow" src="<?php echo esc_url(get_theme_file_uri('img/Arrow 4.png')); ?>" alt="矢印">
       </a>
     </div>
   </section>
-
-
-
 
 </main>
 
