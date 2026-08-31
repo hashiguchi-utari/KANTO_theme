@@ -31,6 +31,10 @@ main {
     }
 }
 
+.sp-comment {
+    display: none;
+}
+
 /*ページタイトル*/
 .page-title {
     position: relative;
@@ -50,7 +54,7 @@ main {
     font-size: 2.8rem;
     padding-bottom: 10rem;
 }
-.page-title span {
+.page-title .pc-border {
     display: block;
     width: 106.4rem;
     height: 0.2rem;
@@ -114,6 +118,9 @@ main {
     opacity: 0.3;
     width: 2rem
 }
+.sp-comment {
+    display: none;
+}
 
 /*紹介カード*/
 .card {
@@ -125,7 +132,7 @@ main {
     padding: 3.2rem;
     background-color: #fff;
     border-radius: 1.6rem;
-    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.4);
+    box-shadow: 2.5rem 2.5rem 3rem rgba(200, 168, 168, 0.4);
 }
 #staff1,
 #staff3 {
@@ -290,4 +297,129 @@ main {
     text-align: center;
     padding-bottom: 4rem;
     font-size: 2.2rem;
+}
+
+
+@media screen and (max-width: 699.98px) {
+    .sp-comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 8rem 0 0 0;
+    }
+    .sp-comment p {
+        font-size: 2rem;
+    }
+    .sp-comment img {
+        position: absolute;
+    }
+    .sp-comment img:nth-child(2) {
+        top: -3rem;
+        left: 18rem;
+        transform: rotate(-15deg);
+        width: 2rem;
+    }
+    .comment {
+        display: none;
+    }
+    .page-title .pc-border {
+        display: none;
+    }
+    .page-title img:nth-of-type(1) {
+        top: 10rem;
+        width: 6.7rem;
+    }
+    .page-title img:nth-of-type(2) {
+        top: -10rem;
+        right: 20rem;
+        width: 7rem;
+    }
+    .page-title img:nth-of-type(3) {
+        top: 2rem;
+        left: 45rem;
+        width: 2rem;
+    }
+    .page-title img:nth-of-type(4) {
+        top: -50rem;
+        right: -20rem;
+    }
+    .page-title h1 {
+        font-size: 4rem;
+        margin: 1rem 0;
+    }
+    .page-title p {
+        margin: 1rem 0;
+    }
+    .sp-border {
+        display: block;
+        background-color: #3f3b3a;
+        height: 0.2rem;
+        width: 25rem;
+    }
+    .comment-sub {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 5rem;
+    }
+    .comment-sub p {
+        font-family: "Kaisei Decol", serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .comment-sub img {
+        max-width: 7rem;
+        height: auto;
+        animation: sway 2.5s ease-in-out infinite;
+    }
+    .card {
+        flex-direction: column;
+        padding: 2rem 1.6rem;
+        gap: 2rem;
+        margin: 0 3.5rem;
+        background: #fff !important; 
+    }
+    #mainimg {
+        flex: 0 0 auto;
+        width: 100%;
+        order: 1;
+        text-align: center;
+    }
+    #mainimg img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .card .status {
+        width: 100%;
+        min-width: auto;
+        padding: 0;
+        text-align: left;
+        order: 2;
+    }
+    .status .job {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .status .staff-name {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.8rem;
+    }
+    .staff-name .kana {
+        margin-left: 0;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+    }
+    .status .border {
+        margin: 2rem auto;
+    }
+    .status .staff-concept {
+        justify-content: center;
+        margin-top: 2rem;
+        text-align: left;
+    }
 }

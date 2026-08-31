@@ -5,20 +5,29 @@
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff-main.png')); ?>" alt="">
         </div>
 
+        <div class="sp-comment"> 
+            <p>\ 私たちがサポートします /</p>
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff3.png')); ?>" alt="">
+        </div>
         <div class="page-title">
             <h1>STAFF</h1>
+            <span class="sp-border"></span>
             <p>スタッフ紹介</p>
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff1.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff2.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
-            <span></span>
+            <span class="pc-border"></span>
         </div>
         <div class="comment"> 
             <p>\ 私たちがサポートします /</p>
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff3.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
+        </div>
+        <div class="comment-sub">
+            <p>まずは～、<br>頼れるお姉さん的存在♪</p>
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff4.png')); ?>" alt="">
         </div>
 
         <div class="card" id="staff1">
