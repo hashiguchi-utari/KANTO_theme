@@ -4,6 +4,16 @@
 <main class="front_container">
   <section class="front_mv">
     <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/movie-image.png')); ?>" alt="TOP動画部分画像で仮置き">
+
+    <!-- <video
+      src="./video/top.mp4"
+      autoplay
+      muted
+      loop
+      playsinline>
+    </video> -->
+
+
   </section>
 
 
@@ -125,9 +135,25 @@
   <section class="insta">
     <div>
       <p class="front-insta">instagram</p>
-      <p class="front-kanto_to">訪問看護ステーションKANTO</p>
-      <p class="front-seta">障がい者グループホーム🍀セタ</p>
-      <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ-</p>
+
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+        <p class="front-kanto_to">訪問看護ステーションKANTO</p>
+      </a>
+      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      <!-- インスタのfeed（変更部はここ）カント -->
+
+      <a href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer" aria-label="Seta Group Home公式サイトへ">
+        <p class="front-seta">障がい者グループホーム🍀セタ</p>
+      </a>
+      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      <!-- インスタのfeed（変更部はここ）セタ -->
+
+      <a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ">
+        <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ-</p>
+      </a>
+      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      <!-- インスタのfeed（変更部はここ）ウタリ -->
+
     </div>
   </section>
 

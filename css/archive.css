@@ -33,7 +33,7 @@
 =====================================*/
 .archive-filter {
   display: flex;
-  gap: 3rem;
+  gap: 1.8rem;
   justify-content: center;
   margin-bottom: 8rem;
 }
@@ -94,7 +94,7 @@ archive部分
   flex-shrink: 0;
   /*画像を縮ませない指定*/
   border: 0.1rem solid #000;
-  background-color: #ECECEC;
+  background-color: #FFEDD4;
   overflow: hidden;
 }
 
@@ -338,7 +338,7 @@ archive部分
     flex-shrink: 0;
     /*画像を縮ませない指定*/
     border: 0.1rem solid #000;
-    background-color: #ECECEC;
+    background-color: #FFEDD4;
     overflow: hidden;
   }
 
