@@ -14,7 +14,7 @@ html {
 
 @media (max-width: 699.98px) {
   html {
-    font-size: min(2.564103vw, 10px);
+    font-size: 2.564103vw;
   }
 }
 body,
