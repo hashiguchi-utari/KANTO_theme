@@ -82,7 +82,10 @@ get_header();
 				<div class="group-service__copy">
 					<p>男性専用のグループホーム・女性専用のグループホーム、男性女性可能のアパートタイプ、男性シェアハウスまで幅広く・・・<br>あなたらしさを大切にした快適な生活を送りませんか？</p>
 				</div>
-				<a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">HPへGO！</a>
+				<a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">
+					<span class="group-service__link-label-pc">HPへGO！</span>
+					<span class="group-service__link-label-sp">グループホーム【セタ】 ホームページ</span>
+				</a>
 			</div>
 		</section>
 
