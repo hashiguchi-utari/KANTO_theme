@@ -33,6 +33,9 @@
         <div class="card" id="staff1">
             <div id="mainimg">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" alt="メイン画像" />
+                <div class="sp-stop">
+                    <img src="<?php echo esc_url(get_theme_file_uri('img/staff-border1.png')); ?>" alt="">
+                </div>
             </div>
             <div class="status">
                 <p class="job">看護師/サービス管理責任者</p>
@@ -74,6 +77,11 @@
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff4.png')); ?>" alt="">
         </div>
 
+        <div class="comment-sub">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff5.png')); ?>" alt="">
+            <p>とってもとーーっても<br>おしゃべりさん♪</p>
+        </div>
+        
         <div class="card" id="staff2">
             <div class="status">
                 <p class="job">看護師</p>
@@ -94,6 +102,9 @@
             </div>
             <div id="mainimg">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" alt="メイン画像" />
+                <div class="sp-stop stop2">
+                    <img src="<?php echo esc_url(get_theme_file_uri('img/staff-border2.png')); ?>" alt="">
+                </div>
             </div>
             <div class="thumbnails">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="1のサムネイル" />
@@ -117,9 +128,17 @@
             <span class="border"></span>
         </div>
 
+        <div class="comment-sub">
+            <p>しっかり者だけどちょっと<br>天然さん♪</p>
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff6.png')); ?>" alt="">
+        </div>
+
         <div class="card" id="staff3">
             <div id="mainimg">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" alt="メイン画像" />
+                <div class="sp-stop stop3">
+                    <img src="<?php echo esc_url(get_theme_file_uri('img/staff-border3.png')); ?>" alt="">
+                </div>
             </div>
             <div class="status">
                 <p class="job">看護師</p>
@@ -146,7 +165,7 @@
             </div>
         </div>
 
-        <div class="staff-footer-top">
+        <div class="staff-footer-top is-last">
             <div class="img-up">
                 <p>よく見たい写真はクリック<br>してください♪</p>
             </div>
@@ -158,7 +177,10 @@
         </div>
 
         <a class="page-start" href="#">このページの上に戻る</a>
-
+        <div class="sp-img">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="" class="last-img-left">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="" class="last-img-right">
+        </div>
     </div>
 
 </main>

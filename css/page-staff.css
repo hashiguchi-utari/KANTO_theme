@@ -34,6 +34,12 @@ main {
 .sp-comment {
     display: none;
 }
+.sp-stop {
+    display: none;
+}
+.sp-img {
+    display: none;
+}
 
 /*ページタイトル*/
 .page-title {
@@ -118,7 +124,7 @@ main {
     opacity: 0.3;
     width: 2rem
 }
-.sp-comment {
+.comment-sub {
     display: none;
 }
 
@@ -325,6 +331,22 @@ main {
     .comment {
         display: none;
     }
+    .page-title h1,
+    .page-title span,
+    .page-title p {
+        animation: floatUp 0.8s ease-out forwards;
+    }
+    @keyframes floatUp {
+        0% {
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .page-title .pc-border {
         display: none;
     }
@@ -376,6 +398,8 @@ main {
         height: auto;
         animation: sway 2.5s ease-in-out infinite;
     }
+
+    /*カード*/
     .card {
         flex-direction: column;
         padding: 2rem 1.6rem;
@@ -384,6 +408,7 @@ main {
         background: #fff !important; 
     }
     #mainimg {
+        position: relative;
         flex: 0 0 auto;
         width: 100%;
         order: 1;
@@ -391,6 +416,24 @@ main {
     }
     #mainimg img {
         max-width: 100%;
+        margin: 0 auto;
+    }
+    .sp-stop {
+        display: block;
+        position: absolute;
+        width: 100%;
+        opacity: 0.8;
+        bottom: -9rem;
+    }
+    .sp-stop.stop2 {
+        bottom: -10.5rem;
+    }
+    .sp-stop.stop3 {
+        bottom: -13rem;
+    }
+    .sp-stop img {
+        max-width: 100%;
+        height: auto;
         margin: 0 auto;
     }
     .card .status {
@@ -403,6 +446,8 @@ main {
     .status .job {
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        text-align: center;
+        margin-top: 5rem;
     }
     .status .staff-name {
         flex-direction: column;
@@ -420,6 +465,78 @@ main {
     .status .staff-concept {
         justify-content: center;
         margin-top: 2rem;
-        text-align: left;
+    }
+    .thumbnails {
+        position: relative;
+        max-width: 30rem;
+        height: 30rem;
+        margin: 0 auto;
+        overflow: hidden;
+        order: 3;
+    }
+    .thumbnails .thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.5s ease-in-out;
+        pointer-events: none; 
+    }
+    .thumbnails .thumb.active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    /*カードの合間*/
+    .img-up {
+        display: none;
+    }
+    .staff-footer-bottom {
+        display: none;
+    }
+    .staff-footer-top {
+        text-align: center;
+    }
+    .staff-footer-top::before,
+    .staff-footer-top::after {
+        content: "";
+        flex-grow: 1;
+        height: 0.2rem;
+        background-color: #3f3b3a;
+    }
+    .staff-footer-top::before {
+        margin: 0 7rem 0 7rem;
+    }
+    .staff-footer-top::after {
+        margin: 0 7rem 0 7rem;
+    }
+    .staff-footer-top.is-last {
+        display: none;
+    }
+
+    .page-start {
+        padding: 15rem 0; 
+    }
+    .sp-img {
+        display: block;
+        position: relative;
+    }
+    .sp-img img {
+        position: absolute;
+    }
+    .sp-img .last-img-left {
+        top: -12rem;
+        left: 10rem;
+        width: 3.5rem;
+    }
+    .sp-img .last-img-right {
+        top: -6rem;
+        left: 15rem;
+        width: 2rem;
+        opacity: 0.6;
     }
 }
