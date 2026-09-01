@@ -119,7 +119,7 @@
       </div>
       <div class="last_space">
         <img class="home" src="<?php echo esc_url(get_theme_file_uri('img/Frame 187.png')); ?>" alt="家のアイコン">
-        <p>「家での暮らしが不安」<br class="sp_only">　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
+        <p> 「家での暮らしが不安」<br class="sp_only">　　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
       </div>
     </div>
   </section>
