@@ -12,6 +12,7 @@
   padding-top: 5rem;
 }
 
+/* 文字とアイコン３つのスペース */
 .service_left {
   width: 53.3rem;
   height: 74rem;
@@ -50,8 +51,7 @@
   transform: translateY(0);
 }
 
-
-
+/* そっと寄り添う。 */
 .catchcopy span {
   color: #FE8344;
 }
@@ -77,6 +77,7 @@
   position: relative;
 }
 
+/* 間にある区切り線 */
 .heart::after,
 .speak::after {
   content: "";
@@ -110,6 +111,7 @@
   margin: 0;
 }
 
+/* メインの画像のスペース */
 .service_img {
   width: 65.2rem;
   padding-bottom: 3.6rem;
@@ -120,6 +122,7 @@
   border-radius: 5rem;
 }
 
+/* メイン画像の下にある３つの画像 */
 .img_photo {
   display: flex;
   gap: 1rem;
@@ -139,6 +142,7 @@
   background-color: #FFD9B8;
 }
 
+/* サービス内容の箱 */
 .service_info {
   width: 120rem;
   height: 62.4rem;
@@ -153,14 +157,13 @@
 .top_word {
   width: 60.9rem;
   margin: 0 auto;
-  padding: 5rem auto;
+  padding-top: 5rem;
 }
 
 .top_word h2 {
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
-  padding-top: 5rem;
 }
 
 .line {
@@ -230,6 +233,7 @@
 }
 
 .service_photo {
+  display: block;
   width: 31.2rem;
   height: 18rem;
   border-radius: 2.4rem;
@@ -242,6 +246,7 @@
   width: 37rem;
   height: 38rem;
   padding: 1rem 2.4rem;
+  box-sizing: border-box;
   border-radius: 2.5rem;
   background-color: #FEF1E4;
 }
@@ -260,7 +265,7 @@
   width: 32.2rem;
   height: 9.9rem;
   font-size: 1.6rem;
-  margin: 0 auto 1.3rem;
+  margin: 0 auto;
 }
 
 .second_content {
@@ -272,6 +277,7 @@
   box-sizing: border-box;
 }
 
+/* 対話を、いちばん大切に。の箱 */
 .service_text_space {
   width: 120rem;
   height: 50rem;
@@ -374,6 +380,7 @@
   background-color: #FFF8E7;
 }
 
+/* KANTOの強みの箱 */
 .kanto_power {
   width: 120rem;
   height: 65.7rem;
@@ -453,7 +460,7 @@
   width: 30.1rem;
   height: 33.4rem;
   margin: 0 auto;
-  padding: 10rem auto;
+  padding: 1.9rem 1.2rem;
   box-sizing: border-box;
   border-radius: 2.5rem;
   background-color: #FEEEE2;
@@ -463,15 +470,16 @@
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
-  margin: 1.9rem auto 0;
+  margin: 0 auto;
 }
 
+/* デザイン実装のためmargin-topを1.5remから0.5remに変更 */
 .illustration0 {
   width: 27.7rem;
   height: 15.7rem;
   margin: 0.5rem auto 0;
 }
-
+/* デザイン実装のためmargin-topを1.5remから0に変更 */
 .point1 p {
   width: 26.2rem;
   height: 3.8rem;
@@ -484,7 +492,7 @@
   width: 48.9rem;
   height: 33.4rem;
   margin: 0 auto;
-  padding: 1.8rem auto;
+  padding: 1.8rem 2.7rem;
   border-radius: 2.5rem;
   background-color: #FDF2E8;
 }
@@ -493,9 +501,10 @@
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
-  margin: 4.8rem auto;
+  margin: 3rem auto 0;
 }
 
+/* ３つの画像を横並びにする */
 .point2_img {
   display: flex;
   gap: 1rem;
@@ -535,9 +544,10 @@
   width: 33rem;
   height: 33.4rem;
   margin: 0 auto;
-  padding: 2.1rem auto;
+  padding: 2.1rem 1rem;
   border-radius: 2.5rem;
   background-color: #FEEEE2;
+  box-sizing: border-box;
 }
 
 .point3 h3 {
@@ -546,22 +556,26 @@
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
-  margin: 2.1rem auto 0;
+  margin: 0 auto;
 }
 
+/* デザイン実装のためmargin-bottomを2remから0に変更 */
 .illustration4 {
+  display: block;
   width: 23.7rem;
   height: 11.5rem;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
 }
 
+/* デザイン実装のためmargin-topを2remから1remに変更 */
 .point3 p {
   font-size: 1.6rem;
   width: 23.8rem;
   height: 5.7rem;
-  margin: 0 auto;
+  margin: 1rem auto 0;
 }
 
+/* 「家での暮らしが不安」…が入る箱 */
 .last_space {
   display: flex;
   align-items: center;
@@ -597,6 +611,7 @@
   background-color: #FFF8E7;
 }
 
+/* ご利用までの流れが入る箱 */
 .step {
   width: 120rem;
   height: 43.8rem;
@@ -646,10 +661,12 @@
   transition: transform 0.3s ease;
 }
 
+/* ホバーすると大きくなる */
 .step_button:hover {
   transform: scale(1.05);
 }
 
+/* ホバーすると大きくなる（矢印） */
 .step_button:hover .arrow {
   transform: scale(2.0) translateX(0.5rem);
 }
@@ -677,6 +694,7 @@
   background-color: #FFF8E7;
 }
 
+/* お問い合わせはこちらを含む箱 */
 .service_contact {
   width: 120rem;
   height: 29.6rem;
@@ -716,10 +734,12 @@
   transition: transform 0.3s ease;
 }
 
+/* ホバーすると大きくなる */
 .contact_button:hover {
   transform: scale(1.05);
 }
 
+/* ホバーすると大きくなる（矢印） */
 .contact_button:hover .contact_arrow {
   transform: scale(2.5) translateX(0.5rem);
 }
@@ -758,6 +778,7 @@
     margin: 0 auto;
   }
 
+  /* 縦並びに変更 */
   .service_main {
     width: 100%;
     height: 100%;
@@ -767,6 +788,7 @@
     padding: 0;
   }
 
+  /* 写真が一番最初に表示されるように */
   .service_img {
     order: 1;
     width: 37rem;
@@ -781,6 +803,7 @@
     margin: 3.6rem 0.3rem 1.1rem 0;
   }
 
+  /* 文字などは２番目に表示されるように */
   .service_left {
     order: 2;
     width: 37rem;
@@ -789,6 +812,7 @@
     padding: 0;
   }
 
+  /* ３つの写真はSP版では非表示 */
   .photo {
     display: none;
   }
@@ -925,14 +949,14 @@
   .second_content {
     width: 100%;
     height: 131.6rem;
+    padding: 0;
   }
 
   .service_text_space {
     width: 36rem;
     height: 121.6rem;
-    margin: 0 auto;
     padding: 5rem 1rem;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 
   .second_photo {
@@ -1170,10 +1194,12 @@
     margin: 1rem auto 6.5rem;
   }
 
+  /* 矢印の位置を調整 */
   .contact_arrow {
     margin-left: 1rem;
   }
 
+  /* ホバーして大きくなる矢印の大きさを調整 */
   .contact_button:hover .contact_arrow {
     transform: scale(1.5) translateX(0.5rem);
   }
