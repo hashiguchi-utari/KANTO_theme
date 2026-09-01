@@ -27,7 +27,7 @@ TOP動画（現在画像で置く）
   margin: 0 auto;
 }
 
- /* .front_mv video {
+/* .front_mv video {
   display: block;
   width: 100%;
   height: auto;
@@ -53,6 +53,7 @@ KANTOとは
 }
 
 .front_h3 {
+  margin-left: 2rem;
   font-size: 3.6rem;
   margin-bottom: 6.6rem;
 }
@@ -166,7 +167,6 @@ SPとPCの切り替え
   font-size: 2.4rem;
   letter-spacing: 0.07em;
   font-weight: 600;
-
 }
 
 .front_circle {
@@ -262,6 +262,11 @@ SPとPCの切り替え
 
 .front-news-text {
   flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*長すぎるタイトルを1行に収めて、語尾を「…」にする*/
 }
 
 /*====================================
@@ -390,7 +395,7 @@ TOP動画（現在画像で置く）
   height: auto;
 } */
 
-/* 
+  /* 
   .front_mv video {
     display: block;
     width: 100%;
@@ -420,12 +425,12 @@ KANTOとは
 
   .front_h3 {
     font-size: 2.4rem;
-    margin-bottom: 9.8rem;
-    margin-left: -5rem;
+    margin-bottom: 10rem;
+    margin-left: -3.8rem;
   }
 
   .front-kanto p {
-    width: 20.8rem;
+    width: 24.5rem;
     font-size: 1.6rem;
     letter-spacing: 0.1em;
     line-height: 1.708;
@@ -466,7 +471,7 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 32%;
+    top: 35%;
     left: 15%;
     transform: translate(-50%, -50%);
   }
@@ -481,7 +486,7 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 82%;
+    top: 86%;
     left: -40%;
     transform: translate(-50%, -50%);
   }
@@ -554,6 +559,9 @@ SPオンリー
     position: relative;
     margin-bottom: 6.6rem;
     font-size: 1.6rem;
+    background-color: #FFEDD4;
+
+    min-height: 16rem;
   }
 
   .front-news-inner {
@@ -567,14 +575,15 @@ SPオンリー
 
   .front-news-title {
     font-size: 2.4rem;
-    margin: 4.7rem 0;
-    padding: 0 4rem;
+    margin: 4.7rem 0 2.7rem;
+    padding: 0 2.7rem;
     box-sizing: border-box;
   }
 
   .front-news img {
     margin: 0 auto;
-    /*ベクター画像2*/
+    width: 36rem;
+    /*ベクター画像4*/
   }
 
   .front-news-list {
@@ -590,21 +599,21 @@ SPオンリー
     width: 34rem;
     margin: 0 auto;
 
-    height: 55px;
+    height: 5.5rem;
     box-sizing: border-box;
   }
 
   .front-news-item a {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 2.5rem;
-    padding: 0rem 1.8rem;
+    padding: 1rem 1.8rem;
     box-sizing: border-box;
     color: #000;
     text-decoration: none;
 
-    height: 100%;
+    min-height: 5.5rem;
   }
 
   .front-news-item time {
@@ -614,12 +623,13 @@ SPオンリー
   .front-news-text {
     flex: 1;
 
+    min-width: 0;
+
     line-height: 1.61;
 
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /*====================================
@@ -680,7 +690,7 @@ SPオンリー
 インスタ紹介の部分
 =====================================*/
   .insta {
-    margin-top: 15rem;
+    margin-top: 11.3rem;
     background-color: #fff;
     padding: 2.5rem 2.7rem 15.4rem;
     box-sizing: border-box;
@@ -688,7 +698,7 @@ SPオンリー
 
   .front-insta {
     font-size: 2.4rem;
-    color: #598876;
+    color: #000;
     margin-bottom: 3.2rem;
   }
 
