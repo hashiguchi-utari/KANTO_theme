@@ -16,7 +16,7 @@
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff1.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff2.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
-            <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff8.png')); ?>" alt="">
             <span class="pc-border"></span>
         </div>
         <div class="comment"> 

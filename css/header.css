@@ -128,10 +128,17 @@
         #header {
             padding: 2rem 0;
         }
+        .header-logo img {
+            width: 25.8rem;
+            height: 6.5rem;
+        }
         .menu {
             display: none;
         }
         .hamburger span {
             background-color: #fff;
+        }
+        .hamburger.is-open {
+            top: 1rem;
         }
 }
