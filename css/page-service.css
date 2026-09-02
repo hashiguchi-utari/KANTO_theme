@@ -481,6 +481,7 @@
   height: 15.7rem;
   margin: 0.5rem auto 0;
 }
+
 /* デザイン実装のためmargin-topを1.5remから0に変更 */
 .point1 p {
   width: 26.2rem;
@@ -787,7 +788,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 5rem auto;
+    margin: 5rem auto 0;
     padding: 0;
   }
 
@@ -843,18 +844,27 @@
   .icon_set {
     display: block;
     padding: 0;
-    margin: 3.2rem auto 10.6rem;
+    margin: 3.2rem auto 4.6rem;
     width: 36rem;
-    height: 49.4rem;
+    height: 54.4rem;
   }
 
-  .icon {
+  .icon1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .icon2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .icon3 {
     width: 60%;
     margin: 0 auto;
   }
 
-  .heart,
-  .speak {
+  .heart {
     width: 30rem;
     height: 15rem;
     box-sizing: border-box;
@@ -865,14 +875,14 @@
     width: 35rem;
     height: 15rem;
     box-sizing: border-box;
-    margin: -5rem auto 0;
+    margin: 0 auto 0;
   }
 
   .grouphome {
     width: 36rem;
     height: 19.4rem;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 5rem auto 0;
   }
 
   .heart::after,
@@ -885,11 +895,11 @@
   }
 
   .heart .pr_point {
-    margin-top: -10rem;
+    margin-top: -16rem;
   }
 
   .speak .pr_point {
-    margin-top: -5rem;
+    margin-top: -6rem;
   }
 
   .grouphome .pr_point {
@@ -899,6 +909,7 @@
   .service_content {
     width: 100%;
     height: 154.7rem;
+    margin-top: -5rem;
   }
 
   .service_info {
@@ -947,6 +958,10 @@
   .medicine h3,
   .main_service h3 {
     font-size: 2.2rem;
+  }
+
+  .body_maintenance p {
+    letter-spacing: -0.05em;
   }
 
   .second_content {
@@ -1171,7 +1186,7 @@
   .nurse {
     width: 33rem;
     height: 29.6rem;
-    margin-top: 1rem;
+    margin-top: 6rem;
   }
 
   .fifth_content {

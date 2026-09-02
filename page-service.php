@@ -15,15 +15,15 @@
 
         <div class="icon_set">
           <div class="heart">
-            <img class="icon" src="<?php echo esc_url(get_theme_file_uri('img/ハート 1.png')); ?>" alt="ハート">
+            <img class="icon1" src="<?php echo esc_url(get_theme_file_uri('img/ハート 1.png')); ?>" alt="ハート">
             <p class="pr_point">こころと体に<br>やさしく寄り添う</p>
           </div>
           <div class="speak">
-            <img class="icon" src="<?php echo esc_url(get_theme_file_uri('img/対話 2.png')); ?>" alt="対話">
+            <img class="icon2" src="<?php echo esc_url(get_theme_file_uri('img/対話 2.png')); ?>" alt="対話">
             <p class="pr_point">対話を大切にした<br>サポート</p>
           </div>
           <div class="grouphome">
-            <img class="icon" src="<?php echo esc_url(get_theme_file_uri('img/ホーム 1.png')); ?>" alt="ホーム">
+            <img class="icon3" src="<?php echo esc_url(get_theme_file_uri('img/ホーム 1.png')); ?>" alt="ホーム">
             <p class="pr_point">グループホーム<br>SETAと連携</p>
           </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="body_maintenance">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/体調管理 1.png')); ?>" alt="血圧計">
           <h3>体調管理</h3>
-          <p>毎日の体調や気分の変化を一緒に確認<br class="sp_only">し、<br>安心して過ごせるようサポートします。</p>
+          <p>毎日の体調や気分の変化を一緒に確認し、<br>安心して過ごせるようサポートします。</p>
         </div>
 
         <div class="medicine">
@@ -119,7 +119,7 @@
       </div>
       <div class="last_space">
         <img class="home" src="<?php echo esc_url(get_theme_file_uri('img/Frame 187.png')); ?>" alt="家のアイコン">
-        <p> 「家での暮らしが不安」<br class="sp_only">　　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
+        <p> 「家での暮らしが不安」<br class="sp_only">　「一人での生活がむずかしい」<br>そんなときは、グループホーム「SETA」という選択肢もご一緒に検討できます。</p>
       </div>
     </div>
   </section>
