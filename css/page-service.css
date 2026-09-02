@@ -481,6 +481,7 @@
   height: 15.7rem;
   margin: 0.5rem auto 0;
 }
+
 /* デザイン実装のためmargin-topを1.5remから0に変更 */
 .point1 p {
   width: 26.2rem;
@@ -582,6 +583,7 @@
 .last_space {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: 110rem;
   height: 10.9rem;
@@ -602,9 +604,8 @@
   width: 58.8rem;
   height: 8.7rem;
   font-size: 1.6rem;
-  margin: 1.1rem 0;
-  display: flex;
-  align-items: center;
+  padding: 2.1rem 0;
+ 
 }
 
 .forth_content {
@@ -765,6 +766,10 @@
   display: inline;
 }
 
+.pc_space{
+  display: inline;
+}
+
 @media screen and (max-width: 699.98px) {
 
   .pc_only {
@@ -773,6 +778,10 @@
 
   .sp_only {
     display: inline;
+  }
+
+  .pc_space{
+    display:none;
   }
 
   .main_container {
@@ -787,7 +796,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 5rem auto;
+    margin: 5rem auto 0;
     padding: 0;
   }
 
@@ -843,18 +852,27 @@
   .icon_set {
     display: block;
     padding: 0;
-    margin: 3.2rem auto 10.6rem;
+    margin: 3.2rem auto 4.6rem;
     width: 36rem;
-    height: 49.4rem;
+    height: 54.4rem;
   }
 
-  .icon {
+  .icon1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .icon2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .icon3 {
     width: 60%;
     margin: 0 auto;
   }
 
-  .heart,
-  .speak {
+  .heart {
     width: 30rem;
     height: 15rem;
     box-sizing: border-box;
@@ -865,14 +883,14 @@
     width: 35rem;
     height: 15rem;
     box-sizing: border-box;
-    margin: -5rem auto 0;
+    margin: 0 auto 0;
   }
 
   .grouphome {
     width: 36rem;
     height: 19.4rem;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 5rem auto 0;
   }
 
   .heart::after,
@@ -885,11 +903,11 @@
   }
 
   .heart .pr_point {
-    margin-top: -10rem;
+    margin-top: -16rem;
   }
 
   .speak .pr_point {
-    margin-top: -5rem;
+    margin-top: -6rem;
   }
 
   .grouphome .pr_point {
@@ -899,6 +917,7 @@
   .service_content {
     width: 100%;
     height: 154.7rem;
+    margin-top: -5rem;
   }
 
   .service_info {
@@ -947,6 +966,10 @@
   .medicine h3,
   .main_service h3 {
     font-size: 2.2rem;
+  }
+
+  .body_maintenance p {
+    letter-spacing: -0.05em;
   }
 
   .second_content {
@@ -1127,7 +1150,8 @@
   .last_space p {
     width: 21.8rem;
     height: 16.3rem;
-    margin: 1rem 2.25rem 1rem 1rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
   }
 
   .forth_content {
@@ -1142,12 +1166,15 @@
   }
 
   .step_guide {
+    width: 35rem;
+    height: 25.8rem;
     margin: 0 auto;
   }
 
   .step_guide h2 {
     font-size: 2.8rem;
     padding-top: 5rem;
+    padding-bottom: 1.6rem;
     text-align: center;
   }
 
@@ -1155,13 +1182,16 @@
     width: 23.9rem;
   }
 
-  .step_guide p {
+  .step_guide > p {
+    width: 26.4rem;
+    margin: 0 auto;
     font-size: 1.6rem;
     text-align: center;
   }
 
   .step_button {
     width: 35rem;
+    margin: 2rem auto;
   }
 
   .step_button p {
@@ -1170,8 +1200,8 @@
 
   .nurse {
     width: 33rem;
-    height: 29.6rem;
-    margin-top: 1rem;
+    height: 29.8rem;
+    margin-top: 6rem;
   }
 
   .fifth_content {
