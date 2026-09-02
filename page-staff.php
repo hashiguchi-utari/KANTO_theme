@@ -56,9 +56,9 @@
             </div>
             <div class="thumbnails">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="1のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="2のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="2のサムネイル" />
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="3のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="4のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="4のサムネイル" />
             </div>
         </div>
 
@@ -108,9 +108,9 @@
             </div>
             <div class="thumbnails">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="1のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="2のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="2のサムネイル" />
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="3のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="4のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="4のサムネイル" />
             </div>
         </div>
 
@@ -159,9 +159,9 @@
             </div>
             <div class="thumbnails">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="1のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="2のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" class="thumb" alt="2のサムネイル" />
                 <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="3のサムネイル" />
-                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" class="thumb" alt="4のサムネイル" />
+                <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" class="thumb" alt="4のサムネイル" />
             </div>
         </div>
 

@@ -153,7 +153,13 @@ main {
     background-color: #fff;
     border-radius: 3rem;
     box-shadow: 2.5rem 2.5rem 3rem rgba(200, 168, 168, 0.4);
-    animation: floatUp 0.8s ease-out forwards;
+    transform: translateY(3rem);
+    transition: opacity 0.6s, transform 0.6s;
+    opacity: 0;
+}
+.card.is-show {
+    opacity: 1;
+    transform: translateY(0);
 }
 #staff1,
 #staff3 {

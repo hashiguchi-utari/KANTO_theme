@@ -22,6 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        function updateThumbnailsSlider(index) {
+            currentIndex = index;
+            const targetThumb = thumbnails[currentIndex];
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === currentIndex);
+            });
+
+            
+            if (isSP()) {
+                thumbnailsContainer.scrollTo({
+                    left: targetThumb.offsetLeft - thumbnailsContainer.offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
         function startAutoSlide() {
             if (!autoSlideInterval && isSP()) {
                 autoSlideInterval = setInterval(() => {
@@ -61,3 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 });
+
+
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-show');
+        } else {
+            entry.target.classList.remove('is-show');
+        }
+    });
+}, observerOptions);
+
+const targetImages = document.querySelectorAll('.card');
+targetImages.forEach(card => observer.observe(card));
