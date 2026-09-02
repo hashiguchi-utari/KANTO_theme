@@ -583,6 +583,7 @@
 .last_space {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: 110rem;
   height: 10.9rem;
@@ -603,9 +604,8 @@
   width: 58.8rem;
   height: 8.7rem;
   font-size: 1.6rem;
-  margin: 1.1rem 0;
-  display: flex;
-  align-items: center;
+  padding: 2.1rem 0;
+ 
 }
 
 .forth_content {
@@ -766,6 +766,10 @@
   display: inline;
 }
 
+.pc_space{
+  display: inline;
+}
+
 @media screen and (max-width: 699.98px) {
 
   .pc_only {
@@ -774,6 +778,10 @@
 
   .sp_only {
     display: inline;
+  }
+
+  .pc_space{
+    display:none;
   }
 
   .main_container {
@@ -1142,7 +1150,8 @@
   .last_space p {
     width: 21.8rem;
     height: 16.3rem;
-    margin: 1rem 2.25rem 1rem 1rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
   }
 
   .forth_content {
@@ -1157,12 +1166,15 @@
   }
 
   .step_guide {
+    width: 35rem;
+    height: 25.8rem;
     margin: 0 auto;
   }
 
   .step_guide h2 {
     font-size: 2.8rem;
     padding-top: 5rem;
+    padding-bottom: 1.6rem;
     text-align: center;
   }
 
@@ -1170,13 +1182,15 @@
     width: 23.9rem;
   }
 
-  .step_guide p {
+  .step_guide > p {
+    width: 26.4rem;
+    margin: 0 auto;
     font-size: 1.6rem;
-    text-align: center;
   }
 
   .step_button {
     width: 35rem;
+    margin: 2rem auto;
   }
 
   .step_button p {
@@ -1185,7 +1199,7 @@
 
   .nurse {
     width: 33rem;
-    height: 29.6rem;
+    height: 29.8rem;
     margin-top: 6rem;
   }
 
