@@ -14,15 +14,28 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
 }
 .mainvisual img {
+    width: calc(33.33% - 1rem);
+    max-width: 100%;
+    height: auto;
     margin-bottom: 4rem;
     z-index: 5;
     position: relative;
-    background-color: #fff6e5;
     opacity: 0;
     transform: translateX(5rem);
-    animation: fadeInRight 1s ease-out forwards;
+    animation: fadeInRight 0.6s ease-out both;
+}
+.mainvisual img:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.mainvisual img:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.mainvisual img:nth-child(3) {
+    animation-delay: 0.5s;
 }
 @keyframes fadeInRight {
     to {

@@ -7,20 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card) => {
         const mainImg = card.querySelector('#mainimg img');
         const thumbnails = card.querySelectorAll('.thumbnails .thumb');
+        const thumbnailsContainer = card.querySelector('.thumbnails');
         if (thumbnails.length === 0) return;
         let currentIndex = 0;
         let autoSlideInterval = null;
 
-        function changeImage(index) {
-            currentIndex = index;
-            const targetThumb = thumbnails[currentIndex];
-            if (mainImg) {
-                mainImg.src = targetThumb.src;
-            }
-            thumbnails.forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === currentIndex);
-            });
-        }
 
         function updateThumbnailsSlider(index) {
             currentIndex = index;
@@ -30,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             
-            if (isSP()) {
+            if (isSP() && targetThumb) {
                 thumbnailsContainer.scrollTo({
                     left: targetThumb.offsetLeft - thumbnailsContainer.offsetLeft,
                     behavior: 'smooth'
@@ -38,11 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        function changeImage(index) {
+            const targetThumb = thumbnails[index];
+            if (mainImg && targetThumb) {
+                mainImg.src = targetThumb.src;
+            }
+            
+            updateThumbnailsSlider(index);
+        }
+
         function startAutoSlide() {
             if (!autoSlideInterval && isSP()) {
                 autoSlideInterval = setInterval(() => {
                     const nextIndex = (currentIndex + 1) % thumbnails.length;
-                    changeImage(nextIndex);
+                    updateThumbnailsSlider(nextIndex);
                 }, 3000);
             }
         }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        changeImage(0);
+        updateThumbnailsSlider(0);
         startAutoSlide();
         window.addEventListener('resize', () => {
             if (isSP()) {
