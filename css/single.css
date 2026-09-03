@@ -129,7 +129,9 @@ SPとPCの切り替え
 .button {
   font-size: 1.4rem;
   padding: 1rem;
-  background-color: #FFEDD4;
+  width: 15rem;
+  border-radius: 20rem;
+   background-color: #FFEDD4;
   border: 0.1rem solid #000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

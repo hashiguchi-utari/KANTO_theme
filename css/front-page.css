@@ -9,12 +9,26 @@ chiron-goround-tc-
   font-style: normal;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@200..900&display=swap');
+
+.mplus-title {
+  font-family: "M PLUS U", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /*====================================
 コンテナ部
 =====================================*/
 .front_container {
   width: 100%;
   margin: 0 auto;
+
+  font-family: 'Noto Sans JP', sans-serif;
+
   background-color: #FFEDD4;
   /*背景ｍｖ以外の部分のカラー？*/
 }
@@ -40,7 +54,8 @@ KANTOとは
   padding-top: 16.4rem;
   margin: 0 auto;
   background-color: #FFEDD4;
-  padding-bottom: 18rem;
+  padding-bottom: 20rem;
+
   position: relative;
 }
 
@@ -85,8 +100,8 @@ KANTOとはの１～４画像
   /*画像を縮ませない指定*/
 
   position: absolute;
-  top: 15%;
-  left: 65%;
+  top: 10%;
+  left: 55%;
   transform: translate(-50%, -50%);
 }
 
@@ -101,7 +116,7 @@ KANTOとはの１～４画像
 
   position: absolute;
   top: 45%;
-  left: 14%;
+  left: 5%;
   transform: translate(-50%, -50%);
 }
 
@@ -116,7 +131,7 @@ KANTOとはの１～４画像
 
   position: absolute;
   top: 53%;
-  right: -4%;
+  right: 4%;
   transform: translate(-50%, -50%);
 }
 
@@ -130,10 +145,38 @@ KANTOとはの１～４画像
   /*画像を縮ませない指定*/
 
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 35%;
   transform: translate(-50%, -50%);
 }
+
+
+/*====================================
+front_img1〜4 をスクロールに合わせて
+順番に浮かび上がらせる
+=====================================*/
+
+/* 初期状態 */
+.front-kanto .front_img1,
+.front-kanto .front_img2,
+.front-kanto .front_img3,
+.front-kanto .front_img4 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+}
+
+/* 画面内に入った画像 */
+.front-kanto .front_img1.is-show,
+.front-kanto .front_img2.is-show,
+.front-kanto .front_img3.is-show,
+.front-kanto .front_img4.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /*====================================
 SPとPCの切り替え
@@ -166,7 +209,12 @@ SPとPCの切り替え
 .front_navi_p {
   font-size: 2.4rem;
   letter-spacing: 0.07em;
-  font-weight: 600;
+  font-weight: 500;
+  text-align: center;
+}
+
+.front_navi_p:hover {
+  color: #ff8d28;
 }
 
 .front_circle {
@@ -176,6 +224,11 @@ SPとPCの切り替え
   object-fit: cover;
   margin-bottom: 2.41rem;
 }
+
+.front_circle:hover {
+  transform: scale(1.25);
+}
+
 
 /*====================================
 浮かぶようなアニメーション
@@ -408,10 +461,10 @@ TOP動画（現在画像で置く）
 KANTOとは
 =====================================*/
   .front-kanto {
-    padding-top: 7.3rem;
+    padding-top: 5.3rem;
     margin: 0 auto;
     background-color: #FFEDD4;
-    padding-bottom: 10.6rem;
+    padding-bottom: 15.6rem;
     position: relative;
   }
 
@@ -456,8 +509,8 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 20%;
-    right: -20%;
+    top: 10%;
+    right: -10%;
     transform: translate(-50%, -50%);
   }
 
@@ -471,8 +524,8 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 35%;
-    left: 15%;
+    top: 29%;
+    left: 10%;
     transform: translate(-50%, -50%);
   }
 
@@ -486,7 +539,7 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 86%;
+    top: 74%;
     left: -40%;
     transform: translate(-50%, -50%);
   }
@@ -501,8 +554,8 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 88%;
-    right: -47%;
+    top: 81%;
+    right: -19%;
     transform: translate(-50%, -50%);
   }
 
@@ -522,7 +575,7 @@ SPオンリー
 =====================================*/
   .front_h1 {
     font-size: 3.6rem;
-    padding: 0 1.5rem;
+    padding: 10rem 0rem;
     box-sizing: border-box;
     text-align: left;
   }
