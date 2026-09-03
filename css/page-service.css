@@ -38,7 +38,7 @@
 .grouphome {
   opacity: 0;
   transform: translateY(3rem);
-  transition: opacity 1.6s ease, transform 1.6s ease;
+  transition: opacity 1.8s ease, transform 1.8s ease;
 }
 
 .service_message.is-visible,
@@ -136,7 +136,7 @@
 }
 
 .service_content {
-  width: 144rem;
+  width: 100%;
   height: 72.4rem;
   margin: 0 auto;
   background-color: #FFD9B8;
@@ -269,7 +269,7 @@
 }
 
 .second_content {
-  width: 144rem;
+  width: 100%;
   height: 60rem;
   background-color: #FFD9B8;
   margin: 0 auto;
@@ -288,7 +288,7 @@
 
 .second_photo {
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
   width: 118rem;
   box-sizing: border-box;
 }
@@ -320,7 +320,7 @@
 }
 
 .smile_tolk {
-  width: 60rem;
+  width: 50rem;
   height: 40rem;
   border-radius: 5rem;
   margin: 5rem 0 0 1rem;
@@ -376,7 +376,7 @@
 }
 
 .third_content {
-  width: 144rem;
+  width: 100%;
   height: 75.7rem;
   margin: 0 auto;
   background-color: #FFF8E7;
@@ -605,11 +605,11 @@
   height: 8.7rem;
   font-size: 1.6rem;
   padding: 2.1rem 0;
- 
+
 }
 
 .forth_content {
-  width: 144rem;
+  width: 100%;
   height: 53.8rem;
   margin: 0 auto;
   background-color: #FFF8E7;
@@ -692,16 +692,16 @@
 }
 
 .fifth_content {
-  width: 144rem;
-  height: 39.6rem;
+  width: 100%;
+  height: 28.6rem;
   margin: 0 auto;
   background-color: #FFF8E7;
 }
 
-/* お問い合わせはこちらを含む箱 */
+/* オレンジ色の箱 */
 .service_contact {
   width: 120rem;
-  height: 29.6rem;
+  height: 18.6rem;
   margin: 0 auto;
   position: relative;
   top: 5rem;
@@ -766,7 +766,7 @@
   display: inline;
 }
 
-.pc_space{
+.pc_space {
   display: inline;
 }
 
@@ -780,8 +780,8 @@
     display: inline;
   }
 
-  .pc_space{
-    display:none;
+  .pc_space {
+    display: none;
   }
 
   .main_container {
@@ -827,6 +827,15 @@
   /* ３つの写真はSP版では非表示 */
   .photo {
     display: none;
+  }
+
+  .service_message,
+  .speak_human,
+  .photo,
+  .heart,
+  .speak,
+  .grouphome {
+    transition: opacity 5.5s ease, transform 5.5s ease;
   }
 
   .service_message {
@@ -944,6 +953,19 @@
     margin: 1rem auto 5rem;
   }
 
+  /* 上 → 中 → 下の順番 */
+  .three_point>div:nth-child(1).is-show {
+    animation-delay: 0s;
+  }
+
+  .three_point>div:nth-child(2).is-show {
+    animation-delay: 1.2s;
+  }
+
+  .three_point>div:nth-child(3).is-show {
+    animation-delay: 2.4s;
+  }
+
   .service_photo {
     width: 31.2rem;
     border-radius: 2.4rem;
@@ -1033,6 +1055,10 @@
     margin: 0 auto;
   }
 
+  .three_message p.is-show {
+    animation: fadeUp 2.5s ease-out forwards;
+  }
+
   .three_message .space {
     margin-bottom: 3.3rem;
   }
@@ -1061,6 +1087,16 @@
     height: 105.8rem;
     display: block;
     margin: 2rem auto;
+  }
+
+  /* ② point2 */
+  .power_point>div:nth-child(2).is-show {
+    animation-delay: 1.5s;
+  }
+
+  /* ③ point3 */
+  .power_point>div:nth-child(3).is-show {
+    animation-delay: 2.5s;
   }
 
   .point1 {
@@ -1182,7 +1218,7 @@
     width: 23.9rem;
   }
 
-  .step_guide > p {
+  .step_guide>p {
     width: 26.4rem;
     margin: 0 auto;
     font-size: 1.6rem;
@@ -1212,31 +1248,20 @@
 
   .service_contact {
     width: 38rem;
-    height: 31.1rem;
+    height: 16.7rem;
   }
 
-  .nav_message1,
-  .nav_message2 {
-    color: white;
+  .nav_message1 {
     font-size: 2.2rem;
+    padding: 2rem 0 0;
   }
 
-  .contact_button {
-    width: 36rem;
-    height: 7.2rem;
-    display: flex;
-    gap: 0;
-    margin: 1rem auto 6.5rem;
+  .nav_message2 {
+    font-size: 2.2rem;
+    padding: 0 0 1.8rem;
+    margin-top: 0;
   }
 
-  /* 矢印の位置を調整 */
-  .contact_arrow {
-    margin-left: 1rem;
-  }
 
-  /* ホバーして大きくなる矢印の大きさを調整 */
-  .contact_button:hover .contact_arrow {
-    transform: scale(1.5) translateX(0.5rem);
-  }
 
 }

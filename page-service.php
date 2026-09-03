@@ -146,10 +146,6 @@
     <div class="service_contact">
       <p class="nav_message1">ひとりで抱え込まず、<br class="sp_only">まずはお話してみませんか？</p>
       <p class="nav_message2">あなたの「はじめの一歩」を、<br class="sp_only">私たちがそっとサポートします。</p>
-      <a class="contact_button" href="<?php echo esc_url(home_url('/inquiry/')); ?>">
-        <p>お問い合わせはこちら</p>
-        <img class="contact_arrow" src="<?php echo esc_url(get_theme_file_uri('img/Arrow 4.png')); ?>" alt="矢印">
-      </a>
     </div>
   </section>
 
