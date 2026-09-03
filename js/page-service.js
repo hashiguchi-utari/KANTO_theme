@@ -5,39 +5,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const photos = document.querySelectorAll(".photo");
   const icons = document.querySelectorAll(".heart, .speak, .grouphome");
 
-  const isSP = window.matchMedia("(max-width: 767px)").matches;
+  const isSP = window.matchMedia("(max-width: 699.98px)").matches;
 
   if (isSP) {
 
-    // SP：speak_humanが画面に入ったら開始
-    const observer = new IntersectionObserver((entries) => {
+  // SP：speak_humanが画面に入ったら開始
+  const observer = new IntersectionObserver((entries) => {
 
-      if (!entries[0].isIntersecting) return;
+    if (!entries[0].isIntersecting) return;
 
-      // ① 人物
-      speakHuman.classList.add("is-visible");
+    // ① 人物
+    speakHuman.classList.add("is-visible");
 
-      // ② 文字
+    // ② 文字
+    setTimeout(() => {
+      serviceMessage.classList.add("is-visible");
+    }, 500);
+
+    // ③ アイコン
+    icons.forEach((icon, index) => {
       setTimeout(() => {
-        serviceMessage.classList.add("is-visible");
-      }, 500);
-
-      // ③ アイコン
-      icons.forEach((icon, index) => {
-        setTimeout(() => {
-          icon.classList.add("is-visible");
-        }, 1000 + index * 400);
-      });
-
-      observer.unobserve(speakHuman);
-
-    }, {
-      threshold: 0.2
+        icon.classList.add("is-visible");
+      }, 1000 + index * 400);
     });
 
-    observer.observe(speakHuman);
+    observer.unobserve(speakHuman);
 
-  } else {
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(speakHuman);
+
+}
+
+  else {
 
     // PC：service_messageが画面に入ったら開始
     const observer = new IntersectionObserver((entries) => {
@@ -92,7 +94,8 @@ if (threePoint) {
       observer.disconnect();
     }
   }, {
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: "0px 0px -20% 0px"
   });
 
   observer.observe(threePoint);
@@ -120,7 +123,8 @@ if (secondContent) {
         observer.disconnect();
       }
     }, {
-      threshold: 0.2
+      threshold: 0,
+      rootMargin: "0px 0px -20% 0px"
     });
 
     observer.observe(secondContent);
@@ -143,7 +147,8 @@ if (powerPoint) {
       observer.disconnect();
     }
   }, {
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: "0px 0px -20% 0px"
   });
 
   observer.observe(powerPoint);
