@@ -154,16 +154,14 @@ function kanto_enqueue_scripts()
 		// 20260828_橋口修正_archive.jsが複数回読み込まれると、カテゴリを1回選択しただけでも
 		// 同じ通信が複数回実行されるため、読み込み場所をここだけに統一しました。
 		// あわせて、カテゴリ絞り込みの通信先となるWordPressのURLをarchive.jsへ渡します。
-    wp_localize_script(
-        'kanto-archive',
-        'archiveAjax',
-        array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-        )
-    );
-
-
-		} elseif (is_single()) {
+		wp_localize_script(
+			'kanto-archive',
+			'archiveAjax',
+			array(
+				'ajaxurl' => admin_url('admin-ajax.php'),
+			)
+		);
+	} elseif (is_single()) {
 		kanto_enqueue_theme_script('kanto-single', '/js/single.js', array('kanto-main'));
 	} elseif (is_search()) {
 		kanto_enqueue_theme_script('kanto-search', '/js/search.js', array('kanto-main'));

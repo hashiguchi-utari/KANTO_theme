@@ -23,3 +23,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 250);
 });
+
+/**
+ * SP版のSeta・UTARI紹介画像を、1枚ずつ自動で切り替えます。
+ * CSSが読み込めない場合は元の縦並びが残るよう、JavaScript有効時だけクラスを付けます。
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const galleries = document.querySelectorAll(
+    '.group-service__gallery--seta, .group-service__gallery--utari'
+  );
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  galleries.forEach((gallery) => {
+    const slides = Array.from(gallery.children);
+
+    if (slides.length < 2) {
+      return;
+    }
+
+    let currentIndex = 0;
+    gallery.classList.add('is-slideshow');
+    slides[0].classList.add('is-active');
+
+    if (reduceMotion) {
+      return;
+    }
+
+    window.setInterval(() => {
+      slides[currentIndex].classList.remove('is-active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('is-active');
+    }, 3500);
+  });
+});

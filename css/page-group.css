@@ -52,12 +52,12 @@
   line-height: 1.55;
 }
 .group-hero__message--left {
-  top: 23rem;
-  left: 11.2rem;
+  top: 19rem;
+  left: 16.2rem;
 }
 .group-hero__message--right {
-  top: 45rem;
-  right: 6.4rem;
+  top: 37rem;
+  right: 5.4rem;
 }
 /* JavaScript読込時だけ、PC版のメッセージを下からじわっと順番に浮かび上がらせる */
 .group-hero__message.is-fade-up-ready {
@@ -85,12 +85,28 @@
   font-size: 3.6rem;
   line-height: 1.2;
   white-space: nowrap;
-  background: rgb(255 248 239 / 85%);
   transform: translateX(-50%);
 }
 .group-hero__diagram {
   position: absolute;
   inset: 0;
+}
+/* PC版は三角形全体を初期表示に収め、中央へRITABELLを配置する */
+@media (min-width: 700px) {
+  .group-hero__inner {
+    height: 108.3rem;
+  }
+  .group-hero__diagram {
+    transform: translateY(-16rem);
+  }
+  .group-hero__company {
+    top: 53.2rem;
+    z-index: 4;
+    font-size: 4.8rem;
+  }
+  .group-hero__title {
+    display: none;
+  }
 }
 .group-hero__item {
   position: absolute;
@@ -119,11 +135,22 @@
   outline-offset: 0.5rem;
 }
 .group-hero__item figcaption {
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  display: block;
+  color: #2f2f2f;
+  font-family: Arial, sans-serif;
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 .group-hero__item--kanto {
-  top: 25rem;
-  left: 49%;
+  top: 28rem;
+  left: 50%;
   width: 36rem;
   transform: translateX(-50%);
 }
@@ -138,6 +165,24 @@
   width: 36rem;
 }
 
+/* PC版では、リンクになっているSETA・UTARIを浮かせてクリック可能だと伝える */
+@media (min-width: 700px) {
+  .group-hero__item--seta,
+  .group-hero__item--utari {
+    transition:
+      transform 0.35s ease,
+      filter 0.35s ease;
+  }
+
+  .group-hero__item--seta:hover,
+  .group-hero__item--seta:focus-within,
+  .group-hero__item--utari:hover,
+  .group-hero__item--utari:focus-within {
+    filter: drop-shadow(0 1.2rem 1rem rgb(0 0 0 / 20%));
+    transform: translateY(-1rem) scale(1.03);
+  }
+}
+
 /* 支給画像を使って3事業を二重線で結ぶ */
 .group-hero__line {
   position: absolute;
@@ -145,7 +190,7 @@
 }
 .group-hero__line--left-1 {
   top: 55.5rem;
-  left: 49rem;
+  left: 45rem;
   width: 10%;
 }
 .group-hero__line--left-2 {
@@ -154,13 +199,13 @@
   width: 10%;
 }
 .group-hero__line--right-1 {
-  top: 56rem;
-  right: 52.5rem;
+  top: 57rem;
+  right: 45.5rem;
   width: 10%;
 }
 .group-hero__line--right-2 {
-  top: 57rem;
-  right: 49.5rem;
+  top: 56rem;
+  right: 44.5rem;
   width: 10%;
 }
 .group-hero__line--bottom {
@@ -199,7 +244,7 @@
   font-weight: bold;
   line-height: 1.35;
   text-align: center;
-  font-family: "Kaisei Decol", serif;
+  font-family: "Rampart One", sans-serif;
   padding-top: 6rem;
 }
 .group-service__title-sp {
@@ -212,7 +257,7 @@
   margin-top: 6rem;
 }
 .group-service__gallery--seta {
-  grid-template-columns: 26.7rem 27.6rem 24.9rem 23.5rem;
+  grid-template-columns: repeat(4, 26.7rem);
   justify-content: space-between;
   gap: 2rem;
   margin: 5rem 6rem;
@@ -226,28 +271,20 @@
   object-fit: cover;
   border-radius: 5rem;
 }
-/* Setaの各画像をデザイン指定のサイズにする（1rem＝10px） */
-.group-service__gallery--seta figure:nth-child(1) {
+/* 右端の縦長画像は、正方形に切り抜く際に上側が見える位置へ調整 */
+.group-service__gallery--seta figure:nth-child(4) img {
+  object-position: center top;
+}
+/* Setaの4画像を一番左の画像と同じ267px四方に統一する（1rem＝10px） */
+.group-service__gallery--seta figure {
   width: 26.7rem;
   height: 26.7rem;
-}
-.group-service__gallery--seta figure:nth-child(2) {
-  width: 27.6rem;
-  height: 27.6rem;
-}
-.group-service__gallery--seta figure:nth-child(3) {
-  width: 24.9rem;
-  height: 33.2rem;
-}
-.group-service__gallery--seta figure:nth-child(4) {
-  width: 23.5rem;
-  height: 31.5rem;
 }
 .group-service__gallery figcaption {
   display: none;
 }
 .group-service__gallery--utari {
-  grid-template-columns: 36.8rem 34.8rem 36.7rem;
+  grid-template-columns: repeat(3, 36.8rem);
   justify-content: space-between;
   gap: 2rem;
   margin: 6rem 5rem;
@@ -262,17 +299,9 @@
   object-fit: cover;
   border-radius: 5rem;
 }
-/* UTARIの各画像をデザイン指定のサイズにする（1rem＝10px） */
-.group-service__gallery--utari img:nth-child(1) {
+/* UTARIの3画像を一番左の画像と同じサイズに統一する（1rem＝10px） */
+.group-service__gallery--utari img:nth-child(n) {
   width: 36.8rem;
-  height: 24.5rem;
-}
-.group-service__gallery--utari img:nth-child(2) {
-  width: 34.8rem;
-  height: 23.2rem;
-}
-.group-service__gallery--utari img:nth-child(3) {
-  width: 36.7rem;
   height: 24.5rem;
 }
 @media (min-width: 700px) {
@@ -298,10 +327,10 @@
   text-align: center;
 }
 .group-service--seta .group-service__catch {
-  margin-top: 4rem;
+  margin-top: 12rem;
 }
 .group-service--utari .group-service__catch {
-  margin-top: 7rem;
+  margin-top: -2rem;
 }
 .group-service__content {
   display: grid;
@@ -331,7 +360,7 @@
 .group-service--utari .group-service__copy p {
   margin-top: 0;
   margin-left: 12rem;
-  width: 75.4rem;
+  width: 72rem;
 }
 .group-service--seta .group-service__link {
   position: relative;
@@ -361,7 +390,7 @@
   min-height: 16.5rem;
   place-items: center;
   padding: 2rem;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
   background: #fff0f2;
   border: 0.2rem solid #e8b1b6;
@@ -397,11 +426,14 @@
     --group-unit: min(0.6944444444vw, 1rem);
   }
   .group-hero__inner {
-    height: calc(108 * var(--group-unit));
+    height: calc(92 * var(--group-unit));
   }
   .group-hero__company {
-    top: calc(4.5 * var(--group-unit));
-    font-size: calc(6.4 * var(--group-unit));
+    top: calc(52.2 * var(--group-unit));
+    font-size: calc(4.8 * var(--group-unit));
+  }
+  .group-hero__diagram {
+    transform: translateY(calc(-16 * var(--group-unit)));
   }
   .group-hero__message {
     font-size: calc(4 * var(--group-unit));
@@ -483,47 +515,22 @@
     gap: calc(2 * var(--group-unit));
   }
   .group-service__gallery--seta {
-    grid-template-columns: 267fr 276fr 249fr 235fr;
+    grid-template-columns: repeat(4, 1fr);
     margin: calc(5 * var(--group-unit)) calc(6 * var(--group-unit));
   }
-  .group-service__gallery--seta figure:nth-child(1) {
+  .group-service__gallery--seta figure:nth-child(n) {
     width: min(18.541667vw, 26.7rem);
     height: auto;
-    aspect-ratio: 267 / 267;
-  }
-  .group-service__gallery--seta figure:nth-child(2) {
-    width: min(19.166667vw, 27.6rem);
-    height: auto;
-    aspect-ratio: 276 / 276;
-  }
-  .group-service__gallery--seta figure:nth-child(3) {
-    width: min(17.291667vw, 24.9rem);
-    height: auto;
-    aspect-ratio: 249 / 332;
-  }
-  .group-service__gallery--seta figure:nth-child(4) {
-    width: min(16.319444vw, 23.5rem);
-    height: auto;
-    aspect-ratio: 235 / 315;
+    aspect-ratio: 1;
   }
   .group-service__gallery--utari {
-    grid-template-columns: 368fr 348fr 367fr;
+    grid-template-columns: repeat(3, 1fr);
     margin: calc(6 * var(--group-unit)) calc(5 * var(--group-unit));
   }
-  .group-service__gallery--utari img:nth-child(1) {
+  .group-service__gallery--utari img:nth-child(n) {
     width: min(25.555556vw, 36.8rem);
     height: auto;
     aspect-ratio: 368 / 245;
-  }
-  .group-service__gallery--utari img:nth-child(2) {
-    width: min(24.166667vw, 34.8rem);
-    height: auto;
-    aspect-ratio: 348 / 232;
-  }
-  .group-service__gallery--utari img:nth-child(3) {
-    width: min(25.486111vw, 36.7rem);
-    height: auto;
-    aspect-ratio: 367 / 245;
   }
   .group-service__gallery--utari img:nth-child(n) {
     margin-top: calc(5 * var(--group-unit));
@@ -626,6 +633,7 @@
     margin-top: -3rem;
   }
   .group-hero__item figcaption {
+    position: static;
     display: block;
     margin-top: 0.7rem;
     font-family: Arial, sans-serif;
@@ -633,6 +641,7 @@
     font-weight: 700;
     line-height: 1;
     text-align: center;
+    transform: none;
   }
   .group-hero__item--seta figcaption {
     margin-top: 3.7rem;
@@ -702,43 +711,18 @@
     object-fit: cover;
     border-radius: 5rem;
   }
-  /* SP版Seta画像のデザイン指定サイズ（1rem＝10px） */
-  .group-service__gallery--seta figure:nth-child(1) {
+  /* SP版もSetaの4画像を267px四方に統一 */
+  .group-service__gallery--seta figure:nth-child(n) {
     width: 26.7rem;
-    height: auto;
+    height: 26.7rem;
     margin-inline: auto;
   }
   .group-service__gallery--seta figure:nth-child(2) {
-    width: 27.6rem;
-    height: auto;
-    margin-inline: auto;
     margin-top: 3rem;
   }
-  .group-service__gallery--seta figure:nth-child(3) {
-    width: 24.9rem;
-    height: auto;
-    margin-inline: auto;
-  }
-  .group-service__gallery--seta figure:nth-child(4) {
-    width: 23.5rem;
-    height: auto;
-    margin-inline: auto;
-  }
-  .group-service__gallery--seta figure:nth-child(1) img {
-    width: 26.7rem;
-    height: 26.7rem;
-  }
-  .group-service__gallery--seta figure:nth-child(2) img {
-    width: 27.6rem;
-    height: 27.6rem;
-  }
-  .group-service__gallery--seta figure:nth-child(3) img {
-    width: 24.9rem;
-    height: 33.2rem;
-  }
-  .group-service__gallery--seta figure:nth-child(4) img {
-    width: 23.5rem;
-    height: 31.5rem;
+  .group-service__gallery--seta figure:nth-child(n) img {
+    width: 100%;
+    height: 100%;
   }
   .group-service__gallery figcaption {
     display: block;
@@ -754,25 +738,42 @@
     object-fit: cover;
     border-radius: 5rem;
   }
-  .group-service__gallery--utari img:nth-child(1),
-  .group-service__gallery--utari img:nth-child(2),
-  .group-service__gallery--utari img:nth-child(3) {
+  .group-service__gallery--utari img:nth-child(n) {
     margin-inline: auto;
-  }
-  .group-service__gallery--utari img:nth-child(1) {
     width: 31.9rem;
-    height: 21.2rem;
-  }
-  .group-service__gallery--utari img:nth-child(2) {
-    width: 29.5rem;
-    height: 19.7rem;
-  }
-  .group-service__gallery--utari img:nth-child(3) {
-    width: 31.7rem;
     height: 21.2rem;
   }
   .group-service__gallery--utari img + img {
     margin-top: 6rem;
+  }
+  /* JavaScript有効時は、縦並びの画像を同じ位置で1枚ずつフェード表示する */
+  .group-service__gallery.is-slideshow {
+    display: grid;
+    place-items: center;
+  }
+  /* SP版Setaのスライドを、画像幅を基準にセクション中央へ配置する */
+  .group-service__gallery--seta.is-slideshow {
+    position: relative;
+    left: 50%;
+    width: 26.7rem;
+    margin-right: 0;
+    margin-left: 0;
+    padding-inline: 0;
+    transform: translateX(-50%);
+  }
+  .group-service__gallery.is-slideshow > * {
+    grid-area: 1 / 1;
+    margin-top: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.7s ease,
+      visibility 0s linear 0.7s;
+  }
+  .group-service__gallery.is-slideshow > *.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
   }
   .group-service__content {
     display: block;
@@ -788,7 +789,8 @@
     margin-top: 3.5rem;
   }
   .group-service--seta .group-service__catch {
-    margin-top: -3rem;
+    /* スライド画像下の施設名とキャッチコピーが重ならないよう間隔を確保 */
+    margin-top: 4rem;
   }
   .group-service--utari .group-service__content {
     margin-top: 3.5rem;
@@ -866,42 +868,26 @@
   .group-service__gallery {
     padding-inline: calc(2 * var(--group-sp-unit));
   }
-  .group-service__gallery--seta figure:nth-child(1) {
+  .group-service__gallery--seta figure:nth-child(n) {
     width: calc(26.7 * var(--group-sp-unit));
-  }
-  .group-service__gallery--seta figure:nth-child(2) {
-    width: calc(27.6 * var(--group-sp-unit));
-  }
-  .group-service__gallery--seta figure:nth-child(3) {
-    width: calc(24.9 * var(--group-sp-unit));
-  }
-  .group-service__gallery--seta figure:nth-child(4) {
-    width: calc(23.5 * var(--group-sp-unit));
+    height: calc(26.7 * var(--group-sp-unit));
   }
   .group-service__gallery--seta figure:nth-child(n) img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
-  .group-service__gallery--utari img:nth-child(1) {
+  .group-service__gallery--utari img:nth-child(n) {
     width: calc(31.9 * var(--group-sp-unit));
-    height: calc(21.2 * var(--group-sp-unit));
-  }
-  .group-service__gallery--utari img:nth-child(2) {
-    width: calc(29.5 * var(--group-sp-unit));
-    height: calc(19.7 * var(--group-sp-unit));
-  }
-  .group-service__gallery--utari img:nth-child(3) {
-    width: calc(31.7 * var(--group-sp-unit));
     height: calc(21.2 * var(--group-sp-unit));
   }
   /* 文章の折り返しが増えても後続セクションに重ならないよう高さを確保する */
   .group-service--seta {
     height: auto;
-    min-height: 222.7rem;
+    min-height: 0;
   }
   .group-service--utari.group-service {
     height: auto;
-    min-height: 146rem;
+    min-height: 0;
   }
   .group-service__link {
     max-width: calc(100% - 4rem);
@@ -925,5 +911,23 @@
   }
   .group-service__link {
     transition: none;
+  }
+  .group-service__gallery.is-slideshow > * {
+    transition: none;
+  }
+}
+
+/* 動きを減らす設定では、PC版のリンク画像を静止したままにする */
+@media (prefers-reduced-motion: reduce) and (min-width: 700px) {
+  .group-hero__item--seta,
+  .group-hero__item--utari {
+    transition: none;
+  }
+  .group-hero__item--seta:hover,
+  .group-hero__item--seta:focus-within,
+  .group-hero__item--utari:hover,
+  .group-hero__item--utari:focus-within {
+    filter: none;
+    transform: none;
   }
 }
