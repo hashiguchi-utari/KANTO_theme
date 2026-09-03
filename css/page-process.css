@@ -22,25 +22,43 @@
 /* 大見出し：左上に配置 */
 .process_main_title {
   font-size: 4rem;
-  font-weight: 400;
-  text-align: left;
-  margin-left: 5rem;
+  font-weight: 700;/*見出しを太くして見やすくする*/
+  color: #333333;
+  text-align: left;/*タイトル左側配置*/
+  margin-left: 2rem;
+  margin-bottom: 0;/*8rem;/*～画像追加のため0に変更かけている*/
+
+  position: relative; /* ラインを配置する基準点 */
+  padding-left: 1rem;
+  padding-bottom: 2rem;/* 文字とラインの間の余白 */
+}
+
+/* 大見出しセクション：見出しとシマエナガを両端に配置 */
+.process_hero_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 大見出しのラインの高さとシマエナガの足元を少しずらす */
   margin-bottom: 8rem;
+  width: 100%;
 }
 
-/* 隣のテキスト */
-.process_content_title {
-  font-size: 3.2rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: #000000;
-  line-height: 1.4;
+/* ------------------------------------------
+   右上シマエナガイラスト右端配置）
+   ------------------------------------------ */
+.process_hero_bird_holder {
+  width: 20rem;
+  height: 20rem;
+  margin-top: -3.5rem;
+  margin-right: 1.5rem; /* 右端にくっつきすぎないための余白 */
+  flex-shrink: 0;  /* 画面幅で絶対に潰れないように保護 */
+  display: block;
 }
 
-/* 隣のテキスト */
-.process_content_text {
-  font-size: 1.6rem;
-  color: #000000;
+.process_hero_bird_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 透過イラストの比率を崩さず収める */
+  display: block;
 }
 
 /* ==========================================
@@ -60,7 +78,7 @@
   align-items: center;
   justify-content: space-between;/* 左右の要素を画面の端と端へ広げる */
   width: 100%;
-  position: relative; /* 斜め線の基準点 */
+  position: relative;/* 斜め線の基準点 */
 }
 
 /* 左右反転レイアウト */
@@ -69,7 +87,7 @@
 }
 
 /* ------------------------------------------
-   超大型サークルデザイン
+   大型サークルデザイン
    ------------------------------------------ */
 .process_circle_wrapper {
   width: 41%;
@@ -81,9 +99,9 @@
 .process_circle_node {
   width: 35rem;
   height: 35rem;
-  border: 0.7rem solid #000000; /* 線少し太くして調整 */
+  border: 0.7rem solid #333333;/* 線少し太くして調整 */
   border-radius: 50%;
-  background-color: #ffffff; /* 白統一 */
+  background-color: #fff9ee;/* オフホワイト統一に変更する？ */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,9 +114,10 @@
 /* サークル内文字 */
 .process_node_text {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.2em;/*行間を空けて読みやすくする*/
   line-height: 1.2;
-  color: #000000;
+  color: #222222;
 }
 
 /* アイコン枠文字のやや下に配置 */
@@ -124,7 +143,31 @@
   width: 56%;/*現在のデザインに寄せ、やや左に寄せています*/
 }
 #process_content_box_left {
-  margin-left: 5rem;/*サークル左隣のテキスト2つには個別で少し位置をずらす指示を出しています*/
+  margin-left: 0;/*サークル左隣のテキスト2つには個別で少し位置をずらす指示を出しています(5rem)*/
+  /*上記追記：リセットCSSレスポンシブ変更でここだけ数値分ずれたので0にしました。０９/０１*/
+}
+
+/* 隣のテキスト */
+.process_content_title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #333333;/*黒色からブラックグレーにする*/
+  line-height: 1.4;
+
+  /* 切り取り線の設定 */
+  padding-bottom: 1.25rem; /* 文字と線の間の余白 */
+  margin-bottom: 1.5rem;   /* 線と下の本文との間の余白 */
+  border-bottom: 0.1875rem dashed #777777; /* 3pxのフランクな破線 */
+  
+  /* ※もっと細かいドットにしたい場合上記を以下に書き換え */
+  /* border-bottom: 0.25rem dotted #777777; */
+}
+
+/* 隣のテキスト */
+.process_content_text {
+  font-size: 1.6rem;
+  color: #333333;
 }
 
 /* ------------------------------------------
@@ -134,32 +177,32 @@
 .process_step_item.line_down_right::before {
   content: "";
   position: absolute;
-  top: 96%;/*線の始まりの位置調整はここ*/
-  left: 21%; /* 巨大サークルの中心に合わせる */
-  width: 66%;/*線の長さはここで調整*/
+  top: 90%;/*線の始まりの位置調整はここ*/
+  left: 27%; /* 巨大サークルの中心に合わせる */
+  width: 53%;/*線の長さはここで調整*/
   height: 0.7rem; /* 線の太さはここで調整*/
-  background-color: #000000;
-  transform: rotate(23deg); /* ななめ線の傾斜具合はここで調整します*/
+  background-color: #333333;
+  transform: rotate(35deg); /* ななめ線の傾斜具合はここで調整します*/
   transform-origin: left center;
   
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
-  transition: clip-path 1.2s ease-out;
+  transition: clip-path 4.0s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
 }
 
-/* 次のステップ（左下）へ伸びる斜め線 */
+/* 次のステップ（左下）へ伸びる斜め線  */
 .process_step_item.line_down_left::before {
   content: "";
   position: absolute;
-  top: 98%;/*線の始まり位置の上下位置調整*/
+  top: 72%;/*線の始まり位置の上下位置調整*/
   right: 21%;/*線の始まりの位置左右調整*/
-  width: 64%;/*線の長さはここで調整*/
+  width: 61%;/*線の長さはここで調整*/
   height: 0.7rem; /*ななめ線の太さ*/
-  background-color: #000000;
-  transform: rotate(-23deg);/*ななめ線の角度はここで調整します*/
+  background-color: #333333;
+  transform: rotate(-36deg);/*ななめ線の角度はここで調整*/
   transform-origin: right center;
   
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  transition: clip-path 1.2s ease-out;
+  transition: clip-path 4.0s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
 }
 
 /* ==========================================
@@ -167,7 +210,7 @@
    ========================================== */
 .fade_up_trigger {
   opacity: 0;
-  transform: translateY(4.5rem); /* 下からフェードアップ */
+  transform: translateY(4.5rem); /* 下からフェードアップ(修正前4.5） */
   transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -186,55 +229,158 @@
 }
 
 
+/* 2線むき出し防止の連動設定*/
+/* 1つ前のステップがアクティブになり線が伸び始めたら次のステップ（隣接する要素）も自動的に出現するように調整 */
+/* 線が届いたときにはすでにその先のサークルが表示されるように*/
+.process_step_item.is_active + .process_step_item {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* ==========================================
-   下部インフォメーションカード
+   修正：個別フェードアップトリガー ＆ 線連動設定
+   ========================================== */
+/* 1. サークル用のトリガー（パッと心地よく出現：0.6秒） */
+.fade_up_trigger_circle {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.fade_up_trigger_circle.is_active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. テキスト用のトリガー（完全に画面に入った時に優しく出現：0.8秒） */
+.fade_up_trigger_text {
+  opacity: 0;
+  transform: translateY(2.5rem); /* テキストは少し浅め(40px)から浮かせる */
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.fade_up_trigger_text.is_active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 大見出し用トリガー（PC共通） */
+.fade_up_trigger {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.fade_up_trigger.is_active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------
+   斜めのつなぎ線の発火条件（サークルが画面に出現したら連動して伸びる）
+   ------------------------------------------ */
+/* 右下のサークル(wrapper)が active になったら、親のアイテムにある before(線) を伸ばす */
+.process_step_item:has(.fade_up_trigger_circle.is_active).line_down_right::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* 左下のサークル(wrapper)が active になったら、親のアイテムにある before(線) を伸ばす */
+.process_step_item:has(.fade_up_trigger_circle.is_active).line_down_left::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+/* ==========================================
+   下部インフォメーションカード(レトロポップな影追加バージョン)
    ========================================== */
 .process_info_section {
   width: 100%;
-  max-width: 70rem; /* 白枠の横サイズ */
+  max-width: 80rem; /* 白枠の横サイズ */
   margin: 12.5rem auto; /* 上下の余白 */
 }
 
 .process_info_card {
   margin-top: -10rem;/*カードの位置を上げるための数値*/
-  background-color: #ffffff;
+  background-color: #fff9ee;
   border-radius: 12.5rem;
-  padding: 6.25rem 5rem;
+  padding: 2.25rem 5rem 5rem 5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
+
+  /* クッキリした実線の黒ボーダー*/
+  /*border: 0.1rem solid #333333; /* 3px */
+  
+  /* 【レトロ影エフェクト】右下に 1rem ズラしたソリッド影 */
+  /* 数値の意味：右に1rem / 下へ1rem / ぼかし0 / 広がり0 / 焦げ茶色 */
+  box-shadow: 1rem 1rem 0 0.1rem #8d663a2e;
+  box-sizing: border-box;
 }
+
 
 /* カード内タイトル：h2*/
 .process_info_title {
   font-size: 2.8rem;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #000000;
+  color: #222222;
+}
+/* ==========================================
+   下部カード見出し：マーカーアニメーションエフェクト
+   ========================================== */
+.process_text_marker {
+  /* インライン要素としてテキストにぴったり合わせる */
+  display: inline-block; 
+  
+  /* グラデーションイエローをそのまま移植 */
+  background-image: linear-gradient(
+    hsl(43 100% 50% / 0.55), hsl(43 100% 50% / 0.55)
+  );
+  background-repeat: no-repeat;
+  background-position: 0 78%; /* マーカーの縦の位置調整 */
+  background-size: 0% 42%;    /* マーカーの縦の太さ（初期状態は横幅0%） */
+  
+  /* ループで引き続けるアニメーション設定 */
+  animation: process_marker_animation 2.6s ease-in-out infinite;
+}
+
+/* マーカーが左から右へスーッと伸びるキーフレーム */
+@keyframes process_marker_animation {
+  0% {
+    background-size: 0% 42%;
+  }
+  55%, 100% { 
+    background-size: 100% 42%; 
+  }
 }
 
 /* リード文 */
 .process_info_lead {
   font-size: 1.6rem;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 4rem;
-  color: #000000;
+  letter-spacing: 0.1em;
+  color: #222222;
 }
 
 /* 箇条書きリスト */
 .process_info_list {
   list-style: none;
-  padding: 0;
+  padding: 3rem 3rem;/*枠線内の余白*/
   margin: 0 auto 4rem auto;
   max-width: 56.25rem; /* リスト全体の幅 */
+
+  /* フランクな切り取り線枠の設定 */
+  border: 0.1875rem dashed #777777; /* タイトル下線と合わせた破線 */
+  border-radius: 3rem;/* 角を丸く可愛さをプラス */
+  box-sizing: border-box;
 }
 
 /* リストアイテム */
 .process_info_item {
   font-size: 1.6rem;
   position: relative;
-  padding-left: 2rem; /* ドット用の余白 */
-  margin-bottom: 1.5rem;
-  color: #000000;
+  padding-left: 1.8rem; /* ドット用の余白 */
+  margin-bottom: 2rem;
+  color: #222222;
 }
 
 /* ドットをサイズや位置の調整 */
@@ -243,18 +389,40 @@
   position: absolute;
   left: 0;
   top: 0.8rem; /* 文字の中心に合わせる */
-  width: 1.2rem; /* 12pxの大きめのドット */
+  width: 1.2rem; /* 12px大きめのドット */
   height: 1.2rem;
-  background-color: #000000;
+  background-color: #222222;
   border-radius: 50%;
 }
 
 /* 注意書き・ノート */
 .process_info_note { 
   font-size: 1.4rem;
-  text-align: center;
-  color: #000000;
+  display: flex;
+  /*text-align: center;*/
+  color: #222222;
+
+  align-items: center;      /* アイコンとテキストの縦の中心を揃える */
+  justify-content: center;  /* PC版は中央に寄せる */
+  gap: 1.25rem;             /* アイコンとテキストの間の余白 */
+  margin-top: 1rem;
+
   line-height: 1.6;
+}
+/* 電球アイコン用の枠 */
+.process_note_hint_icon {
+  width: 4rem;   /* 40px */
+  height: 4rem;  /* 40px */
+  flex-shrink: 0;  /* 画面が縮んでもアイコンが潰れないため */
+  display: block;
+}
+
+/* 電球画像自体の指示 */
+.process_hint_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 画像の比率を保ったまま枠に収める */
+  display: block;
 }
 
 
@@ -282,67 +450,137 @@
 /*鳥イラスト画像への指示 */
 .process_visual_image {
   width: 100%;
-  height: 101%;/*鳥のサイズを大きくするためにこの数値にしています*/
+  height: 101%;/*鳥のサイズを大きくするためにこの数値*/
   object-fit: contain;
   display: block;
 }
 
-
 /* ==========================================
-   SP版（スマホ対応：699.98px以下 固定幅・左寄せ仕様）
+   SP版（スマホ対応：699.98px以下）
    ========================================== */
 @media screen and (max-width: 699.98px) {
-  /* コンテナ：画面幅が縮小しても動かない固定幅 */
-  /* 左右にはみ出さないようにpadding をとり中央に固定 */
   .process_container {
-    width: 100%;
-    max-width: 42.25rem; /* スマホ画面内で固定させるための最大幅 */
+    width: 32rem;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 7rem 2rem; /*もともと設定数値4rem 1.5rem*/
+    padding: 7rem 0.1rem; 
     box-sizing: border-box;
   }
 
-  /* 大見出し：「ご利用までの流れ」センター維持 */
-  .process_main_title {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-left: 0;/*少し右へ寄っていたので修正のため追加*/
+  /* ------------------------------------------
+     SP大見出しセクション（見出し・線・シマエナガ）
+     ------------------------------------------ */
+  .process_hero_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* 見出しを【センター維持】 */
     margin-bottom: 10rem;
-    padding-left: 0;
+    width: 100%;
+    position: relative;     /* シマエナガを右端に絶対配置するための基準点 */
+    opacity: 1 !important;  
+    transform: none !important;
   }
 
-  /* ステップフロー：要素を左寄せに変更 */
+  /* 大見出しテキスト */
+  .process_main_title {
+    font-size: 2.8rem; /* 32px */
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 1.25rem;
+    color: #333333;
+  }
+
+  /* SP対応サイズのシャドウ付き見出し線 */
+  .process_main_title::after {
+    content: "";
+    position: absolute;
+    left: 46%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30rem;
+    height: 0.1rem;
+    background-color: #333333;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15);
+  }
+
+  /* SP右上シマエナガ：コンパクトで右端に表示*/
+  .process_hero_bird_holder {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -1rem; 
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .process_hero_bird_image {
+    width: 100%;
+    height: 86%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ------------------------------------------
+     SPステップフロー（アイコン・タイトルセンター寄せ ＋ 切り取り線）
+     ------------------------------------------ */
   .process_flow_section {
-    gap: 10rem;/*全体テキストの上下余白*/
+    gap: 5rem; /* 区切り線と余白をアイテム側で一括管理するため0に調整 */
     width: 100%;
   }
 
-  /* PC用の斜めつなぎ線を完全に非表示 */
+  /* PC用の斜めつなぎ線を非表示 */
   .process_step_item.line_down_right::before,
   .process_step_item.line_down_left::before {
     display: none;
   }
 
-  /* アイテムの並び方向：反転レイアウトを解除し、すべて左寄せに統一 */
+  /* 反転レイアウトを解除し、すべて共通の縦並びへ */
   .process_step_item,
   .process_step_item.item_reverse {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 左寄せ */
-    text-align: left; /* 左寄せ */
+    align-items: center; /* 中央に配置 */
+    text-align: center;  /* 中央寄せ */
     width: 100%;
+    opacity: 1 !important;  
+    transform: none !important;
+    padding-bottom: 5rem; /* 区切り線までの余白（上のテキストの下） */
+    margin-top: 5rem;    /* 区切り線からの余白（下のアイコンの上） */
+    position: relative;   /* 区切り線を配置する基準点 */
   }
 
-  /* ------------------------------------------
-     サークル領域のリセット（アイコンを左寄せ）
-     ------------------------------------------ */
+  /* フローの最初のアイテムだけ、大見出しとの間隔を保つため上マージンをリセット */
+  .process_step_item:first-child {
+    margin-top: 0;
+  }
+
+  /* --- ステップ間のシャドウ付き区切り線 --- */
+  /* 大見出しの下と同じ仕様の線を、テキストの下・アイコンの上の真ん中に配置 */
+  .process_step_item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -3rem; /* アイテムのpadding-bottomの最下部真ん中にロック */
+    left: 50%;
+    transform: translateX(-50%); /* 中央寄せ */
+    width: 30rem;
+    height: 0.1rem;
+    background-color: #333333;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15); /* 大見出し線と同じシャドウ */
+  }
+
+  /* アイコンイラスト用の枠 */
   .process_circle_wrapper {
     width: 100%;
     display: flex;
-    justify-content: flex-start; /* アイコンを【左寄せ】 */
-    margin-bottom: 3rem;/*アイコンとテキストとの余白*/
+    justify-content: center; 
+    margin-bottom: 3.5rem;
   }
 
-  /* PC用の丸枠やボーダー、背景白を消去 */
+  /* PC用の大型白丸枠を非表示にしてアイコン単体へ */
   .process_circle_node {
     width: auto;
     height: auto;
@@ -350,135 +588,160 @@
     background-color: transparent;
     padding: 0;
   }
-
-  /* 丸枠内の文字は非表示 */
   .process_node_text {
     display: none;
   }
 
-  /* アイコン：サイズを固定し、ふわふわアニメーションを適用 */
+  /* ふわふわ揺れるアイコンサイズ */
   .process_node_icon {
     margin-top: 0;
-    width: 10rem; /* 100px固定 */
-    height: 10rem; /* 100px固定 */
-    flex-shrink: 0; /* 縮小されてもサイズが変わらないよう固定 */
+    width: 6.25rem;
+    height: 6.25rem;
+    flex-shrink: 0;
+    display: block;
     animation: process_float_animation 3.5s ease-in-out infinite;
   }
 
-  /* ------------------------------------------
-     テキスト領域と時間差フェードアップ（すべて左寄せ）
-     ------------------------------------------ */
+  /* 説明テキストブロック */
   .process_content_box {
     width: 100%;
   }
 
-  /* タイトル：スマホサイズで左寄せに */
+  /* タイトル：スマホサイズセンター配置 */
   .process_content_title {
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
-    text-align: left;
-    opacity: 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #2c2c2c;
+    opacity: 1 !important; 
+    
+    /* タイトルの下の切り取り線 */
+    padding-bottom: 3rem; 
+    margin-bottom: 3rem;     
+    border-bottom: 0.125rem dashed #777777;/*切り取り線の細さ大きさ*/
   }
 
-  /* 本文：スマホサイズ【左寄せ】 */
+  /* 説明テキスト */
   .process_content_text {
-    font-size: 1.6rem;
-    color: #000000;
-    text-align: left;
-    opacity: 0;
-  }
-
-  /* スクロール時の時間差フェードタイミング */
-  .process_step_item.is_active .process_content_title {
-    animation: process_soft_fade_up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    animation-delay: 0.3s;
-  }
-
-  .process_step_item.is_active .process_content_text {
-    animation: process_soft_fade_up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    animation-delay: 0.6s;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #333333;
+    text-align: left; 
+    opacity: 1 !important; 
   }
 
   /* ------------------------------------------
-     下部インフォメーション（白枠なし・背景に溶け込む仕様）
+     SP下部インフォメーション（レトロ影付き白枠カード）
      ------------------------------------------ */
   .process_info_section {
     margin: 6rem auto;
     width: 100%;
+    opacity: 1 !important; 
+    transform: none !important;
   }
 
-  /* 白枠カードをリセット：背景色を透明にしてシャドウも消去・背景と一体化させてます */
+  /* スマホ版【白枠カード ＋ レトロ影】 */
   .process_info_card {
-    padding: 0; /* 枠が消えたので余計な内側余白をリセット */
-    background-color: transparent; 
-    box-shadow: none;
-    border-radius: 0;
+    background-color: #fff9ee; 
+    border-radius: 1.5rem;
+    padding: 2.5rem 1.5rem; 
+    /*border: 0.125rem solid #333333;*/
+    box-shadow: 0.8rem 0.8rem 0 0.2rem #8d663a2e; 
+    box-sizing: border-box;
   }
 
-  /* 中央左寄せ（ブロック全体を中央に保ちつつ中身は左寄せ） */
   .process_info_title {
-    font-size: 2.8rem;
-    text-align: left; /* 左寄せ */
-    margin-top: 15rem;
-    margin-bottom: 4rem;
+    font-size: 2rem;
+    text-align: center; 
+    margin-bottom: 1.5rem;
   }
 
   .process_info_lead {
-    font-size: 1.6rem; /* 16px */
-    text-align: left; /* 左寄せ */
-    margin-bottom: 4rem;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
   }
 
+  /* 箇条書きフレーム枠のSPリセット */
   .process_info_list {
-    margin: 0 0 1rem 0; /* 中央配置から左寄せ用のマージンリセット */
+    margin: 0 0 2.5rem 0;
     width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
   }
 
   .process_info_item {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     text-align: left;
+    margin-bottom: 1.25rem;
+
+    position: relative;
+    /* 【ドットの調整用】ドットの大きさに合わせて、文字の左側の余白ここで調整*/
+    padding-left: 1.25rem; 
+    color: #222222;
   }
 
-  /*黒ポチのサイズ調整*/
+  /* SP版ドットのサイズ・位置のカスタマイズエリア */
   .process_info_item::before {
-    top: 1.2rem;
-    width: 1.2rem;
-    height: 1.2rem;
+    content: "";
+    position: absolute;
+    left: 0;
+
+    top: 0.9rem;
+    width: 0.9rem;
+    height: 0.9rem;
+
+    /* 3. ドットの色調整 */
+    background-color: #222222; 
+    
+    /* ドットを完全な丸にする指示（四角にしたい場合は 0 にしてください） */
+    border-radius: 50%;
   }
 
+  /* ワンポイントアドバイス（電球アイコン） */
   .process_info_note {
-    font-size: 1.6rem;
-    text-align: left;/* 左寄せ */
-    margin-top: 4rem;
-    margin-bottom: 15rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .process_note_hint_icon {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.25rem;
   }
 
   /* ------------------------------------------
-     最下部イラストのSP調整（固定サイズ左寄せ）
+     最下部鳥イラスト（SPサイズ）
      ------------------------------------------ */
   .process_visual_section {
     padding-left: 0;
-    justify-content: flex-start; /* イラストも全体の流れに合わせて左寄せ*/
+    justify-content: center; 
     width: 100%;
+    opacity: 1 !important; 
+    transform: none !important;
+    margin-top: 5rem; /* カードとの間に適度な余白を追加 */
   }
 
   .process_hero_image_holder {
-    width: 30rem; /* 画像のサイズ変更はここで */
+    width: 20rem; /* 320px固定 */
     height: auto;
-    aspect-ratio: 380 / 400; /* 比率を保って歪まないように固定 */
+    aspect-ratio: 380 / 400;
     flex-shrink: 0;
   }
 }
 
 /* ==========================================
-   SP専用 アニメーションキーフレーム
+   SP専用 アニメーションキーフレーム定義（ふわふわ用）
    ========================================== */
 @keyframes process_float_animation {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-0.5rem); }
-}
-
-@keyframes process_soft_fade_up {
-  0% { opacity: 0; transform: translateY(1rem); }
-  100% { opacity: 1; transform: translateY(0); }
 }
