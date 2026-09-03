@@ -2,7 +2,9 @@
 <main>
     <div class="staff-main">
         <div class="mainvisual">
-            <img src="<?php echo esc_url(get_theme_file_uri('img/staff-main.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member1.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member2.png')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/staff-member3.png')); ?>" alt="">
         </div>
 
         <div class="sp-comment"> 
