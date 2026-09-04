@@ -246,7 +246,8 @@
 
   .site-footer__inner {
     width: 100%;
-    height: 100.5rem;
+    /* Seta・UTARIの住所表示分を確保し、著作権表示との間隔を保つ */
+    height: 105.5rem;
   }
 
   .site-footer__nav {
@@ -368,10 +369,6 @@
 
   .site-footer__address p + p {
     margin-top: 1rem;
-  }
-
-  .site-footer__address--pc {
-    display: none;
   }
 
   .site-footer__address-phone {

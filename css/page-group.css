@@ -418,6 +418,12 @@
 .group-service__link-label-sp {
   display: none;
 }
+/* PC版のリンク文言は指定位置で改行し、2行とも中央へ揃える */
+.group-service__link-label-pc {
+  text-align: center;
+  line-height: 1.5;
+  white-space: nowrap;
+}
 
 /* 1440px未満のPCでは、画像と周辺の配置を同じ比率で縮める。
    1単位は1440px時に1remとなり、htmlの文字サイズや他ページには影響しない。 */
@@ -794,6 +800,10 @@
   }
   .group-service--utari .group-service__content {
     margin-top: 3.5rem;
+  }
+  /* SP版は共通指定の負の余白を解除し、スライド画像と見出しの間を空ける */
+  .group-service--utari .group-service__catch {
+    margin-top: 4rem;
   }
 
   /* PC用の固定寸法を解除し、SPでは文章量に合わせて自然に伸ばす */

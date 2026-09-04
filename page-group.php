@@ -83,7 +83,7 @@ get_header();
 					<p>男性専用のグループホーム・女性専用のグループホーム、男性女性可能のアパートタイプ、男性シェアハウスまで幅広く・・・<br>あなたらしさを大切にした快適な生活を送りませんか？</p>
 				</div>
 				<a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">
-					<span class="group-service__link-label-pc">HPへGO！</span>
+					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
 					<span class="group-service__link-label-sp">グループホーム【セタ】 ホームページ</span>
 				</a>
 			</div>
@@ -106,7 +106,7 @@ get_header();
 					<p>仲間と共に学び、働き、時には支え合いながら自分のペースで成長できる場を提供します。 WEB制作や動画編集といった仕事を通じて、自分のペースで「できること」を少しずつ広げ、社会とのつながりを実感できる場を目指しています。</p>
 				</div>
 				<a class="group-service__link" href="https://utari.jp/" target="_blank" rel="noopener noreferrer">
-					<span class="group-service__link-label-pc">HPへGO！</span>
+					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
 					<span class="group-service__link-label-sp">UTARI－ウタリー　ホームページ</span>
 				</a>
 			</div>

@@ -51,7 +51,7 @@
 						src="<?php echo esc_url(get_theme_file_uri('/img/seta_logo 2.png')); ?>"
 						alt="Seta Group Home">
 				</a>
-				<address class="site-footer__address site-footer__address--pc">
+				<address class="site-footer__address">
 					<p>本社：札幌市手稲区稲穂4条6丁目4-12</p>
 				</address>
 			</section>
@@ -64,7 +64,7 @@
 						src="<?php echo esc_url(get_theme_file_uri('/img/utari_logo 2.png')); ?>"
 						alt="就労継続支援 UTARI">
 				</a>
-				<address class="site-footer__address site-footer__address--pc">
+				<address class="site-footer__address">
 					<p>札幌市手稲区星置1条3丁目3-10　長作ビル２階</p>
 				</address>
 			</section>
