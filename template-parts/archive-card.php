@@ -52,7 +52,7 @@ if (! defined('ABSPATH')) {
 		</p>
 
 		<a href="<?php the_permalink(); ?>" class="archive-card__more">
-			<span>続きを読む</span>
+			<span class="">続きを読む</span>
 			<span class="archive-card__arrow">→</span>
 		</a>
 	</div>

@@ -241,3 +241,21 @@ add_action('wp_ajax_archive_filter', 'archive_filter_ajax');
 
 // 20260828_橋口修正_ログインしていない一般の閲覧者からのカテゴリ選択も受け付けます。
 add_action('wp_ajax_nopriv_archive_filter', 'archive_filter_ajax');
+
+
+
+// 20260904_鈴木（小西さん案）_トップページのお知らせを1ページにつき5件のみにする。
+function kanto_front_news_per_page($query) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    // ホームページが「最新の投稿」の場合だけ対象にする。
+    if ('posts' === get_option('show_on_front') && $query->is_home()) {
+        $query->set('posts_per_page', 5);
+
+        // 先頭固定投稿の追加で5件を超えないようにする。
+        $query->set('ignore_sticky_posts', true);
+    }
+}
+add_action('pre_get_posts', 'kanto_front_news_per_page');
