@@ -96,13 +96,20 @@
                 </div>
             </div>
         </section>
-
-        <div class="process_container">
+    
+       <div class="process_container">
         
 
         <!-- ステップフローセクション（前述のSTEP 1〜4がここ） -->
         <section class="process_flow_section">
             <!-- （中略：STEP 1 〜 STEP 4） -->
+        </section>
+
+                <!-- 一番下の鳥のイラストアイコン -->
+        <section class="process_visual_section fade_up_trigger">
+            <div class="process_hero_image_holder">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001a.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
+            </div>
         </section>
 
         <!-- 準備しておくと良いもの（下部インフォメーション） -->
@@ -127,14 +134,6 @@
                 </p>
             </div>
         </section>
-
-        <!-- 一番下の鳥のイラストアイコン -->
-        <section class="process_visual_section fade_up_trigger">
-            <div class="process_hero_image_holder">
-                <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001a.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
-            </div>
-        </section>
-
     </div>
 </main>
 
