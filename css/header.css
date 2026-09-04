@@ -82,7 +82,7 @@
     width: 100%;
     max-width: 72rem;
     height: 100vh;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 1s ease-in-out;
     padding: 2rem;
     margin: 0;
     box-sizing: border-box;
@@ -94,7 +94,7 @@
     align-items: center;
     background: linear-gradient(135deg, #ffeac4, #ff988e);
     z-index: 1000;
-    transform: translateY(-100%);
+    transform: translateY(-120%);
 }
 .nav-items.is-open {
     transform: translateY(0);
