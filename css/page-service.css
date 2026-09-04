@@ -1249,19 +1249,26 @@
   .service_contact {
     width: 38rem;
     height: 16.7rem;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .nav_message1 {
+    width: 28.5rem;
+    height: 5.2rem;
     font-size: 2.2rem;
-    padding: 2rem 0 0;
+    font-weight: bold;
+    margin: 0.65rem auto 0;
+    padding-top: 0;
   }
 
   .nav_message2 {
+    width: 32.8rem;
+    height: 5.2rem;
     font-size: 2.2rem;
-    padding: 0 0 1.8rem;
-    margin-top: 0;
+    font-weight: bold;
+    padding-top: 1rem;
+    margin: 0 auto;
   }
-
-
 
 }
