@@ -3,10 +3,12 @@
 <!-- ここに本文を記載 -->
 <main class="front_container">
   <section class="front_mv">
-    <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/movie-image.png')); ?>" alt="TOP動画部分画像で仮置き">
+    <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/movie-image.png')); ?>" alt="TOP画像">
+    <!-- （↑）TOP動画部分画像で仮置き、動画が来たら削除対象 -->
+
 
     <!-- <video
-      src="./video/top.mp4"
+      src="<?php echo esc_url(get_theme_file_uri('/img/front_page/top-mv.mp4')); ?>"
       autoplay
       muted
       loop
@@ -121,16 +123,16 @@
 
           <?php endif; ?>
         <?php endif; ?>
- <a href="<?php echo esc_url(home_url('/news/')); ?>" class="front-news-link">
-      → お知らせ一覧へ
-    </a>
+        <a href="<?php echo esc_url(home_url('/news/')); ?>" class="front-news-link">
+          → お知らせ一覧へ
+        </a>
       </div>
 
     </div>
- 
+
   </section>
 
-  
+
 
   <section class="insta">
     <div>
@@ -237,43 +239,43 @@
   });
 
 
-/*画像1－4の動的スクロール発火アニメ*/
-document.addEventListener('DOMContentLoaded', () => {
+  /*画像1－4の動的スクロールアニメ*/
+  document.addEventListener('DOMContentLoaded', () => {
 
-  const images = document.querySelectorAll(
-    '.front-kanto .front_img1, ' +
-    '.front-kanto .front_img2, ' +
-    '.front-kanto .front_img3, ' +
-    '.front-kanto .front_img4'
-  );
+    const images = document.querySelectorAll(
+      '.front-kanto .front_img1, ' +
+      '.front-kanto .front_img2, ' +
+      '.front-kanto .front_img3, ' +
+      '.front-kanto .front_img4'
+    );
 
-  const observer = new IntersectionObserver(
-    (entries) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
 
-      entries.forEach((entry) => {
+        entries.forEach((entry) => {
 
-        if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
 
-          entry.target.classList.add('is-show');
+            entry.target.classList.add('is-show');
 
-          // 1回発火したら監視終了
-          observer.unobserve(entry.target);
-        }
+            // 1回発火したら監視終了
+            observer.unobserve(entry.target);
+          }
 
-      });
+        });
 
-    },
-    {
-      // 画像が10%見えたら発火
-      threshold: 0.1
-    }
-  );
+      }, {
+        // 画像が50%見えたら発火
+        threshold: 0.5
+      }
+    );
 
-  images.forEach((image) => {
-    observer.observe(image);
+    images.forEach((image) => {
+      observer.observe(image);
+    });
+
   });
 
-});
 
 
 </script>

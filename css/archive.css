@@ -62,6 +62,7 @@
   opacity: 0.4;
   pointer-events: none;
 }
+
 /*====================================
 archive部分
 =====================================*/
@@ -215,6 +216,7 @@ SPとPCの切り替え
   font-size: 2.4rem;
 }
 
+
 .archive-card__arrow {
   display: flex;
   align-items: center;
@@ -230,6 +232,12 @@ SPとPCの切り替え
   font-size: 1.8rem;
 }
 
+/*hoverアクション*/
+.archive-card__more:hover {
+  transition: .3s;
+  transform: translateX(20%);
+}
+
 /*====================================
 ページネーション
 =====================================*/
@@ -238,7 +246,7 @@ SPとPCの切り替え
   justify-content: center;
   align-items: center;
   gap: 2.8rem;
-    margin: 5rem 0 6.3rem;
+  margin: 5rem 0 6.3rem;
 }
 
 .pagination a,
@@ -350,17 +358,17 @@ archive部分
   }
 
 
-/*アイキャッチがない時の画像*/
-.archive-card__image .no-image {
-  /*
+  /*アイキャッチがない時の画像*/
+  .archive-card__image .no-image {
+    /*
    * 20260828_橋口修正_幅30rem・高さ20remのスマートフォン用画像枠に対し、代替画像を
    * 幅25rem・高さ15remにすることで、上下左右へ均等な余白を確保します。
    */
-  width: 25rem;
-  height: 15rem;
-  object-fit: contain;
-  display: block;
-}
+    width: 25rem;
+    height: 15rem;
+    object-fit: contain;
+    display: block;
+  }
 
 
 
@@ -378,7 +386,7 @@ archive部分
 
   /* 日付・カテゴリー */
   .archive-card__meta {
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: block;
     font-size: 2.0rem;
     margin-bottom: 3.5rem;
@@ -443,6 +451,14 @@ SPとPCの切り替え
     color: #fff;
     font-size: 1.8rem;
   }
+
+  /*hoverアクション*/
+  .archive-card__more:hover {
+    transition: .3s;
+    transform: translateX(20%);
+  }
+
+
 
   /*====================================
 ページネーション
