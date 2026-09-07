@@ -1,24 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-  const fadeElements = document.querySelectorAll(".fade_up_trigger");
-  
-  const processObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // 画面内に入ったらクラスを付与（フェードアップと斜め線伸長が同時にはじまる）
-        entry.target.classList.add("is_active");
-      }
-    });
-  }, {
-    root: null,
-    rootMargin: "0px 0px -25% 0px", // 画面下部から15%入った位置で開始
-    threshold: 0.1
-  });
-
-  fadeElements.forEach(el => processObserver.observe(el));
-});*/
-
-/*上記は調整前の保険として残しているものなので必要なくなれば消す */
-
 document.addEventListener("DOMContentLoaded", () => {
   // 1. 大見出し ＆ サークル用の検知（少し早めにパッと出現させて線を伸ばす）
   const circleElements = document.querySelectorAll(".fade_up_trigger, .fade_up_trigger_circle");

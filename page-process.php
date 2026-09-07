@@ -2,14 +2,42 @@
 
 <main class="process_page_layout">
     <div class="process_container">
-        
-        <!-- 大見出しセクション（フォントサイズ72px / 左上配置） -->
+         <!-- 大見出しセクション（ジャンピングドット＆マスクカラー反転仕様） -->
         <section class="process_hero_section fade_up_trigger">
-            <h1 class="process_main_title">* ご利用までの流れ *</h1>
+            <div class="process_title_typography_wrapper">
+                
+                <svg class="process_title_svg_container" viewBox="0 0 1000 240" xmlns="http://w3.org">
+                    <defs>
+                        <!-- 上部をバウンドするマスク用の円（文字色を反転させる範囲） -->
+                        <mask id="process_think_mask">
+                            <circle cx="0" cy="0" r="120" fill="white" class="process_mask_circle_top" />
+                        </mask>
+                        <!-- 下部をバウンドするマスク用の円（文字色を反転させる範囲） -->
+                        <mask id="process_create_mask">
+                            <circle cx="0" cy="0" r="120" fill="white" class="process_mask_circle_bottom" />
+                        </mask>
+                    </defs>
+
+                    <!-- 【1層目】ベースの通常文字 -->
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#333333" letter-spacing="4">ご利用までの流れ</text>
+
+                    <!-- 【2層目】上部ドットが重なった時に切り替わる文字 -->
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">ご利用までの流れ</text>
+
+                    <!-- 【3層目】下部ドットが重なった時に切り替わる文字 -->
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">ご利用までの流れ</text>
+
+                    <!-- 【4層目】目視できる跳ねる黒丸ドット（上部バウンド） -->
+                    <circle class="process_ball_top" r="10" fill="#555555" />
+                    
+                    <!-- 【5層目】目視できる跳ねる黒丸ドット（下部バウンド） -->
+                    <circle class="process_ball_bottom" r="10" fill="#555555" />
+                </svg>
+            </div>
 
             <!-- シマエナガの透過画像用コンテナ -->
             <div class="process_hero_bird_holder">
-                <img src="<?php echo get_theme_file_uri('img/simaenaga2001d.png'); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001d.png')); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
             </div>
         </section>
 
@@ -90,8 +118,7 @@
                     <h2 class="process_content_title">*サービス利用開始</h2>
                     <p class="process_content_text">
                         訪問看護計画に基づき、定期的な訪問看護サービスがスタートします。<br>
-                        地域の医療機関やケアマネジャーと連携しながら、安心できる療養生活を全力でサポート<br>
-                        いたします。
+                        地域の医療機関やケアマネジャーと連携しながら、安心できる療養生活を全力でサポートいたします。
                     </p>
                 </div>
             </div>
