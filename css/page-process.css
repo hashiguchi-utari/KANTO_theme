@@ -21,24 +21,109 @@
 
 /* 大見出し：左上に配置 */
 .process_main_title {
-  font-size: 4rem;
-  font-weight: 700;/*見出しを太くして見やすくする*/
+  font-family: "Rampart One", sans-serif;
+  font-size: 6.4rem;
+  font-weight: 600;
   color: #333333;
   text-align: left;/*タイトル左側配置*/
+
   margin-left: 2rem;
   margin-bottom: 0;/*8rem;/*～画像追加のため0に変更かけている*/
 
-  position: relative; /* ラインを配置する基準点 */
+  position: relative;
   padding-left: 1rem;
   padding-bottom: 2rem;/* 文字とラインの間の余白 */
 }
+
+
+/* ==========================================
+   大見出し：ジャンピングドット＆カラー反転エフェクト
+   ========================================== */
+.process_hero_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin-bottom: 8rem;
+  width: 100%;
+}
+
+/* タイポグラフィ全体のサイズ固定 */
+.process_title_typography_wrapper {
+  position: relative;
+  width: 80rem;
+  height: 16rem;
+}
+
+/* SVGコンテナ */
+.process_title_svg_container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible; /* ドットが文字からはみ出して跳ねるのを許可 */
+}
+
+/* ------------------------------------------
+   バウンドドット ＆ マスクの軌道アニメーション（反時計回り循環）
+   ------------------------------------------ */
+/* 【上部バウンド】テキストの上を2回トン、トンと跳ねて右から左へ（4秒周期） */
+.process_ball_top,
+.process_mask_circle_top {
+  animation: process_ball_top_move 6.0s both infinite;
+  offset-path: path("M 600,65 C 510,15 440,15 370,65 C 300,15 230,-20 140,65");
+  offset-distance: 0%;
+}
+
+/* 【下部バウンド】テキストの下を2回トン、トンと跳ねて左から右へ（4秒周期） */
+.process_ball_bottom,
+.process_mask_circle_bottom {
+  animation: process_ball_bottom_move 6.0s both infinite;
+  offset-path: path("M 140,150 C 230,190 300,190 370,150 C 440,190 510,190 600,150");
+  offset-distance: 0%;
+}
+
+/* 上部ドット＆マスクのアニメーション*/
+@keyframes process_ball_top_move {
+  0% {
+    offset-distance: 0%;
+    transform: scale(0);
+  }
+  5% { transform: scale(1); }
+  42.5% { transform: scale(1); }
+  50% {
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+  100% {
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+}
+
+/* 下部ドット＆マスクのアニメーション */
+@keyframes process_ball_bottom_move {
+  0% {
+    offset-distance: 0%;
+    transform: scale(0);
+  }
+  50% {
+    offset-distance: 0%;
+    transform: scale(0);
+  }
+  55% { transform: scale(1); }
+  95% { transform: scale(1); }
+  100% {
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+}
+
 
 /* 大見出しセクション：見出しとシマエナガを両端に配置 */
 .process_hero_section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* 大見出しのラインの高さとシマエナガの足元を少しずらす */
-  margin-bottom: 8rem;
+  margin-bottom: 15rem;
   width: 100%;
 }
 
@@ -156,12 +241,9 @@
   line-height: 1.4;
 
   /* 切り取り線の設定 */
-  padding-bottom: 1.25rem; /* 文字と線の間の余白 */
-  margin-bottom: 1.5rem;   /* 線と下の本文との間の余白 */
+  padding-bottom: 2.2rem; /* 文字と線の間の余白 */
+  margin-bottom: 2.2rem;   /* 線と下の本文との間の余白 */
   border-bottom: 0.1875rem dashed #777777; /* 3pxのフランクな破線 */
-  
-  /* ※もっと細かいドットにしたい場合上記を以下に書き換え */
-  /* border-bottom: 0.25rem dotted #777777; */
 }
 
 /* 隣のテキスト */
@@ -182,7 +264,7 @@
   width: 53%;/*線の長さはここで調整*/
   height: 0.7rem; /* 線の太さはここで調整*/
   background-color: #333333;
-  transform: rotate(35deg); /* ななめ線の傾斜具合はここで調整します*/
+  transform: rotate(35deg); /* ななめ線の傾斜具合はここで調整*/
   transform-origin: left center;
   
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
@@ -254,8 +336,8 @@
 /* 2. テキスト用のトリガー（完全に画面に入った時に優しく出現：0.8秒） */
 .fade_up_trigger_text {
   opacity: 0;
-  transform: translateY(2.5rem); /* テキストは少し浅め(40px)から浮かせる */
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(4rem); /* テキストは少し浅めゆっくりすぎない程度にふわっと浮かせる */
+  transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade_up_trigger_text.is_active {
   opacity: 1;
@@ -266,7 +348,7 @@
 .fade_up_trigger {
   opacity: 0;
   transform: translateY(3.125rem);
-  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade_up_trigger.is_active {
   opacity: 1;
@@ -298,9 +380,9 @@
 }
 
 .process_info_card {
-  margin-top: -16rem;/*カードの位置を上げるための数値*/
+  margin-top: -14rem;/*カードの位置を上げ下げするための数値*/
   background-color: #fff9ee;
-  border-radius: 12.5rem;
+  border-radius: 5rem;
   padding: 2.25rem 5rem 5rem 5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
 
@@ -425,7 +507,6 @@
   display: block;
 }
 
-
 /* ==========================================
    最後のイラストセクション 左やや端配置)
    ========================================== */
@@ -450,7 +531,7 @@
 /*鳥イラスト画像への指示 */
 .process_visual_image {
   width: 100%;
-  height: 101%;/*鳥のサイズを大きくするためにこの数値*/
+  height: 100%;/*鳥のサイズを大きくするためにこの数値*//*新規修正：一旦必要ないと判断し100%に戻した*/
   object-fit: contain;
   display: block;
 }
@@ -460,7 +541,7 @@
    ========================================== */
 @media screen and (max-width: 699.98px) {
   .process_container {
-    width: 32rem;
+    width: 36rem;
     max-width: 100%;
     margin: 0 auto;
     padding: 7rem 0.1rem 1.5rem 0.1rem; 
@@ -476,32 +557,125 @@
     align-items: center;/* 見出しを【センター維持】 */
     margin-bottom: 10rem;
     width: 100%;
-    position: relative;/* シマエナガを右端に絶対配置するための基準点 */
+    position: relative;/* シマエナガを右端に配置するための基準点 */
     opacity: 1 !important;  
     transform: none !important;
   }
 
   /* 大見出しテキスト */
   .process_main_title {
-    font-size: 2.8rem;
+    font-size: 4rem;
     text-align: center;
     padding-left: 0;
     padding-bottom: 1.25rem;
     color: #333333;
   }
 
-  /* SP対応サイズのシャドウ付き見出し線 */
-  .process_main_title::after {
+    /* SVGコンテナのスマホ調整 */
+  .process_title_svg_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+    /* SP版タイポグラフィ全体のサイズ固定（改行バグ対策：横幅を280pxにロック） */
+  .process_title_typography_wrapper {
+    position: relative;
+    width: 36rem;
+    height: 16rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* 通常文字（ベース）＆ マスク文字（オーバーレイ）のスマホ共通設定 */
+  .process_main_title_base,
+  .process_main_title_overlay {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+    /* 上下の距離を完全に均等にする */
+    line-height: 16rem;
+    letter-spacing: 0.1rem;
+  }
+
+  /* 通常時の文字色 */
+  .process_main_title_base {
+    color: #333333;
+  }
+
+  /* ドットが重なった瞬間に変化する文字色 */
+  .process_main_title_overlay {
+    color: #d08960;
+  }
+
+  /* マスクレイヤーのアニメーション（PC版と完全同期） */
+  .process_title_mask_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    clip-path: inset(0 0 100% 0); 
+    animation: process_mask_toggle_move 4.0s both infinite;
+  }
+
+  /* SP対応サイズのシャドウ付き見出し線（指示通りの4.0remの文字幅に完璧に合わせたサイズ調整） */
+  .process_title_typography_wrapper::after {
     content: "";
     position: absolute;
-    left: 46%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 30rem;
-    height: 0.1rem;
+    left: 50%;
+    bottom: 0rem; /* SVGの拡張されたバウンドスペースに合わせたベストな位置 */
+    transform: translateX(-50%); /* 完全に中央寄せ */
+    width: 26.0rem; /* 4rem文字幅に美しくフィットする260px幅 */
+    height: 0.4rem;  /* 4px */
     background-color: #333333;
-    border-radius: 0.125rem;
-    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.2rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+  }
+
+  /* SVGコンテナのスマホ調整（36remの横幅の中で1行表示させるエリア） */
+  .process_title_svg_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+  /* ------------------------------------------
+     SP版：バウンドドット軌道アニメーション（36rem幅・4.0rem文字用・反時計回り）
+     ------------------------------------------ */
+  /* 【SP上部バウンド】36rem(360px)のコンテナ幅の中で、文字の少し上空をフワッ、フワッと右から左へ2回跳ねる */
+  .process_ball_top,
+  .process_mask_circle_top {
+    animation: process_ball_top_move 4.0s both infinite;
+    /* 始点(340,80)から終点(20,80)へ向かう、文字に被らない上空の美しい放物線パス */
+    offset-path: path("M 340,80 C 275,20 225,20 180,80 C 135,20 85,20 20,80");
+    offset-distance: 0%;
+  }
+
+  /* 【SP下部バウンド】上部バウンドと1ミクロンも狂わずに「上下対称」になる距離で、文字の下をフワッ、フワッと左から右へ戻る */
+  .process_ball_bottom,
+  .process_mask_circle_bottom {
+    animation: process_ball_bottom_move 4.0s both infinite;
+    /* 始点(20,140)から終点(340,140)へ戻る、文字のすぐ下をかすめる美しい放物線パス */
+    offset-path: path("M 20,140 C 85,200 135,200 180,140 C 225,200 275,200 340,140");
+    offset-distance: 0%;
+  }
+
+  /* ドット自体の大きさも、4.0remの大きな文字に負けないように直径14px相当に自動補正 */
+  .process_ball_top,
+  .process_ball_bottom {
+    transform: scale(1.4); 
   }
 
   /* SP右上シマエナガ：コンパクトで右端に表示*/
@@ -685,7 +859,7 @@
 
   /* 説明テキスト */
   .process_content_text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: #333333;
     text-align: left; 
@@ -707,7 +881,7 @@
     margin-top: -12rem;
     background-color: #fff9ee; 
     border-radius: 5.5rem;
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 0.7rem;
 
     border: 0.2rem dashed #777777;/*枠線を破線に*/
     box-shadow: none; 
@@ -715,20 +889,20 @@
   }
 
   .process_info_title {
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-align: center; 
     margin-bottom: 1.5rem;
   }
 
   .process_info_lead {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
   }
 
   /* 箇条書きフレーム枠のSPリセット */
   .process_info_list {
-    margin: 0 0 2.5rem 0;
+    margin: 0 0 3.5rem 0;
     width: 100%;
     padding: 0;
     border: none;
@@ -737,7 +911,7 @@
   }
 
   .process_info_item {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: left;
     margin-bottom: 1.25rem;
@@ -765,13 +939,13 @@
 
   /* ワンポイントアドバイス（電球アイコン） */
   .process_info_note {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     text-align: left;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0.75rem;
+    gap: 1.5rem;
   }
 
   .process_note_hint_icon {
