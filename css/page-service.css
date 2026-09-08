@@ -27,6 +27,7 @@
 
 .catchcopy {
   font-size: 6.4rem;
+  margin-top: 6rem;
 }
 
 /* 順にフェードアップさせる */
@@ -66,6 +67,7 @@
   width: 57.8rem;
   height: 25.9rem;
   padding-top: 10.9rem;
+  margin-top: 3.2rem;
 }
 
 .heart,
@@ -256,7 +258,7 @@
 .main_service h3 {
   font-size: 3.2rem;
   font-weight: bold;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .body_maintenance p,
@@ -342,7 +344,7 @@
   display: block;
   width: 48.1rem;
   height: 0.1rem;
-  margin: 2rem 0 2rem;
+  margin: 1rem 0 2rem;
   background-color: #FFCA33;
 }
 
@@ -350,6 +352,7 @@
   width: 54.4rem;
   height: 9.5rem;
   font-size: 1.6rem;
+  line-height: 1.23em;
 }
 
 .three_message {
@@ -404,7 +407,7 @@
   display: block;
   width: 28.4rem;
   height: 0.1rem;
-  margin: 2rem auto 1rem;
+  margin: 0.5rem auto 1rem;
   background-color: #FFCA33;
 }
 
@@ -596,7 +599,6 @@
   width: 12.7rem;
   height: 8.9rem;
   object-fit: contain;
-  margin-left: 18.8rem;
   padding-top: 1rem;
 }
 
@@ -650,6 +652,7 @@
 
 .step_guide p {
   font-size: 1.6rem;
+  line-height: 1.23em;
 }
 
 .step_button {
@@ -686,7 +689,7 @@
 }
 
 .nurse {
-  width: 48.2rem;
+  width: 41.2rem;
   height: 33.8rem;
   margin-top: 5rem;
 }
@@ -713,15 +716,12 @@
 .nav_message2 {
   color: white;
   font-size: 3.2rem;
+  font-weight: bold;
   text-align: center;
 }
 
 .nav_message1 {
   padding-top: 5rem;
-}
-
-.nav_message2 {
-  margin-top: 1rem;
 }
 
 .contact_button {
@@ -812,7 +812,7 @@
     width: 37.3rem;
     height: 26.4rem;
     object-fit: cover;
-    margin: 3.6rem 0.3rem 1.1rem 0;
+    margin: 6.6rem 0.3rem 1.1rem 0;
   }
 
   /* 文字などは２番目に表示されるように */
@@ -849,7 +849,7 @@
     width: 33.4rem;
     font-size: 4rem;
     text-align: center;
-    margin: 0 auto;
+    margin: 1.5rem auto;
   }
 
   .service_guide {
@@ -936,6 +936,7 @@
 
   .top_word {
     width: 100%;
+    padding-top: 6rem;
   }
 
   .top_word h2 {
@@ -1045,7 +1046,7 @@
     display: block;
     width: 35.2rem;
     height: 37.8rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
     padding: 0 1rem;
   }
 
