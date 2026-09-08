@@ -91,7 +91,8 @@
     flex-direction: column;
     gap: 15px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 10rem;
     background: linear-gradient(135deg, #ffeac4, #ff988e);
     z-index: 1000;
     transform: translateY(-120%);
@@ -147,13 +148,17 @@
             padding: 2rem 0;
         }
         .header-logo img {
-            width: 25.8rem;
-            height: 6.5rem;
+            width: 19.3rem;
+            height: 4.875rem;
+            margin-left: 1rem;
         }
         .menu {
             display: none;
         }
         .hamburger span {
             background-color: #fff;
+        }
+        .nav-items {
+            padding-left: 5rem;
         }
 }

@@ -3,6 +3,9 @@ main {
     background-color: #FFF9F4;
     overflow-x: hidden;
 }
+p {
+    color: #3f3b3a;
+}
 
 /*メイン画像の設定*/
 .staff-main {
@@ -83,12 +86,16 @@ main {
 .page-title h1 {
     font-size: 10rem;
     font-family: "Alice", serif;
-    color: #727272;
+    color: #3f3b3a;
     letter-spacing: 10%;
+    -webkit-text-stroke: 0.3rem black;
+    paint-order: stroke;
 }
 .page-title p {
     font-size: 2.8rem;
     padding-bottom: 10rem;
+    padding-top: 1rem;
+    color: #3f3b3a;
 }
 .page-title .pc-border {
     display: block;
@@ -137,17 +144,20 @@ main {
 }
 .comment p {
     font-size: 3rem;
+    color: #3f3b3a;
 }
 .comment img {
     position: absolute;
 }
 .comment img:nth-child(2) {
-    top: -100%;
-    right: 35.5%;
+    top: -5rem;
+    right: 52rem;
+    width: 5rem;
 }
 .comment img:nth-child(3) {
     top: -5rem;
     left: 10rem;
+    width: 5.5rem;
 }
 .comment img:nth-child(4) {
     left: 15rem;
@@ -172,6 +182,7 @@ main {
     transform: translateY(3rem);
     transition: opacity 0.6s, transform 0.6s;
     opacity: 0;
+    scroll-margin-top: 14rem;
 }
 .card.is-show {
     opacity: 1;
@@ -183,6 +194,7 @@ main {
 }
 #staff2 {
     background: linear-gradient(to right, #Fff 0%, #Fff 80%, #FF8D28 80%, #FF8D28 100%);
+    box-shadow: -2.5rem 2.5rem 3rem rgba(200, 168, 168, 0.4);
 }
 #mainimg {
     flex: 0 0 45rem;
@@ -206,6 +218,9 @@ main {
     display: flex;
     align-items: baseline;
     font-size: 4rem;
+}
+.staff-name h2 {
+    letter-spacing: 0.3rem;
 }
 .staff-name .kana {
     margin-left: 3rem;
@@ -272,6 +287,7 @@ main {
     margin: 5rem auto 3rem;
     width: 100%;
     min-height: 10rem;
+    top: -2.5rem;
 }
 .img-up p {
     font-size: 2rem;
@@ -315,7 +331,7 @@ main {
     justify-content: center;
     gap: 2rem;
     max-width: 115rem;
-    margin: 0 auto 5rem;
+    margin: 0 auto 10rem;
     width: 100%;
 }
 .staff-footer-bottom .border {
@@ -376,7 +392,7 @@ main {
         margin: 8rem 0 0 0;
     }
     .sp-comment p {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .sp-comment img {
         position: absolute;
@@ -408,7 +424,7 @@ main {
         display: none;
     }
     .page-title img:nth-of-type(1) {
-        top: 10rem;
+        top: 15rem;
         width: 6.7rem;
     }
     .page-title img:nth-of-type(2) {
@@ -426,7 +442,7 @@ main {
         right: -25rem;
     }
     .page-title h1 {
-        font-size: 4rem;
+        font-size: 6.4rem;
         margin: 1rem 0;
     }
     .page-title p {
@@ -473,12 +489,11 @@ main {
     }
     #mainimg img {
         max-width: 100%;
-        margin: 0 auto;
     }
     .sp-stop {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 100.2%;
         opacity: 0.8;
         bottom: -6rem;
     }
