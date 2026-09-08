@@ -49,7 +49,7 @@
             <div class="status">
                 <p class="job">看護師/サービス管理責任者</p>
                 <div class="staff-name">
-                    <h2>酒井沙穂里</h2>
+                    <h2>酒井 沙穂里</h2>
                     <h2 class="kana">SAHORI SAKAI</h2>
                 </div>
                 <span class="border"></span>
@@ -95,7 +95,7 @@
             <div class="status">
                 <p class="job">看護師</p>
                 <div class="staff-name">
-                    <h2>浦新沙紀</h2>
+                    <h2>浦新 沙紀</h2>
                     <h2 class="kana">SAKI URASHIN</h2>
                 </div>
                 <span class="border"></span>
@@ -152,7 +152,7 @@
             <div class="status">
                 <p class="job">看護師</p>
                 <div class="staff-name">
-                    <h2>齋藤由布奈</h2>
+                    <h2>齋藤 由布奈</h2>
                     <h2 class="kana">YUNA SAITO</h2>
                 </div>
                 <span class="border"></span>
