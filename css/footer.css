@@ -130,7 +130,8 @@
 
 .site-footer__address {
   width: 100%;
-  margin-top: 1.4rem;
+  /* 下へ移動したロゴと住所が詰まって見えないよう、PC版の間隔を確保 */
+  margin-top: 4rem;
   font-style: normal;
   text-align: center;
 }
@@ -264,18 +265,21 @@
     min-width: 0;
     min-height: 0;
     padding: 0 0 0.8rem;
-    color: #e4c44e;
-    font-family: serif;
+    color: #ded93f;
+    font-family: "Gulzar", serif;
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.2;
+    /* strokeは使わず、1px相当（0.1rem）の黒50％の影で文字の外周をなぞる */
     text-shadow:
-      -0.1rem -0.1rem 0 #527f42,
-      0.1rem -0.1rem 0 #527f42,
-      -0.1rem 0.1rem 0 #527f42,
-      0.1rem 0.1rem 0 #527f42;
+      -0.1rem -0.1rem 0 rgb(0 0 0 / 50%),
+      0.1rem -0.1rem 0 rgb(0 0 0 / 50%),
+      -0.1rem 0.1rem 0 rgb(0 0 0 / 50%),
+      0.1rem 0.1rem 0 rgb(0 0 0 / 50%);
     background: transparent;
+    border: 0;
     border-radius: 0;
+    box-shadow: none;
     overflow: visible;
   }
 
@@ -299,7 +303,7 @@
   }
 
   .site-footer__nav-link:first-child {
-    font-family: serif;
+    font-family: "Gulzar", serif;
     font-size: 1.6rem;
   }
 
