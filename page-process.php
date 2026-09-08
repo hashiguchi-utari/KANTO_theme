@@ -2,7 +2,7 @@
 
 <main class="process_page_layout">
     <div class="process_container">
-         <!-- 大見出しセクション（ジャンピングドット＆マスクカラー反転仕様） -->
+         <!-- PC版で表示する大見出しセクション（ジャンピングドット＆マスクカラー反転仕様） -->
         <section class="process_hero_section fade_up_trigger">
             <div class="process_title_typography_wrapper">
                 
@@ -10,11 +10,11 @@
                     <defs>
                         <!-- 上部をバウンドするマスク用の円（文字色を反転させる範囲） -->
                         <mask id="process_think_mask">
-                            <circle cx="0" cy="0" r="120" fill="white" class="process_mask_circle_top" />
+                            <circle cx="0" cy="0" r="130" fill="white" class="process_mask_circle_top" />
                         </mask>
                         <!-- 下部をバウンドするマスク用の円（文字色を反転させる範囲） -->
                         <mask id="process_create_mask">
-                            <circle cx="0" cy="0" r="120" fill="white" class="process_mask_circle_bottom" />
+                            <circle cx="0" cy="0" r="130" fill="white" class="process_mask_circle_bottom" />
                         </mask>
                     </defs>
 
@@ -28,10 +28,10 @@
                     <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">ご利用までの流れ</text>
 
                     <!-- 【4層目】目視できる跳ねる黒丸ドット（上部バウンド） -->
-                    <circle class="process_ball_top" r="10" fill="#555555" />
+                    <circle class="process_ball_top" r="7" fill="#555555" />
                     
                     <!-- 【5層目】目視できる跳ねる黒丸ドット（下部バウンド） -->
-                    <circle class="process_ball_bottom" r="10" fill="#555555" />
+                    <circle class="process_ball_bottom" r="7" fill="#555555" />
                 </svg>
             </div>
 
@@ -39,6 +39,10 @@
             <div class="process_hero_bird_holder">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001d.png')); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
             </div>
+
+            <!-- ★【SP版専用】新しく作成したシンプルな大見出し★ -->
+            <h2 class="process_sp_only_title">ご利用までの流れ</h2>
+
         </section>
 
         <!-- ステップフローセクション -->

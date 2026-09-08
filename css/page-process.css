@@ -68,7 +68,7 @@
 /* 【上部バウンド】テキストの上を2回トン、トンと跳ねて右から左へ（4秒周期） */
 .process_ball_top,
 .process_mask_circle_top {
-  animation: process_ball_top_move 6.0s both infinite;
+  animation: process_ball_top_move 10.0s both infinite;
   offset-path: path("M 600,65 C 510,15 440,15 370,65 C 300,15 230,-20 140,65");
   offset-distance: 0%;
 }
@@ -76,7 +76,7 @@
 /* 【下部バウンド】テキストの下を2回トン、トンと跳ねて左から右へ（4秒周期） */
 .process_ball_bottom,
 .process_mask_circle_bottom {
-  animation: process_ball_bottom_move 6.0s both infinite;
+  animation: process_ball_bottom_move 10.0s both infinite;
   offset-path: path("M 140,150 C 230,190 300,190 370,150 C 440,190 510,190 600,150");
   offset-distance: 0%;
 }
@@ -536,6 +536,11 @@
   display: block;
 }
 
+/* PC版では新しく作ったSP用の見出しを非表示にする */
+.process_sp_only_title {
+  display: none;
+}
+
 /* ==========================================
    SP版（スマホ対応：699.98px以下）
    ========================================== */
@@ -554,131 +559,50 @@
   .process_hero_section {
     display: flex;
     flex-direction: column;
-    align-items: center;/* 見出しを【センター維持】 */
+    align-items: center;/* 見出しをセンター */
     margin-bottom: 10rem;
     width: 100%;
     position: relative;/* シマエナガを右端に配置するための基準点 */
-    opacity: 1 !important;  
-    transform: none !important;
+    opacity: 1;  
+    transform: none;
   }
 
-  /* 大見出しテキスト */
-  .process_main_title {
+   .process_title_typography_wrapper {
+    display: none;
+  }
+
+  /* ★【SP版のみ】スマホでのみ通常の文字として中央表示★ */
+  .process_sp_only_title {
+    display: block;
     font-size: 4rem;
+    font-weight: 600;
     text-align: center;
+    color: #333333;
     padding-left: 0;
     padding-bottom: 1.25rem;
-    color: #333333;
-  }
-
-    /* SVGコンテナのスマホ調整 */
-  .process_title_svg_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: visible;
-  }
-
-    /* SP版タイポグラフィ全体のサイズ固定（改行バグ対策：横幅を280pxにロック） */
-  .process_title_typography_wrapper {
-    position: relative;
-    width: 36rem;
-    height: 16rem;
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* 通常文字（ベース）＆ マスク文字（オーバーレイ）のスマホ共通設定 */
-  .process_main_title_base,
-  .process_main_title_overlay {
-    font-size: 4rem;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0;
     margin: 0;
-    /* 上下の距離を完全に均等にする */
-    line-height: 16rem;
-    letter-spacing: 0.1rem;
+    line-height: 1.3;
+    letter-spacing: 0;
+    opacity: 1;
+    transform: none;
+    position: relative; 
   }
-
-  /* 通常時の文字色 */
-  .process_main_title_base {
-    color: #333333;
-  }
-
-  /* ドットが重なった瞬間に変化する文字色 */
-  .process_main_title_overlay {
-    color: #d08960;
-  }
-
-  /* マスクレイヤーのアニメーション（PC版と完全同期） */
-  .process_title_mask_layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    clip-path: inset(0 0 100% 0); 
-    animation: process_mask_toggle_move 4.0s both infinite;
-  }
-
-  /* SP対応サイズのシャドウ付き見出し線（指示通りの4.0remの文字幅に完璧に合わせたサイズ調整） */
-  .process_title_typography_wrapper::after {
+    /* ------------------------------------------
+     SP専用：大見出しの下のオシャレなライン（z-index不使用）
+     ------------------------------------------ */
+  .process_sp_only_title::after {
     content: "";
     position: absolute;
+    bottom: -1rem;
     left: 50%;
-    bottom: 0rem; /* SVGの拡張されたバウンドスペースに合わせたベストな位置 */
-    transform: translateX(-50%); /* 完全に中央寄せ */
-    width: 26.0rem; /* 4rem文字幅に美しくフィットする260px幅 */
-    height: 0.4rem;  /* 4px */
-    background-color: #333333;
-    border-radius: 0.2rem;
-    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+    transform: translateX(-50%); /* 中央寄せ */
+    width: 30rem;
+    height: 0.2rem;
+    background-color: #4f4f4f; 
+    border-radius: 0.1rem;
   }
 
-  /* SVGコンテナのスマホ調整（36remの横幅の中で1行表示させるエリア） */
-  .process_title_svg_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: visible;
-  }
-
-  /* ------------------------------------------
-     SP版：バウンドドット軌道アニメーション（36rem幅・4.0rem文字用・反時計回り）
-     ------------------------------------------ */
-  /* 【SP上部バウンド】36rem(360px)のコンテナ幅の中で、文字の少し上空をフワッ、フワッと右から左へ2回跳ねる */
-  .process_ball_top,
-  .process_mask_circle_top {
-    animation: process_ball_top_move 4.0s both infinite;
-    /* 始点(340,80)から終点(20,80)へ向かう、文字に被らない上空の美しい放物線パス */
-    offset-path: path("M 340,80 C 275,20 225,20 180,80 C 135,20 85,20 20,80");
-    offset-distance: 0%;
-  }
-
-  /* 【SP下部バウンド】上部バウンドと1ミクロンも狂わずに「上下対称」になる距離で、文字の下をフワッ、フワッと左から右へ戻る */
-  .process_ball_bottom,
-  .process_mask_circle_bottom {
-    animation: process_ball_bottom_move 4.0s both infinite;
-    /* 始点(20,140)から終点(340,140)へ戻る、文字のすぐ下をかすめる美しい放物線パス */
-    offset-path: path("M 20,140 C 85,200 135,200 180,140 C 225,200 275,200 340,140");
-    offset-distance: 0%;
-  }
-
-  /* ドット自体の大きさも、4.0remの大きな文字に負けないように直径14px相当に自動補正 */
-  .process_ball_top,
-  .process_ball_bottom {
-    transform: scale(1.4); 
-  }
-
-  /* SP右上シマエナガ：コンパクトで右端に表示*/
+  /* SP版右上シマエナガ：コンパクトで右端に表示*/
   .process_hero_bird_holder {
     display: block;
     position: absolute;
@@ -760,7 +684,7 @@
 
     /* 【正円ドットの生成 */
     /* 柔らかいオレンジ背景に馴染む色味の正円追加 */
-    background-image: radial-gradient(#ffb300 35%, transparent 45%);
+    background-image: radial-gradient(#FD8A3A 35%, transparent 45%);
     background-size: 0.9rem 1.1rem; /* 丸1個あたりの範囲を固定し歪みを防止*/
     background-repeat: repeat-y; /* 縦方向に3個並ぶようにリピート */
     
@@ -768,7 +692,7 @@
     opacity: 0; /* 初期状態は消しておく */
     
     /* 3.0秒（ゆっくり）周期で無限ループアニメーションを実行 */
-    animation: process_dots_slow_loop 3.5s ease-in-out infinite;
+    animation: process_dots_slow_loop 3.0s ease-in-out infinite;
   }
   
     /* ------------------------------------------
