@@ -19,19 +19,19 @@
                     </defs>
 
                     <!-- 【1層目】ベースの通常文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#333333" letter-spacing="4">ご利用までの流れ</text>
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#333333" letter-spacing="4">- ご利用までの流れ -</text>
 
                     <!-- 【2層目】上部ドットが重なった時に切り替わる文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">ご利用までの流れ</text>
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">- ご利用までの流れ -</text>
 
                     <!-- 【3層目】下部ドットが重なった時に切り替わる文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">ご利用までの流れ</text>
+                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">- ご利用までの流れ -</text>
 
                     <!-- 【4層目】目視できる跳ねる黒丸ドット（上部バウンド） -->
-                    <circle class="process_ball_top" r="7" fill="#555555" />
+                    <circle class="process_ball_top" r="7" fill="#FD8A3A" />
                     
                     <!-- 【5層目】目視できる跳ねる黒丸ドット（下部バウンド） -->
-                    <circle class="process_ball_bottom" r="7" fill="#555555" />
+                    <circle class="process_ball_bottom" r="7" fill="#FD8A3A" />
                 </svg>
             </div>
 
@@ -40,8 +40,35 @@
                 <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001d.png')); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
             </div>
 
-            <!-- ★【SP版専用】新しく作成したシンプルな大見出し★ -->
-            <h2 class="process_sp_only_title">ご利用までの流れ</h2>
+            <!-- ★【SP版専用】2つの丸が同時回転 ＋ カラー反転エフェクト仕様★ -->
+            <div class="process_sp_only_title">
+                <!-- 1層目：ベースの通常文字 -->
+                <span class="process_sp_title_base">ご利用までの流れ</span>
+
+                <!-- 2層目：ドットが重なった時に切り替わる文字 -->
+                <div class="process_sp_title_mask_layer">
+                    <span class="process_sp_title_overlay">ご利用までの流れ</span>
+                </div>
+
+                <!-- 3層目：上下で同時にゆっくり反時計回りに回転する2つの黒丸ドット（SVG軌道） -->
+                <svg class="process_sp_title_svg" viewBox="0 0 360 160" xmlns="http://w3.org">
+                    <defs>
+                        <!-- 回転に連動して文字色を反転させる型抜きマスク設定 -->
+                        <mask id="process_sp_circle_mask">
+                            <!-- 上部のドット用マスク（反時計回り） -->
+                            <circle cx="0" cy="0" r="30" fill="white" class="process_sp_mask_top" />
+                            <!-- 下部のドット用マスク（反時計回り） -->
+                            <circle cx="0" cy="0" r="30" fill="white" class="process_sp_mask_bottom" />
+                        </mask>
+                    </defs>
+                    <!-- マスク設定を2層目のオレンジ文字へ紐付けるためのダミー要素 -->
+                    <rect x="0" y="0" width="100%" height="100%" fill="none" />
+
+                    <!-- 目視できる2つの黒丸ドット -->
+                    <circle class="process_sp_ball_top" r="4" fill="#FD8A3A" />
+                    <circle class="process_sp_ball_bottom" r="4" fill="#FD8A3A" />
+                </svg>
+            </div>
 
         </section>
 
