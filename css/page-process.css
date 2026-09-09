@@ -568,21 +568,29 @@
     display: none;
   }
 
-  /* ★【SP版のみ】2つのドット同時回転 ＋ カラー型抜き反転エフェクト★ */
+  /* ★【SP版のみ】シンプル大見出し★ */
   .process_sp_only_title {
-    display: block;
-    width: 36.0rem;  /* 360px固定（縮小・改行を徹底防止） */
-    height: 16.0rem; /* 160px固定（ドットが上下をダイナミックに大回りするスペース） */
-    margin: 0 auto;
-    position: relative; 
+    display: block;    /* スマホ版でのみ表示 */
+    font-size: 4.0rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+    padding-left: 0;
+    padding-bottom: 1.5rem; /* 線との間のオシャレな余白スペース*/
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 0.1rem;
+    opacity: 1;
+    transform: none;
+    position: relative;
   }
 
   /* 通常文字（ベース）＆ マスク文字（オーバーレイ）のスマホ共通設定 */
   .process_sp_title_base,
   .process_sp_title_overlay {
-    font-size: 4.0rem !important; /* 指示厳守の40px固定 */
-    font-weight: 600 !important;
-    text-align: center !important;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
     position: absolute;
     width: 100%;
     /* 縦160pxのブロックのど真ん中（y=80px付近）に文字を完全にホールド */
@@ -601,68 +609,6 @@
   /* ドットが重なった瞬間に変化する文字色 */
   .process_sp_title_overlay {
     color: #FD8A3A;
-  }
-
-  /* 文字色を反転させるためのマスクレイヤーの配置設定 */
-  .process_sp_title_mask_layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  
-     /* HTML側のSVG内に定義された2つの丸maskと、オレンジ色の文字を結合 */
-    mask: url(#process_sp_circle_mask);
-    -webkit-mask: url(#process_sp_circle_mask);
-  }
-
-  /* 2つのドットが動くSVGコンテナ */
-  .process_sp_title_svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: visible; 
-  }
-
- /* ------------------------------------------
-     SP版専用：2つのドットの同時回転（6秒周期で周回）
-     ------------------------------------------ */
-  /* 【上部ドット ＋ 上部マスク】文字の少し上を周回 */
-  .process_sp_ball_top,
-  .process_sp_mask_top {
-    animation: process_sp_ball_rotate_top 6.0s linear infinite;
-    /* 360px×160pxの範囲内で、文字の少し上(y=50)を右から左へ移動するパス */
-    offset-path: path("M 320,50 C 240,10 120,10 40,50");
-    offset-distance: 0%;
-  }
-
-  /* 【下部ドット ＋ 下部マスク】上部と同時に、文字の少し下(y=110)を左から右へ連動して戻る */
-  .process_sp_ball_bottom,
-  .process_sp_mask_bottom {
-    animation: process_sp_ball_rotate_bottom 6.0s linear infinite;
-    /* 上部と完全に点対称・等距離になる位置(y=110)を左から右へ移動するパス */
-    offset-path: path("M 40,110 C 120,150 240,150 320,110");
-    offset-distance: 0%;
-  }
-
-  /* 上部ドットのアニメーションキーフレーム（後半は下部へ繋ぐためフェード循環） */
-  @keyframes process_sp_ball_rotate_top {
-    0% { offset-distance: 0%; opacity: 1; }
-    45% { opacity: 1; }
-    50% { offset-distance: 100%; opacity: 0; } /* 左端に着いたら消える */
-    50.001%, 100% { offset-distance: 0%; opacity: 0; }
-  }
-
-  /* 下部ドットのアニメーションキーフレーム（前半は上部が動くため待機、後半に連動） */
-  @keyframes process_sp_ball_rotate_bottom {
-    0%, 50% { offset-distance: 0%; opacity: 0; }
-    50.001% { offset-distance: 0%; opacity: 1; } /* 上部が左端に消えた瞬間、左下から出現 */
-    95% { opacity: 1; }
-    100% { offset-distance: 100%; opacity: 0; } /* 右端に戻ったら消えて最初へループ */
   }
 
   /* ------------------------------------------
