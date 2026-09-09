@@ -56,3 +56,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3500);
   });
 });
+
+/**
+ * 上部のSETA・UTARI画像はPC版だけ紹介セクションへのリンクとして動作させます。
+ * SP版ではタップしてもページ位置を変えず、画面幅を広げた場合はリンクを復帰させます。
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceLinks = document.querySelectorAll(
+    '.group-hero__item--seta > a, .group-hero__item--utari > a'
+  );
+  const spMedia = window.matchMedia('(max-width: 699.98px)');
+
+  if (!serviceLinks.length) {
+    return;
+  }
+
+  const updateLinkState = () => {
+    serviceLinks.forEach((link) => {
+      if (spMedia.matches) {
+        link.setAttribute('aria-disabled', 'true');
+        link.setAttribute('tabindex', '-1');
+      } else {
+        link.removeAttribute('aria-disabled');
+        link.removeAttribute('tabindex');
+      }
+    });
+  };
+
+  serviceLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (spMedia.matches) {
+        event.preventDefault();
+      }
+    });
+  });
+
+  updateLinkState();
+  spMedia.addEventListener('change', updateLinkState);
+});

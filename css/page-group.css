@@ -808,11 +808,11 @@
     margin-top: 4rem;
   }
   .group-service--utari .group-service__content {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
   }
-  /* SP版は共通指定の負の余白を解除し、スライド画像と見出しの間を空ける */
+  /* SP版UTARIの写真・キャッチコピー・説明文の間隔を3remずつに揃える */
   .group-service--utari .group-service__catch {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   /* PC用の固定寸法を解除し、SPでは文章量に合わせて自然に伸ばす */
@@ -829,7 +829,7 @@
     width: 33rem;
   }
   .group-service--utari .group-service__copy p {
-    margin: -3rem 3.5rem;
+    margin: 0 3.5rem;
     width: 33rem;
   }
   .group-service__copy h3 {
