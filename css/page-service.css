@@ -856,12 +856,13 @@
     width: 33.4rem;
     text-align: center;
     margin: 0 auto;
+    white-space: nowrap;
   }
 
   .icon_set {
     display: block;
     padding: 0;
-    margin: 3.2rem auto 4.6rem;
+    margin: 6.4rem auto 1.4rem;
     width: 36rem;
     height: 54.4rem;
   }
