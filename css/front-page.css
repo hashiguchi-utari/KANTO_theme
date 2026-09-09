@@ -452,17 +452,21 @@ KANTOとは
     position: relative;
   }
 
-  .front-kanto img {
+ .front-kanto-top {
     margin: 0 auto;
-
-    flex-shrink: 0;
-    /*画像を縮ませない指定*/
+   width: 80%;
     /*ベクター画像*/
   }
 
+  .front-kanto img {
+    margin: 0 auto;
+    flex-shrink: 0;
+    /*画像を縮ませない指定*/
+    }
+
   .front_h3 {
     font-size: 2.4rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8.5rem;
     margin-left: -3.8rem;
   }
 
@@ -480,7 +484,7 @@ KANTOとは
     transform: translate(-50%, -50%);
   }
 
-  /*====================================
+    /*====================================
 KANTOとはの１～４画像
 =====================================*/
   .front_img1 {
@@ -523,7 +527,7 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 74%;
+    top: 67%;
     left: -40%;
     transform: translate(-50%, -50%);
   }
@@ -538,7 +542,7 @@ KANTOとはの１～４画像
     /*画像を縮ませない指定*/
 
     position: absolute;
-    top: 81%;
+    top: 72%;
     right: -19%;
     transform: translate(-50%, -50%);
   }
@@ -559,7 +563,7 @@ SPオンリー
 =====================================*/
   .front_h1 {
     font-size: 3.6rem;
-    padding: 8rem 1.5rem 0rem;
+    padding: 0rem 1.5rem 0rem;
     box-sizing: border-box;
     text-align: left;
   }

@@ -23,7 +23,7 @@
     <div class="front-kanto">
 
       <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/vector1.png')); ?>" alt="背景ベクター1" class="front_pc_only">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/vector3.svg')); ?>" alt="背景ベクター3" class="front_sp_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/vector3.svg')); ?>" alt="背景ベクター3" class="front_sp_only front-kanto-top">
       <div class="front-howto">
         <h3 class="front_h3">KANTOとは</h3>
         <p>訪問看護ステーションKANTOは、ご利用者様やご家族が住み慣れた地域で安心して生活を続けられるよう、一人ひとりに寄り添った看護を提供する訪問看護ステーションです。
