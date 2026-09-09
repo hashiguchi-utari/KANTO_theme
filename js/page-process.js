@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* 【目視フェードアップ設定】 */
     /* 画面下部から25%（ブラウザの約1/4の高さ）で上にスクロールされる */
     /* テキストブロック全体ディスプレイ上に入ったタイミングを感知してフェードアップ */
-    rootMargin: "0px 0px -25% 0px", 
+    rootMargin: "0px 0px -22% 0px", 
     threshold: 0.2 // 要素がしっかり画面内に入り込んでいることを保証
   });
   textElements.forEach(el => textObserver.observe(el));
