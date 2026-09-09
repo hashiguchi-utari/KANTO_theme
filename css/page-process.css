@@ -275,9 +275,9 @@
 .process_step_item.line_down_left::before {
   content: "";
   position: absolute;
-  top: 72%;/*線の始まり位置の上下位置調整*/
-  right: 21%;/*線の始まりの位置左右調整*/
-  width: 61%;/*線の長さはここで調整*/
+  top: 89%;/*線の始まり位置の上下位置調整72*/
+  right: 28%;/*線の始まりの位置左右調整21*/
+  width: 53%;/*線の長さはここで調整61*/
   height: 0.7rem; /*ななめ線の太さ*/
   background-color: #333333;
   transform: rotate(-36deg);/*ななめ線の角度はここで調整*/
@@ -322,7 +322,7 @@
 /* ==========================================
    修正：個別フェードアップトリガー ＆ 線連動設定
    ========================================== */
-/* 1. サークル用のトリガー（パッと心地よく出現：0.6秒） */
+/* 1. サークル用のトリガー（パッと心地よく出現：1.2秒） */
 .fade_up_trigger_circle {
   opacity: 0;
   transform: translateY(3.125rem);
@@ -333,7 +333,7 @@
   transform: translateY(0);
 }
 
-/* 2. テキスト用のトリガー（完全に画面に入った時に優しく出現） */
+/* 2. テキスト用の動作タイミング（完全に画面に入った時に優しく出現） */
 .fade_up_trigger_text {
   opacity: 0;
   transform: translateY(4rem); /* テキストは少し浅めゆっくりすぎない程度にふわっと浮かせる */
@@ -356,7 +356,7 @@
 }
 
 /* ------------------------------------------
-   斜めのつなぎ線の発火条件（サークルが画面に出現したら連動して伸びる）
+   斜めのつなぎ線の発動条件（サークルが画面に出現したら連動して伸びる）
    ------------------------------------------ */
 /* 右下のサークル(wrapper)が active になったら、親のアイテムにある before(線) を伸ばす */
 .process_step_item:has(.fade_up_trigger_circle.is_active).line_down_right::before {
@@ -383,10 +383,6 @@
   border-radius: 5rem;
   padding: 2.25rem 5rem 5rem 5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
-
-  /* クッキリした実線の黒ボーダー*/
-  /*border: 0.1rem solid #333333; /* 3px */
-  
   /* 【レトロ影エフェクト】右下に 1rem ズラしたソリッド影 */
   /* 数値の意味：右に1rem / 下へ1rem / ぼかし0 / 広がり0 / ブラウン */
   box-shadow: 1rem 1rem 0 0.1rem #8d663a2e;
@@ -417,7 +413,7 @@
   background-size: 0% 42%;    /* マーカーの縦の太さ（初期状態は横幅0%） */
   
   /* ループで引き続けるアニメーション設定 */
-  animation: process_marker_animation 2.6s ease-in-out infinite;
+  animation: process_marker_animation 3.0s ease-in-out infinite;
 }
 
 /* マーカーが左から右へスーッと伸びるキーフレーム */
@@ -446,9 +442,7 @@
   padding: 3rem 3rem;/*枠線内の余白*/
   margin: 0 auto 4rem auto;
   max-width: 56.25rem; /* リスト全体の幅 */
-
-  /* 切り取り線枠の設定 */
-  border: 0.1875rem dashed #777777; /* タイトル下線と合わせた破線 */
+  border: 0.1875rem dashed #777777; /* タイトル下線と合わせた破線（切り取り線） */
   border-radius: 3rem;/* 角を丸く */
   box-sizing: border-box;
 }
@@ -480,12 +474,10 @@
   display: flex;
   /*text-align: center;*/
   color: #222222;
-
   align-items: center;      /* アイコンとテキストの縦の中心を揃える */
   justify-content: center;  /* PC版は中央に寄せる */
   gap: 1.25rem;             /* アイコンとテキストの間の余白 */
   margin-top: 1rem;
-
   line-height: 1.6;
 }
 /* 電球アイコン用の枠 */
@@ -505,11 +497,11 @@
 }
 
 /* ==========================================
-   最後のイラストセクション 左やや端配置)
+   最後のイラストセクション 左側配置)
    ========================================== */
 .process_visual_section {
   width: 100%;
-  max-width: 104rem;
+  max-width: 68rem;/*下部シマエナガの位置をここでずらしてます*/
   margin: 0 auto;
   display: flex;
   justify-content: flex-start; /* 左側に寄せる */
@@ -583,31 +575,6 @@
     opacity: 1;
     transform: none;
     position: relative;
-  }
-
-  /* 通常文字（ベース）＆ マスク文字（オーバーレイ）のスマホ共通設定 */
-  .process_sp_title_base,
-  .process_sp_title_overlay {
-    font-size: 4rem;
-    font-weight: 600;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    line-height: 1.3;
-    letter-spacing: 0;
-  }
-
-  /* 通常時の文字色 */
-  .process_sp_title_base {
-    color: #333333;
-    display: block;
-  }
-
-  /* ドットが重なった瞬間に変化する文字色 */
-  .process_sp_title_overlay {
-    color: #FD8A3A;
   }
 
     /* ------------------------------------------

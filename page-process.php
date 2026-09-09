@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="process_content_box fade_up_trigger_text">
-                    <h2 class="process_content_title">*ご相談・お問い合わせ<br>
+                    <h2 class="process_content_title">　ご相談・お問い合わせ<br>
                     （ケアマネジャーへの連絡等）</h2>
                     <p class="process_content_text">
                         WEBのお問い合わせフォームから必要事項を入力。<br>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="process_content_box fade_up_trigger_text" id="process_content_box_left">
-                    <h2 class="process_content_title">*主治医による<br>「指示書」の発行</h2>
+                    <h2 class="process_content_title">　主治医による<br>「指示書」の発行</h2>
                     <p class="process_content_text">
                         訪問看護を行うにあたり、主治医からの「訪問看護指示書」が必要となります。<br>
                         当ステーションから主治医へ手続きを行うことも可能ですので、お気軽にご相談ください。
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="process_content_box fade_up_trigger_text">
-                    <h2 class="process_content_title">*契約と計画書<br>（ケアプラン）の作成</h2>
+                    <h2 class="process_content_title">　契約と計画書<br>（ケアプラン）の作成</h2>
                     <p class="process_content_text">
                         ご利用者様のご自宅や施設へ訪問し、システムやサービス内容、料金等をご説明いたします。<br>
                         内容にご納得いただけましたら契約を締結し、ケアプランに沿った訪問看護計画を作成します。
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="process_content_box fade_up_trigger_text" id="process_content_box_left">
-                    <h2 class="process_content_title">*サービス利用開始</h2>
+                    <h2 class="process_content_title">　サービス利用開始</h2>
                     <p class="process_content_text">
                         訪問看護計画に基づき、定期的な訪問看護サービスがスタートします。<br>
                         地域の医療機関やケアマネジャーと連携しながら、安心できる療養生活を全力でサポートいたします。
