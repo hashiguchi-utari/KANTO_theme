@@ -270,12 +270,10 @@
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.2;
-    /* strokeは使わず、1px相当（0.1rem）の黒50％の影で文字の外周をなぞる */
-    text-shadow:
-      -0.1rem -0.1rem 0 rgb(0 0 0 / 50%),
-      0.1rem -0.1rem 0 rgb(0 0 0 / 50%),
-      -0.1rem 0.1rem 0 rgb(0 0 0 / 50%),
-      0.1rem 0.1rem 0 rgb(0 0 0 / 50%);
+    /* 影ではなく、黒50％・1px相当（0.1rem）の連続した輪郭線を文字の外側へ描く */
+    -webkit-text-stroke: 0.1rem rgb(0 0 0 / 50%);
+    paint-order: stroke fill;
+    text-shadow: none;
     background: transparent;
     border: 0;
     border-radius: 0;

@@ -226,7 +226,8 @@
   border-radius: 3.2rem;
   box-shadow: 0.9rem 0.9rem 0.3rem rgb(0 0 0 / 25%);
   height: 88.9rem;
-  scroll-margin-top: 3rem;
+  /* 上部の事業画像から移動した際、固定headerに見出しが隠れない位置で止める */
+  scroll-margin-top: 13rem;
 }
 .group-service + .group-service {
   margin-top: 8rem;
@@ -673,6 +674,7 @@
   }
   .group-service {
     width: 100%;
+    scroll-margin-top: 10rem;
     padding: 0 0 5rem;
     border-radius: 0;
     box-shadow: none;
@@ -848,8 +850,28 @@
     font-size: 2rem;
     font-family: "Meiryo UI", Meiryo, sans-serif;
     background: #ffb9bd;
-    border: 0;
+    /* 実機でもボタンと分かるよう、通常時から輪郭と立体的な影を表示する */
+    border: 0.2rem solid #a85f73;
     border-radius: 1.5rem;
+    box-shadow:
+      0 0.5rem 0 #a85f73,
+      0 0.8rem 1.2rem rgb(83 48 62 / 22%);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
+  }
+  /* タッチ端末でhover状態を残さず、押している間だけボタンを沈ませる */
+  .group-service__link:hover {
+    transform: none;
+    box-shadow:
+      0 0.5rem 0 #a85f73,
+      0 0.8rem 1.2rem rgb(83 48 62 / 22%);
+  }
+  .group-service__link:active {
+    box-shadow:
+      0 0.2rem 0 #a85f73,
+      0 0.4rem 0.7rem rgb(83 48 62 / 18%);
+    transform: translateY(0.3rem);
   }
   /* SP版はUTARIのホームページボタンだけ、Setaより1rem下へ配置する */
   .group-service--utari .group-service__link {
@@ -874,6 +896,7 @@
   }
   .group-service__link-label-sp {
     display: inline;
+    text-align: center;
   }
 }
 
