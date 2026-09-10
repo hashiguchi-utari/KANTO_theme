@@ -1,3 +1,6 @@
+/* グループ紹介上部の事業名で使用するフォントだけを、このページ用CSSで読み込む */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&display=swap");
+
 /* グループ紹介ページだけに適用するスタイル */
 .group-page {
   color: #151515;
@@ -141,7 +144,7 @@
   z-index: 4;
   display: block;
   color: #2f2f2f;
-  font-family: Arial, sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   font-size: 6.4rem;
   font-weight: 700;
   line-height: 1;
@@ -596,7 +599,7 @@
 /* 横幅699.98px以下はSP版の縦長レイアウト */
 @media (max-width: 699.98px) {
   .group-hero {
-    background: #fff8f0;
+    background: #fae7d6;
     padding-bottom: 3rem;
   }
   .group-hero__inner {
@@ -646,7 +649,7 @@
     position: static;
     display: block;
     margin-top: 1.7rem;
-    font-family: Arial, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
     font-size: 4rem;
     font-weight: 700;
     line-height: 1;
@@ -848,7 +851,6 @@
     margin: 3rem auto 0;
     padding: 1.7rem 2.4rem;
     font-size: 2rem;
-    font-family: "Meiryo UI", Meiryo, sans-serif;
     background: #ffb9bd;
     /* 実機でもボタンと分かるよう、通常時から輪郭と立体的な影を表示する */
     border: 0.2rem solid #a85f73;

@@ -84,7 +84,7 @@ get_header();
 				</div>
 				<a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">
 					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
-					<span class="group-service__link-label-sp">ホームページは<br>こちら</span>
+					<span class="group-service__link-label-sp">ホームページはこちら</span>
 				</a>
 			</div>
 		</section>
@@ -107,7 +107,7 @@ get_header();
 				</div>
 				<a class="group-service__link" href="https://utari.jp/" target="_blank" rel="noopener noreferrer">
 					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
-					<span class="group-service__link-label-sp">ホームページは<br>こちら</span>
+					<span class="group-service__link-label-sp">ホームページはこちら</span>
 				</a>
 			</div>
 		</section>
