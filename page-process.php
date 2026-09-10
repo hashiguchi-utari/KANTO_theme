@@ -43,6 +43,11 @@
               <!-- ★【SP版専用】新しく作成したシンプルな大見出し -->
             <h2 class="process_sp_only_title">ご利用までの流れ</h2>
 
+            <!-- ★【新設①】SP版専用：大見出しの下の葉っぱ柄透過ライン★ -->
+            <div class="process_sp_leaf_line element_top_line">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/b_simple_122_0S.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
+            </div>
+
         </section>
 
         <!-- ステップフローセクション -->
@@ -165,6 +170,11 @@
                 </p>
             </div>
         </section>
+
+        <!-- ★【新設②】SP版専用：一番最後の余白の葉っぱ柄透過ライン★ -->
+        <div class="process_sp_leaf_line element_bottom_line">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/b_ornament_116_1M.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
+        </div>
     </div>
 </main>
 
