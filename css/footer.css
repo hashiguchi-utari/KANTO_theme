@@ -253,56 +253,74 @@
 
   .site-footer__nav {
     top: 6.8rem;
-    left: 7.4rem;
-    right: 8.2rem;
-    align-items: flex-start;
+    right: 2.4rem;
+    left: 2.4rem;
+    align-items: center;
   }
 
   .site-footer__nav-link {
-    display: block;
-    width: auto;
-    height: auto;
+    display: grid;
+    width: 14.2rem;
+    height: 6.4rem;
     min-width: 0;
     min-height: 0;
-    padding: 0 0 0.8rem;
-    color: #ded93f;
-    font-family: "Gulzar", serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.2;
-    /* 影ではなく、黒50％・1px相当（0.1rem）の連続した輪郭線を文字の外側へ描く */
-    -webkit-text-stroke: 0.1rem rgb(0 0 0 / 50%);
-    paint-order: stroke fill;
+    place-items: center;
+    padding: 0;
+    color: #fffaf7;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-text-stroke: 0;
     text-shadow: none;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    overflow: visible;
+    background: #9b6071;
+    border: 0.2rem solid #ffe4e7;
+    border-radius: 2.5rem;
+    box-shadow: 0 0.3rem 0.6rem rgb(83 48 62 / 22%);
+    overflow: hidden;
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  /* PC版と同じく、ホバー・フォーカス時に色を変えて光を横切らせる */
+  .site-footer__nav-link:hover,
+  .site-footer__nav-link:focus-visible {
+    color: #fff;
+    background-color: #185c34;
+    opacity: 1;
+  }
+
+  .site-footer__nav-link::before {
+    position: absolute;
+    top: -50%;
+    left: -35%;
+    width: 18%;
+    height: 200%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 80%),
+      transparent
+    );
+    content: "";
+    transform: skewX(-20deg);
+    pointer-events: none;
+  }
+
+  .site-footer__nav-link:hover::before,
+  .site-footer__nav-link:focus-visible::before {
+    animation: site-footer-shine 0.7s ease-out;
   }
 
   .site-footer__nav-link::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 0.4rem;
-    background: #4d985b;
-    content: "";
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 0.35s ease-out;
-  }
-
-  /* SP版のリンク下線はホバー・フォーカス時に左から伸ばす */
-  .site-footer__nav-link:hover::after,
-  .site-footer__nav-link:focus-visible::after {
-    transform: scaleX(1);
+    display: none;
   }
 
   .site-footer__nav-link:first-child {
-    font-family: "Gulzar", serif;
-    font-size: 1.6rem;
+    width: 14.2rem;
+    font-family: "Gugi", sans-serif;
+    font-size: 2.4rem;
   }
 
   .site-footer__character--pc {
