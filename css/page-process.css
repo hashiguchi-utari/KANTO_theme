@@ -475,7 +475,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0.8rem; /* 文字の中心に合わせる */
+  top: 1rem; /* 文字の中心に合わせる */
   width: 1.2rem; /* 12px大きめのドット */
   height: 1.2rem;
   background-color: #222222;
@@ -546,6 +546,10 @@
   display: none;
 }
 
+.process_sp_leaf_line {
+  display: none;
+}
+
 /* ==========================================
    SP版（スマホ対応：699.98px以下）
    ========================================== */
@@ -554,7 +558,7 @@
     width: 36rem;
     max-width: 100%;
     margin: 0 auto;
-    padding: 7rem 0.1rem 1.5rem 0.1rem; 
+    padding: 7rem 0.1rem 2.5rem 0.1rem; 
     box-sizing: border-box;
   }
 
@@ -596,16 +600,35 @@
     /* ------------------------------------------
      SP専用：大見出しの下のライン
      ------------------------------------------ */
-  .process_sp_only_title::after {
+  /*.process_sp_only_title::after {
     content: "";
     position: absolute;
     bottom: -1rem;
     left: 50%;
     transform: translateX(-50%); /* 中央寄せ */
-    width: 30rem;
+    /*width: 30rem;
     height: 0.2rem;
     background-color: #4f4f4f; 
     border-radius: 0.1rem;
+  }*/
+
+  /* ------------------------------------------
+     SP専用：おしゃれな線　透過ライン（2箇所共通設定）
+     ------------------------------------------ */
+  .process_sp_leaf_line {
+    display: flex; /* スマホ版でのみ100%確実に表示 */
+    justify-content: center;
+    align-items: center;
+    width: 33rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* 透過画像自体の指示（歪みを防ぎ、さりげないサイズ感に調整） */
+  .process_leaf_img {
+    width: 33rem; /* ラインとして主張しすぎないオシャレな200px相当の横幅に制限 */
+    height: auto;   /* 縦横比を完全にキープして綺麗に表示 */
+    display: block;
   }
 
   /* SP版右上シマエナガ：コンパクトで右端に表示*/
