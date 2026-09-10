@@ -152,18 +152,18 @@
       <!-- インスタのfeed（変更部はここ）セタ -->
 
       <a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ">
-        <p class="front-utari">就労継続支援A型B型事業所UTARI-ウタリ-</p>
+        <p class="front-utari">就労継続支援A型B型事業所<br class="front_sp_only">UTARI-ウタリ-</p>
       </a>
       <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
       <!-- インスタのfeed（変更部はここ）ウタリ -->
 
     </div>
     <div>
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k5.png')); ?>" alt="画像5" class="front_img5">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k6.png')); ?>" alt="画像6" class="front_img6">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k7.png')); ?>" alt="画像7" class="front_img7">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k8.png')); ?>" alt="画像8" class="front_img8">
-        </div>
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k5.png')); ?>" alt="画像5" class="front_img5 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k6.png')); ?>" alt="画像6" class="front_img6 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k7.png')); ?>" alt="画像7" class="front_img7 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k8.png')); ?>" alt="画像8" class="front_img8 front_pc_only">
+    </div>
 
   </section>
 
