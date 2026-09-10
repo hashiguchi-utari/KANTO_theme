@@ -19,19 +19,19 @@
                     </defs>
 
                     <!-- 【1層目】ベースの通常文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#333333" letter-spacing="4">- ご利用までの流れ -</text>
+                    <text x="50" y="135" font-size="65" font-weight="700" fill="#3f3b3a" letter-spacing="4">- ご利用までの流れ -</text>
 
                     <!-- 【2層目】上部ドットが重なった時に切り替わる文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">- ご利用までの流れ -</text>
+                    <text x="50" y="135" font-size="65" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">- ご利用までの流れ -</text>
 
                     <!-- 【3層目】下部ドットが重なった時に切り替わる文字 -->
-                    <text x="50" y="135" font-size="64" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">- ご利用までの流れ -</text>
+                    <text x="50" y="135" font-size="65" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">- ご利用までの流れ -</text>
 
                     <!-- 【4層目】目視できる跳ねる黒丸ドット（上部バウンド） -->
-                    <circle class="process_ball_top" r="7" fill="#FD8A3A" />
+                    <circle class="process_ball_top" r="6" fill="#FD8A3A" />
                     
                     <!-- 【5層目】目視できる跳ねる黒丸ドット（下部バウンド） -->
-                    <circle class="process_ball_bottom" r="7" fill="#FD8A3A" />
+                    <circle class="process_ball_bottom" r="6" fill="#FD8A3A" />
                 </svg>
             </div>
 

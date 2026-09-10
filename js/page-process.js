@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const marker = entry.target.querySelector(".process_text_marker");
         if (marker) {
           marker.classList.add("is_active");
-        }
+        };
       } else {
-        /* 【チームの改善案を完全再現】 */
+        /* 【★チーム修正案】 */
         /* 画面外にスクロールして通り過ぎたら、マーカーの活性化クラスを一度リセット（消去）する */
         /* これにより、ユーザーが再びここに戻ってきたときに、もう一度新鮮にマーカーがスーッと引き直される */
         const marker = entry.target.querySelector(".process_text_marker");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   circleElements.forEach(el => circleObserver.observe(el));
 
-  // 2. 隣の文章（テキスト群）用の検知【調整】
+  // 2. 隣の文章（テキスト）用の検知【調整】
   const textElements = document.querySelectorAll(".fade_up_trigger_text");
   const textObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
