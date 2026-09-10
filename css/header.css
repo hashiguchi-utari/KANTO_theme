@@ -82,7 +82,7 @@
     width: 100%;
     max-width: 72rem;
     height: 100vh;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, visibility 1s;
     padding: 2rem;
     margin: 0;
     box-sizing: border-box;
@@ -95,9 +95,11 @@
     background: linear-gradient(135deg, #ffeac4, #ff988e);
     z-index: 1000;
     transform: translateY(-120%);
+    visibility: hidden;
 }
 .nav-items.is-open {
     transform: translateY(0);
+    visibility: visible;
 }
 .nav-item a {
     display: block;

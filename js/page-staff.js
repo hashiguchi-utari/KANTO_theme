@@ -101,6 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     startAutoSlide();
                 }
             });
+
+            //thumbに対してキーボードのキーが押されたときの処理
+            thumb.addEventListener('keydown', (event) => {
+                //押されたキーがEnterかスペースキーか判定している
+                if (event.key === 'Enter' || event.key === ' ') {
+                    //標準動作をキャンセルする（標準だとスペースキーは下にスクロールする）
+                    event.preventDefault();
+                    //画像を切り替える
+                    changeImage(index);
+                }
+            });
         });
 
         //初期表示として最初のサムネイル（０番目）をアクティブ状態にする
