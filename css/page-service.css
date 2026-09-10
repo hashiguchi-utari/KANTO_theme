@@ -40,6 +40,7 @@
   opacity: 0;
   transform: translateY(3rem);
   transition: opacity 1.8s ease, transform 1.8s ease;
+  
 }
 
 .service_message.is-visible,
