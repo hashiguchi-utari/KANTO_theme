@@ -115,7 +115,7 @@ const secondContent = document.querySelector ('.second_content');
 
 if (secondContent) {
   const photo = secondContent.querySelector ('.smile_tolk');
-  const messages = secondContent.querySelectorAll ('.three_message p');
+  const messages = secondContent.querySelectorAll ('.pop');
 
   if (photo) {
     const observer = new IntersectionObserver (
