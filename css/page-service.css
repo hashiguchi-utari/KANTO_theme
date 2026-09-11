@@ -303,6 +303,7 @@
 }
 
 .pop {
+  position: relative;
   opacity: 0;
   transform: translateY(8rem);
 }
