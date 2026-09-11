@@ -6,7 +6,7 @@
 }
 
 .archive_h2 {
-  margin-top: 20.7rem;
+  margin-top: 28.7rem;
   font-size: 4.0rem;
   margin-bottom: 3rem;
 }
@@ -73,7 +73,7 @@ archive部分
   justify-content: center;
 
   width: 120rem;
-  margin: 0 auto 11.0rem;
+  margin: 0 auto 14.0rem;
 }
 
 /* --------------------
@@ -96,6 +96,8 @@ archive部分
   border: 0.1rem solid #000;
   background-color: #FFEDD4;
   overflow: hidden;
+
+  border-radius: 1rem;
 }
 
 .archive-card__image img {
@@ -111,8 +113,8 @@ archive部分
    * 20260828_橋口修正_代替画像を通常のアイキャッチより一回り小さく表示します。
    * object-fit: containにより、画像を切り取らず全体が見える状態で画像枠内へ収めます。
    */
-  width: 40rem;
-  height: 25rem;
+  width: 90%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -144,8 +146,7 @@ archive部分
 .archive-card__body {
   position: relative;
   width: 58.0rem;
-  /* min-height: 170px; */
-  padding: 0 0 10rem;
+  padding: 0 0 15rem;
   box-sizing: border-box;
 }
 
@@ -165,13 +166,24 @@ archive部分
 
 /* タイトル */
 .archive-card__title {
-  margin: 0 0 3.5rem;
+  margin: 0 0 7.5rem;
   font-size: 3.2rem;
 }
 
 
-/* 本文 */
+/* お知らせタイトルを最大2行で省略する */
+.archive-card__title a {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
 
+
+/* 本文 */
 .archive-card__excerpt {
   margin: 0;
   font-size: 1.6rem;
@@ -221,14 +233,8 @@ SPとPCの切り替え
   align-items: center;
   justify-content: center;
 
-  width: 2.5rem;
-  height: 2.5rem;
-
-  background: #ff8a00;
-  border-radius: 50%;
-
-  color: #fff;
-  font-size: 1.8rem;
+  width: 4.5rem;
+  height: 4.6rem;
 }
 
 /*hoverアクション*/
@@ -254,8 +260,8 @@ SPとPCの切り替え
   align-items: center;
   justify-content: center;
 
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 4.0rem;
+  height: 4.0rem;
 
   color: #000;
   text-decoration: none;
@@ -444,10 +450,6 @@ SPとPCの切り替え
     width: 2.5rem;
     height: 2.5rem;
 
-    background: #ff8a00;
-    border-radius: 50%;
-
-    color: #fff;
     font-size: 1.8rem;
   }
 

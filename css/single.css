@@ -126,6 +126,14 @@ SPとPCの切り替え
 一覧へ戻る
 =====================================*/
 
+.button a,
+.button a:visited,
+.button a:hover,
+.button a:active {
+  color: #333;
+}
+
+
 .button {
   font-size: 1.4rem;
   padding: 1rem;
@@ -257,8 +265,6 @@ SPとPCの切り替え
   .date_space {
     padding: 0 2rem 0 0;
   }
-
-
 
 
 

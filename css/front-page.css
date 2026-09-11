@@ -470,9 +470,14 @@ position: relative;
    right: -11%;
   transform: translate(-50%, -50%);
 }
-
-
-
+/*画像にタッチ操作をうけつけないようにする*/
+ .front_img5,
+  .front_img6,
+  .front_img7,
+  .front_img8 {
+    pointer-events: none;
+    user-select: none;
+  }
 
 
 

@@ -53,7 +53,8 @@ if (! defined('ABSPATH')) {
 
 		<a href="<?php the_permalink(); ?>" class="archive-card__more">
 			<span class="">続きを読む</span>
-			<span class="archive-card__arrow">→</span>
+			<span class="archive-card__arrow"><img
+				src="<?php echo esc_url(get_theme_file_uri('/img/news/arrow.png')); ?>"</span>
 		</a>
 	</div>
 </div>
