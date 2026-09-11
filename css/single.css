@@ -57,6 +57,14 @@
   font-size: 1.6rem;
 }
 
+.single-meta h5 {
+  margin-top: 0;
+  font-size: 2.0rem;
+  font-weight: 400;
+}
+
+
+
 .single-title {
   padding-bottom: 3rem;
   box-sizing: border-box;
@@ -88,6 +96,22 @@
   margin: 0 0 3rem;
 }
 
+
+/*====================================
+投稿ページ部分のはみだし防止
+=====================================*/
+.single-content,
+.single-content p,
+.single-content li,
+.single-content a,
+.single-content h2,
+.single-content h3 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
 /*====================================
 写真が浮かび上がる
 =====================================*/
@@ -108,12 +132,8 @@
 /*====================================
 SPとPCの切り替え
 =====================================*/
-.front_sp_only {
+.single_sp_only {
   display: none;
-}
-
-.front_pc_only {
-  display: block;
 }
 
 .date_space {
@@ -126,15 +146,7 @@ SPとPCの切り替え
 一覧へ戻る
 =====================================*/
 
-.button a,
-.button a:visited,
-.button a:hover,
-.button a:active {
-  color: #333;
-}
-
-
-.button {
+/* .button {
   font-size: 1.4rem;
   padding: 1rem;
   width: 15rem;
@@ -142,7 +154,7 @@ SPとPCの切り替え
    background-color: #FFEDD4;
   border: 0.1rem solid #000;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 .single_button {
   margin-top: 5rem;
@@ -150,9 +162,25 @@ SPとPCの切り替え
   margin-bottom: 8rem;
 }
 
-.button:hover {
-  background-color: #333;
+.button,
+.button:visited {
+  font-size: 1.4rem;
+  display: inline-grid;
+  place-items: center;
+  width: 15rem;
+  padding: 1rem;
+  color: #000;
+  border: 0.1rem solid #000;
+  border-radius: 20rem;
+  background-color: #ffedd4;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover,
+.button:focus-visible {
   color: #fff;
+  background-color: #333;
 }
 
 
