@@ -146,21 +146,25 @@ archive部分
 .archive-card__body {
   position: relative;
   width: 58.0rem;
+  margin-top: 0;
   padding: 0 0 15rem;
   box-sizing: border-box;
 }
 
 
 /* 日付・カテゴリー */
-.archive-card__meta {
+.archive-card__meta h5 {
   display: flex;
-  align-items: center;
-  gap: 3rem;
+  align-items: flex-start;
+  /* 上端をそろえる */
 
   font-size: 2.0rem;
 
   margin-bottom: 3.5rem;
   /*日付カテゴリーとタイトルの間*/
+
+  margin-top: 0;
+  font-weight: 400;
 }
 
 
@@ -193,11 +197,11 @@ archive部分
 /*====================================
 SPとPCの切り替え
 =====================================*/
-.front_sp_only {
+.archive_sp_only {
   display: none;
 }
 
-.front_pc_only {
+.archive_pc_only {
   display: block;
 }
 
@@ -390,13 +394,18 @@ archive部分
 
 
   /* 日付・カテゴリー */
-  .archive-card__meta {
+  .archive-card__meta h5 {
     margin-top: 2rem;
     display: block;
     font-size: 2.0rem;
     margin-bottom: 3.5rem;
     /*日付カテゴリーとタイトルの間*/
+
+    font-weight: 400;
   }
+
+
+
 
   /* タイトル */
   .archive-card__title {
@@ -417,15 +426,13 @@ archive部分
   /*====================================
 SPとPCの切り替え
 =====================================*/
-  .front_sp_only {
+  .archive_sp_only {
     display: block;
-
   }
 
-  .front_pc_only {
+  .archive_pc_only {
     display: none;
   }
-
 
   /* --------------------
    続きを読む

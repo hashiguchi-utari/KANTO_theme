@@ -18,12 +18,12 @@
           <!-- カテゴリー・日付 -->
           <div class="single-meta">
 
-            <p class="single-date">
+            <h5 class="single-date">
               <?php echo get_the_date('Y.m.d'); ?>
-              <span class="date_space"></span><br class="front_sp_only">
+              <span class="date_space"></span><br class="single_sp_only">
               ||| カテゴリー・
               <?php the_category(', '); ?>
-            </p>
+            </h5>
 
           </div>
 
@@ -52,12 +52,14 @@
         </article>
 
       <?php endwhile; ?>
-      
+
 
       <div class="single-underborder"> </div>
 
       <div class="single_button">
-        <a href="<?php echo esc_url(home_url('/news/')); ?>"><button class="button">一覧に戻る</button></a>
+        <a class="button" href="<?php echo esc_url(home_url('/news/')); ?>">
+          一覧に戻る
+        </a>
       </div>
     <?php endif; ?>
   </section>

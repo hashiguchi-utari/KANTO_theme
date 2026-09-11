@@ -259,3 +259,17 @@ function kanto_front_news_per_page($query) {
     }
 }
 add_action('pre_get_posts', 'kanto_front_news_per_page');
+
+
+// お知らせ一覧を1ページにつき5件にする。
+function kanto_news_archive_per_page($query) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->is_post_type_archive('post')) {
+        $query->set('posts_per_page', 5);
+        $query->set('ignore_sticky_posts', true);
+    }
+}
+add_action('pre_get_posts', 'kanto_news_archive_per_page');

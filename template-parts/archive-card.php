@@ -26,19 +26,17 @@ if (! defined('ABSPATH')) {
 			<img
 				src="<?php echo esc_url(get_theme_file_uri('/img/news/no-image.png')); ?>"
 				alt="No image"
-				class="no-image"
-			>
+				class="no-image">
 		<?php endif; ?>
 	</a>
 
 	<div class="archive-card__body">
 		<div class="archive-card__meta">
-			<p>
+			<h5>
 				<?php echo get_the_date('Y.m.d'); ?>
 				<span class="date_space"></span>
-				<br class="front_sp_only">
-				||| カテゴリー・<?php the_category(', '); ?>
-			</p>
+				<br class="archive_sp_only">||| カテゴリー・<?php the_category(', '); ?>
+			</h5>
 		</div>
 
 		<h2 class="archive-card__title">
@@ -54,7 +52,7 @@ if (! defined('ABSPATH')) {
 		<a href="<?php the_permalink(); ?>" class="archive-card__more">
 			<span class="">続きを読む</span>
 			<span class="archive-card__arrow"><img
-				src="<?php echo esc_url(get_theme_file_uri('/img/news/arrow.png')); ?>"</span>
+					src="<?php echo esc_url(get_theme_file_uri('/img/news/arrow.png')); ?>" </span>
 		</a>
 	</div>
 </div>
