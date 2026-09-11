@@ -40,7 +40,7 @@
   opacity: 0;
   transform: translateY(3rem);
   transition: opacity 1.8s ease, transform 1.8s ease;
-  
+
 }
 
 .service_message.is-visible,
@@ -121,8 +121,9 @@
 }
 
 .speak_human {
-  width: 71.9rem;
+  width: 85.9rem;
   border-radius: 5rem;
+  margin-top: 4.6rem;
 }
 
 /* メイン画像の下にある３つの画像 */
@@ -301,12 +302,12 @@
   animation: fadeUp 1.8s ease-out forwards;
 }
 
-.three_message p {
+.pop {
   opacity: 0;
   transform: translateY(8rem);
 }
 
-.three_message p.is-show {
+.pop.is-show {
   animation: fadeUp 1.5s ease-out forwards;
 }
 
@@ -359,12 +360,11 @@
 .three_message {
   display: flex;
   gap: 1rem;
-  width: 56rem;
-  height: 19.4rem;
-  padding: 5rem 0;
+  width: 56.8rem;
+  height: 19.7rem;
+  padding: 3.5rem 0;
   box-sizing: border-box;
   margin-top: 1rem;
-  position: relative;
 }
 
 .three_message p {
@@ -381,22 +381,14 @@
   text-align: center;
 }
 
-.polygon1, .polygon2, .polygon3 {
+.polygon1,
+.polygon2,
+.polygon3 {
   width: 2.425rem;
   height: 2.25rem;
-}
-
-.polygon1 {
   position: absolute;
-  bottom: 10rem;
-}
-.polygon2 {
-  position: absolute;
-  bottom: 10rem;
-}
-.polygon3 {
-  position: absolute;
-  bottom: 10rem;
+  top: 8rem;
+  left: 14rem;
 }
 
 .third_content {
@@ -817,7 +809,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 3.6rem auto 0;
+    margin: 4.6rem auto 0;
     padding: 0;
   }
 
@@ -1084,6 +1076,14 @@
 
   .three_message .space {
     margin-bottom: 3.3rem;
+  }
+
+  .polygon1,
+  .polygon2,
+  .polygon3 {
+    position: absolute;
+    top: 8rem; 
+    left: 30rem;
   }
 
   /* KANTOの強み */

@@ -81,12 +81,18 @@
           </p>
 
           <div class="three_message">
-            <p class="space">気持ちを受け止めて<br>くれる時間が安心です。</p>
-            <img class="polygon1" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
-            <p class="space">自分のペースで一歩ずつ<br>進めています。</p>
-            <img class="polygon2" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
-            <p>困った時に相談できて、<br>心強いです。</p>
-            <img class="polygon3" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
+            <div class="pop">
+              <p class="space">気持ちを受け止めて<br>くれる時間が安心です。</p>
+              <img class="polygon1" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
+            </div>
+            <div class="pop">
+              <p class="space">自分のペースで一歩ずつ<br>進めています。</p>
+              <img class="polygon2" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
+            </div>
+            <div class="pop">
+              <p>困った時に相談できて、<br>心強いです。</p>
+              <img class="polygon3" src="<?php echo esc_url(get_theme_file_uri('img/Polygon 6.png')); ?>" alt="逆三角形">
+            </div>
           </div>
         </div>
       </div>
