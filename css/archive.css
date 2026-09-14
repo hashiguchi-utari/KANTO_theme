@@ -33,6 +33,7 @@
 .archive-filter {
   display: flex;
   gap: 1.8rem;
+  font-size:1.6rem ;
   justify-content: center;
   margin-bottom: 8rem;
 }
@@ -253,7 +254,7 @@ SPとPCの切り替え
 /*====================================
 ページネーション
 =====================================*/
-.pagination {
+.pagination-pc {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,8 +262,8 @@ SPとPCの切り替え
   margin: 5rem 0 6.3rem;
 }
 
-.pagination a,
-.pagination span {
+.pagination-pc a,
+.pagination-pc span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,19 +278,24 @@ SPとPCの切り替え
 }
 
 /* 現在のページ */
-.pagination .current {
+.pagination-pc .current {
   color: #fff;
   background: #ff8a00;
   border-radius: 50%;
 }
 
 /* 前へ・次へ */
-.pagination .prev,
-.pagination .next {
+.pagination-pc .prev,
+.pagination-pc .next {
   width: auto;
   height: auto;
 
   font-size: 2.4rem;
+}
+
+/*SP版のみのページネーション修正用*/
+.pagination-sp {
+  display: none;
 }
 
 
@@ -318,7 +324,7 @@ SP版
     width: 35rem;
     border-bottom: 0.1rem solid #000;
     margin: 0 auto;
-    margin-bottom: 5.0rem;
+    margin-bottom: 2.0rem;
   }
 
   .archive-underborder {
@@ -473,47 +479,45 @@ SPとPCの切り替え
   }
 
 
-
   /*====================================
-ページネーション
+ SP版のページネーション修正
 =====================================*/
-  .pagination {
+.pagination-pc {
+  display: none;
+}
+
+  /*≪　5 / 8　≫のように
+  archive.cssでは、PCでは非表示、SP版だけ表示させます。*/
+  .pagination-sp {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.8rem;
-    margin: 5.4rem 0 9rem;
+    gap: 1.6rem;
+    padding: 5rem 0rem 6.3rem;
+    box-sizing: border-box;
   }
 
-  .pagination a,
-  .pagination span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 2.8rem;
-    height: 2.8rem;
-
-    color: #000;
-    text-decoration: none;
-
-    font-size: 1.6rem;
-  }
-
-  /* 現在のページ */
-  .pagination .current {
+  .pagination-sp__arrow {
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
     color: #fff;
-    background: #ff8a00;
+    background-color: #ff8a00;
     border-radius: 50%;
+    text-decoration: none;
   }
 
-  /* 前へ・次へ */
-  .pagination .prev,
-  .pagination .next {
-    width: auto;
-    height: auto;
-
-    font-size: 2.4rem;
+  .pagination-sp__status {
+    min-width: 7rem;
+    text-align: center;
+    font-size: 1.6rem;
+    white-space: nowrap;
   }
 
+  .pagination-sp__arrow.is-disabled {
+    opacity: 0.35;
+    pointer-events: none;
+  }
 }

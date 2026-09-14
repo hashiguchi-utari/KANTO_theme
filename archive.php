@@ -26,8 +26,8 @@
       ?>
 
         <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>">
-  <?php echo esc_html($category->name); ?>
-</a>
+          <?php echo esc_html($category->name); ?>
+        </a>
 
       <?php endforeach; ?>
 
@@ -66,7 +66,7 @@
         if ($pagination) :
         ?>
 
-          <nav class="pagination" aria-label="ページネーション">
+          <nav class="pagination-pc" aria-label="ページネーション">
 
             <?php foreach ($pagination as $page) : ?>
               <?php echo $page; ?>
@@ -77,6 +77,65 @@
         <?php endif; ?>
 
       <?php endif; ?>
+
+
+
+<!-- ページネーションSP版のみ用 -->
+
+      <?php
+      global $wp_query;
+
+      // 現在のページ番号。1ページ目ではpagedが0になるため1を使用します。
+      $current_page = max(1, (int) get_query_var('paged'));
+
+      // 全体のページ数。
+      $total_pages = max(1, (int) $wp_query->max_num_pages);
+      ?>
+
+      <?php if ($total_pages > 1) : ?>
+        <nav class="pagination-sp" aria-label="ページネーション">
+
+          <?php if ($current_page > 1) : ?>
+            <a
+              class="pagination-sp__arrow"
+              href="<?php echo esc_url(get_pagenum_link($current_page - 1)); ?>"
+              aria-label="前のページ">
+              ≪
+            </a>
+          <?php else : ?>
+            <span
+              class="pagination-sp__arrow is-disabled"
+              aria-hidden="true">
+              ≪
+            </span>
+          <?php endif; ?>
+
+          <span class="pagination-sp__status" aria-current="page">
+            <?php echo esc_html($current_page); ?>
+            <span aria-hidden="true"> / </span>
+            <?php echo esc_html($total_pages); ?>
+          </span>
+
+          <?php if ($current_page < $total_pages) : ?>
+            <a
+              class="pagination-sp__arrow"
+              href="<?php echo esc_url(get_pagenum_link($current_page + 1)); ?>"
+              aria-label="次のページ">
+              ≫
+            </a>
+          <?php else : ?>
+            <span
+              class="pagination-sp__arrow is-disabled"
+              aria-hidden="true">
+              ≫
+            </span>
+          <?php endif; ?>
+
+        </nav>
+      <?php endif; ?>
+
+<!-- ここまで -->
+
 
     </div>
   </section>
