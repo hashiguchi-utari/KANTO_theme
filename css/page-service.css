@@ -1083,7 +1083,7 @@
   .polygon2,
   .polygon3 {
     position: absolute;
-    top: 8rem; 
+    top: 8rem;
     left: 30rem;
   }
 
@@ -1252,6 +1252,22 @@
   .step_button {
     width: 35rem;
     margin: 2rem auto;
+    box-shadow: 0 1rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  /* ホバーしても大きくならない */
+  .step_button:hover {
+    transform: none;
+  }
+
+  /* クリックしたら押した感じ */
+  .step_button:active {
+    transform: translateY(0.3rem);
+  }
+
+  /* ホバーしても大きくならない（矢印） */
+  .step_button:hover .arrow {
+    transform: none;
   }
 
   .step_button p {
