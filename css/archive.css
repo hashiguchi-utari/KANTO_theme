@@ -191,6 +191,9 @@ archive部分
 .archive-card__excerpt {
   margin: 0;
   font-size: 1.6rem;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 
@@ -421,6 +424,9 @@ archive部分
     margin-bottom: 6rem;
     padding-bottom: 10.1rem;
     box-sizing: border-box;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   /*====================================
