@@ -21,7 +21,7 @@
         <div class="page-title">
             <h1>STAFF</h1>
             <span class="sp-border"></span>
-            <p>スタッフ紹介</p>
+            <p><span>スタッフ</span>紹介</p>
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff1.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff2.png')); ?>" alt="">
             <img src="<?php echo esc_url(get_theme_file_uri('img/staff7.png')); ?>" alt="">

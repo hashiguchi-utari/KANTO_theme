@@ -85,7 +85,8 @@ p {
 }
 .page-title h1 {
     font-size: 10rem;
-    font-family: "Alice", serif;
+    font-family: "Zen Old Mincho", serif;
+    font-weight: normal;
     color: #3f3b3a;
     letter-spacing: 10%;
     -webkit-text-stroke: 0.3rem black;
@@ -96,6 +97,7 @@ p {
     padding-bottom: 10rem;
     padding-top: 1rem;
     color: #3f3b3a;
+    font-weight: bold;
 }
 .page-title .pc-border {
     display: block;
@@ -291,7 +293,7 @@ p {
 }
 .img-up p {
     font-size: 2rem;
-    font-family: "Kaisei Decol", serif;
+    font-family: "Yomogi", serif;
     margin: 0;
     text-align: center;
 }
@@ -425,6 +427,7 @@ p {
     }
     .page-title img:nth-of-type(1) {
         top: 15rem;
+        left: 3rem;
         width: 6.7rem;
     }
     .page-title img:nth-of-type(2) {
@@ -462,7 +465,7 @@ p {
         margin-bottom: 5rem;
     }
     .comment-sub p {
-        font-family: "Kaisei Decol", serif;
+        font-family: "Yomogi", serif;
         font-size: 2rem;
         text-align: center;
     }
