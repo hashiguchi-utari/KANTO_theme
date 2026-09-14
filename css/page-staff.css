@@ -146,6 +146,7 @@ p {
 }
 .comment p {
     font-size: 3rem;
+    font-family: 'Zen Old Mincho', serif;
     color: #3f3b3a;
 }
 .comment img {
@@ -395,6 +396,7 @@ p {
     }
     .sp-comment p {
         font-size: 1.6rem;
+        font-family: 'Zen Old Mincho', serif;
     }
     .sp-comment img {
         position: absolute;
