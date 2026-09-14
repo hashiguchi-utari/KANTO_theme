@@ -386,6 +386,8 @@
 }
 .group-service__copy p {
   margin-top: 3.6rem;
+  /* Seta・UTARIの紹介文にM PLUS 1を使用する */
+  font-family: "M PLUS 1", sans-serif;
   font-size: 3.2rem;
   line-height: 1.45;
 }
