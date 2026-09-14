@@ -142,7 +142,7 @@
         </section>
 
                 <!-- 一番下の鳥のイラストアイコン -->
-        <section class="process_visual_section fade_up_trigger">
+        <section class="process_visual_section fade_up_trigger" id="sp_only_shimaenaga_posi">
             <div class="process_hero_image_holder">
                 <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001a.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
             </div>
@@ -164,7 +164,7 @@
                 <p class="process_info_note">
                       <!-- 電球アイコン用のコンテナ -->
                     <span class="process_note_hint_icon">
-                        <img src="<?php echo get_theme_file_uri('img/right.png'); ?>" alt="電球アイコン" class="process_hint_img">
+                        <img src="<?php echo esc_url(get_theme_file_uri('img/right.png')); ?>" alt="電球アイコン" class="process_hint_img">
                     </span>
                     わからないことがあっても、お気軽にご相談ください。<br>スタッフがひとつひとつ丁寧にお答えいたします。
                 </p>
