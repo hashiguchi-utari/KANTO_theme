@@ -8,7 +8,7 @@
 	<link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/favicon.ico')); ?>">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Alice&family=Chiron+GoRound+TC&family=Gugi&family=Gulzar&family=Kaisei+Decol&family=Kaisei+Tokumin&family=M+PLUS+1:wght@100..900&family=Nothing+You+Could+Do&family=Rampart+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alice&family=Chiron+GoRound+TC&family=Gugi&family=Gulzar&family=Kaisei+Decol&family=Kaisei+Tokumin&family=M+PLUS+1:wght@100..900&family=Nothing+You+Could+Do&family=Rampart+One&family=Zen+Old+Mincho&family=Yomogi&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 

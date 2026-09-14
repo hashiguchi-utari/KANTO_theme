@@ -29,9 +29,9 @@
 }
 .menu h2 {
     font-size: 4rem;
-    font-family: "Alice", selif;
+    font-family: "Gulzar", selif;
     font-weight: 300;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .hamburger {
@@ -132,10 +132,11 @@
 }
 .header-inq a {
     color: #ff02e6;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 2.4rem;
-    font-family: "M PLUS 1", sans-serif;
-    -webkit-text-stroke: 1px #333;
+    font-family: "Gulzar", sans-serif;
+    -webkit-text-stroke: 0.3rem #333;
+    paint-order: stroke;
     display: flex;
     justify-content: center;
     align-items: center;
