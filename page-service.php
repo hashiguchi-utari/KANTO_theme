@@ -108,7 +108,7 @@
       <div class="power_point">
         <div class="point1">
           <h3>対話を大切にする<br>訪問看護</h3>
-          <img class="illustration0" src="<?php echo esc_url(get_theme_file_uri('img/対話を大切にする訪問看護 1.png')); ?>" alt="対話の写真">
+          <img class="illustration0" src="<?php echo esc_url(get_theme_file_uri('img/Frame 172.png')); ?>" alt="対話の写真">
           <p>一人ひとりの想いに寄り添い、<br>あなたらしい毎日を支えます。</p>
         </div>
         <div class="point2">
