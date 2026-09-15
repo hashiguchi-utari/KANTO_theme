@@ -245,31 +245,36 @@ add_action('wp_ajax_nopriv_archive_filter', 'archive_filter_ajax');
 
 
 // 20260904_鈴木（小西さん案）_トップページのお知らせを1ページにつき5件のみにする。
-function kanto_front_news_per_page($query) {
-    if (is_admin() || !$query->is_main_query()) {
-        return;
-    }
+function kanto_front_news_per_page($query)
+{
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
 
-    // ホームページが「最新の投稿」の場合だけ対象にする。
-    if ('posts' === get_option('show_on_front') && $query->is_home()) {
-        $query->set('posts_per_page', 5);
+	// ホームページが「最新の投稿」の場合だけ対象にする。
+	if ('posts' === get_option('show_on_front') && $query->is_home()) {
+		$query->set('posts_per_page', 5);
 
-        // 先頭固定投稿の追加で5件を超えないようにする。
-        $query->set('ignore_sticky_posts', true);
-    }
+		// 先頭固定投稿の追加で5件を超えないようにする。
+		$query->set('ignore_sticky_posts', true);
+	}
 }
 add_action('pre_get_posts', 'kanto_front_news_per_page');
 
 
 // お知らせ一覧を1ページにつき5件にする。
-function kanto_news_archive_per_page($query) {
-    if (is_admin() || !$query->is_main_query()) {
-        return;
-    }
+function kanto_news_archive_per_page($query)
+{
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
 
-    if ($query->is_post_type_archive('post')) {
-        $query->set('posts_per_page', 5);
-        $query->set('ignore_sticky_posts', true);
-    }
+	if (
+		$query->is_post_type_archive('post')
+		|| $query->is_category()
+	) {
+		$query->set('posts_per_page', 5);
+		$query->set('ignore_sticky_posts', true);
+	}
 }
 add_action('pre_get_posts', 'kanto_news_archive_per_page');

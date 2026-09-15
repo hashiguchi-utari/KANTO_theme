@@ -12,10 +12,8 @@
     <!-- ！！！！！！！！！！！ここに絞り込みのカテゴリーを置く -->
     <div class="archive-filter">
 
-      <a
-        href="#"
-        class="archive-filter__link is-active"
-        data-category="all">
+      <a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
+
         ALL
       </a>
 
@@ -27,10 +25,7 @@
       foreach ($categories as $category) :
       ?>
 
-        <a
-          href="#"
-          class="archive-filter__link"
-          data-category="<?php echo esc_attr($category->slug); ?>">
+        <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>">
           <?php echo esc_html($category->name); ?>
         </a>
 
@@ -42,49 +37,108 @@
   </section>
 
   <section>
-  <div class="archive-list" id="archive-list">
+    <div class="archive-list" id="archive-list">
 
-    <?php if (have_posts()) : ?>
+      <?php if (have_posts()) : ?>
 
-      <?php while (have_posts()) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <?php
+          // 20260828_橋口修正_お知らせ1件分の表示は共通ファイルから読み込みます。
+          // 同じHTMLを複数箇所へ書かないため、表示内容の食い違いや修正漏れを防止できます。
+          get_template_part('template-parts/archive-card');
+          ?>
+        <?php endwhile; ?>
+
+
+        <div class="archive-underborder"></div>
+
+
+        <!-- ページネーション -->
         <?php
-        // 20260828_橋口修正_お知らせ1件分の表示は共通ファイルから読み込みます。
-        // 同じHTMLを複数箇所へ書かないため、表示内容の食い違いや修正漏れを防止できます。
-        get_template_part('template-parts/archive-card');
+        $pagination = paginate_links([
+          'type'      => 'array',
+          'mid_size'  => 1,
+          'end_size'  => 1,
+          'prev_text' => '≪',
+          'next_text' => '≫',
+        ]);
+
+        if ($pagination) :
         ?>
-      <?php endwhile; ?>
 
+          <nav class="pagination-pc" aria-label="ページネーション">
 
-      <div class="archive-underborder"></div>
+            <?php foreach ($pagination as $page) : ?>
+              <?php echo $page; ?>
+            <?php endforeach; ?>
 
+          </nav>
 
-      <!-- ページネーション -->
-      <?php
-      $pagination = paginate_links([
-        'type'      => 'array',
-        'mid_size'  => 1,
-        'end_size'  => 1,
-        'prev_text' => '≪',
-        'next_text' => '≫',
-      ]);
-
-      if ($pagination) :
-      ?>
-
-        <nav class="pagination" aria-label="ページネーション">
-
-          <?php foreach ($pagination as $page) : ?>
-            <?php echo $page; ?>
-          <?php endforeach; ?>
-
-        </nav>
+        <?php endif; ?>
 
       <?php endif; ?>
 
-    <?php endif; ?>
 
-  </div>
-</section>
+
+<!-- ページネーションSP版のみ用 -->
+
+      <?php
+      global $wp_query;
+
+      // 現在のページ番号。1ページ目ではpagedが0になるため1を使用します。
+      $current_page = max(1, (int) get_query_var('paged'));
+
+      // 全体のページ数。
+      $total_pages = max(1, (int) $wp_query->max_num_pages);
+      ?>
+
+      <?php if ($total_pages > 1) : ?>
+        <nav class="pagination-sp" aria-label="ページネーション">
+
+          <?php if ($current_page > 1) : ?>
+            <a
+              class="pagination-sp__arrow"
+              href="<?php echo esc_url(get_pagenum_link($current_page - 1)); ?>"
+              aria-label="前のページ">
+              ≪
+            </a>
+          <?php else : ?>
+            <span
+              class="pagination-sp__arrow is-disabled"
+              aria-hidden="true">
+              ≪
+            </span>
+          <?php endif; ?>
+
+          <span class="pagination-sp__status" aria-current="page">
+            <?php echo esc_html($current_page); ?>
+            <span aria-hidden="true"> / </span>
+            <?php echo esc_html($total_pages); ?>
+          </span>
+
+          <?php if ($current_page < $total_pages) : ?>
+            <a
+              class="pagination-sp__arrow"
+              href="<?php echo esc_url(get_pagenum_link($current_page + 1)); ?>"
+              aria-label="次のページ">
+              ≫
+            </a>
+          <?php else : ?>
+            <span
+              class="pagination-sp__arrow is-disabled"
+              aria-hidden="true">
+              ≫
+            </span>
+          <?php endif; ?>
+
+        </nav>
+      <?php endif; ?>
+
+<!-- ここまで -->
+
+
+    </div>
+  </section>
 
 
 </main>
