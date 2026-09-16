@@ -64,7 +64,7 @@
         <div class="main_service">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/対話.png')); ?>" alt="対話してる写真">
           <h3>対話（メインの支援）</h3>
-          <p>安心して気持ちを話せる時間を大切にし<br class="sp_only">ます。<br>あなたの想いを耳を傾け、必要なときに<br class="sp_only">必要なサポートを一緒に考えます。</p>
+          <p>安心して気持ちを話せる時間を大切にし<br class="sp_only">ます。<br>あなたの想いに耳を傾け、必要なときに<br class="sp_only">必要なサポートを一緒に考えます。</p>
         </div>
       </div>
   </section>
