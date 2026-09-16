@@ -276,11 +276,17 @@
     background: #9b6071;
     border: 0.2rem solid #ffe4e7;
     border-radius: 2.5rem;
-    box-shadow: 0 0.3rem 0.6rem rgb(83 48 62 / 22%);
+    /* 下側に濃い影を作り、タッチ前はボタンが浮いて見えるようにする */
+    box-shadow:
+      0 0.5rem 0 #6f3f4d,
+      0 0.8rem 1.2rem rgb(83 48 62 / 25%);
     overflow: hidden;
+    transform: translateY(0);
     transition:
       color 0.25s ease,
-      background-color 0.25s ease;
+      background-color 0.25s ease,
+      box-shadow 0.12s ease,
+      transform 0.12s ease;
   }
 
   /* PC版と同じく、ホバー・フォーカス時に色を変えて光を横切らせる */
@@ -289,6 +295,14 @@
     color: #fff;
     background-color: #185c34;
     opacity: 1;
+  }
+
+  /* タップ中は影を短くして本体を沈め、押した感触を視覚的に伝える */
+  .site-footer__nav-link:active {
+    box-shadow:
+      0 0.15rem 0 #6f3f4d,
+      0 0.35rem 0.6rem rgb(83 48 62 / 18%);
+    transform: translateY(0.35rem);
   }
 
   .site-footer__nav-link::before {
