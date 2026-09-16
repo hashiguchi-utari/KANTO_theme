@@ -266,7 +266,7 @@
 .body_maintenance p,
 .medicine p,
 .main_service p {
-  width: 32.2rem;
+  width: 31.4rem;
   height: 9.9rem;
   font-size: 1.6rem;
   margin: 0 auto;
@@ -534,9 +534,10 @@
   height: 10rem;
 }
 
+/*width.height:8.6remに変更（横並びの画像と揃えるため）*/
 .illustration1 {
-  width: 10rem;
-  height: 10rem;
+  width: 8.6rem;
+  height: 8.6rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -546,10 +547,9 @@
   height: 10rem;
 }
 
-/*width.height:8.6remから変更（横並びの画像と揃えるため）  */
 .illustration3 {
-  width: 10rem;
-  height: 10rem;
+  width: 8.6rem;
+  height: 8.6rem;
 }
 
 .point2 p {
@@ -558,7 +558,6 @@
   font-size: 1.6rem;
   text-align: center;
   margin: 0 auto;
-
 }
 
 .point3 {
@@ -1149,7 +1148,7 @@
     width: 33rem;
     height: 33.4rem;
     margin-top: 1rem;
-    padding-top: 0;
+    padding: 0 1.24rem 1.8rem 2.7rem;
   }
 
   .point2 h3 {
