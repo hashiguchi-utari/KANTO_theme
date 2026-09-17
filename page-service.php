@@ -58,13 +58,13 @@
         <div class="medicine">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/服薬管理 1.png')); ?>" alt="薬の写真">
           <h3>服薬管理</h3>
-          <p>お薬の飲み忘れや副作用の不安などを確<br class="sp_only">認し、無理なく続けられる方法を一緒に<br class="sp_only">考えます。</p>
+          <p>お薬の飲み忘れや副作用の不安などを確認<br class="sp_only">し、無理なく続けられる方法を一緒に考え<br class="sp_only">ます。</p>
         </div>
 
         <div class="main_service">
           <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/対話.png')); ?>" alt="対話してる写真">
           <h3>対話（メインの支援）</h3>
-          <p>安心して気持ちを話せる時間を大切にし<br class="sp_only">ます。<br>あなたの想いを耳を傾け、必要なときに<br class="sp_only">必要なサポートを一緒に考えます。</p>
+          <p>安心して気持ちを話せる時間を大切にしま<br class="sp_only">す。<br>あなたの想いに耳を傾け、必要なときに必<br class="sp_only">要なサポートを一緒に考えます。</p>
         </div>
       </div>
   </section>
@@ -76,7 +76,7 @@
         <div class="second_text">
           <h2>対話を、いちばん大切に。</h2>
           <span class="second_line"></span>
-          <p>訪問看護は、病院のように治療をするだけではありません。<br>あなたの気持ちや生活のことをゆっくりお話ししながら、<br>「どうしたいか」「どうなりたいか」を一緒に考えます。<br>
+          <p>訪問看護は、病院のように治療をするだけではありません。<br>あなたの気持ちや生活のことをゆっくりお話をしながら、 <br class="pc_only">「どうしたいか」 「どうなりたいか」を一緒に考えます。<br>
             話すことがつらいときは、無理に話さなくても大丈夫。<br>そばにいるだけでも、支えになります。
           </p>
 
@@ -118,7 +118,7 @@
             <img class="illustration2" src="<?php echo esc_url(get_theme_file_uri('img/Frame 185.png')); ?>" alt="情報交換">
             <img class="illustration3" src="<?php echo esc_url(get_theme_file_uri('img/Mask group.png')); ?>" alt="写真">
           </div>
-          <p>グループホーム「SETA」と日常的に情報を共有し、<br>医療だけでなく、生活面も含めてサポートします。</p>
+          <p>グループホーム「SETA」と日常的に情報を共有し、<br>医療だけでなく、生活面も含めてサ<br class="sp_only">ポートします。</p>
         </div>
         <div class="point3">
           <h3>生活全体を支える<br class="pc_only">サポート</h3>
