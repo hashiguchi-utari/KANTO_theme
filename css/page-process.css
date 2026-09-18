@@ -7,7 +7,38 @@
   font-family: 'Noto Sans', sans-serif;
   color: #000000;
   line-height: 1.9; /* 文字を大きくしたので行間を広げ視認性確保 */
-  background-color: #FFEDD4;
+
+  /* 疑似要素（背景の膜）を画面全体に固定して敷くための基準点 */
+  position: relative; 
+  width: 100%;
+}
+
+.process_bg_blur_layer {
+  position: fixed; /* スクロールしても背景だけをその場に固定（元の効果をキープ） */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* 【背景画像の最適化】 */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  /* 【ほんのりぼかしエフェクト】 */
+  filter: blur(0.5rem);
+  -webkit-filter: blur(0.5rem);
+  pointer-events: none; /* マウスのクリックや操作を邪魔しない */
+}
+
+.process_page_layout {
+  font-family: 'Noto Sans', sans-serif;
+  color: #000000;
+  line-height: 1.9;
+  
+  /* 疑似要素（背景の膜）を画面全体に固定して敷くための基準点 */
+  position: relative; 
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -17,6 +48,17 @@
   margin: 0 auto;
   padding: 15rem 10rem 3rem 10rem; /* 上下左右の余白 */
   box-sizing: border-box;
+  transform: translateZ(0rem);/*下部の白枠カード消えるバグ修正用。表示の序列明確化*/
+}
+
+footer,
+.site_footer,
+.footer_section {
+  /* 背景の奥（-0.1rem）よりも手前（0rem）に配置をロックします */
+  transform: translateZ(0rem);
+  /* 万が一フッター自体の背景色が透明になってしまっている場合へのガード */
+  background-color: #fffaf2 !important;
+  position: relative;
 }
 
 /* 大見出し：左上に配置 */
@@ -380,13 +422,12 @@
 
 .process_info_card {
   margin-top: -21rem;/*カードの位置を上げ下げするための数値*/
-  background-color: #fff9ee;
+  background-color: #fffbf5;
   border-radius: 5rem;
   padding: 2.25rem 5rem 5rem 5rem;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
   /* 【レトロ影エフェクト】右下に 1rem ズラしたソリッド影 */
   /* 数値の意味：右に1rem / 下へ1rem / ぼかし0 / 広がり0 / ブラウン */
-  box-shadow: 1rem 1rem 0 0.1rem #8d663a2e;
+  box-shadow: 2rem 1.2rem 0.4rem 0.2rem #8d663a2e;
   box-sizing: border-box;
 }
 
@@ -476,7 +517,7 @@
   position: absolute;
   left: 0;
   top: 1rem; /* 文字の中心に合わせる */
-  width: 1.2rem; /* 12px大きめのドット */
+  width: 1.2rem; /* 大きめのドット */
   height: 1.2rem;
   background-color: #222222;
   border-radius: 50%;
@@ -562,6 +603,14 @@
     box-sizing: border-box;
   }
 
+  /* ==========================================
+     【SP版限定】背景のズーム具合変更
+     ========================================== */
+  .process_bg_blur_layer {/*背景画像のズーム度合いを変えてPC版と同じ比率に調整*/
+   transform: scale(2.10) translateZ(-0.1rem) !important;
+   filter: blur(0.1rem) !important;
+  }
+
   /* ------------------------------------------
      SP大見出しセクション（見出し・線・シマエナガ）
      ------------------------------------------ */
@@ -626,7 +675,7 @@
 
   /* 透過画像自体の指示（歪みを防ぎ、さりげないサイズ感に調整） */
   .process_leaf_img {
-    width: 33rem; /* ラインとして主張しすぎないオシャレな200px相当の横幅に制限 */
+    width: 33rem; /* ラインとして主張しすぎない*/
     height: auto;   /* 縦横比を完全にキープして綺麗に表示 */
     display: block;
   }
@@ -674,24 +723,26 @@
     flex-direction: column;
     align-items: center; /* 中央に配置 */
     text-align: center;  /* 中央寄せ */
-    width: 100%;
+    /*width: 100%;*/
     opacity: 1 !important;  
     transform: none !important;
     padding-bottom: 5rem; /* 区切り線までの余白（上のテキストの下） */
-    margin-top: 5rem;    /* 区切り線からの余白（下のアイコンの上） */
+    margin-top: 5.0rem;    /* 区切り線からの余白（下のアイコンの上） */
     position: relative;   /* 区切り線を配置する基準点 */
 
     /* ==========================================
      すりガラス風ポップカード
     ========================================== */
-    background: rgba(255, 255, 255, 0.278);
-    backdrop-filter: blur(1.25rem);/*ぼかし*/
-    -webkit-backdrop-filter: blur(1.25rem);
-    border: 0.1rem solid rgba(92, 61, 46, 0.054);
-    border-radius: 3rem;
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: none !important;/*blur(1.25rem);*//*ぼかし*/
+    -webkit-backdrop-filter: none !important;/*blur(1.25rem);*/
+
+    border: 0.1rem solid rgba(255, 255, 255, 0.647) !important;
+    border-radius: 3.0rem;
+    padding: 2.0rem;
     color: #33333360; 
-    box-shadow: 0.5rem 0.5rem 0 0 rgba(92, 61, 46, 0.058); 
+    box-shadow: 0.9rem 0.5rem 0.2rem 0.1rem rgba(92, 61, 46, 0.166); 
+    width: calc(100% - 1.0rem);
     box-sizing: border-box;
   }
 
@@ -716,7 +767,7 @@
 
     /* 正円ドットの生成 */
     /* 柔らかいオレンジ背景に馴染む色味の正円追加 */
-    background-image: radial-gradient(#FD8A3A 35%, transparent 45%);
+    background-image: radial-gradient(#ff6f00f1 35%, transparent 45%);
     background-size: 0.9rem 1.1rem; /* 丸1個あたりの範囲を固定し歪みを防止*/
     background-repeat: repeat-y; /* 縦方向に3個並ぶようにリピート */
     
@@ -823,7 +874,6 @@
   }
 
     /* スマホを開いた瞬間、一番上のSTEP 1だけはスクロールを待たずに即時フェードアップさせる */
-  /* transitionのイージングとディレイを絶妙にブレンドし、カクつきを100%排除します */
   .process_flow_section .process_step_item:first-child .process_content_title,
   .process_flow_section .process_step_item:first-child .process_content_text {
     opacity: 1 !important;
@@ -858,7 +908,7 @@
   /* スマホ版【破線白枠カード】 */
   .process_info_card {
     margin-top: -12rem;
-    background-color: #fff9ee; 
+    background-color: #fffbf5; 
     border-radius: 5.5rem;
     padding: 2.5rem 1.5rem;
     border: 0.2rem dashed #777777;/*枠線を破線に*/

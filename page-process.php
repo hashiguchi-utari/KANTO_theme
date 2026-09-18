@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <main class="process_page_layout">
+
+ <div class="process_bg_blur_layer" style="background-image: url('<?php echo esc_url(get_theme_file_uri('img/yuuyake_guradation-24.jpg')); ?>');"></div>
+
     <div class="process_container">
          <!-- PC版で表示する大見出しセクション（ジャンピングドット＆マスクカラー反転仕様） -->
         <section class="process_hero_section fade_up_trigger">
@@ -19,10 +22,10 @@
                     </defs>
 
                     <!-- 【1層目】ベースの通常文字 -->
-                    <text x="50" y="135" font-size="65" font-weight="700" fill="#3f3b3a" letter-spacing="4">- ご利用までの流れ -</text>
+                    <text x="50" y="135" font-size="65" font-weight="700" fill="#333333" letter-spacing="4">- ご利用までの流れ -</text>
 
                     <!-- 【2層目】上部ドットが重なった時に切り替わる文字 -->
-                    <text x="50" y="135" font-size="65" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_think_mask)">- ご利用までの流れ -</text>
+                    <text x="50" y="135" font-size="65" font-weight="700" fill="#fd8b3a" letter-spacing="4" mask="url(#process_think_mask)">- ご利用までの流れ -</text>
 
                     <!-- 【3層目】下部ドットが重なった時に切り替わる文字 -->
                     <text x="50" y="135" font-size="65" font-weight="700" fill="#FD8A3A" letter-spacing="4" mask="url(#process_create_mask)">- ご利用までの流れ -</text>
