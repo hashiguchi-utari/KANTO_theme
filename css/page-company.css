@@ -1,0 +1,114 @@
+.company_container {
+  width: 100%;
+  height: 243.5rem;
+  background-color: #FFEDD4;
+}
+
+.company_img {
+  width: 100%;
+  height: 67.6rem;
+  padding-top: 5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.teine_mountain {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+ animation: photoMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes photoMove {
+  from {
+    transform: translateX(-5%) scale(1.05);
+  }
+
+  to {
+    transform: translate(0) scale(1.05);
+  }
+}
+
+.company_philosophy {
+  width: 100rem;
+  height: 160.9rem;
+  background-color: white;
+  margin: 5rem auto;
+  border-radius: 4rem;
+}
+
+.company_name::before {
+  content: "〇";
+  color: #00757C;
+  font-size: 1.2rem;
+}
+
+.company_name {
+  font-size: 1.2rem;
+  padding: 8.5rem 0 0 9rem;
+}
+
+.company_philosophy h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 2rem 0 0 9rem;
+}
+
+.message {
+  width: 82rem;
+  height: 17.1rem;
+  font-size: 1.6rem;
+  margin: 2rem auto 4rem;
+}
+
+.company_table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.company_table th {
+  width: 20%;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #01A47D;
+  text-align: left;
+  padding: 2.7rem 0;
+  border-bottom: 0.1rem solid black;
+}
+
+.company_table td {
+  width: 80%;
+  font-size: 1.6rem;
+  text-align: left;
+  padding: 2.7rem 0;
+  border-bottom: 0.1rem solid black;
+}
+
+/* 所在地が真ん中に寄ってるので、上に持っていき、padding-topをつけた */
+.place {
+  vertical-align: top;
+  padding-top: 2.7rem;
+}
+
+/* Google mapとの間隔1rem */
+.space {
+  margin-top: 1rem;
+  color: #01A47D;
+}
+
+.group {
+  margin-top: 5rem;
+}
+
+
+
+
+
+@media screen and (max-width: 699.98px) {
+
+
+  
+}
