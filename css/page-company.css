@@ -5,27 +5,31 @@
 }
 
 .company_img {
-  width: 142rem;
+  width: 144rem;
   height: 67.6rem;
   padding-top: 5rem;
-  margin: 0 auto;
-  border-radius: 2.5rem;
   box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 4rem;
   overflow: hidden;
+  position: relative;
 }
 
 .teine_mountain {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 142rem;
+  height: 65.6rem;
+  padding: 1rem;
+  margin: 0 auto;
   border-radius: 4rem;
+  /* object-fit: cover; */
   max-width: none;
   /* animation: photoMove 15s ease-in-out infinite alternate; */
 }
 
 @keyframes photoMove {
   from {
-    transform: translateX(-5%) scale(1.05);
+    transform: translateX(-4%) scale(1.05);
   }
 
   to {
@@ -38,35 +42,46 @@
   height: 160.9rem;
   background-color: white;
   margin: 5rem auto;
+  padding: 8.5rem 9rem;
   border-radius: 4rem;
 }
 
 .company_name::before {
-  content: "〇";
-  color: #00757C;
-  font-size: 1.2rem;
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 10rem;
+  background-color: #00757C;
+  position: absolute;
+  top: 0.4rem;
+  left: -1.8rem;
 }
 
 .company_name {
+  position: relative;
   font-size: 1.2rem;
-  padding: 8.5rem 0 0 9rem;
+  font-family: Noto Sans jp;
+  padding-right: 9rem;
+  margin-left: 2.2rem;
 }
 
 .company_philosophy h3 {
   font-size: 4rem;
+  font-family: Noto Sans jp;
   font-weight: bold;
-  padding: 2rem 0 0 9rem;
+  padding-top: 2rem;
 }
 
 .message {
   width: 82rem;
   height: 17.1rem;
   font-size: 1.6rem;
+  font-family: Noto Sans jp;
   margin: 2rem auto 4rem;
 }
 
 .company_table {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
 }
@@ -74,19 +89,26 @@
 .company_table th {
   width: 20%;
   font-size: 1.6rem;
+  font-family: Noto Sans jp;
   font-weight: normal;
-  color: #01A47D;
+  color: #FF8D28;
   text-align: left;
   padding: 2.7rem 0;
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid #FF8D28;
 }
 
 .company_table td {
   width: 80%;
   font-size: 1.6rem;
+  font-family: Noto Sans jp;
   text-align: left;
   padding: 2.7rem 0;
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid #FF8D28;
+}
+
+.address_space th,
+.address_space td {
+  padding: 3rem 0;
 }
 
 /* 所在地が真ん中に寄ってるので、上に持っていき、padding-topをつけた */
@@ -95,18 +117,111 @@
   padding-top: 2.7rem;
 }
 
+.address_space .place {
+  border-bottom: none;
+}
+
 /* Google mapとの間隔1rem */
 .space {
   margin-top: 1rem;
-  color: #01A47D;
+  color: #FF8D28;
 }
 
 .group {
   margin-top: 5rem;
 }
 
+.sp_only {
+  display: none;
+}
 
+@media screen and (max-width: 699.98px) {
 
+  .company_container {
+    width: 39rem;
+    height: 213rem;
+    background-color: #FFEDD4;
+  }
 
+  .company_img {
+    width: 100%;
+    height: 27.3rem;
+  }
 
-@media screen and (max-width: 699.98px) {}
+  .teine_mountain {
+    width: 35rem;
+    height: 24.8rem;
+  }
+
+  .company_philosophy {
+    width: 35rem;
+    height: 170.7rem;
+    padding: 3rem 1rem;
+  }
+
+  .company_name::before {
+    top: 0.4rem;
+    left: -0.6rem;
+  }
+
+  .company_name {
+    padding: 0 0 0 1rem;
+    margin-left: 1rem;
+  }
+
+  .company_philosophy h3 {
+    font-size: 3rem;
+    padding: 2rem 0 0 0;
+  }
+
+  .message {
+    width: 33rem;
+    height: 30.4rem;
+    margin: 2rem auto 10.7rem;
+  }
+
+  .company_table {
+    width: 31rem;
+  }
+
+  .company_table th {
+    width: 25%;
+  }
+
+  .company_table td {
+    width: 75%;
+  }
+
+  .address_space .place {
+    vertical-align: top;
+    padding-top: 2.7rem;
+  }
+
+  .address_space>td {
+    vertical-align: top;
+  }
+
+  .address_space .place {
+    border-bottom: none;
+  }
+
+  .address_content {
+    border-bottom: 0.1rem solid #FF8D28;
+  }
+
+  .address_content td {
+    border-bottom: none;
+  }
+
+  .address_content td {
+    letter-spacing: -0.048rem;
+  }
+
+  .group {
+    letter-spacing: -0.048rem;
+  }
+
+  .sp_only {
+    display: inline;
+  }
+}
