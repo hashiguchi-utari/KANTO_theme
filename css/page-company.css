@@ -1,11 +1,11 @@
 .company_container {
-  width: 100%;
-  height: 243.5rem;
+  width: 144rem;
   background-color: #FFEDD4;
+  padding-bottom: 5rem;
 }
 
 .company_img {
-  width: 144rem;
+  width: 100%;
   height: 67.6rem;
   padding-top: 5rem;
   box-sizing: border-box;
@@ -39,9 +39,8 @@
 
 .company_philosophy {
   width: 100rem;
-  height: 160.9rem;
   background-color: white;
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   padding: 8.5rem 9rem;
   border-radius: 4rem;
 }
@@ -74,16 +73,16 @@
 
 .message {
   width: 82rem;
-  height: 17.1rem;
   font-size: 1.6rem;
   font-family: Noto Sans jp;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 3rem;
 }
 
 .company_table {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
+  padding: 3rem 0;
 }
 
 .company_table th {
@@ -123,6 +122,7 @@
 
 /* Google mapとの間隔1rem */
 .space {
+  display: block;
   margin-top: 1rem;
   color: #FF8D28;
 }
@@ -139,13 +139,14 @@
 
   .company_container {
     width: 39rem;
-    height: 213rem;
     background-color: #FFEDD4;
+    padding-bottom: 1rem;
   }
 
   .company_img {
     width: 100%;
-    height: 27.3rem;
+    padding-top: 1rem;
+    height: 24.8rem;
   }
 
   .teine_mountain {
@@ -155,8 +156,9 @@
 
   .company_philosophy {
     width: 35rem;
-    height: 170.7rem;
     padding: 3rem 1rem;
+    margin-top: 2rem;
+
   }
 
   .company_name::before {
@@ -176,49 +178,93 @@
 
   .message {
     width: 33rem;
-    height: 30.4rem;
-    margin: 2rem auto 10.7rem;
+    margin: 2rem auto 3rem;
   }
 
   .company_table {
     width: 31rem;
   }
 
-  .company_table th {
-    width: 25%;
-  }
-
-  .company_table td {
-    width: 75%;
-  }
-
-  .address_space .place {
-    vertical-align: top;
-    padding-top: 2.7rem;
-  }
-
-  .address_space>td {
-    vertical-align: top;
-  }
-
-  .address_space .place {
-    border-bottom: none;
-  }
-
-  .address_content {
+  /* 表の各行をSPでは独立させる */
+  .company_table tr {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    width: 100%;
     border-bottom: 0.1rem solid #FF8D28;
   }
 
-  .address_content td {
+  /* th・tdに元々ついている線を消す */
+  .company_table th,
+  .company_table td {
+    width: auto;
     border-bottom: none;
+    box-sizing: border-box;
   }
 
-  .address_content td {
+  /* 左側の項目名 */
+  .company_table th {
+    white-space: nowrap;
+    padding: 2.7rem 0;
+  }
+
+  /* 右側の内容 */
+  .company_table td {
+    padding: 2.7rem 0;
+  }
+
+  /* 事業内容をセンターにする */
+  .center {
+    display: flex;
+    align-items: center;
+  }
+
+  /* 折り返さないように。ここだけpaddingが異なるため。 */
+  .shift {
+    white-space: nowrap;
+    padding: 0.8rem 0.7rem 0.8rem 0 !important;
+  }
+
+  /* =========================
+   所在地だけ1列
+   ========================= */
+
+  .company_table .address_space {
+    grid-template-columns: 1fr;
+    border-bottom: 0.1rem solid #FF8D28;
+  }
+
+  /* 所在地 */
+  .company_table .address_space .place {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 3rem 0;
+    white-space: nowrap;
+  }
+
+  /* KANTO～住所 */
+  .company_table .address_space>td {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 各施設 */
+  .company_table .address_space .group {
+    margin-top: 5rem;
+  }
+
+  .address_space td {
     letter-spacing: -0.048rem;
   }
 
   .group {
     letter-spacing: -0.048rem;
+  }
+
+  .last_space {
+    margin-bottom: 3rem;
   }
 
   .sp_only {
