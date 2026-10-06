@@ -36,6 +36,7 @@
 					<li class="nav-item"><a href="<?php echo home_url('/staff/'); ?>">スタッフ紹介</a></li>
 					<li class="nav-item"><a href="<?php echo home_url('/group/'); ?>">グループ紹介</a></li>
 					<li class="nav-item"><a href="<?php echo home_url('/news/'); ?>">お知らせ</a></li>
+					<li class="nav-item"><a href="<?php echo home_url('/company/'); ?>">会社概要</a></li>
 					<li class="nav-item header-inq"><a href="<?php echo home_url('/inquery/'); ?>">お問い合わせ</a></li>
 				</ul>
 			</nav>
