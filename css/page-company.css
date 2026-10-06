@@ -1,16 +1,16 @@
 .company_container {
-  width: 144rem;
+  width: auto;
   background-color: #FFEDD4;
   padding-bottom: 5rem;
+  margin: 0 auto;
 }
 
 .company_img {
-  width: 100%;
+  width: 144rem;
   height: 67.6rem;
   padding-top: 5rem;
   box-sizing: border-box;
   margin: 0 auto;
-  border-radius: 4rem;
   overflow: hidden;
   position: relative;
 }
@@ -18,22 +18,22 @@
 .teine_mountain {
   display: block;
   width: 142rem;
-  height: 65.6rem;
-  padding: 1rem;
+  height: 60.6rem;
+  /* padding: 1rem; */
   margin: 0 auto;
   border-radius: 4rem;
-  /* object-fit: cover; */
+  object-fit: cover;
   max-width: none;
-  /* animation: photoMove 15s ease-in-out infinite alternate; */
+  animation: photoMove 15s ease-in-out infinite alternate;
 }
 
 @keyframes photoMove {
   from {
-    transform: translateX(-4%) scale(1.05);
+    object-position: 20% center;
   }
 
   to {
-    transform: translate(0) scale(1.05);
+    object-position: 80% center;
   }
 }
 
@@ -105,6 +105,14 @@
   border-bottom: 0.1rem solid #FF8D28;
 }
 
+.address_space td {
+  border-bottom: none;
+}
+
+.address_space {
+  border-bottom: 0.1rem solid #FF8D28;
+}
+
 .address_space th,
 .address_space td {
   padding: 3rem 0;
@@ -145,20 +153,20 @@
 
   .company_img {
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     height: 24.8rem;
   }
 
   .teine_mountain {
     width: 35rem;
     height: 24.8rem;
+    border-radius: 4rem;
   }
 
   .company_philosophy {
     width: 35rem;
     padding: 3rem 1rem;
     margin-top: 2rem;
-
   }
 
   .company_name::before {

@@ -3,7 +3,7 @@
 <main class="company_container">
 
   <div class="company_img">
-    <img class="teine_mountain" src="<?php echo esc_url(get_theme_file_uri('img/FV.png')); ?>" alt="手稲山からの風景">
+    <img class="teine_mountain" src="<?php echo esc_url(get_theme_file_uri('img/company_top 2.png')); ?>" alt="手稲山からの風景">
   </div>
 
   <section class="company_philosophy">
