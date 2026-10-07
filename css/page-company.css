@@ -11,28 +11,38 @@
   padding-top: 5rem;
   box-sizing: border-box;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+}
+
+/* 写真の枠を作って、その中で写真を表示・アニメーションさせる */
+.company_img::before {
+  content: "";
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
+  width: 142rem;
+  height: 60.6rem;
+  border-radius: 4rem;
+  overflow: hidden;
+  background-image: url("../img/company_top 2.png");
+  background-size: 110% auto;
+  background-position: 0% center;
+  background-repeat: no-repeat;
+  animation: photoMove 30s ease-in-out infinite alternate;
 }
 
 .teine_mountain {
-  display: block;
-  width: 142rem;
-  height: 60.6rem;
-  margin: 0 auto;
-  border-radius: 4rem;
-  object-fit: cover;
-  max-width: none;
-  animation: photoMove 15s ease-in-out infinite alternate;
+  display: none;
 }
-
+/* 画像が動くように */
 @keyframes photoMove {
   from {
-    object-position: 0% center;
+    background-position: 0% center;
   }
 
   to {
-    object-position: 100% center;
+    background-position: 100% center;
   }
 }
 
@@ -152,14 +162,44 @@
 
   .company_img {
     width: 100%;
-    padding-top: 2rem;
     height: 26.8rem;
+    padding-top: 2rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .company_img::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 35rem;
+    height: 24.8rem;
+
+    border-radius: 4rem;
+    overflow: hidden;
+
+    background-image: url("../img/company_top 2.png");
+    background-size: cover;
+    background-position: 0% center;
+    background-repeat: no-repeat;
+
+    animation: photoMoveSP 30s ease-in-out infinite alternate;
   }
 
   .teine_mountain {
-    width: 35rem;
-    height: 24.8rem;
-    border-radius: 4rem;
+    display: none !important;
+  }
+
+  @keyframes photoMoveSP {
+    from {
+      background-position: 0% center;
+    }
+
+    to {
+      background-position: 100% center;
+    }
   }
 
   .company_philosophy {
@@ -277,4 +317,5 @@
   .sp_only {
     display: inline;
   }
+
 }
