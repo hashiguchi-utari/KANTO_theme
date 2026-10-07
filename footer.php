@@ -39,7 +39,7 @@
 				<address class="site-footer__address">
 					<p>北海道札幌市手稲区星置1条3丁目3−12</p>
 					<p>リュウジュビル2F</p>
-					<p class="site-footer__address-phone">011-</p>
+					<!-- <p class="site-footer__address-phone">011-</p> -->
 				</address>
 			</section>
 

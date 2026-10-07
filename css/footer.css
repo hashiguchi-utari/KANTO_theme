@@ -9,7 +9,7 @@
 .site-footer__inner {
   position: relative;
   width: min(100%, 144rem);
-  height: 56.4rem;
+  height: 60.4rem;
   margin-inline: auto;
   overflow: hidden;
 }
@@ -153,7 +153,8 @@
 
 .site-footer__copyright {
   position: absolute;
-  bottom: 3.2rem;
+  /* コピーライトをデザイン上の余白に合わせて少し下へ配置 */
+  bottom: 2.2rem;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -410,7 +411,7 @@
   }
 
   .site-footer__copyright {
-    bottom: 12.2rem;
+    bottom: 11.2rem;
     color: #fff;
     font-size: 1.3rem;
     white-space: nowrap;
