@@ -38,7 +38,7 @@ get_header();
 				<figure class="group-hero__item group-hero__item--seta">
 					<a href="#group-seta" aria-label="Setaの紹介へ移動">
 						<picture>
-							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group_SPseta2.png')); ?>">
+							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group_SPseta.png')); ?>">
 							<img src="<?php echo esc_url(get_theme_file_uri('/img/group-FV-seta2.png')); ?>" alt="障がい者グループホームSeta">
 						</picture>
 					</a>
