@@ -115,7 +115,7 @@
     transform: scale(1.05);
 }
 .header-inq {
-    background-image: url(../img/header1.png);
+    background-image: url(../img/header/header1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
