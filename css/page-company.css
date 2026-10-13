@@ -24,7 +24,7 @@
   height: 65.6rem;
   border-radius: 4rem;
   overflow: hidden;
-  background-image: url("../img/company_top 2.png");
+  background-image: url("../img/company/company-top.png");
   background-size: 110% auto;
   background-position: 0% center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .teine_mountain {
   display: none;
-}
+} 
 
 /* 画像が動くように */
 @keyframes photoMove {
@@ -181,7 +181,7 @@
     border-radius: 4rem;
     overflow: hidden;
 
-    background-image: url("../img/company_top 2.png");
+    background-image: url("../img/company/company-top.png");
     background-size: cover;
     background-position: 0% center;
     background-repeat: no-repeat;
