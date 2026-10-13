@@ -3,12 +3,12 @@
 <main class="company_container">
 
   <div class="company_img">
-    <img class="teine_mountain" src="<?php echo esc_url(get_theme_file_uri('img/company_top 2.png')); ?>" alt="手稲山からの風景">
-  </div>
+    <img class="teine_mountain" src="<?php echo esc_url(get_theme_file_uri('img/company/company-top.png')); ?>" alt="手稲山からの風景">
+  </div> 
 
   <section class="company_philosophy">
     <p class="company_name">株式会社リタベル</p>
-    <h3 class="big_text" >企業理念</h3>
+    <h3 class="big_text">企業理念</h3>
     <p class="message">福祉を、地域のインフラへ。<br><br>
       私たちは、福祉を特別なものにしません。 福祉とは、本来、誰かが困ったときだけに存在するものではなく、地域で暮らすすべての人の生活を支える、当たり前の基盤であるべきだと考えています。<br>
       電気や水道、交通や医療のように、なくてはならない存在。私たちが目指すのは、支援を提供する会社ではありません。<br>
