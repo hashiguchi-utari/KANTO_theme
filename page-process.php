@@ -2,7 +2,7 @@
 
 <main class="process_page_layout">
 
- <div class="process_bg_blur_layer" style="background-image: url('<?php echo esc_url(get_theme_file_uri('img/yuuyake_guradation-24.jpg')); ?>');"></div>
+ <div class="process_bg_blur_layer" style="background-image: url('<?php echo esc_url(get_theme_file_uri('img/process/yuuyake_guradation-24.jpg')); ?>');"></div>
 
     <div class="process_container">
          <!-- PC版で表示する大見出しセクション（ジャンピングドット＆マスクカラー反転仕様） -->
@@ -40,7 +40,7 @@
 
             <!-- シマエナガの透過画像用コンテナ -->
             <div class="process_hero_bird_holder">
-                <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001d.png')); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/process/simaenaga2001d.png')); ?>" alt="右上シマエナガイラスト" class="process_hero_bird_image">
             </div>
 
               <!-- ★【SP版専用】新しく作成したシンプルな大見出し -->
@@ -48,7 +48,7 @@
 
             <!-- ★【新設①】SP版専用：大見出しの下の葉っぱ柄透過ライン★ -->
             <div class="process_sp_leaf_line element_top_line">
-                <img src="<?php echo esc_url(get_theme_file_uri('img/b_simple_122_0S.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/process/b_simple_122_0S.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
             </div>
 
         </section>
@@ -64,7 +64,7 @@
                         <span class="process_node_text">ご相談<br>お問い合わせ</span>
                         <!-- アイコンイラスト枠 -->
                         <div class="process_node_icon">
-                             <img src="<?php echo esc_url(get_theme_file_uri('img/talk.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/process/talk.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div> 
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">主治医に<br>相談</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo esc_url(get_theme_file_uri('img/image22.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/process/image22.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">契約</span>
                         <div class="process_node_icon">
-                             <img src="<?php echo esc_url(get_theme_file_uri('img/image24.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
+                             <img src="<?php echo esc_url(get_theme_file_uri('img/process/image24.png')); ?>" alt="サークル内アイコン１" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                     <div class="process_circle_node">
                         <span class="process_node_text">利用開始</span>
                         <div class="process_node_icon">
-                            <img src="<?php echo esc_url(get_theme_file_uri('img/image25.png')); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
+                            <img src="<?php echo esc_url(get_theme_file_uri('img/process/image25.png')); ?>" alt="サークルアイコンイラスト４" class="process_icon_img">
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                 <!-- 一番下の鳥のイラストアイコン -->
         <section class="process_visual_section fade_up_trigger" id="sp_only_shimaenaga_posi">
             <div class="process_hero_image_holder">
-                <img src="<?php echo esc_url(get_theme_file_uri('img/simaenaga2001a.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
+                <img src="<?php echo esc_url(get_theme_file_uri('img/process/simaenaga2001a.png')); ?>" alt="最下部鳥イラスト" class="process_visual_image">
             </div>
         </section>
 
@@ -167,7 +167,7 @@
                 <p class="process_info_note">
                       <!-- 電球アイコン用のコンテナ -->
                     <span class="process_note_hint_icon">
-                        <img src="<?php echo esc_url(get_theme_file_uri('img/right.png')); ?>" alt="電球アイコン" class="process_hint_img">
+                        <img src="<?php echo esc_url(get_theme_file_uri('img/process/right.png')); ?>" alt="電球アイコン" class="process_hint_img">
                     </span>
                     わからないことがあっても、お気軽にご相談ください。<br>スタッフがひとつひとつ丁寧にお答えいたします。
                 </p>
@@ -176,7 +176,7 @@
 
         <!-- ★【新設②】SP版専用：一番最後の余白の葉っぱ柄透過ライン★ -->
         <div class="process_sp_leaf_line element_bottom_line">
-            <img src="<?php echo esc_url(get_theme_file_uri('img/b_ornament_116_1M.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
+            <img src="<?php echo esc_url(get_theme_file_uri('img/process/b_ornament_116_1M.png')); ?>" alt="葉っぱのライン装飾" class="process_leaf_img">
         </div>
     </div>
 </main>
