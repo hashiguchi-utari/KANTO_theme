@@ -21,16 +21,16 @@ get_header();
 			<!-- PC版では三角形、SP版では縦一列に配置 -->
 			<div class="group-hero__diagram">
 				<!-- PC版の3事業を結ぶ二重線画像 -->
-				<img class="group-hero__line group-hero__line--left-1" src="<?php echo esc_url(get_theme_file_uri('/img/Line 11.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--left-2" src="<?php echo esc_url(get_theme_file_uri('/img/Line 13.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--right-1" src="<?php echo esc_url(get_theme_file_uri('/img/Line 14.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--right-2" src="<?php echo esc_url(get_theme_file_uri('/img/Line 15.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--bottom" src="<?php echo esc_url(get_theme_file_uri('/img/Lines.png')); ?>" alt="" aria-hidden="true">
+				<img class="group-hero__line group-hero__line--left-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-1.png')); ?>" alt="" aria-hidden="true">
+				<img class="group-hero__line group-hero__line--left-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-2.png')); ?>" alt="" aria-hidden="true">
+				<img class="group-hero__line group-hero__line--right-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-1.png')); ?>" alt="" aria-hidden="true">
+				<img class="group-hero__line group-hero__line--right-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-2.png')); ?>" alt="" aria-hidden="true">
+				<img class="group-hero__line group-hero__line--bottom" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-bottom.png')); ?>" alt="" aria-hidden="true">
 
 				<figure class="group-hero__item group-hero__item--kanto">
 					<picture>
-						<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group_SPkanto.png')); ?>">
-						<img src="<?php echo esc_url(get_theme_file_uri('/img/group_FV_kanto.png')); ?>" alt="訪問看護ステーションKANTO">
+						<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-sp.png')); ?>">
+						<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-pc.png')); ?>" alt="訪問看護ステーションKANTO">
 					</picture>
 					<figcaption>KANTO</figcaption>
 				</figure>
@@ -38,8 +38,8 @@ get_header();
 				<figure class="group-hero__item group-hero__item--seta">
 					<a href="#group-seta" aria-label="Setaの紹介へ移動">
 						<picture>
-							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group_SPseta.png')); ?>">
-							<img src="<?php echo esc_url(get_theme_file_uri('/img/group-FV-seta2.png')); ?>" alt="障がい者グループホームSeta">
+							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-sp.png')); ?>">
+							<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-pc.png')); ?>" alt="障がい者グループホームSeta">
 						</picture>
 					</a>
 					<figcaption>SETA</figcaption>
@@ -48,8 +48,8 @@ get_header();
 				<figure class="group-hero__item group-hero__item--utari">
 					<a href="#group-utari" aria-label="UTARIの紹介へ移動">
 						<picture>
-							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group_SPutari.png')); ?>">
-							<img src="<?php echo esc_url(get_theme_file_uri('/img/group_FV_utari.png')); ?>" alt="就労継続支援UTARI">
+							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-sp.png')); ?>">
+							<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-pc.png')); ?>" alt="就労継続支援UTARI">
 						</picture>
 					</a>
 					<figcaption>UTARI</figcaption>
@@ -63,16 +63,16 @@ get_header();
 		<section id="group-seta" class="group-service group-service--seta" aria-labelledby="group-seta-title">
 			<h2 id="group-seta-title" class="group-service__title">障がい者グループホーム【セタ】</h2>
 			<div class="group-service__gallery group-service__gallery--seta">
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group_seta_img1.png')); ?>" alt="稲穂のグループホーム外観">
+				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-1.png')); ?>" alt="稲穂のグループホーム外観">
 					<figcaption>稲穂</figcaption>
 				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group_seta_img2.png')); ?>" alt="手稲本町のグループホーム外観">
+				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-2.png')); ?>" alt="手稲本町のグループホーム外観">
 					<figcaption>手稲本町</figcaption>
 				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group_seta_img3.png')); ?>" alt="前田のグループホーム外観">
+				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-3.png')); ?>" alt="前田のグループホーム外観">
 					<figcaption>前田</figcaption>
 				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group_seta_img4.png')); ?>" alt="稲穂のグループホーム外観">
+				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-4.png')); ?>" alt="稲穂のグループホーム外観">
 					<figcaption>稲穂</figcaption>
 				</figure>
 			</div>
@@ -95,9 +95,9 @@ get_header();
 				<span class="group-service__title-sp">就労継続支援ＵＴＡＲＩ-ウタリ-</span>
 			</h2>
 			<div class="group-service__gallery group-service__gallery--utari">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group_utari_img1.png')); ?>" alt="パソコンを使ったオンライン作業">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group_utari_img2.png')); ?>" alt="明るい共同作業スペース">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group_utari_img3.png')); ?>" alt="デザイン制作作業">
+				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-1.png')); ?>" alt="パソコンを使ったオンライン作業">
+				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-2.png')); ?>" alt="明るい共同作業スペース">
+				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-3.png')); ?>" alt="デザイン制作作業">
 			</div>
 			<!-- キャッチコピーは緑色のセクション全体の中央に配置 -->
 			<h3 class="group-service__catch">『ひとりじゃない』</h3>
