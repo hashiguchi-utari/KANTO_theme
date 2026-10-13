@@ -12,8 +12,7 @@
     <!-- ！！！！！！！！！！！ここに絞り込みのカテゴリーを置く -->
     <div class="archive-filter">
 
-      <a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
-
+      <a href="<?php echo esc_url(home_url('/news/')); ?>">
         ALL
       </a>
 
@@ -80,7 +79,7 @@
 
 
 
-<!-- ページネーションSP版のみ用 -->
+      <!-- ページネーションSP版のみ用 -->
 
       <?php
       global $wp_query;
@@ -134,7 +133,7 @@
         </nav>
       <?php endif; ?>
 
-<!-- ここまで -->
+      <!-- ここまで -->
 
 
     </div>

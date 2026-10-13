@@ -67,6 +67,7 @@
           <p>安心して気持ちを話せる時間を大切にしま<br class="sp_only">す。<br>あなたの想いに耳を傾け、必要なときに必<br class="sp_only">要なサポートを一緒に考えます。</p>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="second_content">
@@ -161,7 +162,3 @@
 </main>
 
 <?php get_footer(); ?>
-
-</body>
-
-</html>

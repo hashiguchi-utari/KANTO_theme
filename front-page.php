@@ -60,6 +60,7 @@
             </a>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="front-news">
