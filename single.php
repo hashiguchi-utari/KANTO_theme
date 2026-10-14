@@ -66,11 +66,6 @@
 
 </main>
 
-<?php get_footer(); ?>
-
-
-
-
 <script>
   /*フェードアップ*/
   const fadeUpImages = document.querySelectorAll('.fade-up-image');

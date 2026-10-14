@@ -10,108 +10,108 @@ get_header();
 ?>
 
 <main class="group-page">
-	<!-- グループ3事業を紹介するメインビジュアル -->
-	<section class="group-hero" aria-labelledby="group-hero-title">
-		<div class="group-hero__inner">
-			<p class="group-hero__company">RITABELL</p>
-			<p class="group-hero__message group-hero__message--left">いつも<br>あなたのそばに</p>
-			<p class="group-hero__message group-hero__message--right">あなたの<br>笑顔が見たいから</p>
-			<h1 id="group-hero-title" class="group-hero__title">グループ紹介</h1>
+  <!-- グループ3事業を紹介するメインビジュアル -->
+  <section class="group-hero" aria-labelledby="group-hero-title">
+    <div class="group-hero__inner">
+      <p class="group-hero__company">RITABELL</p>
+      <p class="group-hero__message group-hero__message--left">いつも<br>あなたのそばに</p>
+      <p class="group-hero__message group-hero__message--right">あなたの<br>笑顔が見たいから</p>
+      <h1 id="group-hero-title" class="group-hero__title">グループ紹介</h1>
 
-			<!-- PC版では三角形、SP版では縦一列に配置 -->
-			<div class="group-hero__diagram">
-				<!-- PC版の3事業を結ぶ二重線画像 -->
-				<img class="group-hero__line group-hero__line--left-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-1.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--left-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-2.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--right-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-1.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--right-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-2.png')); ?>" alt="" aria-hidden="true">
-				<img class="group-hero__line group-hero__line--bottom" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-bottom.png')); ?>" alt="" aria-hidden="true">
+      <!-- PC版では三角形、SP版では縦一列に配置 -->
+      <div class="group-hero__diagram">
+        <!-- PC版の3事業を結ぶ二重線画像 -->
+        <img class="group-hero__line group-hero__line--left-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-1.png')); ?>" alt="" aria-hidden="true">
+        <img class="group-hero__line group-hero__line--left-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-left-2.png')); ?>" alt="" aria-hidden="true">
+        <img class="group-hero__line group-hero__line--right-1" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-1.png')); ?>" alt="" aria-hidden="true">
+        <img class="group-hero__line group-hero__line--right-2" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-right-2.png')); ?>" alt="" aria-hidden="true">
+        <img class="group-hero__line group-hero__line--bottom" src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-line-bottom.png')); ?>" alt="" aria-hidden="true">
 
-				<figure class="group-hero__item group-hero__item--kanto">
-					<picture>
-						<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-sp.png')); ?>">
-						<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-pc.png')); ?>" alt="訪問看護ステーションKANTO">
-					</picture>
-					<figcaption>KANTO</figcaption>
-				</figure>
+        <figure class="group-hero__item group-hero__item--kanto">
+          <picture>
+            <source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-sp.png')); ?>">
+            <img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-kanto-pc.png')); ?>" alt="訪問看護ステーションKANTO">
+          </picture>
+          <figcaption>KANTO</figcaption>
+        </figure>
 
-				<figure class="group-hero__item group-hero__item--seta">
-					<a href="#group-seta" aria-label="Setaの紹介へ移動">
-						<picture>
-							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-sp.png')); ?>">
-							<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-pc.png')); ?>" alt="障がい者グループホームSeta">
-						</picture>
-					</a>
-					<figcaption>SETA</figcaption>
-				</figure>
+        <figure class="group-hero__item group-hero__item--seta">
+          <a href="#group-seta" aria-label="Setaの紹介へ移動">
+            <picture>
+              <source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-sp.png')); ?>">
+              <img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-seta-pc.png')); ?>" alt="障がい者グループホームSeta">
+            </picture>
+          </a>
+          <figcaption>SETA</figcaption>
+        </figure>
 
-				<figure class="group-hero__item group-hero__item--utari">
-					<a href="#group-utari" aria-label="UTARIの紹介へ移動">
-						<picture>
-							<source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-sp.png')); ?>">
-							<img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-pc.png')); ?>" alt="就労継続支援UTARI">
-						</picture>
-					</a>
-					<figcaption>UTARI</figcaption>
-				</figure>
-			</div>
-		</div>
-	</section>
+        <figure class="group-hero__item group-hero__item--utari">
+          <a href="#group-utari" aria-label="UTARIの紹介へ移動">
+            <picture>
+              <source media="(max-width: 699.98px)" srcset="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-sp.png')); ?>">
+              <img src="<?php echo esc_url(get_theme_file_uri('/img/group/hero-utari-pc.png')); ?>" alt="就労継続支援UTARI">
+            </picture>
+          </a>
+          <figcaption>UTARI</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-	<!-- SetaとUTARIのサービス紹介 -->
-	<div class="group-services">
-		<section id="group-seta" class="group-service group-service--seta" aria-labelledby="group-seta-title">
-			<h2 id="group-seta-title" class="group-service__title">障がい者グループホーム【セタ】</h2>
-			<div class="group-service__gallery group-service__gallery--seta">
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-1.png')); ?>" alt="稲穂のグループホーム外観">
-					<figcaption>稲穂</figcaption>
-				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-2.png')); ?>" alt="手稲本町のグループホーム外観">
-					<figcaption>手稲本町</figcaption>
-				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-3.png')); ?>" alt="前田のグループホーム外観">
-					<figcaption>前田</figcaption>
-				</figure>
-				<figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-4.png')); ?>" alt="稲穂のグループホーム外観">
-					<figcaption>稲穂</figcaption>
-				</figure>
-			</div>
-			<!-- キャッチコピーは黄色いセクション全体の中央に配置 -->
-			<h3 class="group-service__catch">「安心と繋がりがある暮らし」</h3>
-			<div class="group-service__content">
-				<div class="group-service__copy">
-					<p>男性専用のグループホーム・女性専用のグループホーム、男性女性可能のアパートタイプ、男性<br>シェアハウスまで幅広く導入しておりますので、希望の生活を実現できます。あなたらしさを大切にした快適な生活を送りませんか？</p>
-				</div>
-				<a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">
-					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
-					<span class="group-service__link-label-sp">ホームページはこちら</span>
-				</a>
-			</div>
-		</section>
+  <!-- SetaとUTARIのサービス紹介 -->
+  <div class="group-services">
+    <section id="group-seta" class="group-service group-service--seta" aria-labelledby="group-seta-title">
+      <h2 id="group-seta-title" class="group-service__title">障がい者グループホーム【セタ】</h2>
+      <div class="group-service__gallery group-service__gallery--seta">
+        <figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-1.png')); ?>" alt="稲穂のグループホーム外観">
+          <figcaption>稲穂</figcaption>
+        </figure>
+        <figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-2.png')); ?>" alt="手稲本町のグループホーム外観">
+          <figcaption>手稲本町</figcaption>
+        </figure>
+        <figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-3.png')); ?>" alt="前田のグループホーム外観">
+          <figcaption>前田</figcaption>
+        </figure>
+        <figure><img src="<?php echo esc_url(get_theme_file_uri('/img/group/seta-gallery-4.png')); ?>" alt="稲穂のグループホーム外観">
+          <figcaption>稲穂</figcaption>
+        </figure>
+      </div>
+      <!-- キャッチコピーは黄色いセクション全体の中央に配置 -->
+      <h3 class="group-service__catch">「安心と繋がりがある暮らし」</h3>
+      <div class="group-service__content">
+        <div class="group-service__copy">
+          <p>男性専用のグループホーム・女性専用のグループホーム、男性女性可能のアパートタイプ、男性<br>シェアハウスまで幅広く導入しておりますので、希望の生活を実現できます。あなたらしさを大切にした快適な生活を送りませんか？</p>
+        </div>
+        <a class="group-service__link" href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer">
+          <span class="group-service__link-label-pc">ホームページは<br>こちら</span>
+          <span class="group-service__link-label-sp">ホームページはこちら</span>
+        </a>
+      </div>
+    </section>
 
-		<section id="group-utari" class="group-service group-service--utari" aria-labelledby="group-utari-title">
-			<h2 id="group-utari-title" class="group-service__title">
-				<span class="group-service__title-pc">就労継続支援A型Ｂ型事業所ＵＴＡＲＩ-ウタリ-</span>
-				<span class="group-service__title-sp">就労継続支援ＵＴＡＲＩ-ウタリ-</span>
-			</h2>
-			<div class="group-service__gallery group-service__gallery--utari">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-1.png')); ?>" alt="パソコンを使ったオンライン作業">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-2.png')); ?>" alt="明るい共同作業スペース">
-				<img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-3.png')); ?>" alt="デザイン制作作業">
-			</div>
-			<!-- キャッチコピーは緑色のセクション全体の中央に配置 -->
-			<h3 class="group-service__catch">『ひとりじゃない』</h3>
-			<div class="group-service__content">
-				<div class="group-service__copy">
-					<p>仲間と共に学び、働き、時には支え合いながら自分のペースで成長できる場を提供します。 WEB制作や動画編集といった仕事を通じて、自分のペースで「できること」を少しずつ広げ、社会とのつながりを実感できる場を目指しています。</p>
-				</div>
-				<a class="group-service__link" href="https://utari.jp/" target="_blank" rel="noopener noreferrer">
-					<span class="group-service__link-label-pc">ホームページは<br>こちら</span>
-					<span class="group-service__link-label-sp">ホームページはこちら</span>
-				</a>
-			</div>
-		</section>
-	</div>
+    <section id="group-utari" class="group-service group-service--utari" aria-labelledby="group-utari-title">
+      <h2 id="group-utari-title" class="group-service__title">
+        <span class="group-service__title-pc">就労継続支援A型Ｂ型事業所ＵＴＡＲＩ-ウタリ-</span>
+        <span class="group-service__title-sp">就労継続支援ＵＴＡＲＩ-ウタリ-</span>
+      </h2>
+      <div class="group-service__gallery group-service__gallery--utari">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-1.png')); ?>" alt="パソコンを使ったオンライン作業">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-2.png')); ?>" alt="明るい共同作業スペース">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/group/utari-gallery-3.png')); ?>" alt="デザイン制作作業">
+      </div>
+      <!-- キャッチコピーは緑色のセクション全体の中央に配置 -->
+      <h3 class="group-service__catch">『ひとりじゃない』</h3>
+      <div class="group-service__content">
+        <div class="group-service__copy">
+          <p>仲間と共に学び、働き、時には支え合いながら自分のペースで成長できる場を提供します。 WEB制作や動画編集といった仕事を通じて、自分のペースで「できること」を少しずつ広げ、社会とのつながりを実感できる場を目指しています。</p>
+        </div>
+        <a class="group-service__link" href="https://utari.jp/" target="_blank" rel="noopener noreferrer">
+          <span class="group-service__link-label-pc">ホームページは<br>こちら</span>
+          <span class="group-service__link-label-sp">ホームページはこちら</span>
+        </a>
+      </div>
+    </section>
+  </div>
 </main>
 
 <?php get_footer(); ?>

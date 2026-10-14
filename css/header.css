@@ -1,163 +1,182 @@
 /* サイト共通のヘッダーに関するスタイルを記述します。 */
 #header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(to right, #ffeac4, #ff988e);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to right, #ffeac4, #ff988e);
 }
+
 .header-contents {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    max-width: 144rem;
-    width: 100%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
 }
+
 .header-logo img {
-    width: 32.9rem;
-    height: 8.3rem;
-    object-fit: cover;
+  width: 32.9rem;
+  height: 8.3rem;
+  object-fit: cover;
 }
 
 .header-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
+
 .menu h2 {
-    font-size: 4rem;
-    font-family: "Gulzar", selif;
-    font-weight: 300;
-    padding-top: 1rem;
+  font-size: 4rem;
+  font-family: "Gulzar", selif;
+  font-weight: 300;
+  padding-top: 1rem;
 }
 
 .hamburger {
-    position: relative;
-    z-index: 1100;
-    width: 3rem;
-    height: 2.4rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  position: relative;
+  z-index: 1100;
+  width: 3rem;
+  height: 2.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
+
 .hamburger span {
-    display: block;
-    width: 100%;
-    height: 0.3rem;
-    background-color: #333;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  background-color: #333;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
+
 .hamburger span:nth-child(1) {
-    top: 0;
+  top: 0;
 }
+
 .hamburger span:nth-child(2) {
-    top: 10px;
+  top: 10px;
 }
+
 .hamburger span:nth-child(3) {
-    top: 20px;
+  top: 20px;
 }
+
 .hamburger.is-open span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
+
 .hamburger.is-open span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
+
 .hamburger.is-open span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 .nav-items {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 72rem;
-    height: 100vh;
-    transition: transform 1s ease-in-out, visibility 1s;
-    padding: 2rem;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: flex-end;
-    align-items: center; 
-    background: linear-gradient(135deg, #ffeac4, #ff988e);
-    z-index: 1000;
-    transform: translateY(-120%);
-    visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 72rem;
+  height: 100vh;
+  transition: transform 1s ease-in-out, visibility 1s;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(135deg, #ffeac4, #ff988e);
+  z-index: 1000;
+  transform: translateY(-120%);
+  visibility: hidden;
 }
+
 .nav-items.is-open {
-    transform: translateY(0);
-    visibility: visible;
+  transform: translateY(0);
+  visibility: visible;
 }
+
 .nav-item a {
-    display: block;
-    padding: 1rem 0;
-    color: #505151;
-    text-decoration: none;
-    font-size: 3.2rem;
-    font-family: "Kaisei Tokumin", serif;
-    transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+  padding: 1rem 0;
+  color: #505151;
+  text-decoration: none;
+  font-size: 3.2rem;
+  font-family: "Kaisei Tokumin", serif;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .nav-item a:hover {
-    color: #ff8d28;
-    transform: scale(1.05);
+  color: #ff8d28;
+  transform: scale(1.05);
 }
+
 .header-inq {
-    background-image: url(../img/header/header1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    max-width: 30rem;
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
+  background-image: url(../img/header/header1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
+
 .header-inq:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
+
 .header-inq a {
-    color: #ff02e6;
-    font-weight: normal;
-    font-size: 2.4rem;
-    font-family: "Gulzar", sans-serif;
-    -webkit-text-stroke: 0.3rem #333;
-    paint-order: stroke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+  color: #ff02e6;
+  font-weight: normal;
+  font-size: 2.4rem;
+  font-family: "Gulzar", sans-serif;
+  -webkit-text-stroke: 0.3rem #333;
+  paint-order: stroke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 699.98px) {
-        #header {
-            padding: 2rem 0;
-        }
-        .header-logo img {
-            width: 19.3rem;
-            height: 4.875rem;
-            margin-left: 1rem;
-        }
-        .menu {
-            display: none;
-        }
-        .hamburger span {
-            background-color: #fff;
-        }
+  #header {
+    padding: 2rem 0;
+  }
+
+  .header-logo img {
+    width: 19.3rem;
+    height: 4.875rem;
+    margin-left: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger span {
+    background-color: #fff;
+  }
 }
