@@ -1,5 +1,7 @@
-/* グループ紹介上部の事業名で使用するフォントだけを、このページ用CSSで読み込む */
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&display=swap");
+/**
+ * 20261014_橋口修正_Instrument Sansの@importを削除し、グループ紹介用の書体をfunctions.phpで読み込むよう統一しました。
+ * このCSSでは、取得した書体を使用箇所のfont-family・font-weightで指定します。
+ */
 
 /* グループ紹介ページだけに適用するスタイル */
 .group-page {
