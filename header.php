@@ -6,10 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>訪問看護ステーションKANTO | 札幌市手稲区</title>
   <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/header/favicon.ico')); ?>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Chiron+GoRound+TC&family=Gugi&family=Gulzar&family=Kaisei+Decol&family=Kaisei+Tokumin&family=M+PLUS+1:wght@100..900&family=Nothing+You+Could+Do&family=Rampart+One&family=Zen+Old+Mincho&family=Yomogi&display=swap" rel="stylesheet">
-  <?php wp_head(); ?>
+  <?php
+  /**
+   * 20261014_橋口修正_Google Fontsの直接記述を削除し、読み込み管理をfunctions.phpへ移しました。
+   * wp_head()を通じて、WordPressに登録したGoogle Fontsや各種CSSなどを出力します。
+   */
+  // この処理内で、登録済みのフォント関数の実行とCSSのリンク出力が行われます。
+  wp_head();
+  ?>
 </head>
 
 <body <?php body_class(); ?>>

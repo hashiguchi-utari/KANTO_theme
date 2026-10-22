@@ -32,6 +32,80 @@ function kanto_theme_setup()
 add_action('after_setup_theme', 'kanto_theme_setup');
 
 /**
+ * 20261014_橋口修正_Google Fontsの読み込み管理をheader.phpから移し、ページごとに必要な書体・太さだけを読み込みます。
+ * 書体を変更する場合は、この関数の一覧と各CSSのfont-family・font-weightを合わせて更新してください。
+ */
+function kanto_enqueue_google_fonts()
+{
+  // 全ページ共通の書体を指定します。書体名の空白はURL用に「+」で表記します。
+  // wghtは文字の太さです。400..600は、その範囲の太さを読み込みます。
+  $font_families = array(
+    'Gugi',
+    'Gulzar',
+    'Kaisei+Tokumin',
+    'Noto+Sans+JP:wght@400..600',
+  );
+
+  // M PLUS Uはトップページだけで使用するため、トップ表示時に追加します。
+  if (is_front_page()) {
+    $font_families[] = 'M+PLUS+U:wght@400';
+  }
+
+  // 固定ページのスラッグ（URLの末尾）と、そのページで追加する書体の対応表です。
+  $page_font_families = array(
+    'staff' => array('Nothing+You+Could+Do', 'Yomogi', 'Zen+Old+Mincho'),
+    'group' => array('Instrument+Sans:wght@700', 'M+PLUS+1:wght@400..700', 'Rampart+One'),
+    'process' => array('Rampart+One'),
+  );
+
+  // 表示中の固定ページに一致する書体だけを、共通の一覧へ追加します。
+  foreach ($page_font_families as $page_slug => $additional_families) {
+    if (is_page($page_slug)) {
+      $font_families = array_merge($font_families, $additional_families);
+    }
+  }
+
+  // 書体の指定を1つのCSSのURLにまとめ、重複した読み込みを避けます。
+  // display=swapは、フォントの取得中も代替書体で文字を表示する指定です。
+  $font_url = 'https://fonts.googleapis.com/css2?family=' . implode('&family=', $font_families) . '&display=swap';
+
+  // WordPressの読み込み一覧へ登録し、wp_head()からCSSのリンクを出力します。
+  // nullを指定し、Google FontsのURLにWordPressのバージョンを付けません。
+  wp_enqueue_style('kanto-google-fonts', $font_url, array(), null);
+}
+/**
+ * 20261014_橋口修正_CSSを読み込むタイミングで、WordPressが上のフォント関数を自動実行するよう登録します。
+ * 優先度5は通常の10より先に実行する指定で、秒数や回数ではありません。
+ */
+add_action('wp_enqueue_scripts', 'kanto_enqueue_google_fonts', 5);
+
+/**
+ * 20261014_橋口修正_Google Fontsへの事前接続をWordPressの標準機能へ移し、functions.phpで管理します。
+ * フォント用CSSを読み込むページだけに、接続先を出力します。
+ *
+ * @param array  $urls          接続先の一覧。
+ * @param string $relation_type 接続ヒントの種類。
+ * @return array 接続先の一覧。
+ */
+function kanto_google_fonts_resource_hints($urls, $relation_type)
+{
+  // 事前接続の出力時だけ処理し、Google Fontsが読み込み対象か確認します。
+  if ('preconnect' === $relation_type && wp_style_is('kanto-google-fonts', 'enqueued')) {
+    // フォントのCSSを配信する接続先です。
+    $urls[] = 'https://fonts.googleapis.com';
+    // フォント本体の配信先には、別ドメインの取得に必要なcrossoriginも指定します。
+    $urls[] = array(
+      'href' => 'https://fonts.gstatic.com',
+      'crossorigin' => 'anonymous',
+    );
+  }
+
+  return $urls;
+}
+// WordPressが接続ヒントを作る際に、上の関数へ接続先の一覧と種類を渡します。
+add_filter('wp_resource_hints', 'kanto_google_fonts_resource_hints', 10, 2);
+
+/**
  * テーマ内にCSSファイルが存在するときだけ読み込みます。
  *
  * @param string   $handle        CSSを識別するための名前。
