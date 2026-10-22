@@ -39,9 +39,8 @@
 .grouphome {
   opacity: 0;
   transform: translateY(3rem);
-  transition:
-    opacity 1.8s ease,
-    transform 1.8s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
 }
 
 .service_message.is-visible,
@@ -849,11 +848,15 @@
   .speak,
   .grouphome {
 <<<<<<< HEAD
+<<<<<<< HEAD
     transition: opacity 3s ease, transform 3s ease;
 =======
     transition:
       opacity 5.5s ease,
       transform 5.5s ease;
+>>>>>>> remotes/origin/konishi
+=======
+    transition: opacity 3s ease, transform 3s ease;
 >>>>>>> remotes/origin/konishi
   }
 
