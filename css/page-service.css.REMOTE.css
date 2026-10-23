@@ -1,0 +1,1315 @@
+.main_container {
+  width: 144rem;
+  height: 86rem;
+  margin: 0 auto;
+}
+
+.service_main {
+  width: 120rem;
+  height: 76rem;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+/* 文字とアイコン３つのスペース */
+.service_left {
+  width: 53.3rem;
+  height: 74rem;
+  margin: 1rem 0 1rem 1rem;
+  padding-top: 5rem;
+}
+
+.service_message {
+  width: 52.3rem;
+  height: 25.1rem;
+}
+
+.catchcopy {
+  font-size: 6.4rem;
+  margin-top: 6rem;
+}
+
+/* 順にフェードアップさせる */
+.service_message,
+.speak_human,
+.photo,
+.heart,
+.speak,
+.grouphome {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
+}
+
+.service_message.is-visible,
+.speak_human.is-visible,
+.photo.is-visible,
+.heart.is-visible,
+.speak.is-visible,
+.grouphome.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* そっと寄り添う。 */
+.catchcopy span {
+  color: #FE8344;
+}
+
+.service_guide {
+  font-size: 1.6rem;
+}
+
+.icon_set {
+  display: flex;
+  gap: 3.2rem;
+  width: 57.8rem;
+  height: 25.9rem;
+  padding-top: 10.9rem;
+  margin-top: 3.2rem;
+}
+
+.heart,
+.speak,
+.grouphome {
+  width: 15rem;
+  height: 15rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 間にある区切り線 */
+.heart::after,
+.speak::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.6rem;
+  width: 0.1rem;
+  height: 15rem;
+  background: #E8D9C9;
+}
+
+.icon {
+  width: 100%;
+}
+
+.heart .pr_point {
+  margin-top: -5rem;
+}
+
+.speak .pr_point {
+  margin-top: -2rem;
+}
+
+.grouphome .pr_point {
+  margin-top: -3.5rem;
+}
+
+.pr_point {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* メインの画像のスペース */
+.service_img {
+  width: 65.2rem;
+  padding-bottom: 3.6rem;
+}
+
+.speak_human {
+  width: 85.9rem;
+  border-radius: 5rem;
+  margin-top: 4.6rem;
+}
+
+/* メイン画像の下にある３つの画像 */
+.img_photo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.photo {
+  width: 20rem;
+  border-radius: 2.5rem;
+}
+
+.service_content {
+  width: 100%;
+  height: 72.4rem;
+  margin: 0 auto;
+  background-color: #FFD9B8;
+}
+
+/* サービス内容の箱 */
+.service_info {
+  width: 120rem;
+  height: 62.4rem;
+  border-radius: 5rem;
+  display: flow-root;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  background-color: white;
+}
+
+.top_word {
+  width: 60.9rem;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.top_word h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.line {
+  display: block;
+  width: 26.1rem;
+  height: 0.1rem;
+  margin: 2rem auto;
+  background-color: #FFCA33;
+}
+
+.top_word p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.three_point {
+  display: flex;
+  gap: 3.3rem;
+  width: 117rem;
+  height: 38rem;
+  margin: 3.1rem auto 5rem;
+}
+
+/* 波のようにフェードアップ */
+.three_point>div {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/* 表示開始 */
+.three_point>div.is-show {
+  animation: waveFadeUp 2.2s ease-out forwards;
+}
+
+/* 左 → 中 → 右の順番 */
+.three_point>div:nth-child(1).is-show {
+  animation-delay: 0s;
+}
+
+.three_point>div:nth-child(2).is-show {
+  animation-delay: 0.6s;
+}
+
+.three_point>div:nth-child(3).is-show {
+  animation-delay: 1.2s;
+}
+
+@keyframes waveFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+
+  65% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service_photo {
+  display: block;
+  width: 31.2rem;
+  height: 18rem;
+  border-radius: 2.4rem;
+  margin: 0 auto;
+}
+
+.body_maintenance,
+.medicine,
+.main_service {
+  width: 37rem;
+  height: 38rem;
+  padding: 1rem 2.4rem;
+  box-sizing: border-box;
+  border-radius: 2.5rem;
+  background-color: #FEF1E4;
+}
+
+.body_maintenance h3,
+.medicine h3,
+.main_service h3 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.body_maintenance p,
+.medicine p,
+.main_service p {
+  width: 31.4rem;
+  height: 9.9rem;
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+.second_content {
+  width: 100%;
+  height: 60rem;
+  background-color: #FFD9B8;
+  margin: 0 auto;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+/* 対話を、いちばん大切に。の箱 */
+.service_text_space {
+  width: 120rem;
+  height: 50rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+
+.second_photo {
+  display: flex;
+  gap: 5rem;
+  width: 118rem;
+  box-sizing: border-box;
+}
+
+/* 画像、メッセージと順々にフェードアップで表示 */
+.smile_tolk.is-show {
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+.pop {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.pop.is-show {
+  animation: fadeUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.smile_tolk {
+  width: 50rem;
+  height: 40rem;
+  border-radius: 5rem;
+  margin: 5rem 0 0 1rem;
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.second_text {
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+.second_text h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.second_line {
+  display: block;
+  width: 48.1rem;
+  height: 0.1rem;
+  margin: 1rem 0 2rem;
+  background-color: #FFCA33;
+}
+
+.second_text p {
+  width: 54.4rem;
+  height: 9.5rem;
+  font-size: 1.6rem;
+  line-height: 1.23em;
+}
+
+.three_message {
+  display: flex;
+  gap: 1rem;
+  width: 56.8rem;
+  height: 19.7rem;
+  padding: 3.5rem 0;
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+
+.three_message p {
+  width: 18.1rem;
+  height: 8.4rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.05em;
+  border: #FFD9B8 solid 0.5rem;
+  border-radius: 2rem;
+  padding: 2.1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.polygon1,
+.polygon2,
+.polygon3 {
+  width: 2.425rem;
+  height: 2.25rem;
+  position: absolute;
+  top: 8rem;
+  left: 14rem;
+}
+
+.third_content {
+  width: 100%;
+  height: 75.7rem;
+  margin: 0 auto;
+  background-color: #FFF8E7;
+}
+
+/* KANTOの強みの箱 */
+.kanto_power {
+  width: 120rem;
+  height: 65.7rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  background-color: white;
+}
+
+.kanto_power h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.third_line {
+  display: block;
+  width: 28.4rem;
+  height: 0.1rem;
+  margin: 0.5rem auto 1rem;
+  background-color: #FFCA33;
+}
+
+.power_word {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.power_point {
+  width: 114rem;
+  height: 33.4rem;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+/* 三つを順にフェードアップさせる */
+.power_point>div {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.power_point>div.is-show {
+  animation: powerPointFadeUp 1.8s ease-out forwards;
+}
+
+/* ① point1 */
+.power_point>div:nth-child(1).is-show {
+  animation-delay: 0s;
+}
+
+/* ② point2 */
+.power_point>div:nth-child(2).is-show {
+  animation-delay: 0.5s;
+}
+
+/* ③ point3 */
+.power_point>div:nth-child(3).is-show {
+  animation-delay: 1s;
+}
+
+@keyframes powerPointFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.point1 {
+  width: 30.1rem;
+  height: 33.4rem;
+  margin: 0 auto;
+  padding: 1.9rem 1.2rem;
+  box-sizing: border-box;
+  border-radius: 2.5rem;
+  background-color: #FEEEE2;
+}
+
+.point1 h3 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* デザイン実装のためmargin-topを1.5remから0.5remに変更 */
+.illustration0 {
+  width: 27.7rem;
+  height: 15.7rem;
+  margin: 0.5rem auto 0;
+}
+
+/* デザイン実装のためmargin-topを1.5remから0に変更 */
+.point1 p {
+  width: 26.2rem;
+  height: 3.8rem;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.point2 {
+  width: 48.9rem;
+  height: 33.4rem;
+  margin: 0 auto;
+  padding: 1.8rem 2.7rem;
+  box-sizing: border-box;
+  border-radius: 2.5rem;
+  background-color: #FDF2E8;
+}
+
+.point2 h3 {
+  font-size: 3.2rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 3rem auto 0;
+}
+
+/* ３つの画像を横並びにする */
+.point2_img {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 33.5rem;
+  height: 10rem;
+}
+
+/*width.height:8.6remに変更（横並びの画像と揃えるため）*/
+.illustration1 {
+  width: 8.6rem;
+  height: 8.6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.illustration2 {
+  width: 10rem;
+  height: 10rem;
+}
+
+.illustration3 {
+  width: 8.6rem;
+  height: 8.6rem;
+}
+
+.point2 p {
+  width: 37.5rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.point3 {
+  width: 33rem;
+  height: 33.4rem;
+  margin: 0 auto;
+  padding: 2.1rem 1rem;
+  border-radius: 2.5rem;
+  background-color: #FEEEE2;
+  box-sizing: border-box;
+}
+
+.point3 h3 {
+  width: 31rem;
+  height: 7.8rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* デザイン実装のためmargin-bottomを2remから0に変更 */
+.illustration4 {
+  display: block;
+  width: 23.7rem;
+  height: 11.5rem;
+  margin: 2rem auto 0;
+}
+
+/* デザイン実装のためmargin-topを2remから1remに変更 */
+.point3 p {
+  font-size: 1.6rem;
+  width: 23.8rem;
+  height: 5.7rem;
+  margin: 1rem auto 0;
+}
+
+/* 「家での暮らしが不安」…が入る箱 */
+.last_space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 110rem;
+  height: 10.9rem;
+  margin: 1rem auto;
+  border-radius: 5rem;
+  background-color: #FDF1DF;
+}
+
+.home {
+  width: 12.7rem;
+  height: 8.9rem;
+  object-fit: contain;
+  padding-top: 1rem;
+}
+
+.last_space p {
+  width: 58.8rem;
+  height: 8.7rem;
+  font-size: 1.6rem;
+  padding: 2.1rem 0;
+
+}
+
+.forth_content {
+  width: 100%;
+  height: 53.8rem;
+  margin: 0 auto;
+  background-color: #FFF8E7;
+}
+
+/* ご利用までの流れが入る箱 */
+.step {
+  width: 120rem;
+  height: 43.8rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  border-radius: 5rem;
+  background-color: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.step_guide {
+  width: 36.4rem;
+  height: 33.8rem;
+  margin-top: 5rem;
+  margin-left: 17.2rem;
+}
+
+.step_guide h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.forth_line {
+  display: block;
+  width: 36rem;
+  height: 0.1rem;
+  margin: 2rem auto;
+  background-color: #FFCA33;
+}
+
+.step_guide p {
+  font-size: 1.6rem;
+  line-height: 1.23em;
+}
+
+.step_button {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 36.4rem;
+  height: 6.6rem;
+  margin: 2rem auto;
+  border: black 0.1rem solid;
+  border-radius: 5rem;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーすると大きくなる */
+.step_button:hover {
+  transform: scale(1.05);
+}
+
+/* ホバーすると大きくなる（矢印） */
+.step_button:hover .arrow {
+  transform: scale(2.0) translateX(0.5rem);
+}
+
+.step_button p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nurse {
+  width: 41.2rem;
+  height: 33.8rem;
+  margin-top: 5rem;
+}
+
+.fifth_content {
+  width: 100%;
+  height: 28.6rem;
+  margin: 0 auto;
+  background-color: #FFF8E7;
+}
+
+/* オレンジ色の箱 */
+.service_contact {
+  width: 120rem;
+  height: 18.6rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  border-radius: 5rem;
+  background-color: #FD8A3A;
+}
+
+.nav_message1,
+.nav_message2 {
+  color: white;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav_message1 {
+  padding-top: 5rem;
+}
+
+.contact_button {
+  width: 82.9rem;
+  height: 10rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 5rem;
+  border: black 0.1rem solid;
+  border-radius: 5rem;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーすると大きくなる */
+.contact_button:hover {
+  transform: scale(1.05);
+}
+
+/* ホバーすると大きくなる（矢印） */
+.contact_button:hover .contact_arrow {
+  transform: scale(2.5) translateX(0.5rem);
+}
+
+.contact_button P {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.contact_arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sp_only {
+  display: none;
+}
+
+.pc_only {
+  display: inline;
+}
+
+.pc_space {
+  display: inline;
+}
+
+@media screen and (max-width: 699.98px) {
+
+  .pc_only {
+    display: none;
+  }
+
+  .sp_only {
+    display: inline;
+  }
+
+  .pc_space {
+    display: none;
+  }
+
+  .main_container {
+    width: 100%;
+    height: 125.4rem;
+    margin: 0 auto;
+  }
+
+  /* 縦並びに変更 */
+  .service_main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 4.6rem auto 0;
+    padding: 0;
+  }
+
+  /* 写真が一番最初に表示されるように */
+  .service_img {
+    order: 1;
+    width: 37rem;
+    height: 31.1rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .speak_human {
+    width: 37.3rem;
+    height: 26.4rem;
+    object-fit: cover;
+    margin: 0 0.3rem;
+  }
+
+  /* 文字などは２番目に表示されるように */
+  .service_left {
+    order: 2;
+    width: 37rem;
+    height: 87.3rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* ３つの写真はSP版では非表示 */
+  .photo {
+    display: none;
+  }
+
+  .service_message,
+  .speak_human,
+  .photo,
+  .heart,
+  .speak,
+  .grouphome {
+    transition: opacity 3s ease, transform 3s ease;
+  }
+
+  .service_message {
+    width: 36rem;
+    height: 25.1rem;
+    margin: 0 auto;
+  }
+
+  .catchcopy {
+    width: 33.4rem;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .service_guide {
+    width: 33.4rem;
+    text-align: center;
+    margin: 3.2rem auto 0;
+    white-space: nowrap;
+  }
+
+  .icon_set {
+    display: block;
+    padding: 0;
+    margin: 0 auto 9.8rem;
+    width: 36rem;
+    height: 54.4rem;
+  }
+
+  .icon1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .icon2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .icon3 {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .heart {
+    width: 30rem;
+    height: 15rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .speak {
+    width: 35rem;
+    height: 15rem;
+    box-sizing: border-box;
+    margin: 0 auto 0;
+  }
+
+  .grouphome {
+    width: 36rem;
+    height: 19.4rem;
+    box-sizing: border-box;
+    margin: 5rem auto 0;
+  }
+
+  .heart::after,
+  .speak::after {
+    display: none;
+  }
+
+  .pr_point {
+    font-weight: bold;
+  }
+
+  .heart .pr_point {
+    margin-top: -16rem;
+  }
+
+  .speak .pr_point {
+    margin-top: -6rem;
+  }
+
+  .grouphome .pr_point {
+    margin-top: -6rem;
+  }
+
+  .service_content {
+    width: 100%;
+    height: 154.7rem;
+    margin-top: -5rem;
+  }
+
+  .service_info {
+    width: 36rem;
+    height: 144.7rem;
+  }
+
+  .top_word {
+    width: 100%;
+    padding-top: 6rem;
+  }
+
+  .top_word h2 {
+    font-size: 2.8rem;
+  }
+
+  .line {
+    width: 20rem;
+  }
+
+  .three_point {
+    display: block;
+    width: 34rem;
+    height: 120rem;
+    margin: 1rem auto 5rem;
+  }
+
+  /* 上 → 中 → 下の順番 */
+  .three_point>div:nth-child(1).is-show {
+    animation-delay: 0s;
+  }
+
+  .three_point>div:nth-child(2).is-show {
+    animation-delay: 1.2s;
+  }
+
+  .three_point>div:nth-child(3).is-show {
+    animation-delay: 2.4s;
+  }
+
+  .service_photo {
+    width: 31.2rem;
+    border-radius: 2.4rem;
+    margin: 0 auto;
+  }
+
+  .body_maintenance,
+  .medicine,
+  .main_service {
+    width: 34rem;
+    height: 38rem;
+  }
+
+  .medicine,
+  .main_service {
+    margin-top: 3.3rem;
+  }
+
+  .body_maintenance h3,
+  .medicine h3,
+  .main_service h3 {
+    font-size: 2.2rem;
+  }
+
+  .body_maintenance p {
+    letter-spacing: -0.05em;
+  }
+
+  .second_content {
+    width: 100%;
+    height: 131.6rem;
+    padding: 5rem 0;
+  }
+
+  .service_text_space {
+    width: 36rem;
+    height: 121.6rem;
+    padding: 5rem 1rem;
+  }
+
+  .second_photo {
+    display: block;
+    width: 100%;
+  }
+
+  .smile_tolk {
+    display: block;
+    width: 34rem;
+    height: 38.7rem;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 5rem;
+  }
+
+  .second_text {
+    width: 35.1rem;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+
+  .second_text P {
+    width: 100%;
+    height: auto;
+  }
+
+  .second_text h2 {
+    font-size: 2.8rem;
+  }
+
+  .second_line {
+    width: 33.5rem;
+  }
+
+  .three_message {
+    display: block;
+    width: 35.2rem;
+    height: 37.8rem;
+    margin-top: 7rem;
+    padding: 0 1rem;
+  }
+
+  .three_message p {
+    width: 100%;
+    height: 8.3rem;
+    margin: 0 auto;
+  }
+
+  .three_message p.is-show {
+    animation: fadeUp 2.5s ease-out forwards;
+  }
+
+  .three_message .space {
+    margin-bottom: 3.3rem;
+  }
+
+  .polygon1,
+  .polygon2,
+  .polygon3 {
+    position: absolute;
+    top: 8rem;
+    left: 30rem;
+  }
+
+  /* KANTOの強み */
+  .third_content {
+    width: 100%;
+    height: 159.5rem;
+  }
+
+  .kanto_power {
+    width: 36rem;
+    height: 149.5rem;
+  }
+
+  .kanto_power h2 {
+    font-size: 2.8rem;
+  }
+
+  .third_line {
+    width: 21rem;
+  }
+
+  .power_point {
+    width: 33rem;
+    height: 105.8rem;
+    display: block;
+    margin: 2rem auto;
+  }
+
+  /* ② point2 */
+  .power_point>div:nth-child(2).is-show {
+    animation-delay: 1.5s;
+  }
+
+  /* ③ point3 */
+  .power_point>div:nth-child(3).is-show {
+    animation-delay: 2.5s;
+  }
+
+  .point1 {
+    width: 33rem;
+    height: 37rem;
+    padding-top: 0;
+  }
+
+  .point1 h3 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    padding-top: 1.9rem;
+  }
+
+  .illustration0 {
+    margin-top: 3.3rem;
+  }
+
+  .point1 p {
+    width: 26.2rem;
+    height: 3.8rem;
+    margin-top: 3.3rem;
+  }
+
+  .point2 {
+    width: 33rem;
+    height: 33.4rem;
+    margin-top: 1rem;
+    padding: 0 1.24rem 1.8rem 2.7rem;
+  }
+
+  .point2 h3 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4.2rem;
+  }
+
+  .point2_img {
+    width: 27.6rem;
+    height: 10rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .point2 p {
+    width: 27.6rem;
+    height: 8.2rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .point3 {
+    margin-top: 1rem;
+    padding-top: 0;
+  }
+
+  .point3 h3 {
+    width: 27.4rem;
+    height: 3.8rem;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 0 auto 0;
+    padding-top: 2rem;
+  }
+
+  /* 4remの方がバランスがいいかも。 */
+  .illustration4 {
+    margin: 2rem auto;
+  }
+
+  .last_space {
+    width: 33rem;
+    height: 18.3rem;
+    margin: 2rem auto 5rem;
+  }
+
+  .home {
+    width: 5.7rem;
+    height: 8.7rem;
+    margin-left: 2.25rem;
+    padding: 0;
+  }
+
+  .last_space p {
+    width: 21.8rem;
+    height: 16.3rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+
+  .forth_content {
+    width: 100%;
+    height: 83.3rem;
+  }
+
+  .step {
+    width: 36rem;
+    height: 73.3rem;
+    display: block;
+  }
+
+  .step_guide {
+    width: 35rem;
+    height: 25.8rem;
+    margin: 0 auto;
+  }
+
+  .step_guide h2 {
+    font-size: 2.8rem;
+    padding-top: 5rem;
+    padding-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .forth_line {
+    width: 23.9rem;
+  }
+
+  .step_guide>p {
+    width: 26.4rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .step_button {
+    width: 35rem;
+    margin: 2rem auto;
+    box-shadow: 0 1rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  /* ホバーしても大きくならない */
+  .step_button:hover {
+    transform: none;
+  }
+
+  /* クリックしたら押した感じ */
+  .step_button:active {
+    transform: translateY(0.3rem);
+  }
+
+  /* ホバーしても大きくならない（矢印） */
+  .step_button:hover .arrow {
+    transform: none;
+  }
+
+  .step_button p {
+    font-size: 1.6rem;
+  }
+
+  .nurse {
+    width: 33rem;
+    height: 29.8rem;
+    margin-top: 6rem;
+  }
+
+  .fifth_content {
+    width: 100%;
+    height: 49.5rem;
+    padding-top: 5rem;
+  }
+
+  .service_contact {
+    width: 38rem;
+    height: 16.7rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .nav_message1 {
+    width: 28.5rem;
+    height: 5.2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0.65rem auto 0;
+    padding-top: 0;
+    white-space: nowrap;
+  }
+
+  .nav_message2 {
+    width: 32.8rem;
+    height: 5.2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+
+}

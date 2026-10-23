@@ -39,9 +39,8 @@
 .grouphome {
   opacity: 0;
   transform: translateY(3rem);
-  transition:
-    opacity 1.8s ease,
-    transform 1.8s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
 }
 
 .service_message.is-visible,
@@ -56,7 +55,7 @@
 
 /* そっと寄り添う。 */
 .catchcopy span {
-  color: #fe8344;
+  color: #FE8344;
 }
 
 .service_guide {
@@ -90,7 +89,7 @@
   right: -1.6rem;
   width: 0.1rem;
   height: 15rem;
-  background: #e8d9c9;
+  background: #E8D9C9;
 }
 
 .icon {
@@ -144,7 +143,7 @@
   width: 100%;
   height: 72.4rem;
   margin: 0 auto;
-  background-color: #ffd9b8;
+  background-color: #FFD9B8;
 }
 
 /* サービス内容の箱 */
@@ -176,7 +175,7 @@
   width: 26.1rem;
   height: 0.1rem;
   margin: 2rem auto;
-  background-color: #ffca33;
+  background-color: #FFCA33;
 }
 
 .top_word p {
@@ -193,26 +192,26 @@
 }
 
 /* 波のようにフェードアップ */
-.three_point > div {
+.three_point>div {
   opacity: 0;
   transform: translateY(8rem);
 }
 
 /* 表示開始 */
-.three_point > div.is-show {
+.three_point>div.is-show {
   animation: waveFadeUp 2.2s ease-out forwards;
 }
 
 /* 左 → 中 → 右の順番 */
-.three_point > div:nth-child(1).is-show {
+.three_point>div:nth-child(1).is-show {
   animation-delay: 0s;
 }
 
-.three_point > div:nth-child(2).is-show {
+.three_point>div:nth-child(2).is-show {
   animation-delay: 0.6s;
 }
 
-.three_point > div:nth-child(3).is-show {
+.three_point>div:nth-child(3).is-show {
   animation-delay: 1.2s;
 }
 
@@ -253,7 +252,7 @@
   padding: 1rem 2.4rem;
   box-sizing: border-box;
   border-radius: 2.5rem;
-  background-color: #fef1e4;
+  background-color: #FEF1E4;
 }
 
 .body_maintenance h3,
@@ -276,7 +275,7 @@
 .second_content {
   width: 100%;
   height: 60rem;
-  background-color: #ffd9b8;
+  background-color: #FFD9B8;
   margin: 0 auto;
   padding: 5rem;
   box-sizing: border-box;
@@ -349,7 +348,7 @@
   width: 48.1rem;
   height: 0.1rem;
   margin: 1rem 0 2rem;
-  background-color: #ffca33;
+  background-color: #FFCA33;
 }
 
 .second_text p {
@@ -374,7 +373,7 @@
   height: 8.4rem;
   font-size: 1.6rem;
   letter-spacing: -0.05em;
-  border: #ffd9b8 solid 0.5rem;
+  border: #FFD9B8 solid 0.5rem;
   border-radius: 2rem;
   padding: 2.1rem 0;
   display: flex;
@@ -397,7 +396,7 @@
   width: 100%;
   height: 75.7rem;
   margin: 0 auto;
-  background-color: #fff8e7;
+  background-color: #FFF8E7;
 }
 
 /* KANTOの強みの箱 */
@@ -423,7 +422,7 @@
   width: 28.4rem;
   height: 0.1rem;
   margin: 0.5rem auto 1rem;
-  background-color: #ffca33;
+  background-color: #FFCA33;
 }
 
 .power_word {
@@ -440,27 +439,27 @@
 }
 
 /* 三つを順にフェードアップさせる */
-.power_point > div {
+.power_point>div {
   opacity: 0;
   transform: translateY(8rem);
 }
 
-.power_point > div.is-show {
+.power_point>div.is-show {
   animation: powerPointFadeUp 1.8s ease-out forwards;
 }
 
 /* ① point1 */
-.power_point > div:nth-child(1).is-show {
+.power_point>div:nth-child(1).is-show {
   animation-delay: 0s;
 }
 
 /* ② point2 */
-.power_point > div:nth-child(2).is-show {
+.power_point>div:nth-child(2).is-show {
   animation-delay: 0.5s;
 }
 
 /* ③ point3 */
-.power_point > div:nth-child(3).is-show {
+.power_point>div:nth-child(3).is-show {
   animation-delay: 1s;
 }
 
@@ -483,7 +482,7 @@
   padding: 1.9rem 1.2rem;
   box-sizing: border-box;
   border-radius: 2.5rem;
-  background-color: #feeee2;
+  background-color: #FEEEE2;
 }
 
 .point1 h3 {
@@ -516,7 +515,7 @@
   padding: 1.8rem 2.7rem;
   box-sizing: border-box;
   border-radius: 2.5rem;
-  background-color: #fdf2e8;
+  background-color: #FDF2E8;
 }
 
 .point2 h3 {
@@ -567,7 +566,7 @@
   margin: 0 auto;
   padding: 2.1rem 1rem;
   border-radius: 2.5rem;
-  background-color: #feeee2;
+  background-color: #FEEEE2;
   box-sizing: border-box;
 }
 
@@ -606,7 +605,7 @@
   height: 10.9rem;
   margin: 1rem auto;
   border-radius: 5rem;
-  background-color: #fdf1df;
+  background-color: #FDF1DF;
 }
 
 .home {
@@ -621,13 +620,14 @@
   height: 8.7rem;
   font-size: 1.6rem;
   padding: 2.1rem 0;
+
 }
 
 .forth_content {
   width: 100%;
   height: 53.8rem;
   margin: 0 auto;
-  background-color: #fff8e7;
+  background-color: #FFF8E7;
 }
 
 /* ご利用までの流れが入る箱 */
@@ -660,7 +660,7 @@
   width: 36rem;
   height: 0.1rem;
   margin: 2rem auto;
-  background-color: #ffca33;
+  background-color: #FFCA33;
 }
 
 .step_guide p {
@@ -688,7 +688,7 @@
 
 /* ホバーすると大きくなる（矢印） */
 .step_button:hover .arrow {
-  transform: scale(2) translateX(0.5rem);
+  transform: scale(2.0) translateX(0.5rem);
 }
 
 .step_button p {
@@ -711,7 +711,7 @@
   width: 100%;
   height: 28.6rem;
   margin: 0 auto;
-  background-color: #fff8e7;
+  background-color: #FFF8E7;
 }
 
 /* オレンジ色の箱 */
@@ -722,7 +722,7 @@
   position: relative;
   top: 5rem;
   border-radius: 5rem;
-  background-color: #fd8a3a;
+  background-color: #FD8A3A;
 }
 
 .nav_message1,
@@ -784,6 +784,7 @@
 }
 
 @media screen and (max-width: 699.98px) {
+
   .pc_only {
     display: none;
   }
@@ -848,13 +849,7 @@
   .heart,
   .speak,
   .grouphome {
-<<<<<<< HEAD
     transition: opacity 3s ease, transform 3s ease;
-=======
-    transition:
-      opacity 5.5s ease,
-      transform 5.5s ease;
->>>>>>> remotes/origin/konishi
   }
 
   .service_message {
@@ -974,15 +969,15 @@
   }
 
   /* 上 → 中 → 下の順番 */
-  .three_point > div:nth-child(1).is-show {
+  .three_point>div:nth-child(1).is-show {
     animation-delay: 0s;
   }
 
-  .three_point > div:nth-child(2).is-show {
+  .three_point>div:nth-child(2).is-show {
     animation-delay: 1.2s;
   }
 
-  .three_point > div:nth-child(3).is-show {
+  .three_point>div:nth-child(3).is-show {
     animation-delay: 2.4s;
   }
 
@@ -1034,8 +1029,7 @@
   .smile_tolk {
     display: block;
     width: 34rem;
-    /* 10/22 画像の縦サイズを38.7remから30remに変更しました。小西 */
-    height: 30rem;
+    height: 38.7rem;
     object-fit: cover;
     margin: 0 auto;
     border-radius: 5rem;
@@ -1119,12 +1113,12 @@
   }
 
   /* ② point2 */
-  .power_point > div:nth-child(2).is-show {
+  .power_point>div:nth-child(2).is-show {
     animation-delay: 1.5s;
   }
 
   /* ③ point3 */
-  .power_point > div:nth-child(3).is-show {
+  .power_point>div:nth-child(3).is-show {
     animation-delay: 2.5s;
   }
 
@@ -1247,7 +1241,7 @@
     width: 23.9rem;
   }
 
-  .step_guide > p {
+  .step_guide>p {
     width: 26.4rem;
     margin: 0 auto;
     font-size: 1.6rem;
@@ -1317,4 +1311,5 @@
     margin: 0 auto;
     white-space: nowrap;
   }
+
 }
