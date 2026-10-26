@@ -2,7 +2,10 @@
 フォント
 M PLUS U
 =====================================*/
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@200..900&display=swap');
+/**
+ * 20261014_橋口修正_M PLUS Uの@importを削除し、functions.phpでトップページだけに読み込むよう統一しました。
+ * 下の.mplus-titleは、取得した書体を見出しへ適用する指定です。
+ */
 
 .mplus-title {
   font-family: "M PLUS U", sans-serif;
