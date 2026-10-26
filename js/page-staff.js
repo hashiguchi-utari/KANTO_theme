@@ -135,6 +135,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+/////////////////////////////////////////////////////////////////////////////////////
+//id名での指示出しは１個のみとなるので、クラス名に指示を出す形に変更をして３人のプロフ面像を設定する必要があります。
+//必要なければ消してください
+
+//新規追加：沼倉　クリックしたらメインの画像に戻る設定
+const mainImg = document.querySelector('#mainimg img');
+const thumbs = document.querySelectorAll('.thumbnails .thumb'); // または共通のクラス名など
+
+// 1. サムネイルをクリックした時の処理（既存の処理の参考）
+thumbs.forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    mainImg.src = thumb.src; // メイン画像をサムネイルの画像に差し替え
+  });
+});
+
+// 2. 【今回追加する機能】メイン画像をクリックしたら元に戻す処理
+mainImg.addEventListener('click', () => {
+  // HTMLの data-default-src に保存しておいた初期URLを取得
+  const defaultSrc = mainImg.getAttribute('data-default-src');//このコードをimg部分に組み込むことでメインプロフ画像をデフォルトとして設定できるようです。HTMｌ側の変更は削除しておきましたのでここも必要なければ消してください。
+  
+  if (defaultSrc) {
+    mainImg.src = defaultSrc; // メイン画像を初期画像に戻す
+  }
+});
+////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 
 //スクロール検知のオプションを設定
 const observerOptions = {
