@@ -34,7 +34,8 @@
         <div class="img_photo">
           <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/walking.png')); ?>" alt="散歩の写真">
           <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/kanto-image.png')); ?>" alt="対話の写真">
-          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/kanto-image.png')); ?>" alt="対話の写真">
+          <!-- 10/22 グループホームのイメージ画像に差し替えました。小西 -->
+          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/seta-image.png')); ?>" alt="対話の写真">
         </div>
       </div>
     </section>
