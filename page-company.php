@@ -4,7 +4,7 @@
 
   <div class="company_img">
     <img class="teine_mountain" src="<?php echo esc_url(get_theme_file_uri('img/company/company-top.png')); ?>" alt="手稲山からの風景">
-  </div> 
+  </div>
 
   <section class="company_philosophy">
     <p class="company_name">株式会社リタベル</p>
@@ -18,7 +18,7 @@
     <table class="company_table">
       <tr class="company_block">
         <th class="heading">設立</th>
-        <td class="text">2026年9月</td>
+        <td class="text">2023年7月</td>
       </tr>
       <tr class="company_block">
         <th class="heading">代表者</th>
