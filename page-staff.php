@@ -3,47 +3,47 @@
   <div class="staff-main">
     <div class="mainvisual">
       <div class="mainimg-pc">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.png')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.png')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.png')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.webp')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.webp')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.webp')); ?>" alt="">
       </div>
       <div class="mainimg-sp">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp1.png')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp2.png')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp3.png')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp1.webp')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp2.webp')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp3.webp')); ?>" alt="">
       </div>
     </div>
 
     <div class="sp-comment">
       <p>\ 私たちがサポートします /</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff3.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff3.webp')); ?>" alt="">
     </div>
     <div class="page-title">
       <h1>STAFF</h1>
       <span class="sp-border"></span>
       <p><span>スタッフ</span>紹介</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff1.png')); ?>" alt="">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff2.png')); ?>" alt="">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.png')); ?>" alt="">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff8.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff1.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff2.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff8.webp')); ?>" alt="">
       <span class="pc-border"></span>
     </div>
     <div class="comment">
       <p>\ 私たちがサポートします /</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff3.png')); ?>" alt="">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.png')); ?>" alt="">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff3.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.webp')); ?>" alt="">
     </div>
     <div class="comment-sub">
       <p>まずは～、<br>頼れるお姉さん的存在♪</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff4.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff4.webp')); ?>" alt="">
     </div>
 
     <div class="card" id="staff1">
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.png')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.webp')); ?>" alt="メイン画像" />
         <div class="sp-stop">
-          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border1.png')); ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border1.webp')); ?>" alt="">
         </div>
       </div>
       <div class="status">
@@ -64,10 +64,10 @@
 
       </div>
       <div class="thumbnails">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile1.png')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile2.png')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile3.png')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile4.png')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile1.webp')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile2.webp')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile3.webp')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff01_profile4.webp')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
       </div>
     </div>
 
@@ -75,7 +75,7 @@
       <div class="img-up">
         <p>よく見たい写真はクリック<br>してください♪</p>
       </div>
-      <a href="#staff2" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff/staff_next.png")) ?>')">
+      <a href="#staff2" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff/staff_next.webp")) ?>')">
         <p>Next<br>Scroll</p>
         <span></span>
       </a>
@@ -83,11 +83,11 @@
 
     <div class="staff-footer-bottom">
       <span class="border"></span>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff4.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff4.webp')); ?>" alt="">
     </div>
 
     <div class="comment-sub">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff5.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff5.webp')); ?>" alt="">
       <p>とってもとーーっても<br>おしゃべりさん♪</p>
     </div>
 
@@ -110,21 +110,21 @@
 
       </div>
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.png')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.webp')); ?>" alt="メイン画像" />
         <div class="sp-stop stop2">
-          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border2.png')); ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border2.webp')); ?>" alt="">
         </div>
       </div>
       <div class="thumbnails">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile1.png')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile2_2.png')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile4_2.png')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile4.png')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile1.webp')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile2_2.webp')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile4_2.webp')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff02_profile4.webp')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
       </div>
     </div>
 
     <div class="staff-footer-top">
-      <a href="#staff3" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff/staff_next.png")) ?>')">
+      <a href="#staff3" class="next-staff" style="background-image: url('<?php echo esc_url(get_theme_file_uri("img/staff/staff_next.webp")) ?>')">
         <p>Next<br>Scroll</p>
         <span></span>
       </a>
@@ -133,20 +133,20 @@
       </div>
     </div>
     <div class="staff-footer-bottom">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff5.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff5.webp')); ?>" alt="">
       <span class="border"></span>
     </div>
 
     <div class="comment-sub">
       <p>しっかり者だけどちょっと<br>天然さん♪</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.webp')); ?>" alt="">
     </div>
 
     <div class="card" id="staff3">
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.png')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.webp')); ?>" alt="メイン画像" />
         <div class="sp-stop stop3">
-          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.png')); ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.webp')); ?>" alt="">
         </div>
       </div>
       <div class="status">
@@ -167,10 +167,10 @@
 
       </div>
       <div class="thumbnails">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile1.png')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile2.png')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile3.png')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff032_4_2.png')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile1.webp')); ?>" class="thumb" tabindex="0" alt="1のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile2.webp')); ?>" class="thumb" tabindex="0" alt="2のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff03_profile3.webp')); ?>" class="thumb" tabindex="0" alt="3のサムネイル" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff032_4_2.webp')); ?>" class="thumb" tabindex="0" alt="4のサムネイル" />
       </div>
     </div>
 
@@ -182,13 +182,13 @@
 
     <div class="staff-footer-bottom">
       <span class="border"></span>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.png')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.webp')); ?>" alt="">
     </div>
 
     <a class="page-start" href="#">このページの上に戻る</a>
     <div class="sp-img">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.png')); ?>" alt="" class="last-img-left">
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.png')); ?>" alt="" class="last-img-right">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.webp')); ?>" alt="" class="last-img-left">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff7.webp')); ?>" alt="" class="last-img-right">
     </div>
   </div>
 
