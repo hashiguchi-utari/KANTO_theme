@@ -21,7 +21,7 @@
 
   <header id="header">
     <div class="header-contents">
-      <h1 class="header-logo"><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_theme_file_uri('img/header/kanto-logo-4.png')); ?>" alt="ロゴ"></a></h1>
+      <h1 class="header-logo"><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_theme_file_uri('img/header/kanto-logo-4.webp')); ?>" alt="ロゴ"></a></h1>
       <nav class="header-navi">
         <div class="header-menu">
           <div class="menu">

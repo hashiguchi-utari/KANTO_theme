@@ -24,7 +24,7 @@ if (! defined('ABSPATH')) {
       // ページを開いた直後とカテゴリを選択した後のどちらでも同じ画像が表示されます。
       ?>
       <img
-        src="<?php echo esc_url(get_theme_file_uri('/img/news/no-image.png')); ?>"
+        src="<?php echo esc_url(get_theme_file_uri('/img/news/no-image.webp')); ?>"
         alt="No image"
         class="no-image">
     <?php endif; ?>
@@ -52,7 +52,7 @@ if (! defined('ABSPATH')) {
     <a href="<?php the_permalink(); ?>" class="archive-card__more">
       <span class="">続きを読む</span>
       <span class="archive-card__arrow"><img
-          src="<?php echo esc_url(get_theme_file_uri('/img/news/arrow.png')); ?>"> </span>
+          src="<?php echo esc_url(get_theme_file_uri('/img/news/arrow.webp')); ?>"> </span>
     </a>
   </div>
 </div>
