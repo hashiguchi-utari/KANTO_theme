@@ -30,12 +30,12 @@
       </div>
 
       <div class="service_img">
-        <img class="speak_human" src="<?php echo esc_url(get_theme_file_uri('img/service/nurse.png')); ?>" alt="対話の写真">
+        <img class="speak_human" src="<?php echo esc_url(get_theme_file_uri('img/service/nurse.webp')); ?>" alt="対話の写真">
         <div class="img_photo">
-          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/walking.png')); ?>" alt="散歩の写真">
-          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/kanto-image.png')); ?>" alt="対話の写真">
+          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/walking.webp')); ?>" alt="散歩の写真">
+          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/kanto-image.webp')); ?>" alt="対話の写真">
           <!-- 10/22 グループホームのイメージ画像に差し替えました。小西 -->
-          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/seta-image.png')); ?>" alt="対話の写真">
+          <img class="photo" src="<?php echo esc_url(get_theme_file_uri('img/service/seta-image.webp')); ?>" alt="対話の写真">
         </div>
       </div>
     </section>
@@ -51,19 +51,19 @@
 
       <div class="three_point">
         <div class="body_maintenance">
-          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/health-management.png')); ?>" alt="血圧計">
+          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/health-management.webp')); ?>" alt="血圧計">
           <h3>体調管理</h3>
           <p>毎日の体調や気分の変化を一緒に確認し、<br>安心して過ごせるようサポートします。</p>
         </div>
 
         <div class="medicine">
-          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/medicine.png')); ?>" alt="薬の写真">
+          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/medicine.webp')); ?>" alt="薬の写真">
           <h3>服薬管理</h3>
           <p>お薬の飲み忘れや副作用の不安などを確認<br class="sp_only">し、無理なく続けられる方法を一緒に考え<br class="sp_only">ます。</p>
         </div>
 
         <div class="main_service">
-          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/communication.png')); ?>" alt="対話してる写真">
+          <img class="service_photo" src="<?php echo esc_url(get_theme_file_uri('img/service/communication.webp')); ?>" alt="対話してる写真">
           <h3>対話（メインの支援）</h3>
           <p>安心して気持ちを話せる時間を大切にしま<br class="sp_only">す。<br>あなたの想いに耳を傾け、必要なときに必<br class="sp_only">要なサポートを一緒に考えます。</p>
         </div>
@@ -74,7 +74,7 @@
   <section class="second_content">
     <div class="service_text_space">
       <div class="second_photo">
-        <img class="smile_tolk" src="<?php echo esc_url(get_theme_file_uri('img/service/communication2.png')); ?>" alt="対話の写真">
+        <img class="smile_tolk" src="<?php echo esc_url(get_theme_file_uri('img/service/communication2.webp')); ?>" alt="対話の写真">
         <div class="second_text">
           <h2>対話を、いちばん大切に。</h2>
           <span class="second_line"></span>
@@ -116,9 +116,9 @@
         <div class="point2">
           <h3>必要に応じてSETAと連携</h3>
           <div class="point2_img">
-            <img class="illustration1" src="<?php echo esc_url(get_theme_file_uri('img/service/image-photo.png')); ?>" alt="寄り添う写真">
+            <img class="illustration1" src="<?php echo esc_url(get_theme_file_uri('img/service/image-photo.webp')); ?>" alt="寄り添う写真">
             <img class="illustration2" src="<?php echo esc_url(get_theme_file_uri('img/service/information-sharing.png')); ?>" alt="情報交換">
-            <img class="illustration3" src="<?php echo esc_url(get_theme_file_uri('img/service/image-photo2.png')); ?>" alt="写真">
+            <img class="illustration3" src="<?php echo esc_url(get_theme_file_uri('img/service/image-photo2.webp')); ?>" alt="写真">
           </div>
           <p>グループホーム「SETA」と日常的に情報を共有し、<br>医療だけでなく、生活面も含めてサ<br class="sp_only">ポートします。</p>
         </div>
