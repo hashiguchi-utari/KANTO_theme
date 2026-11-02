@@ -9,7 +9,7 @@
     <!-- PC版でTOPボタンの役割を案内する吹き出し画像 -->
     <div class="site-footer__speech">
       <img
-        src="<?php echo esc_url(get_theme_file_uri('/img/footer/speech-bubble.png')); ?>"
+        src="<?php echo esc_url(get_theme_file_uri('/img/footer/speech-bubble.webp')); ?>"
         alt=""
         aria-hidden="true">
     </div>
@@ -17,12 +17,12 @@
     <!-- PC版とSP版で表示を切り替える人物画像 -->
     <img
       class="site-footer__character site-footer__character--pc"
-      src="<?php echo esc_url(get_theme_file_uri('/img/footer/cowgirl.png')); ?>"
+      src="<?php echo esc_url(get_theme_file_uri('/img/footer/cowgirl.webp')); ?>"
       alt=""
       aria-hidden="true">
     <img
       class="site-footer__character site-footer__character--sp"
-      src="<?php echo esc_url(get_theme_file_uri('/img/footer/running-nurse.png')); ?>"
+      src="<?php echo esc_url(get_theme_file_uri('/img/footer/running-nurse.webp')); ?>"
       alt=""
       aria-hidden="true">
 
@@ -33,7 +33,7 @@
         <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="訪問看護ステーションKANTO トップページへ">
           <img
             class="site-footer__logo site-footer__logo--kanto"
-            src="<?php echo esc_url(get_theme_file_uri('/img/footer/kanto-logo.png')); ?>"
+            src="<?php echo esc_url(get_theme_file_uri('/img/footer/kanto-logo.webp')); ?>"
             alt="訪問看護ステーション KANTO">
         </a>
         <address class="site-footer__address">
@@ -48,7 +48,7 @@
         <a href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer" aria-label="Seta Group Home公式サイトへ（新しいタブで開きます）">
           <img
             class="site-footer__logo site-footer__logo--seta"
-            src="<?php echo esc_url(get_theme_file_uri('/img/footer/seta-logo.png')); ?>"
+            src="<?php echo esc_url(get_theme_file_uri('/img/footer/seta-logo.webp')); ?>"
             alt="Seta Group Home">
         </a>
         <address class="site-footer__address">
@@ -61,7 +61,7 @@
         <a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ（新しいタブで開きます）">
           <img
             class="site-footer__logo site-footer__logo--utari"
-            src="<?php echo esc_url(get_theme_file_uri('/img/footer/utari-logo.png')); ?>"
+            src="<?php echo esc_url(get_theme_file_uri('/img/footer/utari-logo.webp')); ?>"
             alt="就労継続支援 UTARI">
         </a>
         <address class="site-footer__address">

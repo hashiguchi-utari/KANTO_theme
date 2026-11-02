@@ -11,7 +11,8 @@
 
 /* PC版のメインビジュアル */
 .group-hero {
-  background: #fff6ec url("../img/group/hero-background.jpg") center / cover no-repeat;
+  background: #fff6ec url("../img/group/hero-background.webp") center / cover
+    no-repeat;
 }
 /* PC版の背景画像を左から右、右から左へゆっくり往復させる */
 @media (min-width: 700px) {
