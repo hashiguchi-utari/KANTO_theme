@@ -230,18 +230,18 @@ p {
   box-shadow: -2.5rem 2.5rem 3rem rgba(200, 168, 168, 0.4);
 }
 
-#mainimg {
+.mainimg {
   flex: 0 0 45rem;
 }
 
-#mainimg img {
+.mainimg img {
   width: 100%;
   height: 100%;/*10/26画像追加分修正:沼倉～autoを50remにして画像サイズをfigmaに合わせています。*/
   object-fit: cover;
 }
 /* 10/26追加:沼倉　PC版だけに適用する設定 */
 @media (min-width: 768px) {
-  #mainimg img {
+  .mainimg img {
     border-radius: 15%;/*10/26画像追加分修正:沼倉～新規追加コード*/
     height: 50rem;       /* Figmaデザイン再現のための高さをPCのみに適用 */
   }
@@ -568,7 +568,7 @@ p {
     background: #fff !important;
   }
 
-  #mainimg {
+  .mainimg {
     position: relative;
     flex: 0 0 auto;
     width: 100%;
@@ -576,7 +576,7 @@ p {
     text-align: center;
   }
 
-  #mainimg img {
+  .mainimg img {
     max-width: 100%;
   }
 
