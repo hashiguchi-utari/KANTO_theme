@@ -4,7 +4,7 @@
 <main>
   <div class="front_container">
     <section class="front_mv">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/movie-image.png')); ?>" alt="TOP画像">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/movie-image.webp')); ?>" alt="TOP画像">
       <!-- （↑）TOP動画部分画像で仮置き、動画が来たら削除対象 -->
 
 
@@ -31,10 +31,10 @@
           </p>
         </div>
 
-        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k1.png')); ?>" alt="画像1" class="front_img1">
-        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k2.png')); ?>" alt="画像2" class="front_img2">
-        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k3.png')); ?>" alt="画像3" class="front_img3">
-        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k4.png')); ?>" alt="画像4" class="front_img4">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k1.webp')); ?>" alt="画像1" class="front_img1">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k2.webp')); ?>" alt="画像2" class="front_img2">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k3.webp')); ?>" alt="画像3" class="front_img3">
+        <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k4.webp')); ?>" alt="画像4" class="front_img4">
 
       </div>
     </section>
@@ -45,17 +45,17 @@
           一緒に育てる訪問看護</h1>
         <div class="front_navi">
           <div>
-            <a href="<?php echo esc_url(home_url('/process/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi1.png')); ?>" alt="利用までの流れ" class="front_circle">
+            <a href="<?php echo esc_url(home_url('/process/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi1.webp')); ?>" alt="利用までの流れ" class="front_circle">
               <p class="front_navi_p mplus-title">ご利用まで<br class="front_sp_only">の流れ</p>
             </a>
           </div>
           <div>
-            <a href="<?php echo esc_url(home_url('/service/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi2.png')); ?>" alt="利用までの流れ" class="front_circle">
+            <a href="<?php echo esc_url(home_url('/service/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi2.webp')); ?>" alt="利用までの流れ" class="front_circle">
               <p class="front_navi_p mplus-title">サービス<br class="front_sp_only">内容</p>
             </a>
           </div>
           <div>
-            <a href="<?php echo esc_url(home_url('/group/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi3.png')); ?>" alt="利用までの流れ" class="front_circle">
+            <a href="<?php echo esc_url(home_url('/group/')); ?>"><img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/navi3.webp')); ?>" alt="利用までの流れ" class="front_circle">
               <p class="front_navi_p mplus-title">グループ<br class="front_sp_only">紹介</p>
             </a>
           </div>
@@ -160,10 +160,10 @@
 
     </div>
     <div>
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k5.png')); ?>" alt="画像5" class="front_img5 front_pc_only">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k6.png')); ?>" alt="画像6" class="front_img6 front_pc_only">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k7.png')); ?>" alt="画像7" class="front_img7 front_pc_only">
-      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k8.png')); ?>" alt="画像8" class="front_img8 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k5.webp')); ?>" alt="画像5" class="front_img5 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k6.webp')); ?>" alt="画像6" class="front_img6 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k7.webp')); ?>" alt="画像7" class="front_img7 front_pc_only">
+      <img src="<?php echo esc_url(get_theme_file_uri('/img/front_page/k8.webp')); ?>" alt="画像8" class="front_img8 front_pc_only">
     </div>
 
   </section>
