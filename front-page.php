@@ -149,13 +149,13 @@
       <a href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer" aria-label="Seta Group Home公式サイトへ">
         <p class="front-seta">障がい者グループホーム🍀セタ</p>
       </a>
-      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      <?php echo do_shortcode('[instagram-feed feed=3]'); ?>
       <!-- インスタのfeed（変更部はここ）セタ -->
 
       <a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ">
         <p class="front-utari">就労継続支援A型B型事業所<br class="front_sp_only">UTARI-ウタリ-</p>
       </a>
-      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+      <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
       <!-- インスタのfeed（変更部はここ）ウタリ -->
 
     </div>
