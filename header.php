@@ -41,7 +41,15 @@
           <li class="nav-item"><a href="<?php echo home_url('/group/'); ?>">グループ紹介</a></li>
           <li class="nav-item"><a href="<?php echo home_url('/news/'); ?>">お知らせ</a></li>
           <li class="nav-item"><a href="<?php echo home_url('/company/'); ?>">会社概要</a></li>
-          <li class="nav-item header-inq"><a href="<?php echo home_url('/inquery/'); ?>">お問い合わせ</a></li>
+          <!-- お問い合わせページ完成までは、共通の準備中ポップアップを表示します。 -->
+          <li class="nav-item header-inq">
+            <a
+              class="js-contact-preparing"
+              href="#contact-preparing-modal"
+              role="button"
+              aria-haspopup="dialog"
+              aria-controls="contact-preparing-modal">お問い合わせ</a>
+          </li>
         </ul>
       </nav>
     </div>

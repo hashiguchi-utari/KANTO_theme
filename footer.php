@@ -1,9 +1,14 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <!-- TOPページとお問い合わせページへ移動するフッターナビゲーション -->
+    <!-- TOPページへの移動と、お問い合わせ準備中ポップアップを表示するフッターナビゲーション -->
     <nav class="site-footer__nav" aria-label="フッターナビゲーション">
       <a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
-      <a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/inquiry/')); ?>">お問い合わせ</a>
+      <a
+        class="site-footer__nav-link js-contact-preparing"
+        href="#contact-preparing-modal"
+        role="button"
+        aria-haspopup="dialog"
+        aria-controls="contact-preparing-modal">お問い合わせ</a>
     </nav>
 
     <!-- PC版でTOPボタンの役割を案内する吹き出し画像 -->
@@ -76,6 +81,22 @@
     </p>
   </div>
 </footer>
+
+<!-- header・footerのお問い合わせから共通で開く準備中ポップアップ -->
+<div id="contact-preparing-modal" class="contact-preparing-modal" hidden>
+  <div
+    class="contact-preparing-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-preparing-modal-title">
+    <p id="contact-preparing-modal-title" class="contact-preparing-modal__message">
+      ただいま準備中です。
+    </p>
+    <button type="button" class="contact-preparing-modal__close" data-contact-modal-close>
+      閉じる
+    </button>
+  </div>
+</div>
 
 <?php wp_footer(); ?>
 </body>
