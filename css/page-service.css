@@ -848,7 +848,21 @@
   .heart,
   .speak,
   .grouphome {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     transition: opacity 3s ease, transform 3s ease;
+=======
+    transition:
+      opacity 5.5s ease,
+      transform 5.5s ease;
+>>>>>>> remotes/origin/konishi
+=======
+    transition: opacity 3s ease, transform 3s ease;
+>>>>>>> remotes/origin/konishi
+=======
+    transition: opacity 3s ease, transform 3s ease;
+>>>>>>> c539a1ae276cf3d50a347c8334c5d16811506e1c
   }
 
   .service_message {

@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //ループ処理
   cards.forEach((card) => {
     //メイン画像を取得
-    const mainImg = card.querySelector('#mainimg img');
+    const mainImg = card.querySelector('.mainimg img');
+    //初期画像のURLを保存
+    const defaultSrc = mainImg ? mainImg.src : null;
     //サムネイル画像を取得
     const thumbnails = card.querySelectorAll('.thumbnails .thumb');
     //サムネイルを包んでいる親コンテナを取得
@@ -23,6 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     //オートスライド用のタイマーIDを保持する変数
     let autoSlideInterval = null;
+
+    //メイン画像をクリックしたら初期画像に戻す
+    if (mainImg) {
+      mainImg.addEventListener('click', () => {
+        if (defaultSrc) {
+          mainImg.src = defaultSrc;
+        }
+      });
+    }
+
 
     //指定されたインデックスのサムネイルをアクティブにし、必要に応じてスクロールする関数
     function updateThumbnailsSlider(index) {
@@ -134,6 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
 
 
 //スクロール検知のオプションを設定
