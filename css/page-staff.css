@@ -23,16 +23,96 @@ p {
   overflow: hidden;
 }
 
-.mainvisual img {
+/* 【新規追加沼倉:11/17】画像を切り抜く枠（ここで3等分とフェードインアニメーションを実行） */
+.staff_img_box {
   width: calc(100% / 3);
+  margin-bottom: 4rem;
+  overflow: hidden; /* ズームした画像が枠からはみ出て隣と重なるのを防ぐ */
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(5rem);
+  animation: fadeInRight 0.6s ease-out both;
+}
+
+/* 2枚目・3枚目を少し遅らせて「しゅっしゅっ」と順番に出す場合（任意） */
+.staff_img_box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.staff_img_box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* 枠の中の画像共通設定 */
+.staff_img_box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*.mainvisual img {　/*新規追加コードで不要のためコメントアウトしています。沼倉：11/17*/
+  /*width: calc(100% / 3);
   max-width: 100%;
   height: auto;
   margin-bottom: 4rem;
   z-index: 5;
-  position: relative;
-  opacity: 0;
-  transform: translateX(5rem);
-  animation: fadeInRight 0.6s ease-out both;
+  /*position: relative;*/
+  /*opacity: 0;*/
+  /*transform: translateX(5rem);
+  /*animation: fadeInRight 0.6s ease-out both;*/
+/*}*/
+
+
+/* ==========================================================================
+   【PC用】個別画像のズームアップ・位置調整
+   ※ scale（拡大率）と transform-origin（ズームする中心点：横% 縦%）を調整
+   ========================================================================== */
+.staff_zoom_pc_01 {
+  transform: scale(2.8);
+  transform-origin: 25% 30%;
+}
+
+.staff_zoom_pc_02 {
+  transform: scale(2.3);
+  transform-origin: 18% 38%;
+}
+
+.staff_zoom_pc_03 {
+  transform: scale(2.15);
+  transform-origin: 6% 41%;
+}
+
+/* ==========================================================================
+   SP（スマホ）表示用の切り替え（画面幅 768px ➔ 48rem 以下）
+   ========================================================================== */
+@media screen and (max-width: 48rem) {
+  .staff_mainimg_pc {
+    display: none;
+  }
+
+  .staff_mainimg_sp {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 31.25rem; /* 500px相当（デザインに合わせて調整する） */
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  /* 【SP用】個別画像のズームアップ・位置調整 */
+  .staff_zoom_sp_01 {
+    transform: scale(3.0);
+    transform-origin: 26% 30%;
+  }
+
+  .staff_zoom_sp_02 {
+    transform: scale(2.5);
+    transform-origin: 23% 36%;
+  }
+
+  .staff_zoom_sp_03 {
+    transform: scale(2.2);
+    transform-origin: 10% 41%;
+  }
 }
 
 .mainvisual img:nth-child(1) {

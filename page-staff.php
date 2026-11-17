@@ -3,14 +3,26 @@
   <div class="staff-main">
     <div class="mainvisual">
       <div class="mainimg-pc">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.webp')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.webp')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.webp')); ?>" alt="">
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="トップスタッフ画像1" class="staff_zoom_pc_01">
+        </div>
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="トップスタップ画像2" class="staff_zoom_pc_02" >
+        </div>
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member03.webp')); ?>" alt="トップスタッフ画像3" class="staff_zoom_pc_03">
+        </div>
       </div>
       <div class="mainimg-sp">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp1.webp')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp2.webp')); ?>" alt="">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member_sp3.webp')); ?>" alt="">
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="spトップスタッフ画像1" class="staff_zoom_sp_01">
+        </div>
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="spトップスタッフ画像2" class="staff_zoom_sp_02">
+        </div>
+        <div class="staff_img_box">
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff//staff_member03.webp')); ?>" alt="spトップスタッフ画像3" class="staff_zoom_sp_03">
+        </div>
       </div>
     </div>
 
@@ -139,12 +151,12 @@
 
     <div class="comment-sub">
       <p>しっかり者だけどちょっと<br>天然さん♪</p>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.webp')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff6.webp')); ?>" alt="" class="zoom_card03_img">
     </div>
 
     <div class="card" id="staff3">
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member3.webp')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member03.webp')); ?>" alt="メイン画像" />
         <div class="sp-stop stop3">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.webp')); ?>" alt="">
         </div>
