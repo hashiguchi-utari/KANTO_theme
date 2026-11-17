@@ -53,7 +53,7 @@
 
     <div class="card" id="staff1">
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member1.webp')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard1.webp')); ?>" alt="メイン画像" class="staff_card_photo_img staff_card_zoom_03"/>
         <div class="sp-stop">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border1.webp')); ?>" alt="">
         </div>
@@ -122,7 +122,7 @@
 
       </div>
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member2.webp')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard2.webp')); ?>" alt="メイン画像" class="staff_card_photo_img staff_card_zoom_03"/>
         <div class="sp-stop stop2">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border2.webp')); ?>" alt="">
         </div>
@@ -156,7 +156,7 @@
 
     <div class="card" id="staff3">
       <div class="mainimg">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member03.webp')); ?>" alt="メイン画像" />
+        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard3.webp')); ?>" alt="メイン画像" class="staff_card_photo_img staff_card_zoom_03"/>
         <div class="sp-stop stop3">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.webp')); ?>" alt="">
         </div>

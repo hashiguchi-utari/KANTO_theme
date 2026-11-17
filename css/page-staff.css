@@ -23,7 +23,29 @@ p {
   overflow: hidden;
 }
 
-/* 【新規追加沼倉:11/17】画像を切り抜く枠（ここで3等分とフェードインアニメーションを実行） */
+/* ==============================================
+   追加沼倉：11/17/トップ画像（PC / SP共通）：白いぼかし
+   ======================================== */
+
+/* 疑似要素を重ねるための基準（既存の .staff_img_box に追記でもOK） */
+.staff_img_box {
+  position: relative;
+}
+
+/* 画像の上に半透明の白い膜をふわっと被せる（z-index不使用） */
+.staff_img_box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 白（255, 255, 255）の透明度25%（0.25）で柔らかい印象に */
+  background-color: rgba(255, 255, 255, 0.25);
+  pointer-events: none; /* クリックや画像選択の邪魔をしないようにする */
+}
+
+/* 【新規追加/沼倉:11/17】画像を切り抜く枠（ここで3等分とフェードインアニメーションを実行） */
 .staff_img_box {
   width: calc(100% / 3);
   margin-bottom: 4rem;
@@ -101,7 +123,7 @@ p {
   /* 【SP用】個別画像のズームアップ・位置調整 */
   .staff_zoom_sp_01 {
     transform: scale(3.0);
-    transform-origin: 26% 30%;
+    transform-origin: 26% 28%;
   }
 
   .staff_zoom_sp_02 {
@@ -312,6 +334,9 @@ p {
 
 .mainimg {
   flex: 0 0 45rem;
+  overflow: hidden; /*ズームした画像がはみ出さないように切り抜く 新規追加：沼倉*/
+  border-radius: 10%; /* スマホ・PC共通 */
+
 }
 
 .mainimg img {
@@ -319,6 +344,26 @@ p {
   height: 100%;/*10/26画像追加分修正:沼倉～autoを50remにして画像サイズをfigmaに合わせています。*/
   object-fit: cover;
 }
+
+/* ==========================================================================
+   スタッフ紹介カード：個別ズーム・位置微調整
+   ========================================================================== */
+.mainimg .staff_card_zoom_01 {
+  transform: scale(1.15);
+  transform-origin: 50% 30%;
+  border-radius: 10%;
+}
+
+.mainimg .staff_card_zoom_02 {
+  transform: scale(1.1);
+  transform-origin: 50% 40%;
+}
+
+.mainimg .staff_card_zoom_03 {
+  transform: scale(1.2);
+  transform-origin: 50% 80%;
+}
+
 /* 10/26追加:沼倉　PC版だけに適用する設定 */
 @media (min-width: 768px) {
   .mainimg img {
@@ -530,6 +575,21 @@ p {
     padding: 0;
   }
 
+   /* 1. 外枠の縦サイズ（height）指定 */
+  .mainimg-sp .staff_img_box {
+    width: calc(100% / 3);
+    height: 30rem; /*ここで縦サイズを指定する */
+    overflow: hidden;
+  }
+
+  /* 2. 中の画像を枠の高さいっぱいに合わせる */
+  .mainimg-sp .staff_img_box img {
+    width: 100%;
+    height: 100%;/* 親枠のheightに合わせる */
+    object-fit: cover;/* 比率を保ったまま枠いっぱいトリミング */
+    display: block;
+  }
+
   .sp-comment {
     position: relative;
     display: flex;
@@ -539,6 +599,7 @@ p {
     width: 100%;
     margin: 8rem 0 0 0;
   }
+
 
   .sp-comment p {
     font-size: 1.6rem;
@@ -658,7 +719,10 @@ p {
 
   .mainimg img {
     max-width: 100%;
+    border-radius: 8%;
   }
+
+
 
   .sp-stop {
     display: block;
