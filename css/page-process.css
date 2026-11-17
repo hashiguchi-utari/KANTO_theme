@@ -1,15 +1,15 @@
- @charset "UTF-8";
+@charset "UTF-8";
 
 /* ==========================================
    共通フォント・ベーススタイル
    ========================================== */
 .process_page_layout {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   color: #000000;
   line-height: 1.9; /* 文字を大きくしたので行間を広げ視認性確保 */
 
   /* 疑似要素（背景の膜）を画面全体に固定して敷くための基準点 */
-  position: relative; 
+  position: relative;
   width: 100%;
 }
 
@@ -19,12 +19,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
+
   /* 【背景画像の最適化】 */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  
+
   /* 【ほんのりぼかしエフェクト】 */
   filter: blur(0.5rem);
   -webkit-filter: blur(0.5rem);
@@ -32,12 +32,12 @@
 }
 
 .process_page_layout {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   color: #000000;
   line-height: 1.9;
-  
+
   /* 疑似要素（背景の膜）を画面全体に固定して敷くための基準点 */
-  position: relative; 
+  position: relative;
   width: 100%;
   overflow-x: hidden;
 }
@@ -48,7 +48,9 @@
   margin: 0 auto;
   padding: 15rem 10rem 3rem 10rem; /* 上下左右の余白 */
   box-sizing: border-box;
-  transform: translateZ(0rem);/*下部の白枠カード消えるバグ修正用。表示の序列明確化*/
+  transform: translateZ(
+    0rem
+  ); /*下部の白枠カード消えるバグ修正用。表示の序列明確化*/
 }
 
 footer,
@@ -67,14 +69,13 @@ footer,
   font-size: 6.4rem;
   font-weight: 600;
   color: #3f3b3a;
-  text-align: left;/*タイトル左側配置*/
+  text-align: left; /*タイトル左側配置*/
   margin-left: 2rem;
-  margin-bottom: 0;/*8rem;/*～画像追加のため0に変更かけている*/
+  margin-bottom: 0; /*8rem;/*～画像追加のため0に変更かけている*/
   position: relative;
   padding-left: 1rem;
-  padding-bottom: 2rem;/* 文字とラインの間の余白 */
+  padding-bottom: 2rem; /* 文字とラインの間の余白 */
 }
-
 
 /* ==========================================
    大見出し：ジャンピングドット＆カラー反転エフェクト
@@ -82,7 +83,7 @@ footer,
 .process_hero_section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-bottom: 8rem;
   width: 100%;
 }
@@ -97,7 +98,7 @@ footer,
 /* SVGコンテナ */
 .process_title_svg_container {
   width: 100%;
-  height: 120%;/*文字大型化のためにこの数値設定*/
+  height: 120%; /*文字大型化のためにこの数値設定*/
   position: relative;
   left: 0;
   display: block;
@@ -110,7 +111,7 @@ footer,
 /* 【上部バウンド】テキストの上を2回トン、トンと跳ねて右から左へ（4秒周期） */
 .process_ball_top,
 .process_mask_circle_top {
-  animation: process_ball_top_move 10.0s both infinite;
+  animation: process_ball_top_move 10s both infinite;
   offset-path: path("M 600,65 C 510,15 440,15 370,65 C 300,15 230,-20 140,65");
   offset-distance: 0%;
 }
@@ -118,8 +119,10 @@ footer,
 /* 【下部バウンド】テキストの下を2回トン、トンと跳ねて左から右へ（4秒周期） */
 .process_ball_bottom,
 .process_mask_circle_bottom {
-  animation: process_ball_bottom_move 10.0s both infinite;
-  offset-path: path("M 140,150 C 230,190 300,190 370,150 C 440,190 510,190 600,150");
+  animation: process_ball_bottom_move 10s both infinite;
+  offset-path: path(
+    "M 140,150 C 230,190 300,190 370,150 C 440,190 510,190 600,150"
+  );
   offset-distance: 0%;
 }
 
@@ -129,8 +132,12 @@ footer,
     offset-distance: 0%;
     transform: scale(0);
   }
-  5% { transform: scale(1); }
-  42.5% { transform: scale(1); }
+  5% {
+    transform: scale(1);
+  }
+  42.5% {
+    transform: scale(1);
+  }
   50% {
     offset-distance: 100%;
     transform: scale(0);
@@ -151,14 +158,17 @@ footer,
     offset-distance: 0%;
     transform: scale(0);
   }
-  55% { transform: scale(1); }
-  95% { transform: scale(1); }
+  55% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1);
+  }
   100% {
     offset-distance: 100%;
     transform: scale(0);
   }
 }
-
 
 /* 大見出しセクション：見出しとシマエナガを両端に配置 */
 .process_hero_section {
@@ -177,7 +187,7 @@ footer,
   height: 20rem;
   margin-top: -3.5rem;
   margin-right: 1.5rem; /* 右端にくっつきすぎないための余白 */
-  flex-shrink: 0;  /* 画面幅で絶対に潰れないように保護 */
+  flex-shrink: 0; /* 画面幅で絶対に潰れないように保護 */
   display: block;
 }
 
@@ -203,9 +213,9 @@ footer,
 .process_step_item {
   display: flex;
   align-items: center;
-  justify-content: space-between;/* 左右の要素を画面の端と端へ広げる */
+  justify-content: space-between; /* 左右の要素を画面の端と端へ広げる */
   width: 100%;
-  position: relative;/* 斜め線の基準点 */
+  position: relative; /* 斜め線の基準点 */
 }
 
 /* 左右反転レイアウト */
@@ -220,15 +230,15 @@ footer,
   width: 41%;
   display: flex;
   justify-content: center;
-  position: relative; 
+  position: relative;
 }
 
 .process_circle_node {
   width: 35rem;
   height: 35rem;
-  border: 0.7rem solid #333333;/* 線少し太くして調整 */
+  border: 0.7rem solid #333333; /* 線少し太くして調整 */
   border-radius: 50%;
-  background-color: #fff9ee;/* 目のちかちか防止：オフホワイトに統一*/
+  background-color: #fff9ee; /* 目のちかちか防止：オフホワイトに統一*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,7 +252,7 @@ footer,
 .process_node_text {
   font-size: 3.2rem;
   font-weight: 600;
-  letter-spacing: 0.1em;/*行間を空けて読みやすく*/
+  letter-spacing: 0.1em; /*行間を空けて読みやすく*/
   line-height: 1.2;
   color: #222222;
 }
@@ -267,10 +277,10 @@ footer,
    サークル隣のテキスト領域
    ------------------------------------------ */
 .process_content_box {
-  width: 56%;/*現在のデザインに寄せ、やや左に寄せています*/
+  width: 56%; /*現在のデザインに寄せ、やや左に寄せています*/
 }
 #process_content_box_left {
-  margin-left: 0;/*サークル左隣のテキスト2つには個別で少し位置をずらす指示を出しています(5rem)*/
+  margin-left: 0; /*サークル左隣のテキスト2つには個別で少し位置をずらす指示を出しています(5rem)*/
   /*上記追記：リセットCSSレスポンシブ変更でここだけ数値分ずれたので0にしました。０９/０１*/
 }
 
@@ -279,11 +289,11 @@ footer,
   font-size: 3.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #333333;/*黒色からブラックグレーにする*/
+  color: #333333; /*黒色からブラックグレーにする*/
   line-height: 1.4;
   /* 切り取り線の設定 */
   padding-bottom: 2.2rem; /* 文字と線の間の余白 */
-  margin-bottom: 2.2rem;   /* 線と下の本文との間の余白 */
+  margin-bottom: 2.2rem; /* 線と下の本文との間の余白 */
   border-bottom: 0.25rem dashed #777777; /* 3pxのフランクな破線 */
 }
 
@@ -300,32 +310,32 @@ footer,
 .process_step_item.line_down_right::before {
   content: "";
   position: absolute;
-  top: 90%;/*線の始まりの位置調整はここ*/
+  top: 90%; /*線の始まりの位置調整はここ*/
   left: 27%; /* 巨大サークルの中心に合わせる */
-  width: 53%;/*線の長さはここで調整*/
+  width: 53%; /*線の長さはここで調整*/
   height: 0.7rem; /* 線の太さはここで調整*/
   background-color: #333333;
   transform: rotate(35deg); /* ななめ線の傾斜具合はここで調整*/
   transform-origin: left center;
-  
+
   clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
-  transition: clip-path 4.0s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
+  transition: clip-path 4s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
 }
 
 /* 次のステップ（左下）へ伸びる斜め線  */
 .process_step_item.line_down_left::before {
   content: "";
   position: absolute;
-  top: 89%;/*線の始まり位置の上下位置調整72*/
-  right: 28%;/*線の始まりの位置左右調整21*/
-  width: 53%;/*線の長さはここで調整61*/
+  top: 89%; /*線の始まり位置の上下位置調整72*/
+  right: 28%; /*線の始まりの位置左右調整21*/
+  width: 53%; /*線の長さはここで調整61*/
   height: 0.7rem; /*ななめ線の太さ*/
   background-color: #333333;
-  transform: rotate(-36deg);/*ななめ線の角度はここで調整*/
+  transform: rotate(-36deg); /*ななめ線の角度はここで調整*/
   transform-origin: right center;
-  
+
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  transition: clip-path 4.0s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
+  transition: clip-path 4s ease-out /*cubic-bezier(0.25, 1, 0.5, 1)*/;
 }
 
 /* ==========================================
@@ -333,8 +343,10 @@ footer,
    ========================================== */
 .fade_up_trigger {
   opacity: 0;
-  transform: translateY(4.5rem); /* 下からフェードアップ(修正前4.5） */
-  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(4.5rem);
+  transition:
+    opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .fade_up_trigger.is_active {
@@ -351,7 +363,6 @@ footer,
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-
 /* 2線むき出し防止の連動設定*/
 /* 1つ前のステップがアクティブになり線が伸び始めたら次のステップ（隣接する要素）も自動的に出現するように調整 */
 /* 線が届いたときにはすでにその先のサークルが表示されるように*/
@@ -367,7 +378,9 @@ footer,
 .fade_up_trigger_circle {
   opacity: 0;
   transform: translateY(3.125rem);
-  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transition:
+    opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade_up_trigger_circle.is_active {
   opacity: 1;
@@ -377,8 +390,12 @@ footer,
 /* 2. テキスト用の動作タイミング（完全に画面に入った時に優しく出現） */
 .fade_up_trigger_text {
   opacity: 0;
-  transform: translateY(4rem); /* テキストは少し浅めゆっくりすぎない程度にふわっと浮かせる */
-  transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(
+    4rem
+  ); /* テキストは少し浅めゆっくりすぎない程度にふわっと浮かせる */
+  transition:
+    opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade_up_trigger_text.is_active {
   opacity: 1;
@@ -389,7 +406,9 @@ footer,
 .fade_up_trigger {
   opacity: 0;
   transform: translateY(3.125rem);
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade_up_trigger.is_active {
   opacity: 1;
@@ -400,12 +419,16 @@ footer,
    斜めのつなぎ線の発動条件（サークルが画面に出現したら連動して伸びる）
    ------------------------------------------ */
 /* 右下のサークル(wrapper)が active になったら、親のアイテムにある before(線) を伸ばす */
-.process_step_item:has(.fade_up_trigger_circle.is_active).line_down_right::before {
+.process_step_item:has(
+    .fade_up_trigger_circle.is_active
+  ).line_down_right::before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* 左下のサークル(wrapper)が active になったら、親のアイテムにある before(線) を伸ばす */
-.process_step_item:has(.fade_up_trigger_circle.is_active).line_down_left::before {
+.process_step_item:has(
+    .fade_up_trigger_circle.is_active
+  ).line_down_left::before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -416,12 +439,12 @@ footer,
   width: 100%;
   max-width: 80rem; /* 白枠の横サイズ */
   margin: 12.5rem auto; /* 上下の余白 */
-  opacity: 1 !important; 
+  opacity: 1 !important;
   transform: none !important;
 }
 
 .process_info_card {
-  margin-top: -21rem;/*カードの位置を上げ下げするための数値*/
+  margin-top: -21rem; /*カードの位置を上げ下げするための数値*/
   background-color: #fffbf5;
   border-radius: 5rem;
   padding: 2.25rem 5rem 5rem 5rem;
@@ -444,19 +467,20 @@ footer,
    ========================================== */
 .process_text_marker {
   /* インライン要素としてテキストにぴったり合わせる */
-  display: inline-block; 
-  
+  display: inline-block;
+
   /* グラデーションイエローをそのまま移植 */
   background-image: linear-gradient(
-    hsl(43 100% 50% / 0.55), hsl(43 100% 50% / 0.55)
+    hsl(43 100% 50% / 0.55),
+    hsl(43 100% 50% / 0.55)
   );
   background-repeat: no-repeat;
   background-position: 0 78%; /* マーカーの縦の位置調整 */
-  background-size: 0% 42%;    /* マーカーの縦の太さ（初期状態は横幅0%） */
-  
+  background-size: 0% 42%; /* マーカーの縦の太さ（初期状態は横幅0%） */
+
   /* ループで引き続けるアニメーション設定 */
-  animation: process_marker_animation 7.0s ease-in-out infinite;/*forwards↼停止*/
-   /* 【時間差アプローチ】 */
+  animation: process_marker_animation 7s ease-in-out infinite; /*forwards↼停止*/
+  /* 【時間差アプローチ】 */
   animation-delay: 0.6s;
 }
 
@@ -465,20 +489,11 @@ footer,
   0% {
     background-size: 0% 42%;
   }
-  55%, 100% { 
-    background-size: 100% 42%; 
+  55%,
+  100% {
+    background-size: 100% 42%;
   }
 }
-
-/* マーカーが左から右へ1回だけスーッと伸びる新しいキーフレーム定義
-@keyframes process_marker_animation {
-  0% {
-    background-size: 0% 42%;
-  }
-  100% { 
-    background-size: 100% 42%; /* 100%引ききった状態でピタッと固定終了 */
-  /*}
-}*/
 
 /* リード文 */
 .process_info_lead {
@@ -493,11 +508,11 @@ footer,
 /* 箇条書きリスト */
 .process_info_list {
   list-style: none;
-  padding: 3rem 3rem;/*枠線内の余白*/
+  padding: 3rem 3rem; /*枠線内の余白*/
   margin: 0 auto 4rem auto;
   max-width: 56.25rem; /* リスト全体の幅 */
   border: 0.1875rem dashed #777777; /* タイトル下線と合わせた破線（切り取り線） */
-  border-radius: 3rem;/* 角を丸く */
+  border-radius: 3rem; /* 角を丸く */
   box-sizing: border-box;
 }
 
@@ -524,14 +539,14 @@ footer,
 }
 
 /* 注意書き・ノート */
-.process_info_note { 
+.process_info_note {
   font-size: 1.6rem;
   display: flex;
   /*text-align: center;*/
   color: #222222;
-  align-items: center;      /* アイコンとテキストの縦の中心を揃える */
-  justify-content: center;  /* PC版は中央に寄せる */
-  gap: 1.25rem;             /* アイコンとテキストの間の余白 */
+  align-items: center; /* アイコンとテキストの縦の中心を揃える */
+  justify-content: center; /* PC版は中央に寄せる */
+  gap: 1.25rem; /* アイコンとテキストの間の余白 */
   margin-top: 1rem;
   line-height: 1.6;
 }
@@ -539,7 +554,7 @@ footer,
 .process_note_hint_icon {
   width: 4rem;
   height: 4rem;
-  flex-shrink: 0;  /* 画面が縮んでもアイコンが潰れないため */
+  flex-shrink: 0; /* 画面が縮んでもアイコンが潰れないため */
   display: block;
 }
 
@@ -556,7 +571,7 @@ footer,
    ========================================== */
 .process_visual_section {
   width: 100%;
-  max-width: 68rem;/*下部シマエナガの位置をここでずらしてます*/
+  max-width: 68rem; /*下部シマエナガの位置をここでずらしてます*/
   margin: 0 auto;
   display: flex;
   justify-content: flex-start; /* 左側に寄せる */
@@ -578,7 +593,7 @@ footer,
   height: 100%;
   object-fit: contain;
   display: block;
-  opacity: 1 !important; 
+  opacity: 1 !important;
   transform: none !important;
 }
 
@@ -606,9 +621,10 @@ footer,
   /* ==========================================
      【SP版限定】背景のズーム具合変更
      ========================================== */
-  .process_bg_blur_layer {/*背景画像のズーム度合いを変えてPC版と同じ比率に調整*/
-   transform: scale(2.10) translateZ(-0.1rem) !important;
-   filter: blur(0.1rem) !important;
+  .process_bg_blur_layer {
+    /*背景画像のズーム度合いを変えてPC版と同じ比率に調整*/
+    transform: scale(2.1) translateZ(-0.1rem) !important;
+    filter: blur(0.1rem) !important;
   }
 
   /* ------------------------------------------
@@ -617,11 +633,11 @@ footer,
   .process_hero_section {
     display: flex;
     flex-direction: column;
-    align-items: center;/* 見出しをセンター */
+    align-items: center; /* 見出しをセンター */
     margin-bottom: 10rem;
     width: 100%;
-    position: relative;/* シマエナガを右端に配置するための基準点 */
-    opacity: 1;  
+    position: relative; /* シマエナガを右端に配置するための基準点 */
+    opacity: 1;
     transform: none;
   }
 
@@ -631,7 +647,7 @@ footer,
 
   /* ★【SP版のみ】シンプル大見出し★ */
   .process_sp_only_title {
-    display: block;/* スマホ版でのみ表示 */
+    display: block; /* スマホ版でのみ表示 */
     font-size: 4rem;
     font-weight: 700;
     text-align: center;
@@ -646,7 +662,7 @@ footer,
     position: relative;
   }
 
-    /* ------------------------------------------
+  /* ------------------------------------------
      SP専用：大見出しの下のライン(現在イラストライン配置のためコメントアウト中)
      ------------------------------------------ */
   /*.process_sp_only_title::after {
@@ -655,7 +671,7 @@ footer,
     bottom: -1rem;
     left: 50%;
     transform: translateX(-50%); /* 中央寄せ */
-    /*width: 30rem;
+  /*width: 30rem;
     height: 0.2rem;
     background-color: #4f4f4f; 
     border-radius: 0.1rem;
@@ -676,7 +692,7 @@ footer,
   /* 透過画像自体の指示（歪みを防ぎ、さりげないサイズ感に調整） */
   .process_leaf_img {
     width: 33rem; /* ラインとして主張しすぎない*/
-    height: auto;   /* 縦横比を完全にキープして綺麗に表示 */
+    height: auto; /* 縦横比を完全にキープして綺麗に表示 */
     display: block;
   }
 
@@ -685,7 +701,7 @@ footer,
     display: block;
     position: absolute;
     right: -4rem;
-    top: -1rem; 
+    top: -1rem;
     width: 10rem;
     height: 7rem;
     margin-right: 0;
@@ -722,27 +738,27 @@ footer,
     display: flex;
     flex-direction: column;
     align-items: center; /* 中央に配置 */
-    text-align: center;  /* 中央寄せ */
+    text-align: center; /* 中央寄せ */
     /*width: 100%;*/
-    opacity: 1 !important;  
+    opacity: 1 !important;
     transform: none !important;
     padding-bottom: 5rem; /* 区切り線までの余白（上のテキストの下） */
-    margin-top: 5.0rem;    /* 区切り線からの余白（下のアイコンの上） */
-    position: relative;   /* 区切り線を配置する基準点 */
+    margin-top: 5rem; /* 区切り線からの余白（下のアイコンの上） */
+    position: relative; /* 区切り線を配置する基準点 */
 
     /* ==========================================
      すりガラス風ポップカード
     ========================================== */
     background: rgba(255, 255, 255, 0.45) !important;
-    backdrop-filter: none !important;/*blur(1.25rem);*//*ぼかし*/
-    -webkit-backdrop-filter: none !important;/*blur(1.25rem);*/
+    backdrop-filter: none !important; /*blur(1.25rem);*/ /*ぼかし*/
+    -webkit-backdrop-filter: none !important; /*blur(1.25rem);*/
 
     border: 0.1rem solid rgba(255, 255, 255, 0.647) !important;
-    border-radius: 3.0rem;
-    padding: 2.0rem;
-    color: #33333360; 
-    box-shadow: 0.9rem 0.5rem 0.2rem 0.1rem rgba(92, 61, 46, 0.166); 
-    width: calc(100% - 1.0rem);
+    border-radius: 3rem;
+    padding: 2rem;
+    color: #33333360;
+    box-shadow: 0.9rem 0.5rem 0.2rem 0.1rem rgba(92, 61, 46, 0.166);
+    width: calc(100% - 1rem);
     box-sizing: border-box;
   }
 
@@ -759,10 +775,10 @@ footer,
     top: 100%; /* カードの最下部を基準点にする */
     left: 50%;
     transform: translateX(-50%);
-    
+
     /* 正円を3つ綺麗に収めるための縦長枠のサイズ固定 */
-    width: 0.75rem;  /* 丸の横幅  */
-    height: 3.5rem;  /* 3つの丸が並ぶ全体の縦幅  */
+    width: 0.75rem; /* 丸の横幅  */
+    height: 3.5rem; /* 3つの丸が並ぶ全体の縦幅  */
     margin-top: 3.5rem; /* カードの底からの適切な距離 */
 
     /* 正円ドットの生成 */
@@ -770,18 +786,18 @@ footer,
     background-image: radial-gradient(#ff6f00f1 35%, transparent 45%);
     background-size: 0.9rem 1.1rem; /* 丸1個あたりの範囲を固定し歪みを防止*/
     background-repeat: repeat-y; /* 縦方向に3個並ぶようにリピート */
-    
+
     box-sizing: border-box;
     opacity: 0; /* 初期状態は消しておく */
-    
+
     /* 2.8秒（ゆっくり）周期で無限ループアニメーションを実行 */
     animation: process_dots_slow_loop 2.8s ease-in-out infinite;
   }
-  
-    /* ------------------------------------------
+
+  /* ------------------------------------------
      SP専用 矢印の無限ループアニメーション定義
      ------------------------------------------ */
-     @keyframes process_dots_slow_loop {
+  @keyframes process_dots_slow_loop {
     0% {
       /* 最初は何も見えない状態（高さを0にして丸を隠す） */
       clip-path: inset(0 0 100% 0);
@@ -798,12 +814,14 @@ footer,
       /* ゆっくり【丸、丸】2個目までが現れる */
       clip-path: inset(0 0 33% 0);
     }
-    65%, 80% {
+    65%,
+    80% {
       /* ゆっくり【丸、丸、丸】3個すべてが綺麗に並びきる */
       clip-path: inset(0 0 0 0);
       opacity: 1; /* その場でしっかり目視させるホールド時間 */
     }
-    95%, 100% {
+    95%,
+    100% {
       /* 全部並んだらそのままふわぁと消える */
       clip-path: inset(0 0 0 0);
       opacity: 0;
@@ -819,7 +837,7 @@ footer,
   .process_circle_wrapper {
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     margin-bottom: 3.5rem;
   }
 
@@ -859,9 +877,9 @@ footer,
     opacity: 1 !important;
 
     /* タイトルの下の切り取り線 */
-    padding-bottom: 3rem; 
-    margin-bottom: 3rem;     
-    border-bottom: 0.125rem dashed #777777;/*切り取り線の細さ大きさ*/
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 0.125rem dashed #777777; /*切り取り線の細さ大きさ*/
   }
 
   /* 説明テキスト */
@@ -869,17 +887,19 @@ footer,
     font-size: 1.6rem;
     font-weight: 400;
     color: #333333;
-    text-align: left; 
-    opacity: 1; 
+    text-align: left;
+    opacity: 1;
   }
 
-    /* スマホを開いた瞬間、一番上のSTEP 1だけはスクロールを待たずに即時フェードアップさせる */
+  /* スマホを開いた瞬間、一番上のSTEP 1だけはスクロールを待たずに即時フェードアップさせる */
   .process_flow_section .process_step_item:first-child .process_content_title,
   .process_flow_section .process_step_item:first-child .process_content_text {
     opacity: 1 !important;
     transform: translateY(0) !important;
     /* 画面が開いてから0.3秒後に、0.8秒かけて「スーッ」と最も滑らかに浮き上がらせる設定 */
-    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    transition:
+      opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+      transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
     transition-delay: 0.3s !important;
   }
 
@@ -901,25 +921,25 @@ footer,
   .process_info_section {
     margin: 6rem auto;
     width: 100%;
-    opacity: 1 !important; 
+    opacity: 1 !important;
     transform: none !important;
   }
 
   /* スマホ版【破線白枠カード】 */
   .process_info_card {
     margin-top: -12rem;
-    background-color: #fffbf5; 
+    background-color: #fffbf5;
     border-radius: 5.5rem;
     padding: 2.5rem 1.5rem;
-    border: 0.2rem dashed #777777;/*枠線を破線に*/
-    box-shadow: none; 
+    border: 0.2rem dashed #777777; /*枠線を破線に*/
+    box-shadow: none;
     box-sizing: border-box;
   }
 
   .process_info_title {
     font-size: 2.4rem;
     color: #333333;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 1.5rem;
   }
 
@@ -949,7 +969,7 @@ footer,
     position: relative;
 
     /*ドットの調整用:ドットの大きさに合わせて文字の左側の余白ここで調整*/
-    padding-left: 1.25rem; 
+    padding-left: 1.25rem;
     color: #333333;
   }
 
@@ -963,7 +983,7 @@ footer,
     height: 1rem;
 
     /* 3. ドットの色調整 */
-    background-color: #333333; 
+    background-color: #333333;
     /* ドットを完全な丸にする指示（四角にしたい場合は 0 ） */
     border-radius: 50%;
   }
@@ -990,9 +1010,9 @@ footer,
      ------------------------------------------ */
   .process_visual_section {
     padding-left: 0;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
-    opacity: 1 !important; 
+    opacity: 1 !important;
     transform: none !important;
     margin-top: 5rem; /* カードとの間に適度な余白追加 */
   }
@@ -1003,7 +1023,8 @@ footer,
     aspect-ratio: 380 / 400;
     flex-shrink: 0;
   }
-  #sp_only_shimaenaga_posi {/*SP版のシマエナガ画像の位置微調整用*/
+  #sp_only_shimaenaga_posi {
+    /*SP版のシマエナガ画像の位置微調整用*/
     position: relative;
     right: 3rem;
   }
@@ -1013,6 +1034,11 @@ footer,
    SP専用 アニメーションキーフレーム定義（ふわふわ用）
    ========================================== */
 @keyframes process_float_animation {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1.2rem); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.2rem);
+  }
 }

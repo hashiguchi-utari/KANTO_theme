@@ -1,23 +1,20 @@
-// スタッフページ専用の処理を記述します。
-
-
 //HTMLを読み込み完了後に処理を実行する
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   //カード要素の取得
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll(".card");
   //画面幅が699px以下かどうか判定する
   const isSP = () => window.innerWidth <= 699;
 
   //ループ処理
   cards.forEach((card) => {
     //メイン画像を取得
-    const mainImg = card.querySelector('.mainimg img');
+    const mainImg = card.querySelector(".mainimg img");
     //初期画像のURLを保存
     const defaultSrc = mainImg ? mainImg.src : null;
     //サムネイル画像を取得
-    const thumbnails = card.querySelectorAll('.thumbnails .thumb');
+    const thumbnails = card.querySelectorAll(".thumbnails .thumb");
     //サムネイルを包んでいる親コンテナを取得
-    const thumbnailsContainer = card.querySelector('.thumbnails');
+    const thumbnailsContainer = card.querySelector(".thumbnails");
 
     //もしサムネイルが１つも存在していなかったらこのカードの処理をスキップ
     if (thumbnails.length === 0) return;
@@ -28,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //メイン画像をクリックしたら初期画像に戻す
     if (mainImg) {
-      mainImg.addEventListener('click', () => {
+      mainImg.addEventListener("click", () => {
         if (defaultSrc) {
           mainImg.src = defaultSrc;
         }
       });
     }
-
 
     //指定されたインデックスのサムネイルをアクティブにし、必要に応じてスクロールする関数
     function updateThumbnailsSlider(index) {
@@ -45,9 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
       //すべてのサムネイルに対してループ処理
       thumbnails.forEach((thumb, i) => {
         //インデックスが一致するものだけに'active'クラスを付与し、それ以外からは外す
-        thumb.classList.toggle('active', i === currentIndex);
+        thumb.classList.toggle("active", i === currentIndex);
       });
-
 
       //スマホ表示かつ対象のサムネイルが存在する場合のみ実行
       if (isSP() && targetThumb) {
@@ -56,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
           //コンテナ左端からの対象のサムネイルの位置を計算
           left: targetThumb.offsetLeft - thumbnailsContainer.offsetLeft,
           //スムーズスクロールアニメーションを使用
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }
@@ -99,11 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-
     //各サムネイルに対してクリックイベントを設定
     thumbnails.forEach((thumb, index) => {
       //サムネイルがクリックされたときの処理
-      thumb.addEventListener('click', () => {
+      thumb.addEventListener("click", () => {
         //クリックされたサムネイルの画像に切り替え
         changeImage(index);
         //スマホ表示の場合
@@ -115,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       //thumbに対してキーボードのキーが押されたときの処理
-      thumb.addEventListener('keydown', (event) => {
+      thumb.addEventListener("keydown", (event) => {
         //押されたキーがEnterかスペースキーか判定している
-        if (event.key === 'Enter' || event.key === ' ') {
+        if (event.key === "Enter" || event.key === " ") {
           //標準動作をキャンセルする（標準だとスペースキーは下にスクロールする）
           event.preventDefault();
           //画像を切り替える
@@ -132,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoSlide();
 
     //画面サイズが変更されたときの処理を設定
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       if (isSP()) {
         //オートスライドを開始
         startAutoSlide();
@@ -142,41 +136,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-
-
 });
-
-
-
 
 //スクロール検知のオプションを設定
 const observerOptions = {
   //考査の基準となる要素（nullの場合はブラウザの画面全体）
   root: null,
   //判定領域のマージン（画面下部から-50pxの位置で反応させる）
-  rootMargin: '0px 0px -50px 0px',
+  rootMargin: "0px 0px -50px 0px",
   //対象の要素が10％画面に入ったら交差したと判定
-  threshold: 0.1
+  threshold: 0.1,
 };
 
 //要素が画面内に入ったかどうかを監視するインスタンスを作成
 const observer = new IntersectionObserver((entries, observer) => {
   //entriesを1つずつentryとして取り出して繰り返し処理する
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     //要素が指定の条件で画面内に入っている場合
     if (entry.isIntersecting) {
       //is-showクラスを追加
-      entry.target.classList.add('is-show');
+      entry.target.classList.add("is-show");
     } else {
       //is-showクラスを削除
-      entry.target.classList.remove('is-show');
+      entry.target.classList.remove("is-show");
     }
   });
 }, observerOptions);
 
-
 //監視対象とするすべての'.card'要素を取得
-const targetImages = document.querySelectorAll('.card');
+const targetImages = document.querySelectorAll(".card");
 //各カード要素をIntersectionObserverの監視対象として登録
-targetImages.forEach(card => observer.observe(card));
+targetImages.forEach((card) => observer.observe(card));

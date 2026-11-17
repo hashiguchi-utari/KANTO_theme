@@ -8,14 +8,10 @@ Text Domain: kanto
 */
 
 /**
- * 20261014_橋口修正_Google Fontsの@importを削除し、読み込み管理をfunctions.phpへ統一しました。
- * 書体・太さ・ページ別条件はkanto_enqueue_google_fonts()で管理します。
- * 本文や見出しに適用するfont-family・font-weightは、各CSSで指定します。
- */
+
 
 /* 全ページで使用する色・コンテンツ幅の共通変数。 */
 :root {
-  /* 背景カラーなど共通で使うカラーパレットをここで登録します。 */
   --kanto-orange: #ff8d28;
   --kanto-ink: #3f3b3a;
   --kanto-blue: #150657;
@@ -27,7 +23,6 @@ Text Domain: kanto
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
-/* 議事録を元にフォントサイズを指定しました。スマホ版の文字サイズも欲しいです。 */
 h1 {
   font-size: 6.4rem;
 }

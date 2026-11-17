@@ -1,9 +1,6 @@
 /**
- * 20261014_橋口修正_Instrument Sansの@importを削除し、グループ紹介用の書体をfunctions.phpで読み込むよう統一しました。
  * このCSSでは、取得した書体を使用箇所のfont-family・font-weightで指定します。
  */
-
-/* グループ紹介ページだけに適用するスタイル */
 .group-page {
   color: #151515;
   background: #fbe9da;
@@ -306,7 +303,6 @@
   object-fit: cover;
   border-radius: 5rem;
 }
-/* UTARIの3画像を一番左の画像と同じサイズに統一する（1rem＝10px） */
 .group-service__gallery--utari img:nth-child(n) {
   width: 36.8rem;
   height: 24.5rem;
@@ -389,7 +385,6 @@
 }
 .group-service__copy p {
   margin-top: 3.6rem;
-  /* Seta・UTARIの紹介文にM PLUS 1を使用する */
   font-family: "M PLUS 1", sans-serif;
   font-size: 3.2rem;
   line-height: 1.45;
