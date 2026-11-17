@@ -1,6 +1,5 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <!-- TOPページへの移動と、お問い合わせ準備中ポップアップを表示するフッターナビゲーション -->
     <nav class="site-footer__nav" aria-label="フッターナビゲーション">
       <a class="site-footer__nav-link" href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
       <a
@@ -33,7 +32,6 @@
 
     <!-- KANTO・Seta・UTARIのロゴと事業所情報 -->
     <div class="site-footer__groups">
-      <!-- KANTOのロゴはこのサイトのTOPページへ移動 -->
       <section class="site-footer__group site-footer__group--kanto" aria-label="訪問看護ステーションKANTO">
         <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="訪問看護ステーションKANTO トップページへ">
           <img
@@ -44,11 +42,9 @@
         <address class="site-footer__address">
           <p>北海道札幌市手稲区星置1条3丁目3−12</p>
           <p>リュウジュビル2F</p>
-          <!-- <p class="site-footer__address-phone">011-</p> -->
         </address>
       </section>
 
-      <!-- Setaのロゴは外部公式サイトを別タブで表示 -->
       <section class="site-footer__group site-footer__group--seta" aria-label="Seta Group Home">
         <a href="https://seta-gh.jp/" target="_blank" rel="noopener noreferrer" aria-label="Seta Group Home公式サイトへ（新しいタブで開きます）">
           <img
@@ -61,7 +57,6 @@
         </address>
       </section>
 
-      <!-- UTARIのロゴは外部公式サイトを別タブで表示 -->
       <section class="site-footer__group site-footer__group--utari" aria-label="就労継続支援UTARI">
         <a href="https://utari.jp/" target="_blank" rel="noopener noreferrer" aria-label="就労継続支援UTARI公式サイトへ（新しいタブで開きます）">
           <img

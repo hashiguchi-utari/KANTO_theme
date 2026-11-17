@@ -1,6 +1,6 @@
 .company_container {
   width: auto;
-  background-color: #FFEDD4;
+  background-color: #ffedd4;
   padding-top: 6rem;
   padding-bottom: 5rem;
   margin: 0 auto;
@@ -24,7 +24,7 @@
   height: 65.6rem;
   border-radius: 4rem;
   overflow: hidden;
-  background-image: url("../img/company/company-top.png");
+  background-image: url("../img/company/company-top.webp");
   background-size: 110% auto;
   background-position: 0% center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .teine_mountain {
   display: none;
-} 
+}
 
 /* 画像が動くように */
 @keyframes photoMove {
@@ -59,7 +59,7 @@
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 10rem;
-  background-color: #00757C;
+  background-color: #00757c;
   position: absolute;
   top: 0.4rem;
   left: -1.8rem;
@@ -99,10 +99,10 @@
   font-size: 1.6rem;
   font-family: Noto Sans jp;
   font-weight: normal;
-  color: #FF8D28;
+  color: #ff8d28;
   text-align: left;
   padding: 2.7rem 0;
-  border-bottom: 0.1rem solid #FF8D28;
+  border-bottom: 0.1rem solid #ff8d28;
 }
 
 .text {
@@ -111,7 +111,7 @@
   font-family: Noto Sans jp;
   text-align: left;
   padding: 2.7rem 0;
-  border-bottom: 0.1rem solid #FF8D28;
+  border-bottom: 0.1rem solid #ff8d28;
 }
 
 .address_space .text {
@@ -119,7 +119,7 @@
 }
 
 .address_space {
-  border-bottom: 0.1rem solid #FF8D28;
+  border-bottom: 0.1rem solid #ff8d28;
 }
 
 .heading,
@@ -141,7 +141,7 @@
 .space {
   display: block;
   margin-top: 1rem;
-  color: #FF8D28;
+  color: #ff8d28;
 }
 
 .group {
@@ -153,10 +153,9 @@
 }
 
 @media screen and (max-width: 699.98px) {
-
   .company_container {
     width: 39rem;
-    background-color: #FFEDD4;
+    background-color: #ffedd4;
     padding-top: 0;
     padding-bottom: 1rem;
   }
@@ -181,7 +180,7 @@
     border-radius: 4rem;
     overflow: hidden;
 
-    background-image: url("../img/company/company-top.png");
+    background-image: url("../img/company/company-top.webp");
     background-size: cover;
     background-position: 0% center;
     background-repeat: no-repeat;
@@ -238,7 +237,7 @@
     display: grid;
     grid-template-columns: 9rem 1fr;
     width: 100%;
-    border-bottom: 0.1rem solid #FF8D28;
+    border-bottom: 0.1rem solid #ff8d28;
   }
 
   /* th・tdに元々ついている線を消す */
@@ -278,7 +277,7 @@
 
   .company_table .address_space {
     grid-template-columns: 1fr;
-    border-bottom: 0.1rem solid #FF8D28;
+    border-bottom: 0.1rem solid #ff8d28;
   }
 
   /* 所在地 */
@@ -291,7 +290,7 @@
   }
 
   /* KANTO～住所 */
-  .company_table .address_space>.text {
+  .company_table .address_space > .text {
     display: block;
     width: 100%;
     padding: 0;
@@ -318,5 +317,4 @@
   .sp_only {
     display: inline;
   }
-
 }

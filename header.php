@@ -8,7 +8,7 @@
   <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/header/favicon.ico')); ?>">
   <?php
   /**
-   * 20261014_橋口修正_Google Fontsの直接記述を削除し、読み込み管理をfunctions.phpへ移しました。
+   * Google Fontsの直接記述を削除し、読み込み管理をfunctions.phpへ移しました。
    * wp_head()を通じて、WordPressに登録したGoogle Fontsや各種CSSなどを出力します。
    */
   // この処理内で、登録済みのフォント関数の実行とCSSのリンク出力が行われます。
@@ -41,7 +41,6 @@
           <li class="nav-item"><a href="<?php echo home_url('/group/'); ?>">グループ紹介</a></li>
           <li class="nav-item"><a href="<?php echo home_url('/news/'); ?>">お知らせ</a></li>
           <li class="nav-item"><a href="<?php echo home_url('/company/'); ?>">会社概要</a></li>
-          <!-- お問い合わせページ完成までは、共通の準備中ポップアップを表示します。 -->
           <li class="nav-item header-inq">
             <a
               class="js-contact-preparing"

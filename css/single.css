@@ -7,7 +7,7 @@
 
 .single_h2 {
   margin-top: 20.7rem;
-  font-size: 4.0rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -15,7 +15,7 @@
   width: 120rem;
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
-  margin-bottom: 12.0rem;
+  margin-bottom: 12rem;
   box-sizing: border-box;
 }
 
@@ -24,10 +24,7 @@
   border-bottom: 0.1rem solid #000;
   margin: 0 auto;
   margin: 12rem auto 5rem;
-
 }
-
-
 
 /*====================================
 投稿ページ部分
@@ -59,11 +56,9 @@
 
 .single-meta h5 {
   margin-top: 0;
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: 400;
 }
-
-
 
 .single-title {
   padding-bottom: 3rem;
@@ -96,7 +91,6 @@
   margin: 0 0 3rem;
 }
 
-
 /*====================================
 投稿ページ部分のはみだし防止
 =====================================*/
@@ -110,7 +104,6 @@
   overflow-wrap: anywhere;
   word-break: break-word;
 }
-
 
 /*====================================
 写真が浮かび上がる
@@ -128,7 +121,6 @@
   transform: translateY(0);
 }
 
-
 /*====================================
 SPとPCの切り替え
 =====================================*/
@@ -140,21 +132,9 @@ SPとPCの切り替え
   padding: 0 2rem 0 0;
 }
 
-
-
 /*====================================
 一覧へ戻る
 =====================================*/
-
-/* .button {
-  font-size: 1.4rem;
-  padding: 1rem;
-  width: 15rem;
-  border-radius: 20rem;
-   background-color: #FFEDD4;
-  border: 0.1rem solid #000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-} */
 
 .single_button {
   margin-top: 5rem;
@@ -174,7 +154,9 @@ SPとPCの切り替え
   border-radius: 20rem;
   background-color: #ffedd4;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .button:hover,
@@ -183,17 +165,10 @@ SPとPCの切り替え
   background-color: #333;
 }
 
-
-
-
-
-
 /*====================================
 SP版
 =====================================*/
 @media screen and (max-width: 699.98px) {
-
-
   /*====================================
 お知らせ部分
 =====================================*/
@@ -211,7 +186,7 @@ SP版
     width: 35rem;
     border-bottom: 0.1rem solid #000;
     margin: 0 auto;
-    margin-bottom: 5.0rem;
+    margin-bottom: 5rem;
   }
 
   .single-underborder {
@@ -278,7 +253,6 @@ SP版
     margin: 0 0 3rem;
   }
 
-
   /*====================================
 SPとPCの切り替え
 =====================================*/
@@ -293,8 +267,4 @@ SPとPCの切り替え
   .date_space {
     padding: 0 2rem 0 0;
   }
-
-
-
-
 }

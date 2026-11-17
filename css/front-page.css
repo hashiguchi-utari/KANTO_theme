@@ -3,7 +3,7 @@
 M PLUS U
 =====================================*/
 /**
- * 20261014_橋口修正_M PLUS Uの@importを削除し、functions.phpでトップページだけに読み込むよう統一しました。
+ * 
  * 下の.mplus-titleは、取得した書体を見出しへ適用する指定です。
  */
 
@@ -21,9 +21,9 @@ M PLUS U
   width: 100%;
   margin: 0 auto;
 
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 
-  background-color: #FFEDD4;
+  background-color: #ffedd4;
   /*背景ｍｖ以外の部分のカラー？*/
 }
 
@@ -129,8 +129,8 @@ KANTOとはの１～４画像
 }
 
 .front_img4 {
-  width: min(16.53vw, 26.0rem);
-  height: min(16.53vw, 26.0rem);
+  width: min(16.53vw, 26rem);
+  height: min(16.53vw, 26rem);
   object-fit: cover;
   border-radius: 20%;
 
@@ -142,7 +142,6 @@ KANTOとはの１～４画像
   left: 35%;
   transform: translate(-50%, -50%);
 }
-
 
 /*====================================
 front_img1〜4 をスクロールに合わせて
@@ -169,9 +168,6 @@ front_img1〜4 をスクロールに合わせて
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
 
 /*====================================
 SPとPCの切り替え
@@ -226,14 +222,15 @@ SPとPCの切り替え
   transform: scale(1.2);
 }
 
-
 /*====================================
 浮かぶようなアニメーション
 =====================================*/
 .float-text {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
 }
 
 .float-text.is-show {
@@ -361,7 +358,6 @@ SPとPCの切り替え
   font-size: 2.4rem;
 }
 
-
 /*お知らせ一覧*/
 .front-news-link {
   display: block;
@@ -374,7 +370,6 @@ SPとPCの切り替え
   text-align: center;
 }
 
-
 /*====================================
 インスタ紹介の部分
 =====================================*/
@@ -382,11 +377,11 @@ SPとPCの切り替え
   background-color: #fff;
   padding: 16.8rem 8.6rem 15.4rem;
   box-sizing: border-box;
-width: 85%;
- /*インスタ部分のサイズ（プラグイン外に余白を作る）*/
-margin: 0 auto;
+  width: 85%;
+  /*インスタ部分のサイズ（プラグイン外に余白を作る）*/
+  margin: 0 auto;
 
-position: relative;
+  position: relative;
 }
 
 .front-insta {
@@ -411,7 +406,7 @@ position: relative;
 .front-utari {
   margin-top: 5rem;
   font-size: 2.207rem;
-  color: #4C7A61;
+  color: #4c7a61;
   text-align: center;
 }
 
@@ -470,26 +465,22 @@ position: relative;
 
   position: absolute;
   top: 92%;
-   right: -11%;
+  right: -11%;
   transform: translate(-50%, -50%);
 }
 /*画像にタッチ操作をうけつけないようにする*/
- .front_img5,
-  .front_img6,
-  .front_img7,
-  .front_img8 {
-    pointer-events: none;
-    user-select: none;
-  }
-
-
-
+.front_img5,
+.front_img6,
+.front_img7,
+.front_img8 {
+  pointer-events: none;
+  user-select: none;
+}
 
 /*====================================
 SP版
 =====================================*/
 @media screen and (max-width: 699.98px) {
-
   /*====================================
 コンテナ部
 =====================================*/
@@ -497,7 +488,7 @@ SP版
     width: 100%;
     padding: 3rem 0 0;
     box-sizing: border-box;
-    background-color: #FFEDD4;
+    background-color: #ffedd4;
     /*背景ｍｖ以外の部分のカラー？*/
   }
 
@@ -505,7 +496,7 @@ SP版
 TOP動画（現在画像で置く）
 =====================================*/
   .front_mv {
-    width: 35.0rem;
+    width: 35rem;
     margin: 0 auto;
   }
 
@@ -515,21 +506,20 @@ TOP動画（現在画像で置く）
     height: auto;
   }
 
-
   /*====================================
 KANTOとは
 =====================================*/
   .front-kanto {
-    padding-top:7.3rem;
+    padding-top: 7.3rem;
     margin: 0 auto;
-    background-color: #FFEDD4;
+    background-color: #ffedd4;
     padding-bottom: 6.9rem;
     position: relative;
   }
 
- .front-kanto-top {
+  .front-kanto-top {
     margin: 0 auto;
-   width: 80%;
+    width: 80%;
     /*ベクター画像*/
   }
 
@@ -537,7 +527,7 @@ KANTOとは
     margin: 0 auto;
     flex-shrink: 0;
     /*画像を縮ませない指定*/
-    }
+  }
 
   .front_h3 {
     font-size: 2.4rem;
@@ -559,7 +549,7 @@ KANTOとは
     transform: translate(-50%, -50%);
   }
 
-/*====================================
+  /*====================================
 KANTOとはの１～４画像
 =====================================*/
   .front_img1 {
@@ -578,8 +568,8 @@ KANTOとはの１～４画像
   }
 
   .front_img2 {
-    width: 6.0rem;
-    height: 6.0rem;
+    width: 6rem;
+    height: 6rem;
     object-fit: cover;
     border-radius: 20%;
 
@@ -608,7 +598,7 @@ KANTOとはの１～４画像
   }
 
   .front_img4 {
-    width: 9.0rem;
+    width: 9rem;
     height: 8.8rem;
     object-fit: cover;
     border-radius: 20%;
@@ -796,7 +786,6 @@ SPオンリー
     text-decoration: none;
     font-size: 1.2rem;
     text-align: center;
-
   }
 
   /*====================================
@@ -807,7 +796,6 @@ SPオンリー
     background-color: #fff;
     padding: 2.5rem 2.7rem 15.4rem;
     box-sizing: border-box;
-
   }
 
   .front-insta {
@@ -830,8 +818,7 @@ SPオンリー
 
   .front-utari {
     font-size: 1.6rem;
-    color: #4C7A61;
+    color: #4c7a61;
     text-align: center;
   }
-
 }
