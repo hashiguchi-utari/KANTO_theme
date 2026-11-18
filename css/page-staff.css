@@ -10,7 +10,7 @@ p {
 
 /*メイン画像の設定*/
 .staff-main {
-  max-width: 144rem;
+  max-width: none;
   margin: 0 auto;
   width: 100%;
 }
@@ -32,7 +32,7 @@ p {
   position: relative;
 }
 
-/* 画像の上に半透明の白い膜をふわっと被せる（z-index不使用） */
+/* 画像の上に半透明の白い膜をふわっと被せる */
 .staff_img_box::after {
   content: "";
   position: absolute;
@@ -40,7 +40,6 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  /* 白（255, 255, 255）の透明度25%（0.25）で柔らかい印象に */
   background-color: rgba(255, 255, 255, 0.25);
   pointer-events: none; /* クリックや画像選択の邪魔をしないようにする */
 }
@@ -71,18 +70,17 @@ p {
   display: block;
 }
 
-/*.mainvisual img {　/*新規追加コードで不要のためコメントアウトしています。沼倉：11/17*/
+/*.mainvisual img {/*新規追加コードで不要のためコメントアウトしています。沼倉：11/17*/
   /*width: calc(100% / 3);
   max-width: 100%;
   height: auto;
   margin-bottom: 4rem;
   z-index: 5;
-  /*position: relative;*/
-  /*opacity: 0;*/
-  /*transform: translateX(5rem);
-  /*animation: fadeInRight 0.6s ease-out both;*/
-/*}*/
-
+  position: relative;
+  opacity: 0;
+  transform: translateX(5rem);
+  animation: fadeInRight 0.6s ease-out both;
+}*/
 
 /* ==========================================================================
    【PC用】個別画像のズームアップ・位置調整
@@ -109,6 +107,10 @@ p {
 @media screen and (max-width: 48rem) {
   .staff_mainimg_pc {
     display: none;
+  }
+
+  .mainimg {
+    overflow: visible;
   }
 
   .staff_mainimg_sp {
@@ -309,7 +311,7 @@ p {
   margin: 0 auto;
   padding: 3.2rem;
   background-color: #fff;
-  border-radius: 3rem;
+  border-radius: 3.8rem;
   box-shadow: 2.5rem 2.5rem 3rem rgba(200, 168, 168, 0.4);
   transform: translateY(3rem);
   transition: opacity 0.6s, transform 0.6s;
@@ -334,41 +336,130 @@ p {
 
 .mainimg {
   flex: 0 0 45rem;
-  overflow: hidden; /*ズームした画像がはみ出さないように切り抜く 新規追加：沼倉*/
   border-radius: 10%; /* スマホ・PC共通 */
-
 }
 
+/*11/18新規追加：沼倉（写真サイズ調整用*/
 .mainimg img {
   width: 100%;
   height: 100%;/*10/26画像追加分修正:沼倉～autoを50remにして画像サイズをfigmaに合わせています。*/
   object-fit: cover;
+  object-position: center 25%; /* ★追加：通常表示のときも頭が切れにくくなる */
 }
+
 
 /* ==========================================================================
    スタッフ紹介カード：個別ズーム・位置微調整
    ========================================================================== */
+   /*スタッフ1*/
 .mainimg .staff_card_zoom_01 {
-  transform: scale(1.15);
-  transform-origin: 50% 30%;
+  transform: scale(1);
+  transform-origin: 15% 80%;
   border-radius: 10%;
 }
-
-.mainimg .staff_card_zoom_02 {
-  transform: scale(1.1);
-  transform-origin: 50% 40%;
+#staff_card_zoom_01 {
+  transform: scale(1);
+  transform-origin: 15% 80%;
 }
 
+/* スタッフ1・1枚目 */
+.mainimg img[src*="staff01_profile1.webp"] {
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  object-position: 50% 30%;
+}
+
+/* スタッフ1・2枚目 */
+.mainimg img[src*="staff01_profile2.webp"] {
+  transform: scale(1);
+  transform-origin: 50% 40%;
+  object-position: 50% 40%;
+}
+
+/* スタッフ1・3枚目 */
+.mainimg img[src*="staff01_profile3.webp"] {
+  transform: scale(1);
+  object-position: 80% 20%;
+}
+
+/* スタッフ1・4枚目 */
+.mainimg img[src*="staff01_profile4.webp"] {
+  transform: scale(1);
+  transform-origin: 60% 50%;
+  object-position: 30% 50%;
+}
+
+/*スタッフ2*/
+.mainimg .staff_card_zoom_02 {
+  transform: scale(1);
+  transform-origin: 40% 60%;
+}
+
+/* スタッフ2・1枚目 */
+.mainimg img[src*="staff02_profile1.webp"] {
+  transform: scale(1);
+  transform-origin: 0% 20%;
+  object-position: 10% 30%;
+}
+
+/* スタッフ2・2枚目 */
+.mainimg img[src*="staff02_profile2.webp"] {
+  transform: scale(1);
+  transform-origin: 50% 40%;
+  object-position: 50% 40%;
+}
+
+/* スタッフ2・3枚目 */
+.mainimg img[src*="staff02_profile3.webp"] {
+  transform: scale(1.0);
+  object-position: 80% 20%;
+}
+
+/* スタッフ2・4枚目 */
+.mainimg img[src*="staff02_profile4.webp"] {
+  transform: scale(1.1);
+  transform-origin: 60% 50%;
+  object-position: 44% 50%;
+}
+
+/*スタッフ3*/
 .mainimg .staff_card_zoom_03 {
-  transform: scale(1.2);
+  transform: scale(1);
   transform-origin: 50% 80%;
+}
+
+/* スタッフ3・1枚目 */
+.mainimg img[src*="staff03_profile1.webp"] {
+  transform: scale(1);
+  transform-origin: 50% 200%;
+  object-position: 100% 50%;
+}
+
+/* スタッフ3・2枚目 */
+.mainimg img[src*="staff03_profile2.webp"] {
+  transform: scale(1);
+  transform-origin: 50% 80%;
+  object-position: 80% 40%;
+}
+
+/* スタッフ3・3枚目 */
+.mainimg img[src*="staff03_profile3.webp"] {
+  transform: scale(1);
+  object-position: 10% 20%;
+}
+
+/* スタッフ3・4枚目 */
+.mainimg img[src*="staff03_profile4.webp"] {
+  transform: scale(1);
+  transform-origin: 60% 50%;
+  object-position: 30% 50%;
 }
 
 /* 10/26追加:沼倉　PC版だけに適用する設定 */
 @media (min-width: 768px) {
   .mainimg img {
     border-radius: 15%;/*10/26画像追加分修正:沼倉～新規追加コード*/
-    height: 50rem;       /* Figmaデザイン再現のための高さをPCのみに適用 */
+    height: 50rem;/* Figmaデザイン再現のための高さをPCのみに適用 */
   }
 }
 
@@ -582,6 +673,12 @@ p {
     overflow: hidden;
   }
 
+  /*.border_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }*/
+
   /* 2. 中の画像を枠の高さいっぱいに合わせる */
   .mainimg-sp .staff_img_box img {
     width: 100%;
@@ -722,8 +819,6 @@ p {
     border-radius: 8%;
   }
 
-
-
   .sp-stop {
     display: block;
     position: absolute;
@@ -748,6 +843,7 @@ p {
 
   .card .status {
     width: 100%;
+    margin-top: 1rem;/*11/18新規追加：沼倉/写真とテキスト部分の間の間隔調整*/
     min-width: auto;
     padding: 1rem;
     text-align: left;
