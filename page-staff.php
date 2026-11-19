@@ -4,24 +4,24 @@
     <div class="mainvisual">
       <div class="mainimg-pc">
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="トップスタッフ画像1" class="staff_zoom_pc_01">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="トップスタッフ画像1" class="staff_zoom_pc_01">
         </div>
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="トップスタップ画像2" class="staff_zoom_pc_02" >
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="トップスタップ画像2" class="staff_zoom_pc_02">
         </div>
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member03.webp')); ?>" alt="トップスタッフ画像3" class="staff_zoom_pc_03">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member03.webp')); ?>" alt="トップスタッフ画像3" class="staff_zoom_pc_03">
         </div>
       </div>
       <div class="mainimg-sp">
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="spトップスタッフ画像1" class="staff_zoom_sp_01">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member01.webp')); ?>" alt="spトップスタッフ画像1" class="staff_zoom_sp_01">
         </div>
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="spトップスタッフ画像2" class="staff_zoom_sp_02">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_member02.webp')); ?>" alt="spトップスタッフ画像2" class="staff_zoom_sp_02">
         </div>
         <div class="staff_img_box">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff//staff_member03.webp')); ?>" alt="spトップスタッフ画像3" class="staff_zoom_sp_03">
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff//staff_member03.webp')); ?>" alt="spトップスタッフ画像3" class="staff_zoom_sp_03">
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
     <div class="card" id="staff1">
       <div class="mainimg">
         <div class="staff_photo_clip">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard1.webp')); ?>" alt="メイン画像" class="staff_card_zoom_01" data-default-zoom="staff_card_zoom_01" id="staff_card_zoom_01"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard1.webp')); ?>" alt="メイン画像" class="staff_card_zoom_01" data-default-zoom="staff_card_zoom_01" id="staff_card_zoom_01" />
         </div>
         <div class="sp-stop">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border1.webp')); ?>" alt="" class="border_img">
@@ -125,7 +125,7 @@
       </div>
       <div class="mainimg">
         <div class="staff_photo_clip">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard2.webp')); ?>" alt="メイン画像" class="staff_card_zoom_02" data-default-zoom="staff_card_zoom_02" id="staff_card_zoom_02" />
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard2.webp')); ?>" alt="メイン画像" class="staff_card_zoom_02" data-default-zoom="staff_card_zoom_02" id="staff_card_zoom_02" />
         </div>
         <div class="sp-stop stop2">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border2.webp')); ?>" alt="" class="border_img">
@@ -161,7 +161,7 @@
     <div class="card" id="staff3">
       <div class="mainimg">
         <div class="staff_photo_clip">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard3.webp')); ?>" alt="メイン画像" class="staff_card_zoom_03" data-default-zoom="staff_card_zoom_03" id="staff_card_zoom_03" />
+          <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard3.webp')); ?>" alt="メイン画像" class="staff_card_zoom_03" data-default-zoom="staff_card_zoom_03" id="staff_card_zoom_03" />
         </div>
         <div class="sp-stop stop3">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.webp')); ?>" alt="" class="border_img">

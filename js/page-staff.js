@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //初期画像のURLを保存
     const defaultSrc = mainImg ? mainImg.src : null;
     //【追加】初期設定されているズーム用クラス名を保存
-    const defaultZoomClass = mainImg ? mainImg.getAttribute("data-default-zoom") : null;
+    const defaultZoomClass = mainImg
+      ? mainImg.getAttribute("data-default-zoom")
+      : null;
 
     //サムネイル画像を取得
     const thumbnails = card.querySelectorAll(".thumbnails .thumb");
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const observer = new MutationObserver(() => {
         // 現在の画像URL（mainImg.src）が、初期画像のURL（defaultSrc）と一致するか判定
         if (mainImg.src === defaultSrc) {
-          mainImg.classList.add(defaultZoomClass);    // 初期画像ならズーム復活
+          mainImg.classList.add(defaultZoomClass); // 初期画像ならズーム復活
         } else {
           mainImg.classList.remove(defaultZoomClass); // 別の画像ならズーム解除
         }
@@ -49,43 +51,42 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    //11/18新規追加：沼倉（サムネイル写真へのズーム指示無効化）
-  document.addEventListener('DOMContentLoaded', () => {
-  // すべてのスタッフカードを取得
-  const staff_cards = document.querySelectorAll('.card');
+    //（サムネイル写真へのズーム指示無効化）
+    document.addEventListener("DOMContentLoaded", () => {
+      // すべてのスタッフカードを取得
+      const staff_cards = document.querySelectorAll(".card");
 
-  staff_cards.forEach((card) => {
-    const main_img = card.querySelector('.mainimg img');
-    // カード内のメイン以外のサムネイル画像をすべて取得
-    const sub_imgs = card.querySelectorAll('img:not(.mainimg img)');
+      staff_cards.forEach((card) => {
+        const main_img = card.querySelector(".mainimg img");
+        // カード内のメイン以外のサムネイル画像をすべて取得
+        const sub_imgs = card.querySelectorAll("img:not(.mainimg img)");
 
-    if (!main_img || sub_imgs.length === 0) return;
+        if (!main_img || sub_imgs.length === 0) return;
 
-    // 初期設定されているズーム用クラス名と、初期画像のURLを記憶しておく
-    const default_zoom_class = main_img.getAttribute('data-default-zoom');
-    const default_img_src = main_img.getAttribute('src');
+        // 初期設定されているズーム用クラス名と、初期画像のURLを記憶しておく
+        const default_zoom_class = main_img.getAttribute("data-default-zoom");
+        const default_img_src = main_img.getAttribute("src");
 
-    sub_imgs.forEach((thumb) => {
-      thumb.addEventListener('click', () => {
-        // クリックされたサムネイルのURLを取得
-        const clicked_src = thumb.getAttribute('src');
+        sub_imgs.forEach((thumb) => {
+          thumb.addEventListener("click", () => {
+            // クリックされたサムネイルのURLを取得
+            const clicked_src = thumb.getAttribute("src");
 
-        // もし初期のメイン写真と同じ画像に戻された場合は、ズームクラスを復活させる
-        if (clicked_src === default_img_src) {
-          if (default_zoom_class) {
-            main_img.classList.add(default_zoom_class);
-          }
-        } else {
-          // 2枚目以降のサブ写真に切り替わった場合は、ズームクラスを外して等倍（通常表示）にする
-          if (default_zoom_class) {
-            main_img.classList.remove(default_zoom_class);
-          }
-        }
+            // もし初期のメイン写真と同じ画像に戻された場合は、ズームクラスを復活させる
+            if (clicked_src === default_img_src) {
+              if (default_zoom_class) {
+                main_img.classList.add(default_zoom_class);
+              }
+            } else {
+              // 2枚目以降のサブ写真に切り替わった場合は、ズームクラスを外して等倍（通常表示）にする
+              if (default_zoom_class) {
+                main_img.classList.remove(default_zoom_class);
+              }
+            }
+          });
+        });
       });
     });
-  });
-});
-
 
     //指定されたインデックスのサムネイルをアクティブにし、必要に応じてスクロールする関数
     function updateThumbnailsSlider(index) {
