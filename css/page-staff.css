@@ -101,9 +101,9 @@ p {
   transform-origin: 6% 41%;
 }
 
-/* ==========================================================================
-   SP（スマホ）表示用の切り替え（画面幅 768px ➔ 48rem 以下）
-   ========================================================================== */
+/* ============================================
+   SP（スマホ）表示用の切り替え768px 
+   ============================================ */
 @media screen and (max-width: 48rem) {
   .staff_mainimg_pc {
     display: none;
@@ -117,7 +117,7 @@ p {
     display: block;
     position: relative;
     width: 100%;
-    height: 31.25rem; /* 500px相当（デザインに合わせて調整する） */
+    height: 31.25rem; /* 500px相当（デザインに合わせて調整） */
     overflow: hidden;
     border-radius: 0.5rem;
   }
@@ -344,10 +344,65 @@ p {
   width: 100%;
   height: 100%;/*10/26画像追加分修正:沼倉～autoを50remにして画像サイズをfigmaに合わせています。*/
   object-fit: cover;
-  object-position: center 25%; /* ★追加：通常表示のときも頭が切れにくくなる */
+  object-position: center 90%; /* ★追加：通常表示のときも頭が切れにくくなる */
 }
 
+/* ==========================================================================
+   メイン写真専用の切り抜き枠（写真のみ枠内に収め、角丸を適用）
+   ========================================================================== */
+.staff_photo_clip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;     /* ★写真だけはここでしっかり切り抜く */
+  border-radius: 10%;   /* 角丸は写真枠だけに適用 */
+  isolation: isolate;   /* ズーム時に角丸が外れるのを防ぐ */
+  transform: translateZ(0);
+}
 
+.staff_photo_clip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* 飾り画像（.border_img）への影響ゼロ化 */
+.mainimg .border_img {
+  border-radius: 0;
+  transform: none;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   【PC版】メイン写真の高さ・ズーム・上下左右の調整（768px以上）
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .staff_photo_clip {
+    height: 50rem; /* PC版の高さ */
+    border-radius: 10%;
+  }
+
+  /* 1人目（PC用） */
+  .staff_photo_clip .staff_card_zoom_01 {
+    transform: scale(1.15) translate(0rem, 0rem); /* scale(拡大率) translate(左右移動, 上下移動) */
+    transform-origin: 50% 30%;
+  }
+
+  /* 2人目（PC用） */
+  .staff_photo_clip .staff_card_zoom_02 {
+    transform: scale(1.1) translate(0rem, 0rem);
+    transform-origin: 50% 40%;
+  }
+
+  /* 3人目（PC用） */
+  .staff_photo_clip .staff_card_zoom_03 {
+    transform: scale(1.2) translate(0rem, 0rem);
+    transform-origin: 50% 25%;
+  }
+}
 /* ==========================================================================
    スタッフ紹介カード：個別ズーム・位置微調整
    ========================================================================== */
@@ -656,6 +711,54 @@ p {
   .mainimg-pc {
     display: none !important;
   }
+
+ /* ==========================================================================
+   SP版：飾りの画像（.border_img）が切れないように親の切り抜きを解除する
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+
+  /* 1. 親枠（.mainimg）の切り抜きを解除して、飾りがはみ出せるようにする */
+  .mainimg {
+    overflow: visible;
+  }
+
+  /* 2. 飾り画像（.border_img）自体のリセットと調整 */
+  .mainimg .border_img {
+    overflow: visible;
+    border-radius: 0;       /* 親や共通imgの角丸が効いてしまっている場合のリセット */
+    transform: none;        /* ズームなどの変形が誤爆している場合のリセット */
+    object-fit: contain;    /* 飾り画像が途中で切れないように全体を表示 */
+    height: auto;           /* 高さ固定（height: 100%など）を解除 */
+  }
+}
+
+/* ==========================================================================
+   【SP版】メイン写真の高さ・ズーム・上下左右の調整（767px以下）
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+  .staff_photo_clip {
+    height: 35rem; /* ★SP版の枠の高さをここで指定してください */
+    border-radius: 10%;
+  }
+
+  /* 1人目（SP用） */
+  .staff_photo_clip .staff_card_zoom_01 {
+    transform: scale(1.1) translate(0rem, 0rem);
+    transform-origin: 50% 30%;
+  }
+
+  /* 2人目（SP用） */
+  .staff_photo_clip .staff_card_zoom_02 {
+    transform: scale(1.1) translate(0rem, 0rem);
+    transform-origin: 50% 30%;
+  }
+
+  /* 3人目（SP用） */
+  .staff_photo_clip .staff_card_zoom_03 {
+    transform: scale(1.1) translate(0rem, 0rem);
+    transform-origin: 50% 30%;
+  }
+}
 
   .mainimg-sp {
     display: flex;

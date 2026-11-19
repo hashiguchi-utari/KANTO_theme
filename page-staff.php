@@ -53,7 +53,9 @@
 
     <div class="card" id="staff1">
       <div class="mainimg">
+        <div class="staff_photo_clip">
         <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard1.webp')); ?>" alt="メイン画像" class="staff_card_zoom_01" data-default-zoom="staff_card_zoom_01" id="staff_card_zoom_01"/>
+        </div>
         <div class="sp-stop">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border1.webp')); ?>" alt="" class="border_img">
         </div>
@@ -122,7 +124,9 @@
 
       </div>
       <div class="mainimg">
+        <div class="staff_photo_clip">
         <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard2.webp')); ?>" alt="メイン画像" class="staff_card_zoom_02" data-default-zoom="staff_card_zoom_02" id="staff_card_zoom_02" />
+        </div>
         <div class="sp-stop stop2">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border2.webp')); ?>" alt="" class="border_img">
         </div>
@@ -156,7 +160,9 @@
 
     <div class="card" id="staff3">
       <div class="mainimg">
+        <div class="staff_photo_clip">
         <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_membercard3.webp')); ?>" alt="メイン画像" class="staff_card_zoom_03" data-default-zoom="staff_card_zoom_03" id="staff_card_zoom_03" />
+        </div>
         <div class="sp-stop stop3">
           <img src="<?php echo esc_url(get_theme_file_uri('img/staff/staff_border3.webp')); ?>" alt="" class="border_img">
         </div>
