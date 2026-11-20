@@ -170,6 +170,17 @@
     padding: 2rem 0;
   }
 
+  /* iPhone Safariでも先頭のメニュー項目が画面外へ押し出されないようにします。 */
+  .nav-items {
+    height: 100vh;
+    height: 100dvh;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .header-logo img {
     width: 19.3rem;
     height: 4.875rem;
