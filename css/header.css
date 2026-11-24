@@ -111,8 +111,11 @@
 
 .nav-items.is-open {
   transform: translateY(0);
+  padding-top: 12rem;/*✕印位置、修正用新規追加：11/241沼倉*/
   visibility: visible;
 }
+
+/*11/24修正:沼倉/のためコメントアウトにした旧コードです。*/
 
 /*.nav-items {
   position: fixed;
@@ -139,10 +142,10 @@
   visibility: hidden;
 }*/
 
-.nav-items.is-open {
+/*.nav-items.is-open {
   transform: translateY(0);
   visibility: visible;
-}
+}*/
 
 .nav-item a {
   display: block;
